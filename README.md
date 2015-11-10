@@ -9,7 +9,7 @@ This project we will be developing the local presentation of the Cenfotec Projec
 - Esteban Montes González
 
 
-# Lenguages used in the project:
+# Lenguages used in the project
  - Visual basic with MetroFramework
 
 # Libraries
