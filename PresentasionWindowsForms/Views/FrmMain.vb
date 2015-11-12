@@ -991,11 +991,11 @@ Public Class FrmMain
     End Sub
     Private Function crearHorariosCarrera() As String
 
-        Dim horario1 As String
-        Dim horario2 As String
-        Dim horario3 As String
-        Dim horario4 As String
-        Dim horario5 As String
+        Dim horario1 As String = ""
+        Dim horario2 As String = ""
+        Dim horario3 As String = ""
+        Dim horario4 As String = ""
+        Dim horario5 As String = ""
 
         If horaIni1_nmbr.Value <> 0 Then
             Dim horaIni = horaIni1_nmbr.Value.ToString("00")
@@ -1044,11 +1044,11 @@ Public Class FrmMain
 
     Private Function crearHorariosActi() As String
 
-        Dim horario1 As String
-        Dim horario2 As String
-        Dim horario3 As String
-        Dim horario4 As String
-        Dim horario5 As String
+        Dim horario1 As String = ""
+        Dim horario2 As String = ""
+        Dim horario3 As String = ""
+        Dim horario4 As String = ""
+        Dim horario5 As String = ""
 
         If horaIni1Acti_nmb.Value <> 0 Then
             Dim horaIni = horaIni1Acti_nmb.Value.ToString("00")
