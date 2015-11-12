@@ -29,10 +29,9 @@ Public Class FrmMain
         hideCreateUserForm()
         showListOfUsers()
         'llenarTablaCarreras()
-        llenarComboTiposActi()
+        'llenarComboTiposActi()
         llenarComboTiposCarrera()
-        LlenarComboDias()
-        llenarComboTipoVenta()
+        'llenarComboTipoVenta()
     End Sub
 
     ''' <summary>
@@ -952,14 +951,6 @@ Public Class FrmMain
         listaCursos_pnl.Visible = True
     End Sub
 
-    Private Sub listaCarrerasVolver_btn_Click(sender As Object, e As EventArgs) Handles listaCarrerasVolver_btn.Click
-        listaCarreras_pnl.Visible = False
-    End Sub
-
-    Private Sub nuevaCarrera_btn_Click(sender As Object, e As EventArgs) Handles nuevaCarrera_btn.Click
-        registrarCarrera_pnl.visible = True
-    End Sub
-
     Private Sub LlenarComboDias()
 
         Dim dias() As String = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes"}
@@ -1094,7 +1085,7 @@ Public Class FrmMain
         Dim resul As String = Trim(horario1 & vbNewLine & horario2 & vbNewLine & horario3 & vbNewLine & horario4 & vbNewLine & horario5)
         Return resul
     End Function
-    Private Sub guardarCarrera_btn_Click(sender As Object, e As EventArgs) Handles guardarCarrera_btn.Click
+    Private Sub guardarCarrera_btn_Click(sender As Object, e As EventArgs)
         Dim horarios = crearHorariosCarrera()
         Dim id_tipo = (DirectCast(tipoCarrera_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
 
@@ -1109,7 +1100,7 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub cancelarCarrera_btn_Click(sender As Object, e As EventArgs) Handles cancelarCarrera_btn.Click
+    Private Sub cancelarCarrera_btn_Click(sender As Object, e As EventArgs)
         limpiarFormCarrera()
     End Sub
 
@@ -1186,43 +1177,43 @@ Public Class FrmMain
         tipoCarrera_cmb.DisplayMember = "Value"
         tipoCarrera_cmb.ValueMember = "Key"
     End Sub
-    Private Sub llenarComboTiposActi()
-        Dim comboSource As New Dictionary(Of String, String)()
-        comboSource.Add(1, "Acti")
-        tipoActi_cmb.DataSource = New BindingSource(comboSource, Nothing)
-        tipoActi_cmb.DisplayMember = "Value"
-        tipoActi_cmb.ValueMember = "Key"
-    End Sub
+    'Private Sub llenarComboTiposActi()
+    '    Dim comboSource As New Dictionary(Of String, String)()
+    '    comboSource.Add(1, "Acti")
+    '    tipoActi_cmb.DataSource = New BindingSource(comboSource, Nothing)
+    '    tipoActi_cmb.DisplayMember = "Value"
+    '    tipoActi_cmb.ValueMember = "Key"
+    'End Sub
 
-    Private Sub MetroTile2_Click_1(sender As Object, e As EventArgs) Handles tActis.Click
-        listaActis_pnl.Visible = True
-        llenarTablaActis()
-    End Sub
+    'Private Sub MetroTile2_Click_1(sender As Object, e As EventArgs) Handles tActis.Click
+    '    listaActis_pnl.Visible = True
+    '    llenarTablaActis()
+    'End Sub
 
-    Private Sub nuevoActi_btn_Click(sender As Object, e As EventArgs) Handles nuevoActi_btn.Click
-        registrarActi_pnl.Visible = True
-    End Sub
+    'Private Sub nuevoActi_btn_Click(sender As Object, e As EventArgs)
+    '    registrarActi_pnl.Visible = True
+    'End Sub
 
-    Private Sub vovlerActi_btn_Click(sender As Object, e As EventArgs) Handles vovlerActi_btn.Click
-        listaActis_pnl.Visible = False
-    End Sub
+    'Private Sub vovlerActi_btn_Click(sender As Object, e As EventArgs)
+    '    listaActis_pnl.Visible = False
+    'End Sub
 
-    Private Sub cancelarActi_btn_Click(sender As Object, e As EventArgs) Handles cancelarActi_btn.Click
-        limpiarFormActi()
-    End Sub
+    'Private Sub cancelarActi_btn_Click(sender As Object, e As EventArgs)
+    '    limpiarFormActi()
+    'End Sub
 
-    Private Sub guardarActi_btn_Click(sender As Object, e As EventArgs) Handles guardarActi_btn.Click
-        Dim horarios = crearHorariosActi()
-        Dim id_tipo = (DirectCast(tipoActi_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
-        Dim IsCorrect = ProductsController.RegistrarProducto(nombreActi_text.Text, costoActi_text.Text, codigoActi_text.Text, horarios, id_tipo)
+    'Private Sub guardarActi_btn_Click(sender As Object, e As EventArgs)
+    '    Dim horarios = crearHorariosActi()
+    '    Dim id_tipo = (DirectCast(tipoActi_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
+    '    Dim IsCorrect = ProductsController.RegistrarProducto(nombreActi_text.Text, costoActi_text.Text, codigoActi_text.Text, horarios, id_tipo)
 
-        If IsCorrect Then
-            MsgBox("Todo Tuanis")
-            limpiarFormActi()
-        Else
-            MsgBox("Ha ocurrido un error.")
-        End If
-    End Sub
+    '    If IsCorrect Then
+    '        MsgBox("El nuevo curso se ha agregado con exito.", MsgBoxStyle.Information)
+
+    '    Else
+    '        MsgBox("No se ha podido ingresar el nuevo curso.", MsgBoxStyle.Critical)
+    '    End If
+    'End Sub
 
     Private Sub llenarTablaCarreras()
         listaCarreras_dg.Rows.Clear()
@@ -1236,17 +1227,17 @@ Public Class FrmMain
         End If
     End Sub
 
-    Private Sub llenarTablaActis()
-        listaActis_dg.Rows.Clear()
-        Dim actis As List(Of Producto) = ProductsController.obtenerListaProductos()
-        If (Not actis Is Nothing) Then
-            For Each acti As Producto In actis
-                If (acti.Id_Tipo_Product = 1) Then
-                    listaActis_dg.Rows.Add(acti.Id_producto, acti.Nombre, acti.Codigo_Producto, acti.Costo, acti.Horario)
-                End If
-            Next
-        End If
-    End Sub
+    'Private Sub llenarTablaActis()
+    '    listaActis_dg.Rows.Clear()
+    '    Dim actis As List(Of Producto) = ProductsController.obtenerListaProductos()
+    '    If (Not actis Is Nothing) Then
+    '        For Each acti As Producto In actis
+    '            If (acti.Id_Tipo_Product = 1) Then
+    '                listaActis_dg.Rows.Add(acti.Id_producto, acti.Nombre, acti.Codigo_Producto, acti.Costo, acti.Horario)
+    '            End If
+    '        Next
+    '    End If
+    'End Sub
 
     Private Sub nuevaVenta_btn_Click(sender As Object, e As EventArgs) Handles nuevaVenta_btn.Click
         RegistrarVentas_pnl.Visible = True
@@ -1316,18 +1307,18 @@ Public Class FrmMain
         End If
     End Sub
 
-    Private Sub llenarComboTipoVenta()
+    'Private Sub llenarComboTipoVenta()
 
-        'Dim tipos As List(Of Tipo_Producto) = ProductTypeController.obtenerLista
-        'Dim comboSource As New Dictionary(Of String, String)()
-        'comboSource.Add("", "")
-        'For Each tipo As Tipo_Producto In tipos
-        '    comboSource.Add(tipo.Id_Tipo_Producto.ToString, tipo.Nombre)
-        'Next
-        'tipo_prodVenta_cmb.DataSource = New BindingSource(comboSource, Nothing)
-        'tipo_prodVenta_cmb.DisplayMember = "Value"
-        'tipo_prodVenta_cmb.ValueMember = "Key"
-    End Sub
+    '    'Dim tipos As List(Of Tipo_Producto) = ProductTypeController.obtenerLista
+    '    'Dim comboSource As New Dictionary(Of String, String)()
+    '    'comboSource.Add("", "")
+    '    'For Each tipo As Tipo_Producto In tipos
+    '    '    comboSource.Add(tipo.Id_Tipo_Producto.ToString, tipo.Nombre)
+    '    'Next
+    '    'tipo_prodVenta_cmb.DataSource = New BindingSource(comboSource, Nothing)
+    '    'tipo_prodVenta_cmb.DisplayMember = "Value"
+    '    'tipo_prodVenta_cmb.ValueMember = "Key"
+    'End Sub
     Public Function calcularTotal() As Double
         Dim totalPagar As Double
         Dim matricula As Double
@@ -1369,4 +1360,61 @@ Public Class FrmMain
         txtPasswordCreateUser.Enabled = chkChangeUserPassword.Checked
         txtPasswordCreateUser.Text = lblPasswordUserBackup.Text
     End Sub
+
+    'Private Sub nuevoActi_btn_Click_1(sender As Object, e As EventArgs) Handles nuevoActi_btn.Click
+    '    registrarActi_pnl.Visible = True
+    'End Sub
+
+    Private Sub vovlerActi_btn_Click_1(sender As Object, e As EventArgs) Handles vovlerActi_btn.Click
+        'llenarTablaActis()
+        listaActis_pnl.Visible = False
+    End Sub
+
+    Private Sub nuevaCarrera_btn_Click(sender As Object, e As EventArgs) Handles nuevaCarrera_btn.Click
+        ErrorProvider1.Clear()
+        registrarCarrera_pnl.Visible = True
+    End Sub
+    Private Sub cancelarCarrera_btn_Click_1(sender As Object, e As EventArgs) Handles cancelarCarrera_btn.Click
+        limpiarFormCarrera()
+    End Sub
+
+    ''' <summary>
+    ''' autor: Diego Mora Fernández
+    ''' fecha: 12-11-2015
+    ''' caso de uso: Registrar Venta en el Sistema
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub guardarCarrera_btn_Click_1(sender As Object, e As EventArgs) Handles guardarCarrera_btn.Click
+        ErrorProvider1.Clear()
+        Dim horarios = "-"
+        Dim id_tipo = (DirectCast(tipoCarrera_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
+        If nombreCarrera_text.Text = "" Then
+            ErrorProvider1.SetError(nombreCarrera_text, "Debe ingresar un nombre para la nueva carrera.")
+            Exit Sub
+        ElseIf codigoCarrera_text.Text = "" Then
+            ErrorProvider1.SetError(codigoCarrera_text, "Debe ingresar un código para la nueva carrera.")
+            Exit Sub
+        ElseIf costoCarrera_text.Text = "" Then
+            ErrorProvider1.SetError(costoCarrera_text, "Debe ingresar un costo para la nueva carrera.")
+            Exit Sub
+        Else
+
+            Dim IsCorrect = ProductsController.RegistrarProducto(nombreCarrera_text.Text, costoCarrera_text.Text, codigoCarrera_text.Text, horarios, id_tipo)
+
+            If IsCorrect Then
+                MsgBox("La nueva carrera se ha agregado con exito.", MsgBoxStyle.Information)
+                limpiarFormCarrera()
+                llenarTablaCarreras()
+                registrarCarrera_pnl.Visible = False
+                listaCarreras_pnl.Visible = True
+            Else
+                MsgBox("No se ha podido ingresar la nueva carrera.", MsgBoxStyle.Critical)
+            End If
+        End If
+    End Sub
+
+    Private Sub listaCarrerasVolver_btn_Click_1(sender As Object, e As EventArgs) Handles listaCarrerasVolver_btn.Click
+        listaCarreras_pnl.Visible = False
+    End Sub
+
 End Class

@@ -187,18 +187,6 @@ Partial Class FrmMain
         Me.Column10 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblListaSeguimientos = New MetroFramework.Controls.MetroLabel()
         Me.tabProspectus = New MetroFramework.Controls.MetroTabPage()
-        Me.PnlListaProspectos = New MetroFramework.Controls.MetroPanel()
-        Me.lblListaProspectos = New MetroFramework.Controls.MetroLabel()
-        Me.btnCrearProspecto = New MetroFramework.Controls.MetroButton()
-        Me.lstProspectos = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.PnlNuevoProspecto = New MetroFramework.Controls.MetroPanel()
         Me.cbEventos = New MetroFramework.Controls.MetroComboBox()
         Me.ckbEventoProspecto = New MetroFramework.Controls.MetroCheckBox()
@@ -250,50 +238,6 @@ Partial Class FrmMain
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.tabProducts = New MetroFramework.Controls.MetroTabPage()
-        Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
-        Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
-        Me.MetroPanel4 = New MetroFramework.Controls.MetroPanel()
-        Me.MetroButton5 = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel54 = New MetroFramework.Controls.MetroLabel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn6 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.MetroLabel55 = New MetroFramework.Controls.MetroLabel()
-        Me.vovlerActi_btn = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel56 = New MetroFramework.Controls.MetroLabel()
-        Me.listaActis_dg = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Codigo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.costo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.horario2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn7 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.listaActis_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.nuevoActi_btn = New MetroFramework.Controls.MetroButton()
-        Me.listaCarreras_pnl = New MetroFramework.Controls.MetroPanel()
-        Me.exportarCarreras_btn = New MetroFramework.Controls.MetroButton()
-        Me.listaCursos_pnl = New MetroFramework.Controls.MetroPanel()
-        Me.listaCursosVolver_btn = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
-        Me.listaCursos_dg = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn5 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.listaCursos_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.listaCarrerasVolver_btn = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel17 = New MetroFramework.Controls.MetroLabel()
-        Me.listaCarreras_dg = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Costo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Horario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.carreras_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.nuevaCarrera_btn = New MetroFramework.Controls.MetroButton()
         Me.registrarActi_pnl = New MetroFramework.Controls.MetroPanel()
         Me.cancelarAct_btn = New MetroFramework.Controls.MetroButton()
         Me.guardarAct_btn = New MetroFramework.Controls.MetroButton()
@@ -347,28 +291,8 @@ Partial Class FrmMain
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.horariosActi_grp = New System.Windows.Forms.GroupBox()
         Me.MetroLabel26 = New MetroFramework.Controls.MetroLabel()
-        Me.listaCarreras_pnl = New MetroFramework.Controls.MetroPanel()
-        Me.listaCursos_pnl = New MetroFramework.Controls.MetroPanel()
-        Me.listaCursosVolver_btn = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
-        Me.listaCursos_dg = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn5 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.listaCursos_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.listaCarrerasVolver_btn = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel17 = New MetroFramework.Controls.MetroLabel()
-        Me.listaCarreras_dg = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Costo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Horario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.carreras_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.nuevaCarrera_btn = New MetroFramework.Controls.MetroButton()
         Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
+        Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
         Me.MetroPanel4 = New MetroFramework.Controls.MetroPanel()
         Me.MetroButton5 = New MetroFramework.Controls.MetroButton()
         Me.MetroLabel54 = New MetroFramework.Controls.MetroLabel()
@@ -390,8 +314,9 @@ Partial Class FrmMain
         Me.listaActis_lbl = New MetroFramework.Controls.MetroLabel()
         Me.nuevoActi_btn = New MetroFramework.Controls.MetroButton()
         Me.registrarCarrera_pnl = New MetroFramework.Controls.MetroPanel()
-        Me.cancelarCarrera_btn = New MetroFramework.Controls.MetroButton()
+        Me.ImportarCarreras_cmb = New MetroFramework.Controls.MetroLink()
         Me.guardarCarrera_btn = New MetroFramework.Controls.MetroButton()
+        Me.cancelarCarrera_btn = New MetroFramework.Controls.MetroButton()
         Me.min2_lbl = New MetroFramework.Controls.MetroLabel()
         Me.hora2_lbl = New MetroFramework.Controls.MetroLabel()
         Me.minsFin5_nmbr = New System.Windows.Forms.NumericUpDown()
@@ -441,6 +366,28 @@ Partial Class FrmMain
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.MetroLabel51 = New MetroFramework.Controls.MetroLabel()
+        Me.listaCarreras_pnl = New MetroFramework.Controls.MetroPanel()
+        Me.exportarCarreras_btn = New MetroFramework.Controls.MetroButton()
+        Me.listaCursos_pnl = New MetroFramework.Controls.MetroPanel()
+        Me.listaCursosVolver_btn = New MetroFramework.Controls.MetroButton()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.listaCursos_dg = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn5 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.listaCursos_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.listaCarrerasVolver_btn = New MetroFramework.Controls.MetroButton()
+        Me.MetroLabel17 = New MetroFramework.Controls.MetroLabel()
+        Me.listaCarreras_dg = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Costo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Horario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.carreras_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.nuevaCarrera_btn = New MetroFramework.Controls.MetroButton()
         Me.tCareers = New MetroFramework.Controls.MetroTile()
         Me.tActis = New MetroFramework.Controls.MetroTile()
         Me.tabsContainer = New MetroFramework.Controls.MetroTabControl()
@@ -466,10 +413,10 @@ Partial Class FrmMain
         Me.PnlListaSeguimientos.SuspendLayout()
         CType(Me.lstSeguimientos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabProspectus.SuspendLayout()
-        Me.PnlListaProspectos.SuspendLayout()
-        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlNuevoProspecto.SuspendLayout()
         Me.pnlSeguimientos.SuspendLayout()
+        Me.PnlListaProspectos.SuspendLayout()
+        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabProducts.SuspendLayout()
         Me.registrarActi_pnl.SuspendLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -493,10 +440,6 @@ Partial Class FrmMain
         CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.horariosActi_grp.SuspendLayout()
-        Me.listaCarreras_pnl.SuspendLayout()
-        Me.listaCursos_pnl.SuspendLayout()
-        CType(Me.listaCursos_dg, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.listaCarreras_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.listaActis_pnl.SuspendLayout()
         Me.MetroPanel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -523,6 +466,10 @@ Partial Class FrmMain
         CType(Me.horaIni2_nmbr, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni1_nmbr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
+        Me.listaCarreras_pnl.SuspendLayout()
+        Me.listaCursos_pnl.SuspendLayout()
+        CType(Me.listaCursos_dg, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.listaCarreras_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabsContainer.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -2568,106 +2515,6 @@ Partial Class FrmMain
         Me.tabProspectus.VerticalScrollbarHighlightOnWheel = False
         Me.tabProspectus.VerticalScrollbarSize = 10
         '
-        'PnlListaProspectos
-        '
-        Me.PnlListaProspectos.Controls.Add(Me.lblListaProspectos)
-        Me.PnlListaProspectos.Controls.Add(Me.btnCrearProspecto)
-        Me.PnlListaProspectos.Controls.Add(Me.lstProspectos)
-        Me.PnlListaProspectos.HorizontalScrollbarBarColor = True
-        Me.PnlListaProspectos.HorizontalScrollbarHighlightOnWheel = False
-        Me.PnlListaProspectos.HorizontalScrollbarSize = 10
-        Me.PnlListaProspectos.Location = New System.Drawing.Point(10, 3)
-        Me.PnlListaProspectos.Name = "PnlListaProspectos"
-        Me.PnlListaProspectos.Size = New System.Drawing.Size(742, 455)
-        Me.PnlListaProspectos.Style = MetroFramework.MetroColorStyle.White
-        Me.PnlListaProspectos.TabIndex = 40
-        Me.PnlListaProspectos.VerticalScrollbarBarColor = True
-        Me.PnlListaProspectos.VerticalScrollbarHighlightOnWheel = False
-        Me.PnlListaProspectos.VerticalScrollbarSize = 10
-        '
-        'lblListaProspectos
-        '
-        Me.lblListaProspectos.AutoSize = True
-        Me.lblListaProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblListaProspectos.Location = New System.Drawing.Point(4, 9)
-        Me.lblListaProspectos.Name = "lblListaProspectos"
-        Me.lblListaProspectos.Size = New System.Drawing.Size(132, 25)
-        Me.lblListaProspectos.TabIndex = 10
-        Me.lblListaProspectos.Text = "Lista prospectos"
-        '
-        'btnCrearProspecto
-        '
-        Me.btnCrearProspecto.Location = New System.Drawing.Point(620, 412)
-        Me.btnCrearProspecto.Name = "btnCrearProspecto"
-        Me.btnCrearProspecto.Size = New System.Drawing.Size(123, 36)
-        Me.btnCrearProspecto.TabIndex = 9
-        Me.btnCrearProspecto.Text = "Nuevo prospecto"
-        Me.btnCrearProspecto.UseSelectable = True
-        '
-        'lstProspectos
-        '
-        Me.lstProspectos.AllowUserToAddRows = False
-        Me.lstProspectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.lstProspectos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.Column3, Me.Column4, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewImageColumn1})
-        Me.lstProspectos.Location = New System.Drawing.Point(4, 37)
-        Me.lstProspectos.Name = "lstProspectos"
-        Me.lstProspectos.RowHeadersVisible = False
-        Me.lstProspectos.Size = New System.Drawing.Size(739, 344)
-        Me.lstProspectos.TabIndex = 8
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn4.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Visible = False
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Nombre"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Apellidos"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Nacimiento"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Procedencia"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Teléfono"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.HeaderText = "E-mail"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewImageColumn1.HeaderText = ""
-        Me.DataGridViewImageColumn1.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
         'PnlNuevoProspecto
         '
         Me.PnlNuevoProspecto.Controls.Add(Me.cbEventos)
@@ -2780,7 +2627,7 @@ Partial Class FrmMain
         '
         Me.txtFechaNacProspecto.CustomFormat = ""
         Me.txtFechaNacProspecto.Location = New System.Drawing.Point(158, 112)
-        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(4, 29)
         Me.txtFechaNacProspecto.Name = "txtFechaNacProspecto"
         Me.txtFechaNacProspecto.Size = New System.Drawing.Size(367, 29)
         Me.txtFechaNacProspecto.Style = MetroFramework.MetroColorStyle.Purple
@@ -3233,12 +3080,112 @@ Partial Class FrmMain
         Me.MetroLabel3.TabIndex = 11
         Me.MetroLabel3.Text = "Crear seguimiento"
         '
+        'PnlListaProspectos
+        '
+        Me.PnlListaProspectos.Controls.Add(Me.lblListaProspectos)
+        Me.PnlListaProspectos.Controls.Add(Me.btnCrearProspecto)
+        Me.PnlListaProspectos.Controls.Add(Me.lstProspectos)
+        Me.PnlListaProspectos.HorizontalScrollbarBarColor = True
+        Me.PnlListaProspectos.HorizontalScrollbarHighlightOnWheel = False
+        Me.PnlListaProspectos.HorizontalScrollbarSize = 10
+        Me.PnlListaProspectos.Location = New System.Drawing.Point(10, 3)
+        Me.PnlListaProspectos.Name = "PnlListaProspectos"
+        Me.PnlListaProspectos.Size = New System.Drawing.Size(742, 455)
+        Me.PnlListaProspectos.Style = MetroFramework.MetroColorStyle.White
+        Me.PnlListaProspectos.TabIndex = 40
+        Me.PnlListaProspectos.VerticalScrollbarBarColor = True
+        Me.PnlListaProspectos.VerticalScrollbarHighlightOnWheel = False
+        Me.PnlListaProspectos.VerticalScrollbarSize = 10
+        '
+        'lblListaProspectos
+        '
+        Me.lblListaProspectos.AutoSize = True
+        Me.lblListaProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblListaProspectos.Location = New System.Drawing.Point(4, 9)
+        Me.lblListaProspectos.Name = "lblListaProspectos"
+        Me.lblListaProspectos.Size = New System.Drawing.Size(132, 25)
+        Me.lblListaProspectos.TabIndex = 10
+        Me.lblListaProspectos.Text = "Lista prospectos"
+        '
+        'btnCrearProspecto
+        '
+        Me.btnCrearProspecto.Location = New System.Drawing.Point(620, 412)
+        Me.btnCrearProspecto.Name = "btnCrearProspecto"
+        Me.btnCrearProspecto.Size = New System.Drawing.Size(123, 36)
+        Me.btnCrearProspecto.TabIndex = 9
+        Me.btnCrearProspecto.Text = "Nuevo prospecto"
+        Me.btnCrearProspecto.UseSelectable = True
+        '
+        'lstProspectos
+        '
+        Me.lstProspectos.AllowUserToAddRows = False
+        Me.lstProspectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.lstProspectos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.Column3, Me.Column4, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewImageColumn1})
+        Me.lstProspectos.Location = New System.Drawing.Point(4, 37)
+        Me.lstProspectos.Name = "lstProspectos"
+        Me.lstProspectos.RowHeadersVisible = False
+        Me.lstProspectos.Size = New System.Drawing.Size(739, 344)
+        Me.lstProspectos.TabIndex = 8
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn4.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Visible = False
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Apellidos"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Nacimiento"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Procedencia"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Teléfono"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.HeaderText = "E-mail"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewImageColumn1.HeaderText = ""
+        Me.DataGridViewImageColumn1.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
         'tabProducts
         '
         Me.tabProducts.Controls.Add(Me.registrarActi_pnl)
-        Me.tabProducts.Controls.Add(Me.listaCarreras_pnl)
         Me.tabProducts.Controls.Add(Me.listaActis_pnl)
         Me.tabProducts.Controls.Add(Me.registrarCarrera_pnl)
+        Me.tabProducts.Controls.Add(Me.listaCarreras_pnl)
         Me.tabProducts.Controls.Add(Me.tCareers)
         Me.tabProducts.Controls.Add(Me.tActis)
         Me.tabProducts.HorizontalScrollbarBarColor = True
@@ -3255,8 +3202,9 @@ Partial Class FrmMain
         '
         'registrarActi_pnl
         '
-        Me.registrarActi_pnl.Controls.Add(Me.cancelarActi_btn)
-        Me.registrarActi_pnl.Controls.Add(Me.guardarActi_btn)
+        Me.registrarActi_pnl.Controls.Add(Me.cancelarAct_btn)
+        Me.registrarActi_pnl.Controls.Add(Me.guardarAct_btn)
+        Me.registrarActi_pnl.Controls.Add(Me.importarActis_lbl)
         Me.registrarActi_pnl.Controls.Add(Me.minsFinActi_lbl)
         Me.registrarActi_pnl.Controls.Add(Me.horaFinActi_lbl)
         Me.registrarActi_pnl.Controls.Add(Me.minsFin5Acti_nmb)
@@ -3312,30 +3260,44 @@ Partial Class FrmMain
         Me.registrarActi_pnl.Name = "registrarActi_pnl"
         Me.registrarActi_pnl.Size = New System.Drawing.Size(746, 462)
         Me.registrarActi_pnl.Style = MetroFramework.MetroColorStyle.Purple
-        Me.registrarActi_pnl.TabIndex = 82
+        Me.registrarActi_pnl.TabIndex = 84
         Me.registrarActi_pnl.Theme = MetroFramework.MetroThemeStyle.Light
         Me.registrarActi_pnl.VerticalScrollbarBarColor = True
         Me.registrarActi_pnl.VerticalScrollbarHighlightOnWheel = False
         Me.registrarActi_pnl.VerticalScrollbarSize = 10
         Me.registrarActi_pnl.Visible = False
         '
-        'cancelarActi_btn
+        'cancelarAct_btn
         '
-        Me.cancelarActi_btn.Location = New System.Drawing.Point(7, 412)
-        Me.cancelarActi_btn.Name = "cancelarActi_btn"
-        Me.cancelarActi_btn.Size = New System.Drawing.Size(123, 36)
-        Me.cancelarActi_btn.TabIndex = 79
-        Me.cancelarActi_btn.Text = "Cancelar"
-        Me.cancelarActi_btn.UseSelectable = True
+        Me.cancelarAct_btn.Location = New System.Drawing.Point(427, 421)
+        Me.cancelarAct_btn.Name = "cancelarAct_btn"
+        Me.cancelarAct_btn.Size = New System.Drawing.Size(97, 23)
+        Me.cancelarAct_btn.TabIndex = 87
+        Me.cancelarAct_btn.Text = "Cancelar"
+        Me.cancelarAct_btn.UseSelectable = True
         '
-        'guardarActi_btn
+        'guardarAct_btn
         '
-        Me.guardarActi_btn.Location = New System.Drawing.Point(623, 412)
-        Me.guardarActi_btn.Name = "guardarActi_btn"
-        Me.guardarActi_btn.Size = New System.Drawing.Size(123, 36)
-        Me.guardarActi_btn.TabIndex = 78
-        Me.guardarActi_btn.Text = "Guardar"
-        Me.guardarActi_btn.UseSelectable = True
+        Me.guardarAct_btn.Location = New System.Drawing.Point(324, 421)
+        Me.guardarAct_btn.Name = "guardarAct_btn"
+        Me.guardarAct_btn.Size = New System.Drawing.Size(97, 23)
+        Me.guardarAct_btn.TabIndex = 86
+        Me.guardarAct_btn.Text = "Guardar"
+        Me.guardarAct_btn.UseSelectable = True
+        '
+        'importarActis_lbl
+        '
+        Me.importarActis_lbl.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.importarActis_lbl.FontSize = MetroFramework.MetroLinkSize.Tall
+        Me.importarActis_lbl.FontWeight = MetroFramework.MetroLinkWeight.Light
+        Me.importarActis_lbl.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.importarActis_lbl.Location = New System.Drawing.Point(187, 11)
+        Me.importarActis_lbl.Name = "importarActis_lbl"
+        Me.importarActis_lbl.Size = New System.Drawing.Size(147, 23)
+        Me.importarActis_lbl.TabIndex = 85
+        Me.importarActis_lbl.Text = "Importar Datos"
+        Me.importarActis_lbl.UseCustomForeColor = True
+        Me.importarActis_lbl.UseSelectable = True
         '
         'minsFinActi_lbl
         '
@@ -3829,205 +3791,9 @@ Partial Class FrmMain
         Me.MetroLabel26.TabIndex = 38
         Me.MetroLabel26.Text = "Horarios"
         '
-        'listaCarreras_pnl
-        '
-        Me.listaCarreras_pnl.Controls.Add(Me.listaCursos_pnl)
-        Me.listaCarreras_pnl.Controls.Add(Me.listaCarrerasVolver_btn)
-        Me.listaCarreras_pnl.Controls.Add(Me.MetroLabel17)
-        Me.listaCarreras_pnl.Controls.Add(Me.listaCarreras_dg)
-        Me.listaCarreras_pnl.Controls.Add(Me.carreras_lbl)
-        Me.listaCarreras_pnl.Controls.Add(Me.nuevaCarrera_btn)
-        Me.listaCarreras_pnl.HorizontalScrollbarBarColor = True
-        Me.listaCarreras_pnl.HorizontalScrollbarHighlightOnWheel = False
-        Me.listaCarreras_pnl.HorizontalScrollbarSize = 10
-        Me.listaCarreras_pnl.Location = New System.Drawing.Point(0, 3)
-        Me.listaCarreras_pnl.Name = "listaCarreras_pnl"
-        Me.listaCarreras_pnl.Size = New System.Drawing.Size(767, 461)
-        Me.listaCarreras_pnl.Style = MetroFramework.MetroColorStyle.Blue
-        Me.listaCarreras_pnl.TabIndex = 50
-        Me.listaCarreras_pnl.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.listaCarreras_pnl.VerticalScrollbarBarColor = True
-        Me.listaCarreras_pnl.VerticalScrollbarHighlightOnWheel = False
-        Me.listaCarreras_pnl.VerticalScrollbarSize = 10
-        Me.listaCarreras_pnl.Visible = False
-        '
-        'listaCursos_pnl
-        '
-        Me.listaCursos_pnl.Controls.Add(Me.listaCursosVolver_btn)
-        Me.listaCursos_pnl.Controls.Add(Me.MetroLabel2)
-        Me.listaCursos_pnl.Controls.Add(Me.listaCursos_dg)
-        Me.listaCursos_pnl.Controls.Add(Me.listaCursos_lbl)
-        Me.listaCursos_pnl.HorizontalScrollbarBarColor = True
-        Me.listaCursos_pnl.HorizontalScrollbarHighlightOnWheel = False
-        Me.listaCursos_pnl.HorizontalScrollbarSize = 10
-        Me.listaCursos_pnl.Location = New System.Drawing.Point(548, 431)
-        Me.listaCursos_pnl.Name = "listaCursos_pnl"
-        Me.listaCursos_pnl.Size = New System.Drawing.Size(0, 3)
-        Me.listaCursos_pnl.Style = MetroFramework.MetroColorStyle.Blue
-        Me.listaCursos_pnl.TabIndex = 51
-        Me.listaCursos_pnl.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.listaCursos_pnl.VerticalScrollbarBarColor = True
-        Me.listaCursos_pnl.VerticalScrollbarHighlightOnWheel = False
-        Me.listaCursos_pnl.VerticalScrollbarSize = 10
-        Me.listaCursos_pnl.Visible = False
-        '
-        'listaCursosVolver_btn
-        '
-        Me.listaCursosVolver_btn.Location = New System.Drawing.Point(7, 412)
-        Me.listaCursosVolver_btn.Name = "listaCursosVolver_btn"
-        Me.listaCursosVolver_btn.Size = New System.Drawing.Size(123, 36)
-        Me.listaCursosVolver_btn.TabIndex = 50
-        Me.listaCursosVolver_btn.Text = "Volver"
-        Me.listaCursosVolver_btn.UseSelectable = True
-        '
-        'MetroLabel2
-        '
-        Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(723, 7)
-        Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(20, 19)
-        Me.MetroLabel2.TabIndex = 49
-        Me.MetroLabel2.Text = "id"
-        Me.MetroLabel2.Visible = False
-        '
-        'listaCursos_dg
-        '
-        Me.listaCursos_dg.AllowUserToAddRows = False
-        Me.listaCursos_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.listaCursos_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewImageColumn5})
-        Me.listaCursos_dg.Location = New System.Drawing.Point(7, 37)
-        Me.listaCursos_dg.Name = "listaCursos_dg"
-        Me.listaCursos_dg.RowHeadersVisible = False
-        Me.listaCursos_dg.Size = New System.Drawing.Size(739, 344)
-        Me.listaCursos_dg.TabIndex = 12
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn13.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        Me.DataGridViewTextBoxColumn13.Visible = False
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.HeaderText = "Nombre"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.HeaderText = "Estado"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        '
-        'DataGridViewImageColumn5
-        '
-        Me.DataGridViewImageColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewImageColumn5.HeaderText = ""
-        Me.DataGridViewImageColumn5.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.DataGridViewImageColumn5.Name = "DataGridViewImageColumn5"
-        Me.DataGridViewImageColumn5.ReadOnly = True
-        Me.DataGridViewImageColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewImageColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'listaCursos_lbl
-        '
-        Me.listaCursos_lbl.AutoSize = True
-        Me.listaCursos_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.listaCursos_lbl.Location = New System.Drawing.Point(4, 9)
-        Me.listaCursos_lbl.Name = "listaCursos_lbl"
-        Me.listaCursos_lbl.Size = New System.Drawing.Size(107, 25)
-        Me.listaCursos_lbl.TabIndex = 10
-        Me.listaCursos_lbl.Text = "Listar Cursos"
-        '
-        'listaCarrerasVolver_btn
-        '
-        Me.listaCarrerasVolver_btn.Location = New System.Drawing.Point(7, 412)
-        Me.listaCarrerasVolver_btn.Name = "listaCarrerasVolver_btn"
-        Me.listaCarrerasVolver_btn.Size = New System.Drawing.Size(123, 36)
-        Me.listaCarrerasVolver_btn.TabIndex = 50
-        Me.listaCarrerasVolver_btn.Text = "Volver"
-        Me.listaCarrerasVolver_btn.UseSelectable = True
-        '
-        'MetroLabel17
-        '
-        Me.MetroLabel17.AutoSize = True
-        Me.MetroLabel17.Location = New System.Drawing.Point(723, 7)
-        Me.MetroLabel17.Name = "MetroLabel17"
-        Me.MetroLabel17.Size = New System.Drawing.Size(20, 19)
-        Me.MetroLabel17.TabIndex = 49
-        Me.MetroLabel17.Text = "id"
-        Me.MetroLabel17.Visible = False
-        '
-        'listaCarreras_dg
-        '
-        Me.listaCarreras_dg.AllowUserToAddRows = False
-        Me.listaCarreras_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.listaCarreras_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.Codigo, Me.Costo, Me.Horario, Me.DataGridViewImageColumn4})
-        Me.listaCarreras_dg.Location = New System.Drawing.Point(7, 37)
-        Me.listaCarreras_dg.Name = "listaCarreras_dg"
-        Me.listaCarreras_dg.RowHeadersVisible = False
-        Me.listaCarreras_dg.Size = New System.Drawing.Size(739, 344)
-        Me.listaCarreras_dg.TabIndex = 12
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn10.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Visible = False
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Nombre"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Codigo"
-        Me.Codigo.Name = "Codigo"
-        '
-        'Costo
-        '
-        Me.Costo.HeaderText = "Costo"
-        Me.Costo.Name = "Costo"
-        '
-        'Horario
-        '
-        Me.Horario.HeaderText = "Horario"
-        Me.Horario.Name = "Horario"
-        '
-        'DataGridViewImageColumn4
-        '
-        Me.DataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewImageColumn4.HeaderText = ""
-        Me.DataGridViewImageColumn4.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.DataGridViewImageColumn4.Name = "DataGridViewImageColumn4"
-        Me.DataGridViewImageColumn4.ReadOnly = True
-        Me.DataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewImageColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'carreras_lbl
-        '
-        Me.carreras_lbl.AutoSize = True
-        Me.carreras_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.carreras_lbl.Location = New System.Drawing.Point(4, 9)
-        Me.carreras_lbl.Name = "carreras_lbl"
-        Me.carreras_lbl.Size = New System.Drawing.Size(119, 25)
-        Me.carreras_lbl.TabIndex = 10
-        Me.carreras_lbl.Text = "Listar Carreras"
-        '
-        'nuevaCarrera_btn
-        '
-        Me.nuevaCarrera_btn.Location = New System.Drawing.Point(623, 412)
-        Me.nuevaCarrera_btn.Name = "nuevaCarrera_btn"
-        Me.nuevaCarrera_btn.Size = New System.Drawing.Size(123, 36)
-        Me.nuevaCarrera_btn.TabIndex = 9
-        Me.nuevaCarrera_btn.Text = "Nueva Carrera"
-        Me.nuevaCarrera_btn.UseSelectable = True
-        '
         'listaActis_pnl
         '
+        Me.listaActis_pnl.Controls.Add(Me.exportarActi_btn)
         Me.listaActis_pnl.Controls.Add(Me.MetroPanel4)
         Me.listaActis_pnl.Controls.Add(Me.vovlerActi_btn)
         Me.listaActis_pnl.Controls.Add(Me.MetroLabel56)
@@ -4041,12 +3807,21 @@ Partial Class FrmMain
         Me.listaActis_pnl.Name = "listaActis_pnl"
         Me.listaActis_pnl.Size = New System.Drawing.Size(767, 461)
         Me.listaActis_pnl.Style = MetroFramework.MetroColorStyle.Blue
-        Me.listaActis_pnl.TabIndex = 51
+        Me.listaActis_pnl.TabIndex = 86
         Me.listaActis_pnl.Theme = MetroFramework.MetroThemeStyle.Light
         Me.listaActis_pnl.VerticalScrollbarBarColor = True
         Me.listaActis_pnl.VerticalScrollbarHighlightOnWheel = False
         Me.listaActis_pnl.VerticalScrollbarSize = 10
         Me.listaActis_pnl.Visible = False
+        '
+        'exportarActi_btn
+        '
+        Me.exportarActi_btn.Location = New System.Drawing.Point(485, 412)
+        Me.exportarActi_btn.Name = "exportarActi_btn"
+        Me.exportarActi_btn.Size = New System.Drawing.Size(123, 36)
+        Me.exportarActi_btn.TabIndex = 52
+        Me.exportarActi_btn.Text = "Exportar"
+        Me.exportarActi_btn.UseSelectable = True
         '
         'MetroPanel4
         '
@@ -4225,8 +4000,9 @@ Partial Class FrmMain
         '
         'registrarCarrera_pnl
         '
-        Me.registrarCarrera_pnl.Controls.Add(Me.cancelarCarrera_btn)
+        Me.registrarCarrera_pnl.Controls.Add(Me.ImportarCarreras_cmb)
         Me.registrarCarrera_pnl.Controls.Add(Me.guardarCarrera_btn)
+        Me.registrarCarrera_pnl.Controls.Add(Me.cancelarCarrera_btn)
         Me.registrarCarrera_pnl.Controls.Add(Me.min2_lbl)
         Me.registrarCarrera_pnl.Controls.Add(Me.hora2_lbl)
         Me.registrarCarrera_pnl.Controls.Add(Me.minsFin5_nmbr)
@@ -4281,36 +4057,51 @@ Partial Class FrmMain
         Me.registrarCarrera_pnl.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.registrarCarrera_pnl.Location = New System.Drawing.Point(0, 3)
         Me.registrarCarrera_pnl.Name = "registrarCarrera_pnl"
-        Me.registrarCarrera_pnl.Size = New System.Drawing.Size(753, 462)
+        Me.registrarCarrera_pnl.Size = New System.Drawing.Size(746, 462)
         Me.registrarCarrera_pnl.Style = MetroFramework.MetroColorStyle.Purple
-        Me.registrarCarrera_pnl.TabIndex = 81
+        Me.registrarCarrera_pnl.TabIndex = 83
         Me.registrarCarrera_pnl.Theme = MetroFramework.MetroThemeStyle.Light
         Me.registrarCarrera_pnl.VerticalScrollbarBarColor = True
         Me.registrarCarrera_pnl.VerticalScrollbarHighlightOnWheel = False
         Me.registrarCarrera_pnl.VerticalScrollbarSize = 10
         Me.registrarCarrera_pnl.Visible = False
         '
-        'cancelarCarrera_btn
+        'ImportarCarreras_cmb
         '
-        Me.cancelarCarrera_btn.Location = New System.Drawing.Point(7, 412)
-        Me.cancelarCarrera_btn.Name = "cancelarCarrera_btn"
-        Me.cancelarCarrera_btn.Size = New System.Drawing.Size(123, 36)
-        Me.cancelarCarrera_btn.TabIndex = 79
-        Me.cancelarCarrera_btn.Text = "Cancelar"
-        Me.cancelarCarrera_btn.UseSelectable = True
+        Me.ImportarCarreras_cmb.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ImportarCarreras_cmb.FontSize = MetroFramework.MetroLinkSize.Tall
+        Me.ImportarCarreras_cmb.FontWeight = MetroFramework.MetroLinkWeight.Light
+        Me.ImportarCarreras_cmb.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.ImportarCarreras_cmb.Location = New System.Drawing.Point(142, 9)
+        Me.ImportarCarreras_cmb.Name = "ImportarCarreras_cmb"
+        Me.ImportarCarreras_cmb.Size = New System.Drawing.Size(147, 23)
+        Me.ImportarCarreras_cmb.TabIndex = 90
+        Me.ImportarCarreras_cmb.Text = "Importar Datos"
+        Me.ImportarCarreras_cmb.UseCustomForeColor = True
+        Me.ImportarCarreras_cmb.UseSelectable = True
         '
         'guardarCarrera_btn
         '
-        Me.guardarCarrera_btn.Location = New System.Drawing.Point(623, 412)
+        Me.guardarCarrera_btn.Location = New System.Drawing.Point(324, 421)
         Me.guardarCarrera_btn.Name = "guardarCarrera_btn"
-        Me.guardarCarrera_btn.Size = New System.Drawing.Size(123, 36)
-        Me.guardarCarrera_btn.TabIndex = 78
+        Me.guardarCarrera_btn.Size = New System.Drawing.Size(97, 23)
+        Me.guardarCarrera_btn.TabIndex = 88
         Me.guardarCarrera_btn.Text = "Guardar"
         Me.guardarCarrera_btn.UseSelectable = True
+        '
+        'cancelarCarrera_btn
+        '
+        Me.cancelarCarrera_btn.Location = New System.Drawing.Point(427, 421)
+        Me.cancelarCarrera_btn.Name = "cancelarCarrera_btn"
+        Me.cancelarCarrera_btn.Size = New System.Drawing.Size(97, 23)
+        Me.cancelarCarrera_btn.TabIndex = 89
+        Me.cancelarCarrera_btn.Text = "Cancelar"
+        Me.cancelarCarrera_btn.UseSelectable = True
         '
         'min2_lbl
         '
         Me.min2_lbl.AutoSize = True
+        Me.min2_lbl.Enabled = False
         Me.min2_lbl.Location = New System.Drawing.Point(594, 224)
         Me.min2_lbl.Name = "min2_lbl"
         Me.min2_lbl.Size = New System.Drawing.Size(55, 19)
@@ -4320,6 +4111,7 @@ Partial Class FrmMain
         'hora2_lbl
         '
         Me.hora2_lbl.AutoSize = True
+        Me.hora2_lbl.Enabled = False
         Me.hora2_lbl.Location = New System.Drawing.Point(546, 224)
         Me.hora2_lbl.Name = "hora2_lbl"
         Me.hora2_lbl.Size = New System.Drawing.Size(38, 19)
@@ -4328,6 +4120,7 @@ Partial Class FrmMain
         '
         'minsFin5_nmbr
         '
+        Me.minsFin5_nmbr.Enabled = False
         Me.minsFin5_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsFin5_nmbr.Location = New System.Drawing.Point(603, 354)
         Me.minsFin5_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4337,6 +4130,7 @@ Partial Class FrmMain
         '
         'minsFin4_nmbr
         '
+        Me.minsFin4_nmbr.Enabled = False
         Me.minsFin4_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsFin4_nmbr.Location = New System.Drawing.Point(603, 327)
         Me.minsFin4_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4346,6 +4140,7 @@ Partial Class FrmMain
         '
         'minsFin3_nmbr
         '
+        Me.minsFin3_nmbr.Enabled = False
         Me.minsFin3_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsFin3_nmbr.Location = New System.Drawing.Point(603, 300)
         Me.minsFin3_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4355,6 +4150,7 @@ Partial Class FrmMain
         '
         'minsFin2_nmbr
         '
+        Me.minsFin2_nmbr.Enabled = False
         Me.minsFin2_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsFin2_nmbr.Location = New System.Drawing.Point(603, 273)
         Me.minsFin2_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4364,6 +4160,7 @@ Partial Class FrmMain
         '
         'minsFin1_nmbr
         '
+        Me.minsFin1_nmbr.Enabled = False
         Me.minsFin1_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsFin1_nmbr.Location = New System.Drawing.Point(603, 246)
         Me.minsFin1_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4373,6 +4170,7 @@ Partial Class FrmMain
         '
         'horaFin5_nmbr
         '
+        Me.horaFin5_nmbr.Enabled = False
         Me.horaFin5_nmbr.Location = New System.Drawing.Point(546, 354)
         Me.horaFin5_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaFin5_nmbr.Name = "horaFin5_nmbr"
@@ -4381,6 +4179,7 @@ Partial Class FrmMain
         '
         'horaFin4_nmbr
         '
+        Me.horaFin4_nmbr.Enabled = False
         Me.horaFin4_nmbr.Location = New System.Drawing.Point(546, 327)
         Me.horaFin4_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaFin4_nmbr.Name = "horaFin4_nmbr"
@@ -4389,6 +4188,7 @@ Partial Class FrmMain
         '
         'horaFin3_nmbr
         '
+        Me.horaFin3_nmbr.Enabled = False
         Me.horaFin3_nmbr.Location = New System.Drawing.Point(546, 300)
         Me.horaFin3_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaFin3_nmbr.Name = "horaFin3_nmbr"
@@ -4397,6 +4197,7 @@ Partial Class FrmMain
         '
         'horaFin2_nmbr
         '
+        Me.horaFin2_nmbr.Enabled = False
         Me.horaFin2_nmbr.Location = New System.Drawing.Point(546, 273)
         Me.horaFin2_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaFin2_nmbr.Name = "horaFin2_nmbr"
@@ -4405,6 +4206,7 @@ Partial Class FrmMain
         '
         'horaFin1_nmbr
         '
+        Me.horaFin1_nmbr.Enabled = False
         Me.horaFin1_nmbr.Location = New System.Drawing.Point(546, 246)
         Me.horaFin1_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaFin1_nmbr.Name = "horaFin1_nmbr"
@@ -4414,6 +4216,7 @@ Partial Class FrmMain
         'min1_lbl
         '
         Me.min1_lbl.AutoSize = True
+        Me.min1_lbl.Enabled = False
         Me.min1_lbl.Location = New System.Drawing.Point(462, 224)
         Me.min1_lbl.Name = "min1_lbl"
         Me.min1_lbl.Size = New System.Drawing.Size(55, 19)
@@ -4423,6 +4226,7 @@ Partial Class FrmMain
         'hora1_lbl
         '
         Me.hora1_lbl.AutoSize = True
+        Me.hora1_lbl.Enabled = False
         Me.hora1_lbl.Location = New System.Drawing.Point(414, 224)
         Me.hora1_lbl.Name = "hora1_lbl"
         Me.hora1_lbl.Size = New System.Drawing.Size(38, 19)
@@ -4431,6 +4235,7 @@ Partial Class FrmMain
         '
         'minsIni5_nmbr
         '
+        Me.minsIni5_nmbr.Enabled = False
         Me.minsIni5_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsIni5_nmbr.Location = New System.Drawing.Point(471, 354)
         Me.minsIni5_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4440,6 +4245,7 @@ Partial Class FrmMain
         '
         'minsIni4_nmbr
         '
+        Me.minsIni4_nmbr.Enabled = False
         Me.minsIni4_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsIni4_nmbr.Location = New System.Drawing.Point(471, 327)
         Me.minsIni4_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4449,6 +4255,7 @@ Partial Class FrmMain
         '
         'minsIni3_nmbr
         '
+        Me.minsIni3_nmbr.Enabled = False
         Me.minsIni3_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsIni3_nmbr.Location = New System.Drawing.Point(471, 300)
         Me.minsIni3_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4458,6 +4265,7 @@ Partial Class FrmMain
         '
         'minsIni2_nmbr
         '
+        Me.minsIni2_nmbr.Enabled = False
         Me.minsIni2_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsIni2_nmbr.Location = New System.Drawing.Point(471, 273)
         Me.minsIni2_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4467,6 +4275,7 @@ Partial Class FrmMain
         '
         'minsIni1_nmbr
         '
+        Me.minsIni1_nmbr.Enabled = False
         Me.minsIni1_nmbr.Increment = New Decimal(New Integer() {15, 0, 0, 0})
         Me.minsIni1_nmbr.Location = New System.Drawing.Point(471, 246)
         Me.minsIni1_nmbr.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -4476,6 +4285,7 @@ Partial Class FrmMain
         '
         'horaIni5_nmbr
         '
+        Me.horaIni5_nmbr.Enabled = False
         Me.horaIni5_nmbr.Location = New System.Drawing.Point(414, 354)
         Me.horaIni5_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaIni5_nmbr.Name = "horaIni5_nmbr"
@@ -4484,6 +4294,7 @@ Partial Class FrmMain
         '
         'horaIni4_nmbr
         '
+        Me.horaIni4_nmbr.Enabled = False
         Me.horaIni4_nmbr.Location = New System.Drawing.Point(414, 327)
         Me.horaIni4_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaIni4_nmbr.Name = "horaIni4_nmbr"
@@ -4492,6 +4303,7 @@ Partial Class FrmMain
         '
         'horaIni3_nmbr
         '
+        Me.horaIni3_nmbr.Enabled = False
         Me.horaIni3_nmbr.Location = New System.Drawing.Point(414, 300)
         Me.horaIni3_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaIni3_nmbr.Name = "horaIni3_nmbr"
@@ -4500,6 +4312,7 @@ Partial Class FrmMain
         '
         'horaIni2_nmbr
         '
+        Me.horaIni2_nmbr.Enabled = False
         Me.horaIni2_nmbr.Location = New System.Drawing.Point(414, 273)
         Me.horaIni2_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaIni2_nmbr.Name = "horaIni2_nmbr"
@@ -4508,6 +4321,7 @@ Partial Class FrmMain
         '
         'horaIni1_nmbr
         '
+        Me.horaIni1_nmbr.Enabled = False
         Me.horaIni1_nmbr.Location = New System.Drawing.Point(414, 246)
         Me.horaIni1_nmbr.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.horaIni1_nmbr.Name = "horaIni1_nmbr"
@@ -4516,6 +4330,7 @@ Partial Class FrmMain
         '
         'dia5_cmb
         '
+        Me.dia5_cmb.Enabled = False
         Me.dia5_cmb.FormattingEnabled = True
         Me.dia5_cmb.Location = New System.Drawing.Point(156, 351)
         Me.dia5_cmb.Name = "dia5_cmb"
@@ -4524,6 +4339,7 @@ Partial Class FrmMain
         '
         'dia4_cmb
         '
+        Me.dia4_cmb.Enabled = False
         Me.dia4_cmb.FormattingEnabled = True
         Me.dia4_cmb.Location = New System.Drawing.Point(156, 324)
         Me.dia4_cmb.Name = "dia4_cmb"
@@ -4532,6 +4348,7 @@ Partial Class FrmMain
         '
         'dia3_cmb
         '
+        Me.dia3_cmb.Enabled = False
         Me.dia3_cmb.FormattingEnabled = True
         Me.dia3_cmb.Location = New System.Drawing.Point(156, 297)
         Me.dia3_cmb.Name = "dia3_cmb"
@@ -4540,6 +4357,7 @@ Partial Class FrmMain
         '
         'dia2_cmb
         '
+        Me.dia2_cmb.Enabled = False
         Me.dia2_cmb.FormattingEnabled = True
         Me.dia2_cmb.Location = New System.Drawing.Point(156, 270)
         Me.dia2_cmb.Name = "dia2_cmb"
@@ -4548,6 +4366,7 @@ Partial Class FrmMain
         '
         'dia1_cmb
         '
+        Me.dia1_cmb.Enabled = False
         Me.dia1_cmb.FormattingEnabled = True
         Me.dia1_cmb.Location = New System.Drawing.Point(156, 243)
         Me.dia1_cmb.Name = "dia1_cmb"
@@ -4557,6 +4376,7 @@ Partial Class FrmMain
         'horaFin_lbl
         '
         Me.horaFin_lbl.AutoSize = True
+        Me.horaFin_lbl.Enabled = False
         Me.horaFin_lbl.Location = New System.Drawing.Point(562, 191)
         Me.horaFin_lbl.Name = "horaFin_lbl"
         Me.horaFin_lbl.Size = New System.Drawing.Size(59, 19)
@@ -4566,6 +4386,7 @@ Partial Class FrmMain
         'horaIni_lbl
         '
         Me.horaIni_lbl.AutoSize = True
+        Me.horaIni_lbl.Enabled = False
         Me.horaIni_lbl.Location = New System.Drawing.Point(426, 191)
         Me.horaIni_lbl.Name = "horaIni_lbl"
         Me.horaIni_lbl.Size = New System.Drawing.Size(72, 19)
@@ -4765,6 +4586,7 @@ Partial Class FrmMain
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.Window
+        Me.GroupBox3.Enabled = False
         Me.GroupBox3.Location = New System.Drawing.Point(399, 200)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(124, 185)
@@ -4774,6 +4596,7 @@ Partial Class FrmMain
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.SystemColors.Window
+        Me.GroupBox4.Enabled = False
         Me.GroupBox4.Location = New System.Drawing.Point(533, 200)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(124, 185)
@@ -4784,21 +4607,229 @@ Partial Class FrmMain
         '
         Me.GroupBox5.BackColor = System.Drawing.SystemColors.Window
         Me.GroupBox5.Controls.Add(Me.MetroLabel51)
-        Me.GroupBox5.Location = New System.Drawing.Point(30, 176)
+        Me.GroupBox5.Location = New System.Drawing.Point(30, 175)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(678, 222)
+        Me.GroupBox5.Size = New System.Drawing.Size(678, 223)
         Me.GroupBox5.TabIndex = 77
         Me.GroupBox5.TabStop = False
         '
         'MetroLabel51
         '
         Me.MetroLabel51.AutoSize = True
+        Me.MetroLabel51.Enabled = False
         Me.MetroLabel51.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel51.Location = New System.Drawing.Point(0, -5)
         Me.MetroLabel51.Name = "MetroLabel51"
         Me.MetroLabel51.Size = New System.Drawing.Size(76, 25)
         Me.MetroLabel51.TabIndex = 38
         Me.MetroLabel51.Text = "Horarios"
+        '
+        'listaCarreras_pnl
+        '
+        Me.listaCarreras_pnl.Controls.Add(Me.exportarCarreras_btn)
+        Me.listaCarreras_pnl.Controls.Add(Me.listaCursos_pnl)
+        Me.listaCarreras_pnl.Controls.Add(Me.listaCarrerasVolver_btn)
+        Me.listaCarreras_pnl.Controls.Add(Me.MetroLabel17)
+        Me.listaCarreras_pnl.Controls.Add(Me.listaCarreras_dg)
+        Me.listaCarreras_pnl.Controls.Add(Me.carreras_lbl)
+        Me.listaCarreras_pnl.Controls.Add(Me.nuevaCarrera_btn)
+        Me.listaCarreras_pnl.HorizontalScrollbarBarColor = True
+        Me.listaCarreras_pnl.HorizontalScrollbarHighlightOnWheel = False
+        Me.listaCarreras_pnl.HorizontalScrollbarSize = 10
+        Me.listaCarreras_pnl.Location = New System.Drawing.Point(0, 3)
+        Me.listaCarreras_pnl.Name = "listaCarreras_pnl"
+        Me.listaCarreras_pnl.Size = New System.Drawing.Size(767, 461)
+        Me.listaCarreras_pnl.Style = MetroFramework.MetroColorStyle.Blue
+        Me.listaCarreras_pnl.TabIndex = 85
+        Me.listaCarreras_pnl.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.listaCarreras_pnl.VerticalScrollbarBarColor = True
+        Me.listaCarreras_pnl.VerticalScrollbarHighlightOnWheel = False
+        Me.listaCarreras_pnl.VerticalScrollbarSize = 10
+        Me.listaCarreras_pnl.Visible = False
+        '
+        'exportarCarreras_btn
+        '
+        Me.exportarCarreras_btn.Location = New System.Drawing.Point(485, 412)
+        Me.exportarCarreras_btn.Name = "exportarCarreras_btn"
+        Me.exportarCarreras_btn.Size = New System.Drawing.Size(123, 36)
+        Me.exportarCarreras_btn.TabIndex = 52
+        Me.exportarCarreras_btn.Text = "Exportar"
+        Me.exportarCarreras_btn.UseSelectable = True
+        '
+        'listaCursos_pnl
+        '
+        Me.listaCursos_pnl.Controls.Add(Me.listaCursosVolver_btn)
+        Me.listaCursos_pnl.Controls.Add(Me.MetroLabel2)
+        Me.listaCursos_pnl.Controls.Add(Me.listaCursos_dg)
+        Me.listaCursos_pnl.Controls.Add(Me.listaCursos_lbl)
+        Me.listaCursos_pnl.HorizontalScrollbarBarColor = True
+        Me.listaCursos_pnl.HorizontalScrollbarHighlightOnWheel = False
+        Me.listaCursos_pnl.HorizontalScrollbarSize = 10
+        Me.listaCursos_pnl.Location = New System.Drawing.Point(548, 431)
+        Me.listaCursos_pnl.Name = "listaCursos_pnl"
+        Me.listaCursos_pnl.Size = New System.Drawing.Size(0, 3)
+        Me.listaCursos_pnl.Style = MetroFramework.MetroColorStyle.Blue
+        Me.listaCursos_pnl.TabIndex = 51
+        Me.listaCursos_pnl.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.listaCursos_pnl.VerticalScrollbarBarColor = True
+        Me.listaCursos_pnl.VerticalScrollbarHighlightOnWheel = False
+        Me.listaCursos_pnl.VerticalScrollbarSize = 10
+        Me.listaCursos_pnl.Visible = False
+        '
+        'listaCursosVolver_btn
+        '
+        Me.listaCursosVolver_btn.Location = New System.Drawing.Point(7, 412)
+        Me.listaCursosVolver_btn.Name = "listaCursosVolver_btn"
+        Me.listaCursosVolver_btn.Size = New System.Drawing.Size(123, 36)
+        Me.listaCursosVolver_btn.TabIndex = 50
+        Me.listaCursosVolver_btn.Text = "Volver"
+        Me.listaCursosVolver_btn.UseSelectable = True
+        '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.Location = New System.Drawing.Point(723, 7)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(20, 19)
+        Me.MetroLabel2.TabIndex = 49
+        Me.MetroLabel2.Text = "id"
+        Me.MetroLabel2.Visible = False
+        '
+        'listaCursos_dg
+        '
+        Me.listaCursos_dg.AllowUserToAddRows = False
+        Me.listaCursos_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.listaCursos_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewImageColumn5})
+        Me.listaCursos_dg.Location = New System.Drawing.Point(7, 37)
+        Me.listaCursos_dg.Name = "listaCursos_dg"
+        Me.listaCursos_dg.RowHeadersVisible = False
+        Me.listaCursos_dg.Size = New System.Drawing.Size(739, 344)
+        Me.listaCursos_dg.TabIndex = 12
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn13.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.Visible = False
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "Estado"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        '
+        'DataGridViewImageColumn5
+        '
+        Me.DataGridViewImageColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewImageColumn5.HeaderText = ""
+        Me.DataGridViewImageColumn5.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.DataGridViewImageColumn5.Name = "DataGridViewImageColumn5"
+        Me.DataGridViewImageColumn5.ReadOnly = True
+        Me.DataGridViewImageColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewImageColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'listaCursos_lbl
+        '
+        Me.listaCursos_lbl.AutoSize = True
+        Me.listaCursos_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.listaCursos_lbl.Location = New System.Drawing.Point(4, 9)
+        Me.listaCursos_lbl.Name = "listaCursos_lbl"
+        Me.listaCursos_lbl.Size = New System.Drawing.Size(107, 25)
+        Me.listaCursos_lbl.TabIndex = 10
+        Me.listaCursos_lbl.Text = "Listar Cursos"
+        '
+        'listaCarrerasVolver_btn
+        '
+        Me.listaCarrerasVolver_btn.Location = New System.Drawing.Point(7, 412)
+        Me.listaCarrerasVolver_btn.Name = "listaCarrerasVolver_btn"
+        Me.listaCarrerasVolver_btn.Size = New System.Drawing.Size(123, 36)
+        Me.listaCarrerasVolver_btn.TabIndex = 50
+        Me.listaCarrerasVolver_btn.Text = "Volver"
+        Me.listaCarrerasVolver_btn.UseSelectable = True
+        '
+        'MetroLabel17
+        '
+        Me.MetroLabel17.AutoSize = True
+        Me.MetroLabel17.Location = New System.Drawing.Point(723, 7)
+        Me.MetroLabel17.Name = "MetroLabel17"
+        Me.MetroLabel17.Size = New System.Drawing.Size(20, 19)
+        Me.MetroLabel17.TabIndex = 49
+        Me.MetroLabel17.Text = "id"
+        Me.MetroLabel17.Visible = False
+        '
+        'listaCarreras_dg
+        '
+        Me.listaCarreras_dg.AllowUserToAddRows = False
+        Me.listaCarreras_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.listaCarreras_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.Codigo, Me.Costo, Me.Horario, Me.DataGridViewImageColumn4})
+        Me.listaCarreras_dg.Location = New System.Drawing.Point(7, 37)
+        Me.listaCarreras_dg.Name = "listaCarreras_dg"
+        Me.listaCarreras_dg.RowHeadersVisible = False
+        Me.listaCarreras_dg.Size = New System.Drawing.Size(739, 344)
+        Me.listaCarreras_dg.TabIndex = 12
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn10.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Visible = False
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Codigo"
+        Me.Codigo.Name = "Codigo"
+        '
+        'Costo
+        '
+        Me.Costo.HeaderText = "Costo"
+        Me.Costo.Name = "Costo"
+        '
+        'Horario
+        '
+        Me.Horario.HeaderText = "Horario"
+        Me.Horario.Name = "Horario"
+        '
+        'DataGridViewImageColumn4
+        '
+        Me.DataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewImageColumn4.HeaderText = ""
+        Me.DataGridViewImageColumn4.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.DataGridViewImageColumn4.Name = "DataGridViewImageColumn4"
+        Me.DataGridViewImageColumn4.ReadOnly = True
+        Me.DataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewImageColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'carreras_lbl
+        '
+        Me.carreras_lbl.AutoSize = True
+        Me.carreras_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.carreras_lbl.Location = New System.Drawing.Point(4, 9)
+        Me.carreras_lbl.Name = "carreras_lbl"
+        Me.carreras_lbl.Size = New System.Drawing.Size(119, 25)
+        Me.carreras_lbl.TabIndex = 10
+        Me.carreras_lbl.Text = "Listar Carreras"
+        '
+        'nuevaCarrera_btn
+        '
+        Me.nuevaCarrera_btn.Location = New System.Drawing.Point(623, 412)
+        Me.nuevaCarrera_btn.Name = "nuevaCarrera_btn"
+        Me.nuevaCarrera_btn.Size = New System.Drawing.Size(123, 36)
+        Me.nuevaCarrera_btn.TabIndex = 9
+        Me.nuevaCarrera_btn.Text = "Nueva Carrera"
+        Me.nuevaCarrera_btn.UseSelectable = True
         '
         'tCareers
         '
@@ -4889,13 +4920,13 @@ Partial Class FrmMain
         Me.PnlListaSeguimientos.PerformLayout()
         CType(Me.lstSeguimientos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabProspectus.ResumeLayout(False)
-        Me.PnlListaProspectos.ResumeLayout(False)
-        Me.PnlListaProspectos.PerformLayout()
-        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlNuevoProspecto.ResumeLayout(False)
         Me.PnlNuevoProspecto.PerformLayout()
         Me.pnlSeguimientos.ResumeLayout(False)
         Me.pnlSeguimientos.PerformLayout()
+        Me.PnlListaProspectos.ResumeLayout(False)
+        Me.PnlListaProspectos.PerformLayout()
+        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabProducts.ResumeLayout(False)
         Me.registrarActi_pnl.ResumeLayout(False)
         Me.registrarActi_pnl.PerformLayout()
@@ -4921,12 +4952,6 @@ Partial Class FrmMain
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.horariosActi_grp.ResumeLayout(False)
         Me.horariosActi_grp.PerformLayout()
-        Me.listaCarreras_pnl.ResumeLayout(False)
-        Me.listaCarreras_pnl.PerformLayout()
-        Me.listaCursos_pnl.ResumeLayout(False)
-        Me.listaCursos_pnl.PerformLayout()
-        CType(Me.listaCursos_dg, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.listaCarreras_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.listaActis_pnl.ResumeLayout(False)
         Me.listaActis_pnl.PerformLayout()
         Me.MetroPanel4.ResumeLayout(False)
@@ -4957,6 +4982,12 @@ Partial Class FrmMain
         CType(Me.horaIni1_nmbr, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        Me.listaCarreras_pnl.ResumeLayout(False)
+        Me.listaCarreras_pnl.PerformLayout()
+        Me.listaCursos_pnl.ResumeLayout(False)
+        Me.listaCursos_pnl.PerformLayout()
+        CType(Me.listaCursos_dg, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.listaCarreras_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabsContainer.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -5128,152 +5159,6 @@ Partial Class FrmMain
     Friend WithEvents tgReportsRol As MetroFramework.Controls.MetroToggle
     Friend WithEvents tgKpiRol As MetroFramework.Controls.MetroToggle
     Friend WithEvents tgEventsRol As MetroFramework.Controls.MetroToggle
-    Friend WithEvents listaCarreras_pnl As MetroFramework.Controls.MetroPanel
-    Friend WithEvents listaCarrerasVolver_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel17 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents listaCarreras_dg As System.Windows.Forms.DataGridView
-    Friend WithEvents carreras_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents nuevaCarrera_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents listaCursos_pnl As MetroFramework.Controls.MetroPanel
-    Friend WithEvents listaCursosVolver_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents listaCursos_dg As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn5 As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents listaCursos_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents registrarCarrera_pnl As MetroFramework.Controls.MetroPanel
-    Friend WithEvents min2_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents hora2_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents minsFin5_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsFin4_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsFin3_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsFin2_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsFin1_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin5_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin4_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin3_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin2_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin1_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents min1_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents hora1_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents minsIni5_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIni4_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIni3_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIni2_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIni1_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni5_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni4_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni3_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni2_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni1_nmbr As System.Windows.Forms.NumericUpDown
-    Friend WithEvents dia5_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents dia4_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents dia3_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents dia2_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents dia1_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents horaFin_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents horaIni_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel35 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel36 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel37 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel38 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel39 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents tipoCarrera_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents costoCarrera_text As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents nombreCarrera_text As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents codigoCarrera_text As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents carreraNombre_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents tipoCarrera_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents costoCarrera_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents carreraCodigo_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents registrarCarrera_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
-    Friend WithEvents MetroLabel51 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents guardarCarrera_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents cancelarCarrera_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents registrarActi_pnl As MetroFramework.Controls.MetroPanel
-    Friend WithEvents cancelarActi_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents guardarActi_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents minsFinActi_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents horaFinActi_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents minsFin5Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsFin4Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsFin3Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsFin2Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsFin1Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin5Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin4Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin3Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin2Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaFin1Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIniActi_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents horaIniActi_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents minsIni5Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIni4Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIni3Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIni2Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents minsIni1Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni5Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni4Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni3Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni2Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents horaIni1Acti_nmb As System.Windows.Forms.NumericUpDown
-    Friend WithEvents dia5Acti_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents dia4Acti_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents dia3Acti_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents dia2Acti_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents dia1Acti_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents MetroLabel8 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel9 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents dia5_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents dia4Acti_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents dia2Acti_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents dia3Acti_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents dia1Acti_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents tipoActi_cmb As System.Windows.Forms.ComboBox
-    Friend WithEvents costoActi_text As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents nombreActi_text As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents codigoActi_text As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents nombreActi_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents tipoActi_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel22 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents codigoActi_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents acti_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
-    Friend WithEvents horariosActi_grp As System.Windows.Forms.GroupBox
-    Friend WithEvents MetroLabel26 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents listaActis_pnl As MetroFramework.Controls.MetroPanel
-    Friend WithEvents MetroPanel4 As MetroFramework.Controls.MetroPanel
-    Friend WithEvents MetroButton5 As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel54 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn6 As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents MetroLabel55 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents vovlerActi_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel56 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents listaActis_dg As System.Windows.Forms.DataGridView
-    Friend WithEvents listaActis_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents nuevoActi_btn As MetroFramework.Controls.MetroButton
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Codigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Costo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Horario As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn4 As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Codigo2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents costo2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents horario2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn7 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents RegistrarVentas_pnl As MetroFramework.Controls.MetroPanel
     Friend WithEvents tipo_prodVenta_cmb As System.Windows.Forms.ComboBox
     Friend WithEvents cod_prod_cmb As System.Windows.Forms.ComboBox
@@ -5326,4 +5211,154 @@ Partial Class FrmMain
     Friend WithEvents cbInteresesProspecto As MetroFramework.Controls.MetroComboBox
     Friend WithEvents chkChangeUserPassword As MetroFramework.Controls.MetroCheckBox
     Friend WithEvents lblPasswordUserBackup As System.Windows.Forms.Label
+    Friend WithEvents listaActis_pnl As MetroFramework.Controls.MetroPanel
+    Friend WithEvents exportarActi_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroPanel4 As MetroFramework.Controls.MetroPanel
+    Friend WithEvents MetroButton5 As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroLabel54 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewImageColumn6 As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents MetroLabel55 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents vovlerActi_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroLabel56 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents listaActis_dg As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn19 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Codigo2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents costo2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents horario2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewImageColumn7 As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents listaActis_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents nuevoActi_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents listaCarreras_pnl As MetroFramework.Controls.MetroPanel
+    Friend WithEvents exportarCarreras_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents listaCursos_pnl As MetroFramework.Controls.MetroPanel
+    Friend WithEvents listaCursosVolver_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents listaCursos_dg As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewImageColumn5 As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents listaCursos_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents listaCarrerasVolver_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroLabel17 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents listaCarreras_dg As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Codigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Costo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Horario As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewImageColumn4 As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents carreras_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents nuevaCarrera_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents registrarActi_pnl As MetroFramework.Controls.MetroPanel
+    Friend WithEvents cancelarAct_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents guardarAct_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents importarActis_lbl As MetroFramework.Controls.MetroLink
+    Friend WithEvents minsFinActi_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents horaFinActi_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents minsFin5Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsFin4Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsFin3Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsFin2Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsFin1Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin5Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin4Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin3Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin2Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin1Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIniActi_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents horaIniActi_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents minsIni5Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIni4Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIni3Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIni2Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIni1Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni5Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni4Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni3Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni2Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni1Acti_nmb As System.Windows.Forms.NumericUpDown
+    Friend WithEvents dia5Acti_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents dia4Acti_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents dia3Acti_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents dia2Acti_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents dia1Acti_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents MetroLabel8 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel9 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents dia5_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents dia4Acti_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents dia2Acti_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents dia3Acti_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents dia1Acti_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents tipoActi_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents costoActi_text As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents nombreActi_text As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents codigoActi_text As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents nombreActi_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents tipoActi_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel22 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents codigoActi_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents acti_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents horariosActi_grp As System.Windows.Forms.GroupBox
+    Friend WithEvents MetroLabel26 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents registrarCarrera_pnl As MetroFramework.Controls.MetroPanel
+    Friend WithEvents ImportarCarreras_cmb As MetroFramework.Controls.MetroLink
+    Friend WithEvents guardarCarrera_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents cancelarCarrera_btn As MetroFramework.Controls.MetroButton
+    Friend WithEvents min2_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents hora2_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents minsFin5_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsFin4_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsFin3_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsFin2_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsFin1_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin5_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin4_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin3_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin2_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaFin1_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents min1_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents hora1_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents minsIni5_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIni4_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIni3_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIni2_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents minsIni1_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni5_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni4_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni3_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni2_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents horaIni1_nmbr As System.Windows.Forms.NumericUpDown
+    Friend WithEvents dia5_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents dia4_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents dia3_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents dia2_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents dia1_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents horaFin_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents horaIni_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel35 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel36 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel37 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel38 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel39 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents tipoCarrera_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents costoCarrera_text As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents nombreCarrera_text As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents codigoCarrera_text As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents carreraNombre_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents tipoCarrera_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents costoCarrera_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents carreraCodigo_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents registrarCarrera_lbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents MetroLabel51 As MetroFramework.Controls.MetroLabel
 End Class
