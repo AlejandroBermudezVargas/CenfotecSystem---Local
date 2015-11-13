@@ -18,7 +18,7 @@ Public Class ProductsController
         request.RequestFormat = DataFormat.Json
         request.AddObject(producto)
         Dim response = client.Execute(Of Producto)(request)
-        If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.Created)) Then
             Return True
         Else
             Return False
@@ -101,7 +101,7 @@ Public Class ProductsController
         Dim request = New RestRequest("Products/{id}", Method.GET)
         request.RootElement = "result"
         request.AddUrlSegment("id", id)
-        'request.RequestFormat = DataFormat.Json
+        request.RequestFormat = DataFormat.Json
         Dim response = client.Execute(Of Producto)(request)
 
         If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
