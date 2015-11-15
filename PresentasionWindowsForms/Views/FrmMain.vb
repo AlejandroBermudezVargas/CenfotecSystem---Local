@@ -282,6 +282,101 @@ Public Class FrmMain
         Return result
     End Function
 
+    Private Sub lstProspectos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles lstProspectos.CellContentClick
+        If e.ColumnIndex = 7 Then
+            Dim id As String = lstProspectos.Rows(e.RowIndex).Cells(0).Value
+            Dim ppros As Prospecto = ProspectusController.getProspecto(id)
+            lblIdProspecto.Text = ppros.Id_prospecto
+            txtNombreProspecto.Text = ppros.Nombre
+            txtApellidosProspecto.Text = ppros.Apellidos
+            txtFechaNacProspecto.Text = ppros.Fecha_nacimiento
+            txtProcedenciaProspecto.Text = ppros.Procedencia
+            tglEstadoProspecto.Checked = ppros.Estado
+            txtTelProspecto.Text = ppros.Telefono
+            txtEmailProspecto.Text = ppros.Email
+            txtDireccionProspecto.Text = ppros.Direccion
+            tglEstaInteresado.Checked = ppros.Interesado
+            tglEsCliente.Checked = ppros.Cliente
+            btnNuevoSeguimiento.Visible = True
+            btnListarSeguimientos.Visible = True
+            PnlListaProspectos.Visible = False
+            PnlNuevoProspecto.Visible = True
+        Else
+            Exit Sub
+        End If
+    End Sub
+
+    Public Sub llenarComboIntereses()
+        Dim comboData As New Dictionary(Of String, String)()
+        comboData.Add(1, "Acti")
+        comboData.Add(2, "Carrera")
+        cbInteresesProspecto.DataSource = New BindingSource(comboData, Nothing)
+        cbInteresesProspecto.DisplayMember = "Value"
+        cbInteresesProspecto.ValueMember = "Key"
+    End Sub
+
+    Public Sub llenarComboEventos()
+        Dim eventos = EventosController.ListarEventos()
+        Dim comboData As New Dictionary(Of String, String)()
+        If (eventos.Count > 0) Then
+            For Each evento As Evento In eventos
+                comboData.Add(evento.IdEvento, evento.Lugar)
+            Next
+            cbEventos.DataSource = New BindingSource(comboData, Nothing)
+            cbEventos.DisplayMember = "Value"
+            cbEventos.ValueMember = "Key"
+        End If
+    End Sub
+
+    Private Sub tglEstaInteresado_CheckedChanged(sender As Object, e As EventArgs) Handles tglEstaInteresado.CheckedChanged
+        If (tglEstaInteresado.Checked = True) Then
+            txtProcedenciaProspecto.Enabled = False
+            cbInteresesProspecto.Enabled = True
+            llenarComboIntereses()
+        Else
+            txtProcedenciaProspecto.Enabled = True
+            cbInteresesProspecto.Enabled = False
+        End If
+    End Sub
+
+    Private Sub ckbEventoProspecto_CheckedChanged(sender As Object, e As EventArgs) Handles ckbEventoProspecto.CheckedChanged
+        If (ckbEventoProspecto.Checked = True) Then
+            txtProcedenciaProspecto.Enabled = False
+            cbEventos.Enabled = True
+            llenarComboEventos()
+        Else
+            txtProcedenciaProspecto.Enabled = True
+            cbEventos.Enabled = False
+        End If
+    End Sub
+
+    Private Sub tglEstadoProspecto_CheckedChanged(sender As Object, e As EventArgs) Handles tglEstadoProspecto.CheckedChanged
+        If tglEstadoProspecto.Checked = True Then
+            habilitarFormProspectos(True)
+        Else
+            habilitarFormProspectos(False)
+        End If
+    End Sub
+
+    Private Sub habilitarFormProspectos(ByVal valor As Boolean)
+        txtNombreProspecto.Enabled = valor
+        txtApellidosProspecto.Enabled = valor
+        txtFechaNacProspecto.Enabled = valor
+        txtEmailProspecto.Enabled = valor
+        txtTelProspecto.Enabled = valor
+        txtProcedenciaProspecto.Enabled = valor
+        txtDireccionProspecto.Enabled = valor
+        tglEstaInteresado.Enabled = valor
+        tglEsCliente.Enabled = valor
+        ckbEventoProspecto.Enabled = valor
+        If tglEstaInteresado.Checked = True Then
+            cbInteresesProspecto.Enabled = valor
+        End If
+        If ckbEventoProspecto.Checked = True Then
+            cbEventos.Enabled = valor
+        End If
+    End Sub
+
     'VALIDACIONES
     Function IsEmail(ByVal text As String) As Boolean
         Static emailExpression As New Regex("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$")
