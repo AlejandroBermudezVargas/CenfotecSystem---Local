@@ -51,6 +51,7 @@ Public Class FrmMain
         cboUsuario.Text = "Usuario"
         Me.llenarEventos()
         Me.llenarListaProspectos()
+        TabProductos.Focus()
     End Sub
 
     Private Sub btnCrearEvento_Click(sender As Object, e As EventArgs) Handles btnCrearEvento.Click
@@ -310,6 +311,189 @@ Public Class FrmMain
         Static regularExpression As New Regex("^[a-zA-Z ]*$")
         Return regularExpression.IsMatch(text)
     End Function
+
+    Private Sub TabProductos_Click(sender As Object, e As EventArgs) Handles TabProductos.Click
+
+    End Sub
+
+    Private Sub tListaVentas_Click(sender As Object, e As EventArgs) Handles tListaVentas.Click
+        listarVerntas_pnl.Visible = True
+    End Sub
+
+    Private Sub tRegistrar_Click(sender As Object, e As EventArgs) Handles tRegistrar.Click
+        llenarComboProductos()
+        llenarComboCodigos()
+        llenarComboTipoVenta()
+        RegistrarVentas_pnl.Visible = True
+    End Sub
+
+    Private Sub tConsultarVenta_Click(sender As Object, e As EventArgs) Handles tConsultarVenta.Click
+        consultarVentas_pnl.Visible = True
+    End Sub
+
+    Private Sub volverConsulta_Click(sender As Object, e As EventArgs) Handles volverConsulta.Click
+        consultarVentas_pnl.Visible = False
+    End Sub
+
+    Private Sub cancelarVenta_btn_Click(sender As Object, e As EventArgs) Handles cancelarVenta_btn.Click
+        RegistrarVentas_pnl.Visible = False
+    End Sub
+
+    Private Sub guardarVenta_btn_Click(sender As Object, e As EventArgs) Handles guardarVenta_btn.Click
+        Dim totalPagar As Double
+        Dim fecha As Date
+        Dim id_usuario As Integer
+        Dim tipo As String
+
+        id_usuario = user.id_usuario
+        tipo = tipo_prodVenta_cmb.Text
+        fecha = Today
+        totalPagar = calcularTotal()
+        Dim isCorrect = SalesController.RegistrarVenta(fecha, totalPagar, id_usuario, tipo)
+        If isCorrect Then
+            MsgBox("La nueva venta se ha agregado con exito.", MsgBoxStyle.Information)
+            LimpiarFormVenta()
+            llenarTablaVentas()
+            RegistrarVentas_pnl.Visible = False
+            listarVerntas_pnl.Visible = True
+        Else
+            MsgBox("No se ha podido ingresar la nueva venta.", MsgBoxStyle.Critical)
+        End If
+    End Sub
+
+    Private Sub LimpiarFormVenta()
+        productos_cmb.SelectedIndex = 0
+        cod_prod_cmb.SelectedIndex = 0
+        matricula_text.Text = ""
+        costoVenta_text.Text = ""
+    End Sub
+
+    Private Sub nuevaVenta_btn_Click(sender As Object, e As EventArgs) Handles nuevaVenta_btn.Click
+        llenarComboProductos()
+        llenarComboCodigos()
+        llenarComboTipoVenta()
+        RegistrarVentas_pnl.Visible = True
+    End Sub
+
+    Private Sub volverVenta_btn_Click(sender As Object, e As EventArgs) Handles volverVenta_btn.Click
+        listarVerntas_pnl.Visible = False
+    End Sub
+    Private Sub llenarTablaVentas()
+        listaVentas_dg.Rows.Clear()
+        Dim usuario As UserModel = Nothing
+
+        Dim ventas As List(Of Sale) = SalesController.obtenerListaVentas()
+        If (Not ventas Is Nothing) Then
+            For Each venta As Sale In ventas
+                If user.id_rol = 1 Then
+                    usuario = Users_controller.getUser(venta.Id_Usuario)
+                    listaVentas_dg.Rows.Add(venta.SaleId, usuario.nombre & " " & usuario.apellido, venta.Monto, venta.Fecha, venta.Tipo)
+                Else
+
+                    If venta.Id_Usuario = user.id_usuario Then
+                        usuario = Users_controller.getUser(venta.Id_Usuario)
+                        listaVentas_dg.Rows.Add(venta.SaleId, usuario.nombre & " " & usuario.apellido, venta.Monto, venta.Fecha, venta.Tipo)
+                    End If
+                End If
+            Next
+        End If
+    End Sub
+    Public Function calcularTotal() As Double
+        Dim totalPagar As Double
+        Dim matricula As Double
+
+        If matricula_text.Text = "" Then
+            matricula = 0.0
+        Else
+            matricula = Double.Parse(matricula_text.Text)
+        End If
+        If costoVenta_text.Text <> "" Then
+            totalPagar = Double.Parse(costoVenta_text.Text)
+        End If
+        totalPagar = totalPagar + matricula
+        totalVenta_text.Text = totalPagar
+        Return totalPagar
+    End Function
+    Private Sub cod_prod_cmb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cod_prod_cmb.SelectedIndexChanged
+        Dim id As Integer
+        Dim producto As Producto
+
+        If IsNothing(cod_prod_cmb.SelectedValue) Or (DirectCast(cod_prod_cmb.SelectedItem, KeyValuePair(Of String, String)).Key) = "" Then
+            id = 0
+        Else
+            id = CInt(DirectCast(cod_prod_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
+            producto = ProductsController.obtenerProducto(id)
+            costoVenta_text.Text = producto.Costo
+            tipo_prodVenta_cmb.SelectedIndex = producto.Id_Tipo_Product
+            productos_cmb.SelectedIndex = cod_prod_cmb.SelectedIndex
+
+        End If
+    End Sub
+
+    Private Sub productos_cmb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles productos_cmb.SelectedIndexChanged
+        Dim id As Integer
+        Dim producto As Producto
+        If IsNothing(productos_cmb.SelectedValue) Or (DirectCast(productos_cmb.SelectedItem, KeyValuePair(Of String, String)).Key) = "" Then
+            id = 0
+        Else
+            id = CInt(DirectCast(productos_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
+            producto = ProductsController.obtenerProducto(id)
+            costoVenta_text.Text = producto.Costo
+            tipo_prodVenta_cmb.SelectedIndex = producto.Id_Tipo_Product
+            cod_prod_cmb.SelectedIndex = productos_cmb.SelectedIndex
+
+        End If
+    End Sub
+
+    Private Sub costo_text_Click(sender As Object, e As EventArgs) Handles costoVenta_text.TextChanged
+        calcularTotal()
+    End Sub
+
+    Private Sub matricula_text_Click(sender As Object, e As EventArgs) Handles matricula_text.TextChanged
+        calcularTotal()
+    End Sub
+
+    Private Sub llenarComboProductos()
+        Dim productos As List(Of Producto) = ProductsController.obtenerListaProductos
+        Dim comboSource As New Dictionary(Of String, String)()
+        comboSource.Add("", "Elija uno")
+        For Each prod As Producto In productos
+            comboSource.Add(prod.Id_Producto.ToString, prod.Nombre)
+        Next
+        productos_cmb.DataSource = New BindingSource(comboSource, Nothing)
+        productos_cmb.DisplayMember = "Value"
+        productos_cmb.ValueMember = "Key"
+    End Sub
+
+    Private Sub llenarComboCodigos()
+
+        Dim productos As List(Of Producto) = ProductsController.obtenerListaProductos
+        Dim comboSource As New Dictionary(Of String, String)()
+        comboSource.Add("", "Elija uno")
+        For Each prod As Producto In productos
+            comboSource.Add(prod.Id_Producto, prod.Codigo_Producto)
+        Next
+        cod_prod_cmb.DataSource = New BindingSource(comboSource, Nothing)
+        cod_prod_cmb.DisplayMember = "Value"
+        cod_prod_cmb.ValueMember = "Key"
+    End Sub
+    Private Sub llenarComboTipoVenta()
+
+        Dim tipos As List(Of Tipo_Producto) = ProductTypeController.obtenerLista
+        Dim comboSource As New Dictionary(Of String, String)()
+
+        If IsNothing(tipos) Then
+            MsgBox("Se ha producido un error y no se pueden cargar los datos de tipo de producto.", MsgBoxStyle.Critical)
+        Else
+            comboSource.Add("", "")
+            For Each tipo As Tipo_Producto In tipos
+                comboSource.Add(tipo.Id_Tipo_Producto.ToString, tipo.Nombre)
+            Next
+        End If
+        tipo_prodVenta_cmb.DataSource = New BindingSource(comboSource, Nothing)
+        tipo_prodVenta_cmb.DisplayMember = "Value"
+        tipo_prodVenta_cmb.ValueMember = "Key"
+    End Sub
 End Class
 
 
