@@ -1,46 +1,53 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Net.Mail
 Public Class FrmMain
+
+    Private user As UserModel
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Login</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Sub New()
+
+        ' Llamada necesaria para el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Login</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Sub New(ByRef puser As UserModel)
+        ' Llamada necesaria para el diseñador.
+        InitializeComponent()
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        user = puser
+        Me.Text = user.nombre + " " + user.apellido
+        'Me.tActis.Visible = False
+        'Me.tCareers.Visible = False
+        Me.Main.TabPages.Remove(Me.TabProductos)
+        Me.Main.TabPages.Remove(Me.TabProspectos)
+        Me.Main.TabPages.Remove(Me.TabVentas)
+        Me.Main.TabPages.Remove(Me.Eventos)
+        Me.Main.TabPages.Remove(Me.KPIHolder)
+        Me.Main.TabPages.Remove(Me.TabUsuarios)
+        Me.Main.TabPages.Remove(Me.TabReportes)
+        Me.Main.TabPages.Remove(Me.TabConfiguracion)
+    End Sub
+
     Dim idEventoModificar As Integer
-    Private Sub MetroTile2_Click(sender As Object, e As EventArgs) Handles btnActiIco.Click
-
-    End Sub
-
-    Private Sub MetroLabel2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub MetroComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboUsuario.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub MetroTabPage9_Click(sender As Object, e As EventArgs) Handles TabConfiguracion.Click
-
-    End Sub
 
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cboUsuario.Text = "Usuario"
         Me.llenarEventos()
-    End Sub
-
-    Private Sub MetroLabel2_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub MetroLabel4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub MetroLabel8_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub MetroToggle1_CheckedChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PanelListarEventos_Paint(sender As Object, e As PaintEventArgs)
-
     End Sub
 
     Private Sub btnCrearEvento_Click(sender As Object, e As EventArgs) Handles btnCrearEvento.Click
@@ -128,11 +135,11 @@ Public Class FrmMain
         If (checkBoxTotalProducto.Checked) Then
             resultado = ProductsController.totalProductos()
         ElseIf (checkBoxTotalProducto.Checked = False) Then
-                MsgBox("Por Favor Seleccione una opcion")
-                resultado = "No se selecciono una opcion"
+            MsgBox("Por Favor Seleccione una opcion")
+            resultado = "No se selecciono una opcion"
         End If
-            TextBoxResultadoKpiProductos.AppendText(resultado)
-            TextBoxResultadoKpiProductos.AppendText(Environment.NewLine)
+        TextBoxResultadoKpiProductos.AppendText(resultado)
+        TextBoxResultadoKpiProductos.AppendText(Environment.NewLine)
     End Sub
 
     Private Sub btnCrearKpiVenta_Click(sender As Object, e As EventArgs) Handles btnCrearKpiVenta.Click
@@ -147,8 +154,8 @@ Public Class FrmMain
             resultado = "No se selecciono una opcion"
         End If
 
-            TextBoxResultadosVentas.AppendText(resultado)
-            TextBoxResultadosVentas.AppendText(Environment.NewLine)
+        TextBoxResultadosVentas.AppendText(resultado)
+        TextBoxResultadosVentas.AppendText(Environment.NewLine)
     End Sub
 
     Private Sub btnCancelarKpiVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarKpiVenta.Click

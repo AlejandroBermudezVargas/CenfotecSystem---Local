@@ -72,5 +72,32 @@ Namespace My.Resources
                 Return ResourceManager.GetString("elUsuarioNoExiste", resourceCulture)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Tu rol se encuentra inactivo!.
+        '''</summary>
+        Friend Shared ReadOnly Property INACTIVE_ROL() As String
+            Get
+                Return ResourceManager.GetString("INACTIVE_ROL", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Tu usuario se encuentra inactivo en el sistema!.
+        '''</summary>
+        Friend Shared ReadOnly Property INACTIVE_USER() As String
+            Get
+                Return ResourceManager.GetString("INACTIVE_USER", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Combinación de password y contraseña incorrectos.
+        '''</summary>
+        Friend Shared ReadOnly Property USER_NOT_EXIST() As String
+            Get
+                Return ResourceManager.GetString("USER_NOT_EXIST", resourceCulture)
+            End Get
+        End Property
     End Class
 End Namespace
