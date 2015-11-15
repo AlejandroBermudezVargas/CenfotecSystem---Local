@@ -134,6 +134,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>respuestasDelSistema.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\ValidationsMessages.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationsMessages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -164,6 +169,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>respuestasDelSistema.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ValidationsMessages.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationsMessages.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

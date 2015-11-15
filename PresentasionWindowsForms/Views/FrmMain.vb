@@ -1,5 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Net.Mail
+Imports PresentasionWindowsForms.My.Resources
+
 Public Class FrmMain
 
     Private user As UserModel
@@ -200,6 +202,114 @@ Public Class FrmMain
             Next
         End If
     End Sub
+
+    Private Sub btnCrearProspecto_Click(sender As Object, e As EventArgs) Handles btnCrearProspecto.Click
+        btnNuevoSeguimiento.Visible = False
+        btnListarSeguimientos.Visible = False
+        PnlListaProspectos.Visible = False
+        PnlNuevoProspecto.Visible = True
+    End Sub
+
+    Private Sub btnCancelarProspecto_Click(sender As Object, e As EventArgs) Handles btnCancelarProspecto.Click
+        Me.limpiarFormProspectos()
+        PnlListaProspectos.Visible = True
+        PnlNuevoProspecto.Visible = False
+    End Sub
+
+    Private Sub limpiarFormProspectos()
+        lblIdProspecto.Text = -1
+        txtNombreProspecto.Clear()
+        txtApellidosProspecto.Clear()
+        txtFechaNacProspecto.Value = Date.Now
+        txtProcedenciaProspecto.Clear()
+        txtProcedenciaProspecto.Enabled = True
+        tglEstadoProspecto.Checked = True
+        txtTelProspecto.Clear()
+        txtEmailProspecto.Clear()
+        txtDireccionProspecto.Clear()
+        tglEstaInteresado.Checked = False
+        tglEsCliente.Checked = False
+        ckbEventoProspecto.Checked = False
+    End Sub
+
+    Private Sub btnGuardarProspecto_Click(sender As Object, e As EventArgs) Handles btnGuardarProspecto.Click
+        Dim listaIntereses As New List(Of Tipo_Producto)
+        If (tglEstaInteresado.Checked = True) Then
+            Dim interes As New Tipo_Producto
+            Dim idInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of String, String)).Key)
+            Dim nombreInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of String, String)).Value)
+            interes.Id_Tipo_Producto = idInteres
+            interes.Nombre = nombreInteres
+            listaIntereses.Add(interes)
+        End If
+        If validateProspectusForm() Then
+            Dim resul = ProspectusController.guardarOActualizar(CInt(lblIdProspecto.Text), txtNombreProspecto.Text, txtApellidosProspecto.Text, txtFechaNacProspecto.Value,
+                                         txtProcedenciaProspecto.Text, tglEstadoProspecto.Checked, txtTelProspecto.Text,
+                                         txtEmailProspecto.Text, txtDireccionProspecto.Text, tglEstaInteresado.Checked,
+                                         tglEsCliente.Checked, listaIntereses)
+            If (resul.Equals(True)) Then
+                MsgBox(respuestasDelSistema.CREATE_USER_SUCCESS, MsgBoxStyle.Information)
+            Else
+                MsgBox(respuestasDelSistema.CREATE_USER_ERROR, MsgBoxStyle.Critical)
+            End If
+            lstProspectos.Rows.Clear()
+            Me.llenarListaProspectos()
+            Me.limpiarFormProspectos()
+            PnlListaProspectos.Visible = True
+            PnlNuevoProspecto.Visible = False
+            lblIdProspecto.Text = -1
+        End If
+    End Sub
+
+    Public Function validateProspectusForm() As Boolean
+        Dim result As Boolean = True
+        If Not IsEmail(txtEmailProspecto.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtEmailProspecto, ValidationsMessages.INVALID_EMAIL)
+        End If
+        If Not isAPhoneNumber(txtTelProspecto.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtTelProspecto, ValidationsMessages.INVALID_PHONE_NUMBER)
+        End If
+        If String.IsNullOrEmpty(txtNombreProspecto.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtNombreProspecto, ValidationsMessages.EMPTY_FIELD)
+        End If
+        If String.IsNullOrEmpty(txtApellidosProspecto.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtApellidosProspecto, ValidationsMessages.EMPTY_FIELD)
+        End If
+        Return result
+    End Function
+
+    'VALIDACIONES
+    Function IsEmail(ByVal text As String) As Boolean
+        Static emailExpression As New Regex("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$")
+        Return emailExpression.IsMatch(text)
+    End Function
+
+    Function IsGoodPassword(ByVal text As String) As Boolean
+        '- 8 caracteres
+        '- no mas de 15 caracteres
+        '- Letra mayuscula, minuscula y un numero
+        Static regularExpression As New Regex("^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$")
+        Return regularExpression.IsMatch(text)
+    End Function
+
+    Function isAUserId(ByVal text As String) As Boolean 'Minimo 9
+        Static regularExpression As New Regex("^[0-9]{9,15}$")
+        Return regularExpression.IsMatch(text)
+    End Function
+
+    Function isAPhoneNumber(ByVal text As String) As Boolean 'Minimo 8
+        Static regularExpression As New Regex("^[0-9]{8,15}$")
+        Return regularExpression.IsMatch(text)
+    End Function
+
+    Function OnlyTextAllowSpaces(ByVal text As String) As Boolean
+        Static regularExpression As New Regex("^[a-zA-Z ]*$")
+        Return regularExpression.IsMatch(text)
+    End Function
 End Class
 
 
