@@ -377,6 +377,101 @@ Public Class FrmMain
         End If
     End Sub
 
+    Private Sub btnAsignarProspecto_Click_1(sender As Object, e As EventArgs) Handles btnAsignarProspecto.Click
+        PnlListaProspectos.Visible = False
+        pnlAsignarProspecto.Visible = True
+        llenarListBoxVendedores()
+        llenarListBoxProspectos()
+    End Sub
+
+    Dim data1 As New Dictionary(Of Integer, String)()
+    Dim data2 As New Dictionary(Of Integer, String)()
+    Dim data3 As New Dictionary(Of Integer, String)()
+
+    Public Sub llenarListBoxVendedores()
+        If data1.Count.Equals(0) Then
+            Dim users = Users_controller.getUsers()
+            If users.Count > 0 Then
+                For Each user As UserModel In users
+                    Dim rol As RolModel = RolsController.getRol(user.id_rol)
+                    If rol.nombre.Equals("Telemercadeo") Or rol.nombre.Equals("Ventas") Then
+                        data1.Add(user.id_usuario, user.nombre + "" + user.apellido)
+                    End If
+                Next
+                ltbVendedoresSlt.DataSource = New BindingSource(data1, Nothing)
+                ltbVendedoresSlt.DisplayMember = "Value"
+                ltbVendedoresSlt.ValueMember = "Key"
+            End If
+        End If
+    End Sub
+
+    Public Sub llenarListBoxProspectos()
+        If data2.Count.Equals(0) Then
+            Dim prospectos = ProspectusController.listar()
+            If prospectos.Count > 0 Then
+                For Each prosp As Prospecto In prospectos
+                    If prosp.Estado.Equals(True) Then
+                        data2.Add(prosp.Id_prospecto, prosp.Nombre + " " + prosp.Apellidos)
+                    End If
+                Next
+                ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
+                ltbProspectosSlt.DisplayMember = "Value"
+                ltbProspectosSlt.ValueMember = "Key"
+            End If
+        End If
+    End Sub
+
+    Private Sub btnCancelarAsignarProsp_Click(sender As Object, e As EventArgs) Handles btnCancelarAsignarProsp.Click
+        data1.Clear()
+        data2.Clear()
+        data3.Clear()
+        pnlAsignarProspecto.Visible = False
+        PnlListaProspectos.Visible = True
+    End Sub
+
+    Private Sub btnAsignarListaProsp_Click(sender As Object, e As EventArgs) Handles btnAsignarListaProsp.Click
+        If (data2.Count > 0) Then
+            Dim llave = DirectCast(ltbProspectosSlt.SelectedItem, KeyValuePair(Of Integer, String)).Key
+            Dim valor = DirectCast(ltbProspectosSlt.SelectedItem, KeyValuePair(Of Integer, String)).Value
+            data3.Add(llave, valor)
+            data2.Remove(DirectCast(ltbProspectosSlt.SelectedItem, KeyValuePair(Of Integer, String)).Key)
+            ltbProspectosSlt.DataSource = Nothing
+            ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
+            ltbProspectosSlt.DisplayMember = "Value"
+            ltbProspectosSlt.ValueMember = "Key"
+            ltbProspAsignados.DataSource = Nothing
+            ltbProspAsignados.DataSource = New BindingSource(data3, Nothing)
+            ltbProspAsignados.DisplayMember = "Value"
+            ltbProspAsignados.ValueMember = "Key"
+        End If
+    End Sub
+
+    Private Sub btnQuitarProspAsignado_Click(sender As Object, e As EventArgs) Handles btnQuitarProspAsignado.Click
+        If data3.Count > 0 Then
+            Dim llave = DirectCast(ltbProspAsignados.SelectedItem, KeyValuePair(Of Integer, String)).Key
+            Dim valor = DirectCast(ltbProspAsignados.SelectedItem, KeyValuePair(Of Integer, String)).Value
+            data2.Add(llave, valor)
+            data3.Remove(DirectCast(ltbProspAsignados.SelectedItem, KeyValuePair(Of Integer, String)).Key)
+            ltbProspAsignados.DataSource = Nothing
+            ltbProspAsignados.DataSource = New BindingSource(data3, Nothing)
+            ltbProspAsignados.DisplayMember = "Value"
+            ltbProspAsignados.ValueMember = "Key"
+            ltbProspectosSlt.DataSource = Nothing
+            ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
+            ltbProspectosSlt.DisplayMember = "Value"
+            ltbProspectosSlt.ValueMember = "Key"
+        End If
+    End Sub
+
+
+
+    Private Sub ltbVendedoresSlt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ltbVendedoresSlt.SelectedIndexChanged
+        data2.Clear()
+        data3.Clear()
+        ltbProspAsignados.DataSource = Nothing
+        llenarListBoxProspectos()
+    End Sub
+
     'VALIDACIONES
     Function IsEmail(ByVal text As String) As Boolean
         Static emailExpression As New Regex("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$")
