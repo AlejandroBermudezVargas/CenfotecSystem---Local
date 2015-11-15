@@ -48,6 +48,7 @@ Public Class FrmMain
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cboUsuario.Text = "Usuario"
         Me.llenarEventos()
+        Me.llenarListaProspectos()
     End Sub
 
     Private Sub btnCrearEvento_Click(sender As Object, e As EventArgs) Handles btnCrearEvento.Click
@@ -186,6 +187,18 @@ Public Class FrmMain
     Private Sub btnCancelarKpiProducto_Click(sender As Object, e As EventArgs) Handles btnCancelarKpiProducto.Click
         pnlCrearKpiProducto.Visible = False
         panSeleccionarTipoKPI.Visible = True
+    End Sub
+
+    '//////////////////////////////////////// PROSPECTOS ////////////////////////////////////////
+
+    Private Sub llenarListaProspectos()
+        Dim prospectos = ProspectusController.listar()
+        If (Not prospectos.Equals(Nothing)) Then
+            For Each prosp As Prospecto In prospectos
+                lstProspectos.Rows.Add(prosp.Id_prospecto, prosp.Nombre, prosp.Apellidos, Format(prosp.Fecha_nacimiento, "dd-MM-yyyy"),
+                                       prosp.Procedencia, prosp.Telefono, prosp.Email)
+            Next
+        End If
     End Sub
 End Class
 
