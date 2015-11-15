@@ -95,15 +95,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\EventosController.vb" />
+    <Compile Include="Controllers\PermissionsController.vb" />
     <Compile Include="Controllers\ProductsController.vb" />
+    <Compile Include="Controllers\ProductTypeController.vb" />
     <Compile Include="Controllers\ProspectusController.vb" />
+    <Compile Include="Controllers\RolsController.vb" />
     <Compile Include="Controllers\SalesController.vb" />
+    <Compile Include="Controllers\SeguimientoController.vb" />
+    <Compile Include="Controllers\UsersController.vb" />
     <Compile Include="Models\Evento.vb" />
     <Compile Include="Models\Kpi.vb" />
+    <Compile Include="Models\PermissionModel.vb" />
     <Compile Include="Models\Producto.vb" />
     <Compile Include="Models\Prospecto.vb" />
+    <Compile Include="Models\RolModel.vb" />
+    <Compile Include="Models\Sale.vb" />
+    <Compile Include="Models\Seguimiento.vb" />
     <Compile Include="Models\Tipo_Kpi.vb" />
     <Compile Include="Models\Tipo_Producto.vb" />
+    <Compile Include="Models\UserModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
