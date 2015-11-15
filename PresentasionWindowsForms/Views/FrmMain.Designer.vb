@@ -49,6 +49,18 @@ Partial Class FrmMain
         Me.lblLugar = New MetroFramework.Controls.MetroLabel()
         Me.EventosLbl = New MetroFramework.Controls.MetroLabel()
         Me.TabProspectos = New MetroFramework.Controls.MetroTabPage()
+        Me.pnlAsignarProspecto = New MetroFramework.Controls.MetroPanel()
+        Me.btnQuitarProspAsignado = New MetroFramework.Controls.MetroButton()
+        Me.btnGuardarAsignarProsp = New MetroFramework.Controls.MetroButton()
+        Me.btnCancelarAsignarProsp = New MetroFramework.Controls.MetroButton()
+        Me.btnAsignarListaProsp = New MetroFramework.Controls.MetroButton()
+        Me.ltbProspAsignados = New System.Windows.Forms.ListBox()
+        Me.lblProspAsignados = New MetroFramework.Controls.MetroLabel()
+        Me.ltbProspectosSlt = New System.Windows.Forms.ListBox()
+        Me.ltbVendedoresSlt = New System.Windows.Forms.ListBox()
+        Me.lblProspectosSlt = New MetroFramework.Controls.MetroLabel()
+        Me.lblVendedoresSlt = New MetroFramework.Controls.MetroLabel()
+        Me.lblAsignarProspecto = New MetroFramework.Controls.MetroLabel()
         Me.PnlListaProspectos = New MetroFramework.Controls.MetroPanel()
         Me.btnAsignarProspecto = New MetroFramework.Controls.MetroButton()
         Me.lblListaProspectos = New MetroFramework.Controls.MetroLabel()
@@ -62,6 +74,38 @@ Partial Class FrmMain
         Me.ColumnaTelefonoProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaEmailProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaEditarProspecto = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.PnlNuevoProspecto = New MetroFramework.Controls.MetroPanel()
+        Me.lblIdSeguimiento = New MetroFramework.Controls.MetroLabel()
+        Me.lblIdProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.cbEventos = New MetroFramework.Controls.MetroComboBox()
+        Me.ckbEventoProspecto = New MetroFramework.Controls.MetroCheckBox()
+        Me.lblInteres = New MetroFramework.Controls.MetroLabel()
+        Me.cbInteresesProspecto = New MetroFramework.Controls.MetroComboBox()
+        Me.btnListarSeguimientos = New MetroFramework.Controls.MetroButton()
+        Me.btnNuevoSeguimiento = New MetroFramework.Controls.MetroButton()
+        Me.txtFechaNacProspecto = New MetroFramework.Controls.MetroDateTime()
+        Me.txtDireccionProspecto = New MetroFramework.Controls.MetroTextBox()
+        Me.txtProcedenciaProspecto = New MetroFramework.Controls.MetroTextBox()
+        Me.txtTelProspecto = New MetroFramework.Controls.MetroTextBox()
+        Me.txtEmailProspecto = New MetroFramework.Controls.MetroTextBox()
+        Me.txtApellidosProspecto = New MetroFramework.Controls.MetroTextBox()
+        Me.txtNombreProspecto = New MetroFramework.Controls.MetroTextBox()
+        Me.btnCancelarProspecto = New MetroFramework.Controls.MetroButton()
+        Me.btnGuardarProspecto = New MetroFramework.Controls.MetroButton()
+        Me.tglEstaInteresado = New MetroFramework.Controls.MetroToggle()
+        Me.lblInteresadoProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.lblProcedenciaProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.lblDireccionProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.tglEstadoProspecto = New MetroFramework.Controls.MetroToggle()
+        Me.lblTelefonoProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.lblEstadoProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.lblApellidosProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.lblFechaProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.lblCorreoProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.lblNombreProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.lblCrearProspectos = New MetroFramework.Controls.MetroLabel()
+        Me.lblClienteProspecto = New MetroFramework.Controls.MetroLabel()
+        Me.tglEsCliente = New MetroFramework.Controls.MetroToggle()
         Me.KPIHolder = New MetroFramework.Controls.MetroTabPage()
         Me.panSeleccionarTipoKPI = New MetroFramework.Controls.MetroPanel()
         Me.TileKpiProductos = New MetroFramework.Controls.MetroTile()
@@ -97,38 +141,6 @@ Partial Class FrmMain
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.PnlNuevoProspecto = New MetroFramework.Controls.MetroPanel()
-        Me.cbEventos = New MetroFramework.Controls.MetroComboBox()
-        Me.ckbEventoProspecto = New MetroFramework.Controls.MetroCheckBox()
-        Me.lblInteres = New MetroFramework.Controls.MetroLabel()
-        Me.cbInteresesProspecto = New MetroFramework.Controls.MetroComboBox()
-        Me.btnListarSeguimientos = New MetroFramework.Controls.MetroButton()
-        Me.btnNuevoSeguimiento = New MetroFramework.Controls.MetroButton()
-        Me.txtFechaNacProspecto = New MetroFramework.Controls.MetroDateTime()
-        Me.txtDireccionProspecto = New MetroFramework.Controls.MetroTextBox()
-        Me.txtProcedenciaProspecto = New MetroFramework.Controls.MetroTextBox()
-        Me.txtTelProspecto = New MetroFramework.Controls.MetroTextBox()
-        Me.txtEmailProspecto = New MetroFramework.Controls.MetroTextBox()
-        Me.txtApellidosProspecto = New MetroFramework.Controls.MetroTextBox()
-        Me.txtNombreProspecto = New MetroFramework.Controls.MetroTextBox()
-        Me.btnCancelarProspecto = New MetroFramework.Controls.MetroButton()
-        Me.btnGuardarProspecto = New MetroFramework.Controls.MetroButton()
-        Me.tglEstaInteresado = New MetroFramework.Controls.MetroToggle()
-        Me.lblInteresadoProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.lblProcedenciaProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.lblDireccionProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.tglEstadoProspecto = New MetroFramework.Controls.MetroToggle()
-        Me.lblTelefonoProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.lblEstadoProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.lblApellidosProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.lblFechaProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.lblCorreoProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.lblNombreProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.lblCrearProspectos = New MetroFramework.Controls.MetroLabel()
-        Me.lblClienteProspecto = New MetroFramework.Controls.MetroLabel()
-        Me.tglEsCliente = New MetroFramework.Controls.MetroToggle()
-        Me.lblIdSeguimiento = New MetroFramework.Controls.MetroLabel()
-        Me.lblIdProspecto = New MetroFramework.Controls.MetroLabel()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.Eventos.SuspendLayout()
@@ -136,15 +148,16 @@ Partial Class FrmMain
         CType(Me.DataListarEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelCrearEvento.SuspendLayout()
         Me.TabProspectos.SuspendLayout()
+        Me.pnlAsignarProspecto.SuspendLayout()
         Me.PnlListaProspectos.SuspendLayout()
         CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlNuevoProspecto.SuspendLayout()
         Me.KPIHolder.SuspendLayout()
         Me.panSeleccionarTipoKPI.SuspendLayout()
         Me.pnlCrearKpiProducto.SuspendLayout()
         Me.pnlKpiProspectos.SuspendLayout()
         Me.panKpiVentas.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PnlNuevoProspecto.SuspendLayout()
         Me.SuspendLayout()
         '
         'Main
@@ -427,6 +440,7 @@ Partial Class FrmMain
         '
         'TabProspectos
         '
+        Me.TabProspectos.Controls.Add(Me.pnlAsignarProspecto)
         Me.TabProspectos.Controls.Add(Me.PnlListaProspectos)
         Me.TabProspectos.Controls.Add(Me.PnlNuevoProspecto)
         Me.TabProspectos.HorizontalScrollbarBarColor = True
@@ -440,6 +454,128 @@ Partial Class FrmMain
         Me.TabProspectos.VerticalScrollbarBarColor = True
         Me.TabProspectos.VerticalScrollbarHighlightOnWheel = False
         Me.TabProspectos.VerticalScrollbarSize = 10
+        '
+        'pnlAsignarProspecto
+        '
+        Me.pnlAsignarProspecto.Controls.Add(Me.btnQuitarProspAsignado)
+        Me.pnlAsignarProspecto.Controls.Add(Me.btnGuardarAsignarProsp)
+        Me.pnlAsignarProspecto.Controls.Add(Me.btnCancelarAsignarProsp)
+        Me.pnlAsignarProspecto.Controls.Add(Me.btnAsignarListaProsp)
+        Me.pnlAsignarProspecto.Controls.Add(Me.ltbProspAsignados)
+        Me.pnlAsignarProspecto.Controls.Add(Me.lblProspAsignados)
+        Me.pnlAsignarProspecto.Controls.Add(Me.ltbProspectosSlt)
+        Me.pnlAsignarProspecto.Controls.Add(Me.ltbVendedoresSlt)
+        Me.pnlAsignarProspecto.Controls.Add(Me.lblProspectosSlt)
+        Me.pnlAsignarProspecto.Controls.Add(Me.lblVendedoresSlt)
+        Me.pnlAsignarProspecto.Controls.Add(Me.lblAsignarProspecto)
+        Me.pnlAsignarProspecto.HorizontalScrollbarBarColor = True
+        Me.pnlAsignarProspecto.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlAsignarProspecto.HorizontalScrollbarSize = 10
+        Me.pnlAsignarProspecto.Location = New System.Drawing.Point(4, 8)
+        Me.pnlAsignarProspecto.Name = "pnlAsignarProspecto"
+        Me.pnlAsignarProspecto.Size = New System.Drawing.Size(743, 464)
+        Me.pnlAsignarProspecto.TabIndex = 45
+        Me.pnlAsignarProspecto.VerticalScrollbarBarColor = True
+        Me.pnlAsignarProspecto.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlAsignarProspecto.VerticalScrollbarSize = 10
+        Me.pnlAsignarProspecto.Visible = False
+        '
+        'btnQuitarProspAsignado
+        '
+        Me.btnQuitarProspAsignado.Location = New System.Drawing.Point(488, 228)
+        Me.btnQuitarProspAsignado.Name = "btnQuitarProspAsignado"
+        Me.btnQuitarProspAsignado.Size = New System.Drawing.Size(35, 23)
+        Me.btnQuitarProspAsignado.TabIndex = 26
+        Me.btnQuitarProspAsignado.Text = "<="
+        Me.btnQuitarProspAsignado.UseSelectable = True
+        '
+        'btnGuardarAsignarProsp
+        '
+        Me.btnGuardarAsignarProsp.Location = New System.Drawing.Point(318, 439)
+        Me.btnGuardarAsignarProsp.Name = "btnGuardarAsignarProsp"
+        Me.btnGuardarAsignarProsp.Size = New System.Drawing.Size(97, 23)
+        Me.btnGuardarAsignarProsp.TabIndex = 25
+        Me.btnGuardarAsignarProsp.Text = "Guardar"
+        Me.btnGuardarAsignarProsp.UseSelectable = True
+        '
+        'btnCancelarAsignarProsp
+        '
+        Me.btnCancelarAsignarProsp.Location = New System.Drawing.Point(421, 439)
+        Me.btnCancelarAsignarProsp.Name = "btnCancelarAsignarProsp"
+        Me.btnCancelarAsignarProsp.Size = New System.Drawing.Size(97, 23)
+        Me.btnCancelarAsignarProsp.TabIndex = 24
+        Me.btnCancelarAsignarProsp.Text = "Cancelar"
+        Me.btnCancelarAsignarProsp.UseSelectable = True
+        '
+        'btnAsignarListaProsp
+        '
+        Me.btnAsignarListaProsp.Location = New System.Drawing.Point(489, 190)
+        Me.btnAsignarListaProsp.Name = "btnAsignarListaProsp"
+        Me.btnAsignarListaProsp.Size = New System.Drawing.Size(35, 23)
+        Me.btnAsignarListaProsp.TabIndex = 23
+        Me.btnAsignarListaProsp.Text = "=>"
+        Me.btnAsignarListaProsp.UseSelectable = True
+        '
+        'ltbProspAsignados
+        '
+        Me.ltbProspAsignados.FormattingEnabled = True
+        Me.ltbProspAsignados.Location = New System.Drawing.Point(540, 91)
+        Me.ltbProspAsignados.Name = "ltbProspAsignados"
+        Me.ltbProspAsignados.Size = New System.Drawing.Size(184, 277)
+        Me.ltbProspAsignados.TabIndex = 20
+        '
+        'lblProspAsignados
+        '
+        Me.lblProspAsignados.AutoSize = True
+        Me.lblProspAsignados.Location = New System.Drawing.Point(540, 64)
+        Me.lblProspAsignados.Name = "lblProspAsignados"
+        Me.lblProspAsignados.Size = New System.Drawing.Size(135, 19)
+        Me.lblProspAsignados.TabIndex = 19
+        Me.lblProspAsignados.Text = "Prospectos asignados"
+        '
+        'ltbProspectosSlt
+        '
+        Me.ltbProspectosSlt.FormattingEnabled = True
+        Me.ltbProspectosSlt.Location = New System.Drawing.Point(288, 91)
+        Me.ltbProspectosSlt.Name = "ltbProspectosSlt"
+        Me.ltbProspectosSlt.Size = New System.Drawing.Size(184, 277)
+        Me.ltbProspectosSlt.TabIndex = 18
+        '
+        'ltbVendedoresSlt
+        '
+        Me.ltbVendedoresSlt.FormattingEnabled = True
+        Me.ltbVendedoresSlt.Location = New System.Drawing.Point(23, 91)
+        Me.ltbVendedoresSlt.Name = "ltbVendedoresSlt"
+        Me.ltbVendedoresSlt.Size = New System.Drawing.Size(183, 277)
+        Me.ltbVendedoresSlt.TabIndex = 17
+        '
+        'lblProspectosSlt
+        '
+        Me.lblProspectosSlt.AutoSize = True
+        Me.lblProspectosSlt.Location = New System.Drawing.Point(288, 64)
+        Me.lblProspectosSlt.Name = "lblProspectosSlt"
+        Me.lblProspectosSlt.Size = New System.Drawing.Size(73, 19)
+        Me.lblProspectosSlt.TabIndex = 16
+        Me.lblProspectosSlt.Text = "Prospectos"
+        '
+        'lblVendedoresSlt
+        '
+        Me.lblVendedoresSlt.AutoSize = True
+        Me.lblVendedoresSlt.Location = New System.Drawing.Point(22, 64)
+        Me.lblVendedoresSlt.Name = "lblVendedoresSlt"
+        Me.lblVendedoresSlt.Size = New System.Drawing.Size(78, 19)
+        Me.lblVendedoresSlt.TabIndex = 15
+        Me.lblVendedoresSlt.Text = "Vendedores"
+        '
+        'lblAsignarProspecto
+        '
+        Me.lblAsignarProspecto.AutoSize = True
+        Me.lblAsignarProspecto.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblAsignarProspecto.Location = New System.Drawing.Point(1, 10)
+        Me.lblAsignarProspecto.Name = "lblAsignarProspecto"
+        Me.lblAsignarProspecto.Size = New System.Drawing.Size(149, 25)
+        Me.lblAsignarProspecto.TabIndex = 11
+        Me.lblAsignarProspecto.Text = "Asignar prospecto"
         '
         'PnlListaProspectos
         '
@@ -550,6 +686,484 @@ Partial Class FrmMain
         Me.ColumnaEditarProspecto.Name = "ColumnaEditarProspecto"
         Me.ColumnaEditarProspecto.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ColumnaEditarProspecto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'PnlNuevoProspecto
+        '
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblIdSeguimiento)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblIdProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.cbEventos)
+        Me.PnlNuevoProspecto.Controls.Add(Me.ckbEventoProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblInteres)
+        Me.PnlNuevoProspecto.Controls.Add(Me.cbInteresesProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.btnListarSeguimientos)
+        Me.PnlNuevoProspecto.Controls.Add(Me.btnNuevoSeguimiento)
+        Me.PnlNuevoProspecto.Controls.Add(Me.txtFechaNacProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.txtDireccionProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.txtProcedenciaProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.txtTelProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.txtEmailProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.txtApellidosProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.txtNombreProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.btnCancelarProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.btnGuardarProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.tglEstaInteresado)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblInteresadoProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblProcedenciaProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblDireccionProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.tglEstadoProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblTelefonoProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblEstadoProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblApellidosProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblFechaProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblCorreoProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblNombreProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblCrearProspectos)
+        Me.PnlNuevoProspecto.Controls.Add(Me.lblClienteProspecto)
+        Me.PnlNuevoProspecto.Controls.Add(Me.tglEsCliente)
+        Me.PnlNuevoProspecto.HorizontalScrollbarBarColor = True
+        Me.PnlNuevoProspecto.HorizontalScrollbarHighlightOnWheel = False
+        Me.PnlNuevoProspecto.HorizontalScrollbarSize = 10
+        Me.PnlNuevoProspecto.Location = New System.Drawing.Point(4, 14)
+        Me.PnlNuevoProspecto.Name = "PnlNuevoProspecto"
+        Me.PnlNuevoProspecto.Size = New System.Drawing.Size(704, 459)
+        Me.PnlNuevoProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.PnlNuevoProspecto.TabIndex = 44
+        Me.PnlNuevoProspecto.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.PnlNuevoProspecto.VerticalScrollbarBarColor = True
+        Me.PnlNuevoProspecto.VerticalScrollbarHighlightOnWheel = False
+        Me.PnlNuevoProspecto.VerticalScrollbarSize = 10
+        Me.PnlNuevoProspecto.Visible = False
+        '
+        'lblIdSeguimiento
+        '
+        Me.lblIdSeguimiento.AutoSize = True
+        Me.lblIdSeguimiento.Location = New System.Drawing.Point(648, 9)
+        Me.lblIdSeguimiento.Name = "lblIdSeguimiento"
+        Me.lblIdSeguimiento.Size = New System.Drawing.Size(20, 19)
+        Me.lblIdSeguimiento.TabIndex = 48
+        Me.lblIdSeguimiento.Text = "-1"
+        Me.lblIdSeguimiento.Visible = False
+        '
+        'lblIdProspecto
+        '
+        Me.lblIdProspecto.AutoSize = True
+        Me.lblIdProspecto.Location = New System.Drawing.Point(671, 9)
+        Me.lblIdProspecto.Name = "lblIdProspecto"
+        Me.lblIdProspecto.Size = New System.Drawing.Size(20, 19)
+        Me.lblIdProspecto.TabIndex = 47
+        Me.lblIdProspecto.Text = "-1"
+        Me.lblIdProspecto.Visible = False
+        '
+        'cbEventos
+        '
+        Me.cbEventos.Enabled = False
+        Me.cbEventos.FormattingEnabled = True
+        Me.cbEventos.ItemHeight = 23
+        Me.cbEventos.Location = New System.Drawing.Point(403, 209)
+        Me.cbEventos.Name = "cbEventos"
+        Me.cbEventos.Size = New System.Drawing.Size(121, 29)
+        Me.cbEventos.Style = MetroFramework.MetroColorStyle.Purple
+        Me.cbEventos.TabIndex = 46
+        Me.cbEventos.UseSelectable = True
+        '
+        'ckbEventoProspecto
+        '
+        Me.ckbEventoProspecto.AutoSize = True
+        Me.ckbEventoProspecto.Location = New System.Drawing.Point(329, 217)
+        Me.ckbEventoProspecto.Name = "ckbEventoProspecto"
+        Me.ckbEventoProspecto.Size = New System.Drawing.Size(59, 15)
+        Me.ckbEventoProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.ckbEventoProspecto.TabIndex = 45
+        Me.ckbEventoProspecto.Text = "Evento"
+        Me.ckbEventoProspecto.UseSelectable = True
+        '
+        'lblInteres
+        '
+        Me.lblInteres.AutoSize = True
+        Me.lblInteres.Location = New System.Drawing.Point(324, 356)
+        Me.lblInteres.Name = "lblInteres"
+        Me.lblInteres.Size = New System.Drawing.Size(59, 19)
+        Me.lblInteres.TabIndex = 44
+        Me.lblInteres.Text = "Intereses"
+        '
+        'cbInteresesProspecto
+        '
+        Me.cbInteresesProspecto.Enabled = False
+        Me.cbInteresesProspecto.ItemHeight = 23
+        Me.cbInteresesProspecto.Location = New System.Drawing.Point(403, 356)
+        Me.cbInteresesProspecto.Name = "cbInteresesProspecto"
+        Me.cbInteresesProspecto.Size = New System.Drawing.Size(121, 29)
+        Me.cbInteresesProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.cbInteresesProspecto.TabIndex = 43
+        Me.cbInteresesProspecto.UseSelectable = True
+        '
+        'btnListarSeguimientos
+        '
+        Me.btnListarSeguimientos.Location = New System.Drawing.Point(575, 104)
+        Me.btnListarSeguimientos.Name = "btnListarSeguimientos"
+        Me.btnListarSeguimientos.Size = New System.Drawing.Size(116, 37)
+        Me.btnListarSeguimientos.TabIndex = 37
+        Me.btnListarSeguimientos.Text = "Lista seguimientos"
+        Me.btnListarSeguimientos.UseSelectable = True
+        Me.btnListarSeguimientos.Visible = False
+        '
+        'btnNuevoSeguimiento
+        '
+        Me.btnNuevoSeguimiento.Location = New System.Drawing.Point(575, 51)
+        Me.btnNuevoSeguimiento.Name = "btnNuevoSeguimiento"
+        Me.btnNuevoSeguimiento.Size = New System.Drawing.Size(116, 37)
+        Me.btnNuevoSeguimiento.TabIndex = 36
+        Me.btnNuevoSeguimiento.Text = "Nuevo seguimiento"
+        Me.btnNuevoSeguimiento.UseSelectable = True
+        Me.btnNuevoSeguimiento.Visible = False
+        '
+        'txtFechaNacProspecto
+        '
+        Me.txtFechaNacProspecto.CustomFormat = ""
+        Me.txtFechaNacProspecto.Location = New System.Drawing.Point(158, 112)
+        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.txtFechaNacProspecto.Name = "txtFechaNacProspecto"
+        Me.txtFechaNacProspecto.Size = New System.Drawing.Size(367, 29)
+        Me.txtFechaNacProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtFechaNacProspecto.TabIndex = 32
+        Me.txtFechaNacProspecto.Value = New Date(2015, 11, 1, 16, 55, 54, 0)
+        '
+        'txtDireccionProspecto
+        '
+        '
+        '
+        '
+        Me.txtDireccionProspecto.CustomButton.Image = Nothing
+        Me.txtDireccionProspecto.CustomButton.Location = New System.Drawing.Point(301, 1)
+        Me.txtDireccionProspecto.CustomButton.Name = ""
+        Me.txtDireccionProspecto.CustomButton.Size = New System.Drawing.Size(65, 65)
+        Me.txtDireccionProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtDireccionProspecto.CustomButton.TabIndex = 1
+        Me.txtDireccionProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtDireccionProspecto.CustomButton.UseSelectable = True
+        Me.txtDireccionProspecto.CustomButton.Visible = False
+        Me.txtDireccionProspecto.Lines = New String(-1) {}
+        Me.txtDireccionProspecto.Location = New System.Drawing.Point(158, 248)
+        Me.txtDireccionProspecto.MaxLength = 32767
+        Me.txtDireccionProspecto.Multiline = True
+        Me.txtDireccionProspecto.Name = "txtDireccionProspecto"
+        Me.txtDireccionProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtDireccionProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtDireccionProspecto.SelectedText = ""
+        Me.txtDireccionProspecto.SelectionLength = 0
+        Me.txtDireccionProspecto.SelectionStart = 0
+        Me.txtDireccionProspecto.Size = New System.Drawing.Size(367, 67)
+        Me.txtDireccionProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtDireccionProspecto.TabIndex = 31
+        Me.txtDireccionProspecto.UseSelectable = True
+        Me.txtDireccionProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtDireccionProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtProcedenciaProspecto
+        '
+        '
+        '
+        '
+        Me.txtProcedenciaProspecto.CustomButton.Image = Nothing
+        Me.txtProcedenciaProspecto.CustomButton.Location = New System.Drawing.Point(132, 1)
+        Me.txtProcedenciaProspecto.CustomButton.Name = ""
+        Me.txtProcedenciaProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtProcedenciaProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtProcedenciaProspecto.CustomButton.TabIndex = 1
+        Me.txtProcedenciaProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtProcedenciaProspecto.CustomButton.UseSelectable = True
+        Me.txtProcedenciaProspecto.CustomButton.Visible = False
+        Me.txtProcedenciaProspecto.Lines = New String(-1) {}
+        Me.txtProcedenciaProspecto.Location = New System.Drawing.Point(158, 213)
+        Me.txtProcedenciaProspecto.MaxLength = 32767
+        Me.txtProcedenciaProspecto.Name = "txtProcedenciaProspecto"
+        Me.txtProcedenciaProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtProcedenciaProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtProcedenciaProspecto.SelectedText = ""
+        Me.txtProcedenciaProspecto.SelectionLength = 0
+        Me.txtProcedenciaProspecto.SelectionStart = 0
+        Me.txtProcedenciaProspecto.Size = New System.Drawing.Size(154, 23)
+        Me.txtProcedenciaProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtProcedenciaProspecto.TabIndex = 30
+        Me.txtProcedenciaProspecto.UseSelectable = True
+        Me.txtProcedenciaProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtProcedenciaProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtTelProspecto
+        '
+        '
+        '
+        '
+        Me.txtTelProspecto.CustomButton.Image = Nothing
+        Me.txtTelProspecto.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtTelProspecto.CustomButton.Name = ""
+        Me.txtTelProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtTelProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtTelProspecto.CustomButton.TabIndex = 1
+        Me.txtTelProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtTelProspecto.CustomButton.UseSelectable = True
+        Me.txtTelProspecto.CustomButton.Visible = False
+        Me.txtTelProspecto.Lines = New String(-1) {}
+        Me.txtTelProspecto.Location = New System.Drawing.Point(158, 180)
+        Me.txtTelProspecto.MaxLength = 32767
+        Me.txtTelProspecto.Name = "txtTelProspecto"
+        Me.txtTelProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtTelProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtTelProspecto.SelectedText = ""
+        Me.txtTelProspecto.SelectionLength = 0
+        Me.txtTelProspecto.SelectionStart = 0
+        Me.txtTelProspecto.Size = New System.Drawing.Size(367, 23)
+        Me.txtTelProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtTelProspecto.TabIndex = 28
+        Me.txtTelProspecto.UseSelectable = True
+        Me.txtTelProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtTelProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtEmailProspecto
+        '
+        '
+        '
+        '
+        Me.txtEmailProspecto.CustomButton.Image = Nothing
+        Me.txtEmailProspecto.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtEmailProspecto.CustomButton.Name = ""
+        Me.txtEmailProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtEmailProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtEmailProspecto.CustomButton.TabIndex = 1
+        Me.txtEmailProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtEmailProspecto.CustomButton.UseSelectable = True
+        Me.txtEmailProspecto.CustomButton.Visible = False
+        Me.txtEmailProspecto.Lines = New String(-1) {}
+        Me.txtEmailProspecto.Location = New System.Drawing.Point(158, 148)
+        Me.txtEmailProspecto.MaxLength = 32767
+        Me.txtEmailProspecto.Name = "txtEmailProspecto"
+        Me.txtEmailProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtEmailProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtEmailProspecto.SelectedText = ""
+        Me.txtEmailProspecto.SelectionLength = 0
+        Me.txtEmailProspecto.SelectionStart = 0
+        Me.txtEmailProspecto.Size = New System.Drawing.Size(367, 23)
+        Me.txtEmailProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtEmailProspecto.TabIndex = 27
+        Me.txtEmailProspecto.UseSelectable = True
+        Me.txtEmailProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtEmailProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtApellidosProspecto
+        '
+        '
+        '
+        '
+        Me.txtApellidosProspecto.CustomButton.Image = Nothing
+        Me.txtApellidosProspecto.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtApellidosProspecto.CustomButton.Name = ""
+        Me.txtApellidosProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtApellidosProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtApellidosProspecto.CustomButton.TabIndex = 1
+        Me.txtApellidosProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtApellidosProspecto.CustomButton.UseSelectable = True
+        Me.txtApellidosProspecto.CustomButton.Visible = False
+        Me.txtApellidosProspecto.Lines = New String(-1) {}
+        Me.txtApellidosProspecto.Location = New System.Drawing.Point(158, 82)
+        Me.txtApellidosProspecto.MaxLength = 32767
+        Me.txtApellidosProspecto.Name = "txtApellidosProspecto"
+        Me.txtApellidosProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtApellidosProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtApellidosProspecto.SelectedText = ""
+        Me.txtApellidosProspecto.SelectionLength = 0
+        Me.txtApellidosProspecto.SelectionStart = 0
+        Me.txtApellidosProspecto.Size = New System.Drawing.Size(367, 23)
+        Me.txtApellidosProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtApellidosProspecto.TabIndex = 25
+        Me.txtApellidosProspecto.UseSelectable = True
+        Me.txtApellidosProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtApellidosProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtNombreProspecto
+        '
+        '
+        '
+        '
+        Me.txtNombreProspecto.CustomButton.Image = Nothing
+        Me.txtNombreProspecto.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtNombreProspecto.CustomButton.Name = ""
+        Me.txtNombreProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtNombreProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtNombreProspecto.CustomButton.TabIndex = 1
+        Me.txtNombreProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNombreProspecto.CustomButton.UseSelectable = True
+        Me.txtNombreProspecto.CustomButton.Visible = False
+        Me.txtNombreProspecto.Lines = New String(-1) {}
+        Me.txtNombreProspecto.Location = New System.Drawing.Point(158, 51)
+        Me.txtNombreProspecto.MaxLength = 32767
+        Me.txtNombreProspecto.Name = "txtNombreProspecto"
+        Me.txtNombreProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNombreProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtNombreProspecto.SelectedText = ""
+        Me.txtNombreProspecto.SelectionLength = 0
+        Me.txtNombreProspecto.SelectionStart = 0
+        Me.txtNombreProspecto.Size = New System.Drawing.Size(367, 23)
+        Me.txtNombreProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtNombreProspecto.TabIndex = 24
+        Me.txtNombreProspecto.UseSelectable = True
+        Me.txtNombreProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNombreProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'btnCancelarProspecto
+        '
+        Me.btnCancelarProspecto.Location = New System.Drawing.Point(423, 433)
+        Me.btnCancelarProspecto.Name = "btnCancelarProspecto"
+        Me.btnCancelarProspecto.Size = New System.Drawing.Size(97, 23)
+        Me.btnCancelarProspecto.TabIndex = 23
+        Me.btnCancelarProspecto.Text = "Cancelar"
+        Me.btnCancelarProspecto.UseSelectable = True
+        '
+        'btnGuardarProspecto
+        '
+        Me.btnGuardarProspecto.Location = New System.Drawing.Point(320, 433)
+        Me.btnGuardarProspecto.Name = "btnGuardarProspecto"
+        Me.btnGuardarProspecto.Size = New System.Drawing.Size(97, 23)
+        Me.btnGuardarProspecto.TabIndex = 22
+        Me.btnGuardarProspecto.Text = "Guardar"
+        Me.btnGuardarProspecto.UseSelectable = True
+        '
+        'tglEstaInteresado
+        '
+        Me.tglEstaInteresado.AutoSize = True
+        Me.tglEstaInteresado.Location = New System.Drawing.Point(158, 356)
+        Me.tglEstaInteresado.Name = "tglEstaInteresado"
+        Me.tglEstaInteresado.Size = New System.Drawing.Size(80, 17)
+        Me.tglEstaInteresado.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tglEstaInteresado.TabIndex = 21
+        Me.tglEstaInteresado.Text = "Off"
+        Me.tglEstaInteresado.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.tglEstaInteresado.UseSelectable = True
+        '
+        'lblInteresadoProspecto
+        '
+        Me.lblInteresadoProspecto.AutoSize = True
+        Me.lblInteresadoProspecto.Location = New System.Drawing.Point(24, 354)
+        Me.lblInteresadoProspecto.Name = "lblInteresadoProspecto"
+        Me.lblInteresadoProspecto.Size = New System.Drawing.Size(70, 19)
+        Me.lblInteresadoProspecto.TabIndex = 20
+        Me.lblInteresadoProspecto.Text = "Interesado"
+        '
+        'lblProcedenciaProspecto
+        '
+        Me.lblProcedenciaProspecto.AutoSize = True
+        Me.lblProcedenciaProspecto.Location = New System.Drawing.Point(24, 213)
+        Me.lblProcedenciaProspecto.Name = "lblProcedenciaProspecto"
+        Me.lblProcedenciaProspecto.Size = New System.Drawing.Size(81, 19)
+        Me.lblProcedenciaProspecto.TabIndex = 19
+        Me.lblProcedenciaProspecto.Text = "Procedencia"
+        '
+        'lblDireccionProspecto
+        '
+        Me.lblDireccionProspecto.AutoSize = True
+        Me.lblDireccionProspecto.Location = New System.Drawing.Point(25, 248)
+        Me.lblDireccionProspecto.Name = "lblDireccionProspecto"
+        Me.lblDireccionProspecto.Size = New System.Drawing.Size(63, 19)
+        Me.lblDireccionProspecto.TabIndex = 18
+        Me.lblDireccionProspecto.Text = "Dirección"
+        '
+        'tglEstadoProspecto
+        '
+        Me.tglEstadoProspecto.AutoSize = True
+        Me.tglEstadoProspecto.Checked = True
+        Me.tglEstadoProspecto.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.tglEstadoProspecto.Location = New System.Drawing.Point(158, 328)
+        Me.tglEstadoProspecto.Name = "tglEstadoProspecto"
+        Me.tglEstadoProspecto.Size = New System.Drawing.Size(80, 17)
+        Me.tglEstadoProspecto.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tglEstadoProspecto.TabIndex = 17
+        Me.tglEstadoProspecto.Text = "On"
+        Me.tglEstadoProspecto.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.tglEstadoProspecto.UseSelectable = True
+        '
+        'lblTelefonoProspecto
+        '
+        Me.lblTelefonoProspecto.AutoSize = True
+        Me.lblTelefonoProspecto.Location = New System.Drawing.Point(24, 180)
+        Me.lblTelefonoProspecto.Name = "lblTelefonoProspecto"
+        Me.lblTelefonoProspecto.Size = New System.Drawing.Size(58, 19)
+        Me.lblTelefonoProspecto.TabIndex = 16
+        Me.lblTelefonoProspecto.Text = "Telefono"
+        '
+        'lblEstadoProspecto
+        '
+        Me.lblEstadoProspecto.AutoSize = True
+        Me.lblEstadoProspecto.Location = New System.Drawing.Point(24, 326)
+        Me.lblEstadoProspecto.Name = "lblEstadoProspecto"
+        Me.lblEstadoProspecto.Size = New System.Drawing.Size(48, 19)
+        Me.lblEstadoProspecto.TabIndex = 15
+        Me.lblEstadoProspecto.Text = "Estado"
+        '
+        'lblApellidosProspecto
+        '
+        Me.lblApellidosProspecto.AutoSize = True
+        Me.lblApellidosProspecto.Location = New System.Drawing.Point(24, 82)
+        Me.lblApellidosProspecto.Name = "lblApellidosProspecto"
+        Me.lblApellidosProspecto.Size = New System.Drawing.Size(58, 19)
+        Me.lblApellidosProspecto.TabIndex = 14
+        Me.lblApellidosProspecto.Text = "Apellido"
+        '
+        'lblFechaProspecto
+        '
+        Me.lblFechaProspecto.AutoSize = True
+        Me.lblFechaProspecto.Location = New System.Drawing.Point(25, 114)
+        Me.lblFechaProspecto.Name = "lblFechaProspecto"
+        Me.lblFechaProspecto.Size = New System.Drawing.Size(111, 19)
+        Me.lblFechaProspecto.TabIndex = 13
+        Me.lblFechaProspecto.Text = "Fecha nacimiento"
+        '
+        'lblCorreoProspecto
+        '
+        Me.lblCorreoProspecto.AutoSize = True
+        Me.lblCorreoProspecto.Location = New System.Drawing.Point(24, 148)
+        Me.lblCorreoProspecto.Name = "lblCorreoProspecto"
+        Me.lblCorreoProspecto.Size = New System.Drawing.Size(51, 19)
+        Me.lblCorreoProspecto.TabIndex = 12
+        Me.lblCorreoProspecto.Text = "Correo"
+        '
+        'lblNombreProspecto
+        '
+        Me.lblNombreProspecto.AutoSize = True
+        Me.lblNombreProspecto.Location = New System.Drawing.Point(24, 51)
+        Me.lblNombreProspecto.Name = "lblNombreProspecto"
+        Me.lblNombreProspecto.Size = New System.Drawing.Size(59, 19)
+        Me.lblNombreProspecto.TabIndex = 11
+        Me.lblNombreProspecto.Text = "Nombre"
+        '
+        'lblCrearProspectos
+        '
+        Me.lblCrearProspectos.AutoSize = True
+        Me.lblCrearProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblCrearProspectos.Location = New System.Drawing.Point(-2, 4)
+        Me.lblCrearProspectos.Name = "lblCrearProspectos"
+        Me.lblCrearProspectos.Size = New System.Drawing.Size(133, 25)
+        Me.lblCrearProspectos.TabIndex = 10
+        Me.lblCrearProspectos.Text = "Crear prospecto"
+        '
+        'lblClienteProspecto
+        '
+        Me.lblClienteProspecto.AutoSize = True
+        Me.lblClienteProspecto.Location = New System.Drawing.Point(25, 384)
+        Me.lblClienteProspecto.Name = "lblClienteProspecto"
+        Me.lblClienteProspecto.Size = New System.Drawing.Size(49, 19)
+        Me.lblClienteProspecto.TabIndex = 34
+        Me.lblClienteProspecto.Text = "Cliente"
+        '
+        'tglEsCliente
+        '
+        Me.tglEsCliente.AutoSize = True
+        Me.tglEsCliente.Location = New System.Drawing.Point(158, 384)
+        Me.tglEsCliente.Name = "tglEsCliente"
+        Me.tglEsCliente.Size = New System.Drawing.Size(80, 17)
+        Me.tglEsCliente.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tglEsCliente.TabIndex = 35
+        Me.tglEsCliente.Text = "Off"
+        Me.tglEsCliente.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.tglEsCliente.UseSelectable = True
         '
         'KPIHolder
         '
@@ -928,484 +1542,6 @@ Partial Class FrmMain
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'PnlNuevoProspecto
-        '
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblIdSeguimiento)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblIdProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.cbEventos)
-        Me.PnlNuevoProspecto.Controls.Add(Me.ckbEventoProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblInteres)
-        Me.PnlNuevoProspecto.Controls.Add(Me.cbInteresesProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.btnListarSeguimientos)
-        Me.PnlNuevoProspecto.Controls.Add(Me.btnNuevoSeguimiento)
-        Me.PnlNuevoProspecto.Controls.Add(Me.txtFechaNacProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.txtDireccionProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.txtProcedenciaProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.txtTelProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.txtEmailProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.txtApellidosProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.txtNombreProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.btnCancelarProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.btnGuardarProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.tglEstaInteresado)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblInteresadoProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblProcedenciaProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblDireccionProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.tglEstadoProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblTelefonoProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblEstadoProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblApellidosProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblFechaProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblCorreoProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblNombreProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblCrearProspectos)
-        Me.PnlNuevoProspecto.Controls.Add(Me.lblClienteProspecto)
-        Me.PnlNuevoProspecto.Controls.Add(Me.tglEsCliente)
-        Me.PnlNuevoProspecto.HorizontalScrollbarBarColor = True
-        Me.PnlNuevoProspecto.HorizontalScrollbarHighlightOnWheel = False
-        Me.PnlNuevoProspecto.HorizontalScrollbarSize = 10
-        Me.PnlNuevoProspecto.Location = New System.Drawing.Point(4, 14)
-        Me.PnlNuevoProspecto.Name = "PnlNuevoProspecto"
-        Me.PnlNuevoProspecto.Size = New System.Drawing.Size(704, 459)
-        Me.PnlNuevoProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.PnlNuevoProspecto.TabIndex = 44
-        Me.PnlNuevoProspecto.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.PnlNuevoProspecto.VerticalScrollbarBarColor = True
-        Me.PnlNuevoProspecto.VerticalScrollbarHighlightOnWheel = False
-        Me.PnlNuevoProspecto.VerticalScrollbarSize = 10
-        Me.PnlNuevoProspecto.Visible = False
-        '
-        'cbEventos
-        '
-        Me.cbEventos.Enabled = False
-        Me.cbEventos.FormattingEnabled = True
-        Me.cbEventos.ItemHeight = 23
-        Me.cbEventos.Location = New System.Drawing.Point(403, 209)
-        Me.cbEventos.Name = "cbEventos"
-        Me.cbEventos.Size = New System.Drawing.Size(121, 29)
-        Me.cbEventos.Style = MetroFramework.MetroColorStyle.Purple
-        Me.cbEventos.TabIndex = 46
-        Me.cbEventos.UseSelectable = True
-        '
-        'ckbEventoProspecto
-        '
-        Me.ckbEventoProspecto.AutoSize = True
-        Me.ckbEventoProspecto.Location = New System.Drawing.Point(329, 217)
-        Me.ckbEventoProspecto.Name = "ckbEventoProspecto"
-        Me.ckbEventoProspecto.Size = New System.Drawing.Size(59, 15)
-        Me.ckbEventoProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.ckbEventoProspecto.TabIndex = 45
-        Me.ckbEventoProspecto.Text = "Evento"
-        Me.ckbEventoProspecto.UseSelectable = True
-        '
-        'lblInteres
-        '
-        Me.lblInteres.AutoSize = True
-        Me.lblInteres.Location = New System.Drawing.Point(324, 356)
-        Me.lblInteres.Name = "lblInteres"
-        Me.lblInteres.Size = New System.Drawing.Size(59, 19)
-        Me.lblInteres.TabIndex = 44
-        Me.lblInteres.Text = "Intereses"
-        '
-        'cbInteresesProspecto
-        '
-        Me.cbInteresesProspecto.Enabled = False
-        Me.cbInteresesProspecto.ItemHeight = 23
-        Me.cbInteresesProspecto.Location = New System.Drawing.Point(403, 356)
-        Me.cbInteresesProspecto.Name = "cbInteresesProspecto"
-        Me.cbInteresesProspecto.Size = New System.Drawing.Size(121, 29)
-        Me.cbInteresesProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.cbInteresesProspecto.TabIndex = 43
-        Me.cbInteresesProspecto.UseSelectable = True
-        '
-        'btnListarSeguimientos
-        '
-        Me.btnListarSeguimientos.Location = New System.Drawing.Point(575, 104)
-        Me.btnListarSeguimientos.Name = "btnListarSeguimientos"
-        Me.btnListarSeguimientos.Size = New System.Drawing.Size(116, 37)
-        Me.btnListarSeguimientos.TabIndex = 37
-        Me.btnListarSeguimientos.Text = "Lista seguimientos"
-        Me.btnListarSeguimientos.UseSelectable = True
-        Me.btnListarSeguimientos.Visible = False
-        '
-        'btnNuevoSeguimiento
-        '
-        Me.btnNuevoSeguimiento.Location = New System.Drawing.Point(575, 51)
-        Me.btnNuevoSeguimiento.Name = "btnNuevoSeguimiento"
-        Me.btnNuevoSeguimiento.Size = New System.Drawing.Size(116, 37)
-        Me.btnNuevoSeguimiento.TabIndex = 36
-        Me.btnNuevoSeguimiento.Text = "Nuevo seguimiento"
-        Me.btnNuevoSeguimiento.UseSelectable = True
-        Me.btnNuevoSeguimiento.Visible = False
-        '
-        'txtFechaNacProspecto
-        '
-        Me.txtFechaNacProspecto.CustomFormat = ""
-        Me.txtFechaNacProspecto.Location = New System.Drawing.Point(158, 112)
-        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(0, 29)
-        Me.txtFechaNacProspecto.Name = "txtFechaNacProspecto"
-        Me.txtFechaNacProspecto.Size = New System.Drawing.Size(367, 29)
-        Me.txtFechaNacProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtFechaNacProspecto.TabIndex = 32
-        Me.txtFechaNacProspecto.Value = New Date(2015, 11, 1, 16, 55, 54, 0)
-        '
-        'txtDireccionProspecto
-        '
-        '
-        '
-        '
-        Me.txtDireccionProspecto.CustomButton.Image = Nothing
-        Me.txtDireccionProspecto.CustomButton.Location = New System.Drawing.Point(301, 1)
-        Me.txtDireccionProspecto.CustomButton.Name = ""
-        Me.txtDireccionProspecto.CustomButton.Size = New System.Drawing.Size(65, 65)
-        Me.txtDireccionProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtDireccionProspecto.CustomButton.TabIndex = 1
-        Me.txtDireccionProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtDireccionProspecto.CustomButton.UseSelectable = True
-        Me.txtDireccionProspecto.CustomButton.Visible = False
-        Me.txtDireccionProspecto.Lines = New String(-1) {}
-        Me.txtDireccionProspecto.Location = New System.Drawing.Point(158, 248)
-        Me.txtDireccionProspecto.MaxLength = 32767
-        Me.txtDireccionProspecto.Multiline = True
-        Me.txtDireccionProspecto.Name = "txtDireccionProspecto"
-        Me.txtDireccionProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtDireccionProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtDireccionProspecto.SelectedText = ""
-        Me.txtDireccionProspecto.SelectionLength = 0
-        Me.txtDireccionProspecto.SelectionStart = 0
-        Me.txtDireccionProspecto.Size = New System.Drawing.Size(367, 67)
-        Me.txtDireccionProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtDireccionProspecto.TabIndex = 31
-        Me.txtDireccionProspecto.UseSelectable = True
-        Me.txtDireccionProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtDireccionProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'txtProcedenciaProspecto
-        '
-        '
-        '
-        '
-        Me.txtProcedenciaProspecto.CustomButton.Image = Nothing
-        Me.txtProcedenciaProspecto.CustomButton.Location = New System.Drawing.Point(132, 1)
-        Me.txtProcedenciaProspecto.CustomButton.Name = ""
-        Me.txtProcedenciaProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtProcedenciaProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtProcedenciaProspecto.CustomButton.TabIndex = 1
-        Me.txtProcedenciaProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtProcedenciaProspecto.CustomButton.UseSelectable = True
-        Me.txtProcedenciaProspecto.CustomButton.Visible = False
-        Me.txtProcedenciaProspecto.Lines = New String(-1) {}
-        Me.txtProcedenciaProspecto.Location = New System.Drawing.Point(158, 213)
-        Me.txtProcedenciaProspecto.MaxLength = 32767
-        Me.txtProcedenciaProspecto.Name = "txtProcedenciaProspecto"
-        Me.txtProcedenciaProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtProcedenciaProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtProcedenciaProspecto.SelectedText = ""
-        Me.txtProcedenciaProspecto.SelectionLength = 0
-        Me.txtProcedenciaProspecto.SelectionStart = 0
-        Me.txtProcedenciaProspecto.Size = New System.Drawing.Size(154, 23)
-        Me.txtProcedenciaProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtProcedenciaProspecto.TabIndex = 30
-        Me.txtProcedenciaProspecto.UseSelectable = True
-        Me.txtProcedenciaProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtProcedenciaProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'txtTelProspecto
-        '
-        '
-        '
-        '
-        Me.txtTelProspecto.CustomButton.Image = Nothing
-        Me.txtTelProspecto.CustomButton.Location = New System.Drawing.Point(345, 1)
-        Me.txtTelProspecto.CustomButton.Name = ""
-        Me.txtTelProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtTelProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtTelProspecto.CustomButton.TabIndex = 1
-        Me.txtTelProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtTelProspecto.CustomButton.UseSelectable = True
-        Me.txtTelProspecto.CustomButton.Visible = False
-        Me.txtTelProspecto.Lines = New String(-1) {}
-        Me.txtTelProspecto.Location = New System.Drawing.Point(158, 180)
-        Me.txtTelProspecto.MaxLength = 32767
-        Me.txtTelProspecto.Name = "txtTelProspecto"
-        Me.txtTelProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtTelProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtTelProspecto.SelectedText = ""
-        Me.txtTelProspecto.SelectionLength = 0
-        Me.txtTelProspecto.SelectionStart = 0
-        Me.txtTelProspecto.Size = New System.Drawing.Size(367, 23)
-        Me.txtTelProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtTelProspecto.TabIndex = 28
-        Me.txtTelProspecto.UseSelectable = True
-        Me.txtTelProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtTelProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'txtEmailProspecto
-        '
-        '
-        '
-        '
-        Me.txtEmailProspecto.CustomButton.Image = Nothing
-        Me.txtEmailProspecto.CustomButton.Location = New System.Drawing.Point(345, 1)
-        Me.txtEmailProspecto.CustomButton.Name = ""
-        Me.txtEmailProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtEmailProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtEmailProspecto.CustomButton.TabIndex = 1
-        Me.txtEmailProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtEmailProspecto.CustomButton.UseSelectable = True
-        Me.txtEmailProspecto.CustomButton.Visible = False
-        Me.txtEmailProspecto.Lines = New String(-1) {}
-        Me.txtEmailProspecto.Location = New System.Drawing.Point(158, 148)
-        Me.txtEmailProspecto.MaxLength = 32767
-        Me.txtEmailProspecto.Name = "txtEmailProspecto"
-        Me.txtEmailProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtEmailProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtEmailProspecto.SelectedText = ""
-        Me.txtEmailProspecto.SelectionLength = 0
-        Me.txtEmailProspecto.SelectionStart = 0
-        Me.txtEmailProspecto.Size = New System.Drawing.Size(367, 23)
-        Me.txtEmailProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtEmailProspecto.TabIndex = 27
-        Me.txtEmailProspecto.UseSelectable = True
-        Me.txtEmailProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtEmailProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'txtApellidosProspecto
-        '
-        '
-        '
-        '
-        Me.txtApellidosProspecto.CustomButton.Image = Nothing
-        Me.txtApellidosProspecto.CustomButton.Location = New System.Drawing.Point(345, 1)
-        Me.txtApellidosProspecto.CustomButton.Name = ""
-        Me.txtApellidosProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtApellidosProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtApellidosProspecto.CustomButton.TabIndex = 1
-        Me.txtApellidosProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtApellidosProspecto.CustomButton.UseSelectable = True
-        Me.txtApellidosProspecto.CustomButton.Visible = False
-        Me.txtApellidosProspecto.Lines = New String(-1) {}
-        Me.txtApellidosProspecto.Location = New System.Drawing.Point(158, 82)
-        Me.txtApellidosProspecto.MaxLength = 32767
-        Me.txtApellidosProspecto.Name = "txtApellidosProspecto"
-        Me.txtApellidosProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtApellidosProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtApellidosProspecto.SelectedText = ""
-        Me.txtApellidosProspecto.SelectionLength = 0
-        Me.txtApellidosProspecto.SelectionStart = 0
-        Me.txtApellidosProspecto.Size = New System.Drawing.Size(367, 23)
-        Me.txtApellidosProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtApellidosProspecto.TabIndex = 25
-        Me.txtApellidosProspecto.UseSelectable = True
-        Me.txtApellidosProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtApellidosProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'txtNombreProspecto
-        '
-        '
-        '
-        '
-        Me.txtNombreProspecto.CustomButton.Image = Nothing
-        Me.txtNombreProspecto.CustomButton.Location = New System.Drawing.Point(345, 1)
-        Me.txtNombreProspecto.CustomButton.Name = ""
-        Me.txtNombreProspecto.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtNombreProspecto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtNombreProspecto.CustomButton.TabIndex = 1
-        Me.txtNombreProspecto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtNombreProspecto.CustomButton.UseSelectable = True
-        Me.txtNombreProspecto.CustomButton.Visible = False
-        Me.txtNombreProspecto.Lines = New String(-1) {}
-        Me.txtNombreProspecto.Location = New System.Drawing.Point(158, 51)
-        Me.txtNombreProspecto.MaxLength = 32767
-        Me.txtNombreProspecto.Name = "txtNombreProspecto"
-        Me.txtNombreProspecto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNombreProspecto.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtNombreProspecto.SelectedText = ""
-        Me.txtNombreProspecto.SelectionLength = 0
-        Me.txtNombreProspecto.SelectionStart = 0
-        Me.txtNombreProspecto.Size = New System.Drawing.Size(367, 23)
-        Me.txtNombreProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtNombreProspecto.TabIndex = 24
-        Me.txtNombreProspecto.UseSelectable = True
-        Me.txtNombreProspecto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtNombreProspecto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'btnCancelarProspecto
-        '
-        Me.btnCancelarProspecto.Location = New System.Drawing.Point(423, 433)
-        Me.btnCancelarProspecto.Name = "btnCancelarProspecto"
-        Me.btnCancelarProspecto.Size = New System.Drawing.Size(97, 23)
-        Me.btnCancelarProspecto.TabIndex = 23
-        Me.btnCancelarProspecto.Text = "Cancelar"
-        Me.btnCancelarProspecto.UseSelectable = True
-        '
-        'btnGuardarProspecto
-        '
-        Me.btnGuardarProspecto.Location = New System.Drawing.Point(320, 433)
-        Me.btnGuardarProspecto.Name = "btnGuardarProspecto"
-        Me.btnGuardarProspecto.Size = New System.Drawing.Size(97, 23)
-        Me.btnGuardarProspecto.TabIndex = 22
-        Me.btnGuardarProspecto.Text = "Guardar"
-        Me.btnGuardarProspecto.UseSelectable = True
-        '
-        'tglEstaInteresado
-        '
-        Me.tglEstaInteresado.AutoSize = True
-        Me.tglEstaInteresado.Location = New System.Drawing.Point(158, 356)
-        Me.tglEstaInteresado.Name = "tglEstaInteresado"
-        Me.tglEstaInteresado.Size = New System.Drawing.Size(80, 17)
-        Me.tglEstaInteresado.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tglEstaInteresado.TabIndex = 21
-        Me.tglEstaInteresado.Text = "Off"
-        Me.tglEstaInteresado.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.tglEstaInteresado.UseSelectable = True
-        '
-        'lblInteresadoProspecto
-        '
-        Me.lblInteresadoProspecto.AutoSize = True
-        Me.lblInteresadoProspecto.Location = New System.Drawing.Point(24, 354)
-        Me.lblInteresadoProspecto.Name = "lblInteresadoProspecto"
-        Me.lblInteresadoProspecto.Size = New System.Drawing.Size(70, 19)
-        Me.lblInteresadoProspecto.TabIndex = 20
-        Me.lblInteresadoProspecto.Text = "Interesado"
-        '
-        'lblProcedenciaProspecto
-        '
-        Me.lblProcedenciaProspecto.AutoSize = True
-        Me.lblProcedenciaProspecto.Location = New System.Drawing.Point(24, 213)
-        Me.lblProcedenciaProspecto.Name = "lblProcedenciaProspecto"
-        Me.lblProcedenciaProspecto.Size = New System.Drawing.Size(81, 19)
-        Me.lblProcedenciaProspecto.TabIndex = 19
-        Me.lblProcedenciaProspecto.Text = "Procedencia"
-        '
-        'lblDireccionProspecto
-        '
-        Me.lblDireccionProspecto.AutoSize = True
-        Me.lblDireccionProspecto.Location = New System.Drawing.Point(25, 248)
-        Me.lblDireccionProspecto.Name = "lblDireccionProspecto"
-        Me.lblDireccionProspecto.Size = New System.Drawing.Size(63, 19)
-        Me.lblDireccionProspecto.TabIndex = 18
-        Me.lblDireccionProspecto.Text = "Dirección"
-        '
-        'tglEstadoProspecto
-        '
-        Me.tglEstadoProspecto.AutoSize = True
-        Me.tglEstadoProspecto.Checked = True
-        Me.tglEstadoProspecto.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.tglEstadoProspecto.Location = New System.Drawing.Point(158, 328)
-        Me.tglEstadoProspecto.Name = "tglEstadoProspecto"
-        Me.tglEstadoProspecto.Size = New System.Drawing.Size(80, 17)
-        Me.tglEstadoProspecto.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tglEstadoProspecto.TabIndex = 17
-        Me.tglEstadoProspecto.Text = "On"
-        Me.tglEstadoProspecto.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.tglEstadoProspecto.UseSelectable = True
-        '
-        'lblTelefonoProspecto
-        '
-        Me.lblTelefonoProspecto.AutoSize = True
-        Me.lblTelefonoProspecto.Location = New System.Drawing.Point(24, 180)
-        Me.lblTelefonoProspecto.Name = "lblTelefonoProspecto"
-        Me.lblTelefonoProspecto.Size = New System.Drawing.Size(58, 19)
-        Me.lblTelefonoProspecto.TabIndex = 16
-        Me.lblTelefonoProspecto.Text = "Telefono"
-        '
-        'lblEstadoProspecto
-        '
-        Me.lblEstadoProspecto.AutoSize = True
-        Me.lblEstadoProspecto.Location = New System.Drawing.Point(24, 326)
-        Me.lblEstadoProspecto.Name = "lblEstadoProspecto"
-        Me.lblEstadoProspecto.Size = New System.Drawing.Size(48, 19)
-        Me.lblEstadoProspecto.TabIndex = 15
-        Me.lblEstadoProspecto.Text = "Estado"
-        '
-        'lblApellidosProspecto
-        '
-        Me.lblApellidosProspecto.AutoSize = True
-        Me.lblApellidosProspecto.Location = New System.Drawing.Point(24, 82)
-        Me.lblApellidosProspecto.Name = "lblApellidosProspecto"
-        Me.lblApellidosProspecto.Size = New System.Drawing.Size(58, 19)
-        Me.lblApellidosProspecto.TabIndex = 14
-        Me.lblApellidosProspecto.Text = "Apellido"
-        '
-        'lblFechaProspecto
-        '
-        Me.lblFechaProspecto.AutoSize = True
-        Me.lblFechaProspecto.Location = New System.Drawing.Point(25, 114)
-        Me.lblFechaProspecto.Name = "lblFechaProspecto"
-        Me.lblFechaProspecto.Size = New System.Drawing.Size(111, 19)
-        Me.lblFechaProspecto.TabIndex = 13
-        Me.lblFechaProspecto.Text = "Fecha nacimiento"
-        '
-        'lblCorreoProspecto
-        '
-        Me.lblCorreoProspecto.AutoSize = True
-        Me.lblCorreoProspecto.Location = New System.Drawing.Point(24, 148)
-        Me.lblCorreoProspecto.Name = "lblCorreoProspecto"
-        Me.lblCorreoProspecto.Size = New System.Drawing.Size(51, 19)
-        Me.lblCorreoProspecto.TabIndex = 12
-        Me.lblCorreoProspecto.Text = "Correo"
-        '
-        'lblNombreProspecto
-        '
-        Me.lblNombreProspecto.AutoSize = True
-        Me.lblNombreProspecto.Location = New System.Drawing.Point(24, 51)
-        Me.lblNombreProspecto.Name = "lblNombreProspecto"
-        Me.lblNombreProspecto.Size = New System.Drawing.Size(59, 19)
-        Me.lblNombreProspecto.TabIndex = 11
-        Me.lblNombreProspecto.Text = "Nombre"
-        '
-        'lblCrearProspectos
-        '
-        Me.lblCrearProspectos.AutoSize = True
-        Me.lblCrearProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblCrearProspectos.Location = New System.Drawing.Point(-2, 4)
-        Me.lblCrearProspectos.Name = "lblCrearProspectos"
-        Me.lblCrearProspectos.Size = New System.Drawing.Size(133, 25)
-        Me.lblCrearProspectos.TabIndex = 10
-        Me.lblCrearProspectos.Text = "Crear prospecto"
-        '
-        'lblClienteProspecto
-        '
-        Me.lblClienteProspecto.AutoSize = True
-        Me.lblClienteProspecto.Location = New System.Drawing.Point(25, 384)
-        Me.lblClienteProspecto.Name = "lblClienteProspecto"
-        Me.lblClienteProspecto.Size = New System.Drawing.Size(49, 19)
-        Me.lblClienteProspecto.TabIndex = 34
-        Me.lblClienteProspecto.Text = "Cliente"
-        '
-        'tglEsCliente
-        '
-        Me.tglEsCliente.AutoSize = True
-        Me.tglEsCliente.Location = New System.Drawing.Point(158, 384)
-        Me.tglEsCliente.Name = "tglEsCliente"
-        Me.tglEsCliente.Size = New System.Drawing.Size(80, 17)
-        Me.tglEsCliente.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tglEsCliente.TabIndex = 35
-        Me.tglEsCliente.Text = "Off"
-        Me.tglEsCliente.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.tglEsCliente.UseSelectable = True
-        '
-        'lblIdSeguimiento
-        '
-        Me.lblIdSeguimiento.AutoSize = True
-        Me.lblIdSeguimiento.Location = New System.Drawing.Point(648, 9)
-        Me.lblIdSeguimiento.Name = "lblIdSeguimiento"
-        Me.lblIdSeguimiento.Size = New System.Drawing.Size(20, 19)
-        Me.lblIdSeguimiento.TabIndex = 48
-        Me.lblIdSeguimiento.Text = "-1"
-        Me.lblIdSeguimiento.Visible = False
-        '
-        'lblIdProspecto
-        '
-        Me.lblIdProspecto.AutoSize = True
-        Me.lblIdProspecto.Location = New System.Drawing.Point(671, 9)
-        Me.lblIdProspecto.Name = "lblIdProspecto"
-        Me.lblIdProspecto.Size = New System.Drawing.Size(20, 19)
-        Me.lblIdProspecto.TabIndex = 47
-        Me.lblIdProspecto.Text = "-1"
-        Me.lblIdProspecto.Visible = False
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1426,9 +1562,13 @@ Partial Class FrmMain
         Me.PanelCrearEvento.ResumeLayout(False)
         Me.PanelCrearEvento.PerformLayout()
         Me.TabProspectos.ResumeLayout(False)
+        Me.pnlAsignarProspecto.ResumeLayout(False)
+        Me.pnlAsignarProspecto.PerformLayout()
         Me.PnlListaProspectos.ResumeLayout(False)
         Me.PnlListaProspectos.PerformLayout()
         CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlNuevoProspecto.ResumeLayout(False)
+        Me.PnlNuevoProspecto.PerformLayout()
         Me.KPIHolder.ResumeLayout(False)
         Me.panSeleccionarTipoKPI.ResumeLayout(False)
         Me.pnlCrearKpiProducto.ResumeLayout(False)
@@ -1438,8 +1578,6 @@ Partial Class FrmMain
         Me.panKpiVentas.ResumeLayout(False)
         Me.panKpiVentas.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PnlNuevoProspecto.ResumeLayout(False)
-        Me.PnlNuevoProspecto.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1550,4 +1688,16 @@ Partial Class FrmMain
     Friend WithEvents tglEsCliente As MetroFramework.Controls.MetroToggle
     Friend WithEvents lblIdSeguimiento As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblIdProspecto As MetroFramework.Controls.MetroLabel
+    Friend WithEvents pnlAsignarProspecto As MetroFramework.Controls.MetroPanel
+    Friend WithEvents btnQuitarProspAsignado As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnGuardarAsignarProsp As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnCancelarAsignarProsp As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnAsignarListaProsp As MetroFramework.Controls.MetroButton
+    Friend WithEvents ltbProspAsignados As System.Windows.Forms.ListBox
+    Friend WithEvents lblProspAsignados As MetroFramework.Controls.MetroLabel
+    Friend WithEvents ltbProspectosSlt As System.Windows.Forms.ListBox
+    Friend WithEvents ltbVendedoresSlt As System.Windows.Forms.ListBox
+    Friend WithEvents lblProspectosSlt As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblVendedoresSlt As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblAsignarProspecto As MetroFramework.Controls.MetroLabel
 End Class
