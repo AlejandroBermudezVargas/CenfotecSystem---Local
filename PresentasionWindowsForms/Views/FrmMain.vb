@@ -457,9 +457,11 @@ Public Class FrmMain
         Dim productos As List(Of Producto) = ProductsController.obtenerListaProductos
         Dim comboSource As New Dictionary(Of String, String)()
         comboSource.Add("", "Elija uno")
-        For Each prod As Producto In productos
-            comboSource.Add(prod.Id_Producto.ToString, prod.Nombre)
-        Next
+        If Not IsNothing(productos) Then
+            For Each prod As Producto In productos
+                comboSource.Add(prod.Id_Producto.ToString, prod.Nombre)
+            Next
+        End If
         productos_cmb.DataSource = New BindingSource(comboSource, Nothing)
         productos_cmb.DisplayMember = "Value"
         productos_cmb.ValueMember = "Key"
@@ -470,9 +472,11 @@ Public Class FrmMain
         Dim productos As List(Of Producto) = ProductsController.obtenerListaProductos
         Dim comboSource As New Dictionary(Of String, String)()
         comboSource.Add("", "Elija uno")
-        For Each prod As Producto In productos
-            comboSource.Add(prod.Id_Producto, prod.Codigo_Producto)
-        Next
+        If Not IsNothing(productos) Then
+            For Each prod As Producto In productos
+                comboSource.Add(prod.Id_Producto, prod.Codigo_Producto)
+            Next
+        End If
         cod_prod_cmb.DataSource = New BindingSource(comboSource, Nothing)
         cod_prod_cmb.DisplayMember = "Value"
         cod_prod_cmb.ValueMember = "Key"
