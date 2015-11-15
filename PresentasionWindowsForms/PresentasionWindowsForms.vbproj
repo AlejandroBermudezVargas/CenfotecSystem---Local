@@ -95,23 +95,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\EventosController.vb" />
-    <Compile Include="Controllers\PermissionsController.vb" />
     <Compile Include="Controllers\ProductsController.vb" />
-    <Compile Include="Controllers\ProductTypeController.vb" />
     <Compile Include="Controllers\ProspectusController.vb" />
-    <Compile Include="Controllers\RolsController.vb" />
     <Compile Include="Controllers\SalesController.vb" />
-    <Compile Include="Controllers\SeguimientoController.vb" />
-    <Compile Include="Controllers\UsersController.vb" />
     <Compile Include="Models\Evento.vb" />
-    <Compile Include="Models\PermissionModel.vb" />
+    <Compile Include="Models\Kpi.vb" />
     <Compile Include="Models\Producto.vb" />
     <Compile Include="Models\Prospecto.vb" />
-    <Compile Include="Models\RolModel.vb" />
-    <Compile Include="Models\Sale.vb" />
-    <Compile Include="Models\Seguimiento.vb" />
+    <Compile Include="Models\Tipo_Kpi.vb" />
     <Compile Include="Models\Tipo_Producto.vb" />
-    <Compile Include="Models\UserModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -131,11 +123,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>respuestasDelSistema.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\ValidationsMessages.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ValidationsMessages.resx</DependentUpon>
     </Compile>
     <Compile Include="Views\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -168,11 +155,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>respuestasDelSistema.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\ValidationsMessages.resx">
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ValidationsMessages.Designer.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -198,7 +180,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pen29.png" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -208,15 +190,7 @@
     <None Include="Resources\delete81.png" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
+    <None Include="Resources\pen29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

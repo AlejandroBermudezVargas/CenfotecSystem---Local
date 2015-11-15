@@ -1,7 +1,11 @@
-# CenfotecSystem---Local
-This project we will be developing the local presentation of the Cenfotec Project
+﻿# PresentasionLocal-Sistema-Cenfotec-
+Aqui es donde vamos a trabajar todo lo que es presentacion del lado del cliente en la parte local, Para el sistema de gestión de CENFOTEC
 
-# Colaborators
+Lenguajes utilizados en este proyecto
+- Visual Basic Windows forms y MetroFramework
+
+Desarrolladores del proyecto:
+
 - Alejandro Bermúdez Vargas
 - Jhonny Camacho Madrigal
 - Fabio Flores Manrique
@@ -9,10 +13,5 @@ This project we will be developing the local presentation of the Cenfotec Projec
 - Esteban Montes González
 
 
-# Lenguages used in the project
- - Visual basic with MetroFramework
 
-# Libraries
-- RestSharp for create request to the API
-- MetroFramework
-
+Universidad CENFOTEC

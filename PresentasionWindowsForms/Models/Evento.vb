@@ -2,7 +2,7 @@
     Private _lugar As String
     Private _fecha_inicio As Date
     Private _fecha_fin As Date
-    Private _id_evento As Integer
+    Private _id As Integer
 
     Public Property Lugar As String
         Get
@@ -13,7 +13,7 @@
         End Set
     End Property
 
-    Public Property Fecha_inicio As Date
+    Public Property FechaInicio As Date
         Get
             Return _fecha_inicio
         End Get
@@ -22,7 +22,7 @@
         End Set
     End Property
 
-    Public Property Fecha_fin As Date
+    Public Property FechaFin As Date
         Get
             Return _fecha_fin
         End Get
@@ -31,12 +31,12 @@
         End Set
     End Property
 
-    Public Property Id_evento As Integer
+    Public Property IdEvento As Integer
         Get
-            Return _id_evento
+            Return _id
         End Get
         Set(value As Integer)
-            _id_evento = value
+            _id = value
         End Set
     End Property
 

@@ -10,7 +10,6 @@
     Private _direccion As String
     Private _interesado As Boolean
     Private _cliente As Boolean
-    Private _tipo_producto As List(Of Tipo_Producto)
 
     Public Property Id_prospecto As Integer
         Get
@@ -110,14 +109,4 @@
             _cliente = value
         End Set
     End Property
-
-    Public Property Tipo_producto As List(Of Tipo_Producto)
-        Get
-            Return _tipo_producto
-        End Get
-        Set(value As List(Of Tipo_Producto))
-            _tipo_producto = value
-        End Set
-    End Property
 End Class
-

@@ -24,186 +24,75 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.pnListUsers = New MetroFramework.Controls.MetroPanel()
-        Me.lblRoles = New MetroFramework.Controls.MetroLink()
-        Me.MetroLabel14 = New MetroFramework.Controls.MetroLabel()
-        Me.btnCreateUser = New MetroFramework.Controls.MetroButton()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.lstProspectos = New System.Windows.Forms.DataGridView()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colIdentificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colRol = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colState = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.pnListUsers.SuspendLayout()
-        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MetroPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'pnListUsers
+        'MetroLabel2
         '
-        Me.pnListUsers.Controls.Add(Me.lstProspectos)
-        Me.pnListUsers.Controls.Add(Me.lblRoles)
-        Me.pnListUsers.Controls.Add(Me.MetroLabel14)
-        Me.pnListUsers.Controls.Add(Me.btnCreateUser)
-        Me.pnListUsers.HorizontalScrollbarBarColor = True
-        Me.pnListUsers.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnListUsers.HorizontalScrollbarSize = 10
-        Me.pnListUsers.Location = New System.Drawing.Point(102, 68)
-        Me.pnListUsers.Name = "pnListUsers"
-        Me.pnListUsers.Size = New System.Drawing.Size(746, 462)
-        Me.pnListUsers.Style = MetroFramework.MetroColorStyle.Blue
-        Me.pnListUsers.TabIndex = 35
-        Me.pnListUsers.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.pnListUsers.VerticalScrollbarBarColor = True
-        Me.pnListUsers.VerticalScrollbarHighlightOnWheel = False
-        Me.pnListUsers.VerticalScrollbarSize = 10
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel2.Location = New System.Drawing.Point(4, 9)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(132, 25)
+        Me.MetroLabel2.TabIndex = 10
+        Me.MetroLabel2.Text = "Lista prospectos"
         '
-        'lblRoles
+        'MetroButton1
         '
-        Me.lblRoles.BackColor = System.Drawing.Color.Ivory
-        Me.lblRoles.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblRoles.FontSize = MetroFramework.MetroLinkSize.Medium
-        Me.lblRoles.Location = New System.Drawing.Point(0, 425)
-        Me.lblRoles.Name = "lblRoles"
-        Me.lblRoles.Size = New System.Drawing.Size(216, 23)
-        Me.lblRoles.Style = MetroFramework.MetroColorStyle.Purple
-        Me.lblRoles.TabIndex = 11
-        Me.lblRoles.Text = "Administrar roles de usuario"
-        Me.lblRoles.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.lblRoles.UseSelectable = True
+        Me.MetroButton1.Location = New System.Drawing.Point(620, 412)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(123, 36)
+        Me.MetroButton1.TabIndex = 9
+        Me.MetroButton1.Text = "Nuevo prospecto"
+        Me.MetroButton1.UseSelectable = True
         '
-        'MetroLabel14
+        'DataGridView1
         '
-        Me.MetroLabel14.AutoSize = True
-        Me.MetroLabel14.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel14.Location = New System.Drawing.Point(4, 9)
-        Me.MetroLabel14.Name = "MetroLabel14"
-        Me.MetroLabel14.Size = New System.Drawing.Size(113, 25)
-        Me.MetroLabel14.TabIndex = 10
-        Me.MetroLabel14.Text = "Lista usuarios"
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(4, 37)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(739, 344)
+        Me.DataGridView1.TabIndex = 8
         '
-        'btnCreateUser
+        'MetroPanel1
         '
-        Me.btnCreateUser.Location = New System.Drawing.Point(620, 412)
-        Me.btnCreateUser.Name = "btnCreateUser"
-        Me.btnCreateUser.Size = New System.Drawing.Size(123, 36)
-        Me.btnCreateUser.TabIndex = 9
-        Me.btnCreateUser.Text = "Nuevo usuario"
-        Me.btnCreateUser.UseSelectable = True
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.HeaderText = ""
-        Me.DataGridViewImageColumn1.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.DataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        '
-        'lstProspectos
-        '
-        Me.lstProspectos.AllowUserToAddRows = False
-        Me.lstProspectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.lstProspectos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.colIdentificacion, Me.Column1, Me.Column2, Me.Column5, Me.Column6, Me.colRol, Me.colState, Me.Column7, Me.Column9})
-        Me.lstProspectos.Location = New System.Drawing.Point(7, 37)
-        Me.lstProspectos.Name = "lstProspectos"
-        Me.lstProspectos.RowHeadersVisible = False
-        Me.lstProspectos.Size = New System.Drawing.Size(739, 344)
-        Me.lstProspectos.TabIndex = 12
-        '
-        'Column8
-        '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column8.HeaderText = "ID"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        '
-        'colIdentificacion
-        '
-        Me.colIdentificacion.HeaderText = "Cédula"
-        Me.colIdentificacion.Name = "colIdentificacion"
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Nombre"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Apellidos"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Teléfono"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "E-mail"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'colRol
-        '
-        Me.colRol.HeaderText = "Tipo"
-        Me.colRol.Name = "colRol"
-        '
-        'colState
-        '
-        Me.colState.HeaderText = "Estado"
-        Me.colState.Name = "colState"
-        '
-        'Column7
-        '
-        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column7.HeaderText = ""
-        Me.Column7.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.Column7.Name = "Column7"
-        Me.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'Column9
-        '
-        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column9.HeaderText = ""
-        Me.Column9.Image = Global.PresentasionWindowsForms.My.Resources.Resources.delete81
-        Me.Column9.Name = "Column9"
+        Me.MetroPanel1.Controls.Add(Me.MetroLabel2)
+        Me.MetroPanel1.Controls.Add(Me.MetroButton1)
+        Me.MetroPanel1.Controls.Add(Me.DataGridView1)
+        Me.MetroPanel1.HorizontalScrollbarBarColor = True
+        Me.MetroPanel1.HorizontalScrollbarHighlightOnWheel = False
+        Me.MetroPanel1.HorizontalScrollbarSize = 10
+        Me.MetroPanel1.Location = New System.Drawing.Point(102, 73)
+        Me.MetroPanel1.Name = "MetroPanel1"
+        Me.MetroPanel1.Size = New System.Drawing.Size(746, 452)
+        Me.MetroPanel1.Style = MetroFramework.MetroColorStyle.White
+        Me.MetroPanel1.TabIndex = 3
+        Me.MetroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.MetroPanel1.VerticalScrollbarBarColor = True
+        Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
+        Me.MetroPanel1.VerticalScrollbarSize = 10
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(950, 598)
-        Me.Controls.Add(Me.pnListUsers)
+        Me.Controls.Add(Me.MetroPanel1)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        Me.pnListUsers.ResumeLayout(False)
-        Me.pnListUsers.PerformLayout()
-        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MetroPanel1.ResumeLayout(False)
+        Me.MetroPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents pnListUsers As MetroFramework.Controls.MetroPanel
-    Friend WithEvents lblRoles As MetroFramework.Controls.MetroLink
-    Friend WithEvents MetroLabel14 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents btnCreateUser As MetroFramework.Controls.MetroButton
-    Friend WithEvents DataGridViewImageColumn1 As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents lstProspectos As System.Windows.Forms.DataGridView
-    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colIdentificacion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colRol As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colState As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents Column9 As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents MetroPanel1 As MetroFramework.Controls.MetroPanel
 End Class

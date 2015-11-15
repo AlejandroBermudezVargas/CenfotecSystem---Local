@@ -1,19 +1,19 @@
 ﻿Imports RestSharp
 Imports RestSharp.Deserializers
 Imports System.Configuration
-Imports Newtonsoft.Json
+Imports NewtonSoft.Json
 Public Class EventosController
 
     Shared Function CrearEvento(ByVal id As Integer, ByVal lugar As String, ByVal fechaInicio As Date, ByVal fechaFin As Date)
         Dim evento = New Evento
         evento.Lugar = lugar
-        evento.Fecha_inicio = fechaInicio
-        evento.Fecha_fin = fechaFin
+        evento.FechaInicio = fechaInicio
+        evento.FechaFin = fechaFin
         Dim cliente = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
         Dim request As RestRequest
         If (id <> Nothing) Then
-            evento.Id_evento = id
-            request = New RestRequest("Events/" + evento.Id_evento.ToString, Method.PUT) 'esta basura no sirve
+            evento.IdEvento = id
+            request = New RestRequest("Events/" + evento.IdEvento.ToString, Method.PUT) 'esta basura no sirve
             request.RequestFormat = DataFormat.Json
         Else
             request = New RestRequest("Events", Method.POST)
@@ -68,4 +68,5 @@ Public Class EventosController
     End Function
 
 End Class
+
 

@@ -22,126 +22,121 @@ Partial Class FrmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
-        Me.lblForgotPasswordLogin = New MetroFramework.Controls.MetroLink()
-        Me.btnSignInLogin = New MetroFramework.Controls.MetroButton()
-        Me.txtPasswordLogin = New MetroFramework.Controls.MetroTextBox()
-        Me.lblEmailLogin = New MetroFramework.Controls.MetroLabel()
-        Me.txtEmailLogin = New MetroFramework.Controls.MetroTextBox()
-        Me.lblPasswordLogin = New MetroFramework.Controls.MetroLabel()
+        Me.lblOlvidoContrasenna = New MetroFramework.Controls.MetroLink()
+        Me.btnIniciarSesion = New MetroFramework.Controls.MetroButton()
+        Me.txtContrasenna = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.txtUsuario = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
         Me.HtmlLabel2 = New MetroFramework.Drawing.Html.HtmlLabel()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblForgotPasswordLogin
+        'lblOlvidoContrasenna
         '
-        Me.lblForgotPasswordLogin.ForeColor = System.Drawing.Color.Black
-        Me.lblForgotPasswordLogin.Location = New System.Drawing.Point(35, 407)
-        Me.lblForgotPasswordLogin.Name = "lblForgotPasswordLogin"
-        Me.lblForgotPasswordLogin.Size = New System.Drawing.Size(157, 23)
-        Me.lblForgotPasswordLogin.Style = MetroFramework.MetroColorStyle.Purple
-        Me.lblForgotPasswordLogin.TabIndex = 14
-        Me.lblForgotPasswordLogin.Text = "¿Olvidaste tu contraseña?"
-        Me.lblForgotPasswordLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblForgotPasswordLogin.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.lblForgotPasswordLogin.UseSelectable = True
+        Me.lblOlvidoContrasenna.ForeColor = System.Drawing.Color.Black
+        Me.lblOlvidoContrasenna.Location = New System.Drawing.Point(35, 407)
+        Me.lblOlvidoContrasenna.Name = "lblOlvidoContrasenna"
+        Me.lblOlvidoContrasenna.Size = New System.Drawing.Size(157, 23)
+        Me.lblOlvidoContrasenna.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lblOlvidoContrasenna.TabIndex = 14
+        Me.lblOlvidoContrasenna.Text = "¿Olvidaste tu contraseña?"
+        Me.lblOlvidoContrasenna.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblOlvidoContrasenna.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.lblOlvidoContrasenna.UseSelectable = True
+        Me.lblOlvidoContrasenna.Visible = False
         '
-        'btnSignInLogin
+        'btnIniciarSesion
         '
-        Me.btnSignInLogin.Location = New System.Drawing.Point(250, 335)
-        Me.btnSignInLogin.Name = "btnSignInLogin"
-        Me.btnSignInLogin.Size = New System.Drawing.Size(133, 30)
-        Me.btnSignInLogin.Style = MetroFramework.MetroColorStyle.Lime
-        Me.btnSignInLogin.TabIndex = 13
-        Me.btnSignInLogin.Text = "Iniciar sesion"
-        Me.btnSignInLogin.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.btnSignInLogin.UseSelectable = True
+        Me.btnIniciarSesion.Location = New System.Drawing.Point(250, 335)
+        Me.btnIniciarSesion.Name = "btnIniciarSesion"
+        Me.btnIniciarSesion.Size = New System.Drawing.Size(133, 30)
+        Me.btnIniciarSesion.Style = MetroFramework.MetroColorStyle.Lime
+        Me.btnIniciarSesion.TabIndex = 13
+        Me.btnIniciarSesion.Text = "Iniciar sesion"
+        Me.btnIniciarSesion.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnIniciarSesion.UseSelectable = True
         '
-        'txtPasswordLogin
-        '
-        '
-        '
-        '
-        Me.txtPasswordLogin.CustomButton.Image = Nothing
-        Me.txtPasswordLogin.CustomButton.Location = New System.Drawing.Point(244, 1)
-        Me.txtPasswordLogin.CustomButton.Name = ""
-        Me.txtPasswordLogin.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtPasswordLogin.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtPasswordLogin.CustomButton.TabIndex = 1
-        Me.txtPasswordLogin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtPasswordLogin.CustomButton.UseSelectable = True
-        Me.txtPasswordLogin.CustomButton.Visible = False
-        Me.txtPasswordLogin.Lines = New String() {"Admin1379"}
-        Me.txtPasswordLogin.Location = New System.Drawing.Point(117, 292)
-        Me.txtPasswordLogin.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
-        Me.txtPasswordLogin.MaxLength = 50
-        Me.txtPasswordLogin.Name = "txtPasswordLogin"
-        Me.txtPasswordLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.txtPasswordLogin.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtPasswordLogin.SelectedText = ""
-        Me.txtPasswordLogin.SelectionLength = 0
-        Me.txtPasswordLogin.SelectionStart = 0
-        Me.txtPasswordLogin.Size = New System.Drawing.Size(266, 23)
-        Me.txtPasswordLogin.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtPasswordLogin.TabIndex = 12
-        Me.txtPasswordLogin.Text = "Admin1379"
-        Me.txtPasswordLogin.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtPasswordLogin.UseSelectable = True
-        Me.txtPasswordLogin.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtPasswordLogin.WaterMarkFont = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'lblEmailLogin
-        '
-        Me.lblEmailLogin.AutoSize = True
-        Me.lblEmailLogin.Location = New System.Drawing.Point(35, 245)
-        Me.lblEmailLogin.Name = "lblEmailLogin"
-        Me.lblEmailLogin.Size = New System.Drawing.Size(53, 19)
-        Me.lblEmailLogin.TabIndex = 11
-        Me.lblEmailLogin.Text = "Usuario"
-        '
-        'txtEmailLogin
+        'txtContrasenna
         '
         '
         '
         '
-        Me.txtEmailLogin.CustomButton.Image = Nothing
-        Me.txtEmailLogin.CustomButton.Location = New System.Drawing.Point(244, 1)
-        Me.txtEmailLogin.CustomButton.Name = ""
-        Me.txtEmailLogin.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtEmailLogin.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtEmailLogin.CustomButton.TabIndex = 1
-        Me.txtEmailLogin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtEmailLogin.CustomButton.UseSelectable = True
-        Me.txtEmailLogin.CustomButton.Visible = False
-        Me.txtEmailLogin.Lines = New String() {"admin@ucenfotec.ac.cr"}
-        Me.txtEmailLogin.Location = New System.Drawing.Point(117, 245)
-        Me.txtEmailLogin.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
-        Me.txtEmailLogin.MaxLength = 50
-        Me.txtEmailLogin.Name = "txtEmailLogin"
-        Me.txtEmailLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtEmailLogin.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtEmailLogin.SelectedText = ""
-        Me.txtEmailLogin.SelectionLength = 0
-        Me.txtEmailLogin.SelectionStart = 0
-        Me.txtEmailLogin.Size = New System.Drawing.Size(266, 23)
-        Me.txtEmailLogin.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtEmailLogin.TabIndex = 10
-        Me.txtEmailLogin.Text = "admin@ucenfotec.ac.cr"
-        Me.txtEmailLogin.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtEmailLogin.UseSelectable = True
-        Me.txtEmailLogin.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtEmailLogin.WaterMarkFont = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContrasenna.CustomButton.Image = Nothing
+        Me.txtContrasenna.CustomButton.Location = New System.Drawing.Point(244, 1)
+        Me.txtContrasenna.CustomButton.Name = ""
+        Me.txtContrasenna.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtContrasenna.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtContrasenna.CustomButton.TabIndex = 1
+        Me.txtContrasenna.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtContrasenna.CustomButton.UseSelectable = True
+        Me.txtContrasenna.CustomButton.Visible = False
+        Me.txtContrasenna.Lines = New String(-1) {}
+        Me.txtContrasenna.Location = New System.Drawing.Point(117, 292)
+        Me.txtContrasenna.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
+        Me.txtContrasenna.MaxLength = 32767
+        Me.txtContrasenna.Name = "txtContrasenna"
+        Me.txtContrasenna.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtContrasenna.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtContrasenna.SelectedText = ""
+        Me.txtContrasenna.SelectionLength = 0
+        Me.txtContrasenna.SelectionStart = 0
+        Me.txtContrasenna.Size = New System.Drawing.Size(266, 23)
+        Me.txtContrasenna.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtContrasenna.TabIndex = 12
+        Me.txtContrasenna.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtContrasenna.UseSelectable = True
+        Me.txtContrasenna.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtContrasenna.WaterMarkFont = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'lblPasswordLogin
+        'MetroLabel2
         '
-        Me.lblPasswordLogin.AutoSize = True
-        Me.lblPasswordLogin.Location = New System.Drawing.Point(35, 292)
-        Me.lblPasswordLogin.Name = "lblPasswordLogin"
-        Me.lblPasswordLogin.Size = New System.Drawing.Size(75, 19)
-        Me.lblPasswordLogin.TabIndex = 9
-        Me.lblPasswordLogin.Text = "Contraseña"
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.Location = New System.Drawing.Point(35, 245)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(53, 19)
+        Me.MetroLabel2.TabIndex = 11
+        Me.MetroLabel2.Text = "Usuario"
+        '
+        'txtUsuario
+        '
+        '
+        '
+        '
+        Me.txtUsuario.CustomButton.Image = Nothing
+        Me.txtUsuario.CustomButton.Location = New System.Drawing.Point(244, 1)
+        Me.txtUsuario.CustomButton.Name = ""
+        Me.txtUsuario.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtUsuario.CustomButton.TabIndex = 1
+        Me.txtUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtUsuario.CustomButton.UseSelectable = True
+        Me.txtUsuario.CustomButton.Visible = False
+        Me.txtUsuario.Lines = New String(-1) {}
+        Me.txtUsuario.Location = New System.Drawing.Point(117, 245)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
+        Me.txtUsuario.MaxLength = 32767
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUsuario.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtUsuario.SelectedText = ""
+        Me.txtUsuario.SelectionLength = 0
+        Me.txtUsuario.SelectionStart = 0
+        Me.txtUsuario.Size = New System.Drawing.Size(266, 23)
+        Me.txtUsuario.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtUsuario.TabIndex = 10
+        Me.txtUsuario.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtUsuario.UseSelectable = True
+        Me.txtUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtUsuario.WaterMarkFont = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(35, 292)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(75, 19)
+        Me.MetroLabel4.TabIndex = 9
+        Me.MetroLabel4.Text = "Contraseña"
         '
         'HtmlLabel2
         '
@@ -156,39 +151,30 @@ Partial Class FrmLogin
         Me.HtmlLabel2.Size = New System.Drawing.Size(210, 105)
         Me.HtmlLabel2.TabIndex = 8
         '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
-        Me.ErrorProvider1.Icon = CType(resources.GetObject("ErrorProvider1.Icon"), System.Drawing.Icon)
-        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(432, 493)
-        Me.Controls.Add(Me.lblForgotPasswordLogin)
-        Me.Controls.Add(Me.btnSignInLogin)
-        Me.Controls.Add(Me.txtPasswordLogin)
-        Me.Controls.Add(Me.lblEmailLogin)
-        Me.Controls.Add(Me.txtEmailLogin)
-        Me.Controls.Add(Me.lblPasswordLogin)
+        Me.Controls.Add(Me.lblOlvidoContrasenna)
+        Me.Controls.Add(Me.btnIniciarSesion)
+        Me.Controls.Add(Me.txtContrasenna)
+        Me.Controls.Add(Me.MetroLabel2)
+        Me.Controls.Add(Me.txtUsuario)
+        Me.Controls.Add(Me.MetroLabel4)
         Me.Controls.Add(Me.HtmlLabel2)
-        Me.MaximumSize = New System.Drawing.Size(432, 493)
-        Me.MinimumSize = New System.Drawing.Size(432, 493)
         Me.Name = "FrmLogin"
         Me.Style = MetroFramework.MetroColorStyle.Purple
         Me.Text = "Inicio de sesión"
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblForgotPasswordLogin As MetroFramework.Controls.MetroLink
-    Friend WithEvents btnSignInLogin As MetroFramework.Controls.MetroButton
-    Friend WithEvents txtPasswordLogin As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents lblEmailLogin As MetroFramework.Controls.MetroLabel
-    Friend WithEvents txtEmailLogin As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents lblPasswordLogin As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblOlvidoContrasenna As MetroFramework.Controls.MetroLink
+    Friend WithEvents btnIniciarSesion As MetroFramework.Controls.MetroButton
+    Friend WithEvents txtContrasenna As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtUsuario As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
     Friend WithEvents HtmlLabel2 As MetroFramework.Drawing.Html.HtmlLabel
-    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

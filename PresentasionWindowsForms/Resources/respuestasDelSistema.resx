@@ -117,43 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CREATE_ROL_ERROR" xml:space="preserve">
-    <value>ocurrio un error al insertar el usuario!</value>
-  </data>
-  <data name="CREATE_ROL_SUCCESS" xml:space="preserve">
-    <value>El rol ha sido creado exitosamente!</value>
-  </data>
-  <data name="CREATE_USER_ERROR" xml:space="preserve">
-    <value>Hubo un error al crear el usuario</value>
-  </data>
-  <data name="CREATE_USER_SUCCESS" xml:space="preserve">
-    <value>El usuario ha sido creado exitosamente!</value>
-  </data>
-  <data name="DELETE_USER_SUCCESS" xml:space="preserve">
-    <value>El usuario ha sido eliminado exitoxamente!</value>
-  </data>
-  <data name="INACTIVE_ROL" xml:space="preserve">
-    <value>Tu rol se encuentra desactivado.</value>
-  </data>
-  <data name="INACTIVE_USER" xml:space="preserve">
-    <value>El usuario se encuentra inactivo en el sistema</value>
-  </data>
-  <data name="POPULATE_FILLS_ERROR" xml:space="preserve">
-    <value>No se han podido cargar los datos</value>
-  </data>
-  <data name="UPDATE_ROL_ERROR" xml:space="preserve">
-    <value>El rol no ha podido se modificado</value>
-  </data>
-  <data name="UPDATE_ROL_SUCCESS" xml:space="preserve">
-    <value>El rol ha sido modificado correctamente!</value>
-  </data>
-  <data name="UPDATE_USER_SUCCESS" xml:space="preserve">
-    <value>El usuario ha sido modificado con exito!</value>
-  </data>
-  <data name="UPDATE__USER_ERROR" xml:space="preserve">
-    <value>El usuario no ha podido ser modificado</value>
-  </data>
-  <data name="USER_NOT_EXIST" xml:space="preserve">
-    <value>La combinacion de correo y contraseña es incorrecta</value>
+  <data name="elUsuarioNoExiste" xml:space="preserve">
+    <value>El usuario no existe en el sistema!</value>
   </data>
 </root>

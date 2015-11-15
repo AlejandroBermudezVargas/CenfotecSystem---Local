@@ -117,32 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ErrorProvider1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
-        AAD///8B////ATVC9GE2QvThNUD0Mf///wH///8B////Af///wH///8B////ATVA9DE2QvThNUD0Mf//
-        /wH///8B////ATVC9GE2Q/T/NkP0/zVD8/E1QPQx////Af///wH///8B////ATVA9DE1Q/PxNkP0/zVD
-        8/E1QPQx////ATVC9GE2Q/T/NkP0/zZD9P82Q/T/NUPz8TVA9DH///8B////ATVA9DE1Q/PxNkP0/zZD
-        9P82Q/T/NUPz8TVA9DE1Q/PxNkP0/zZD9P82Q/T/NkP0/zZD9P81Q/PxNUD0MTVA9DE1Q/PxNkP0/zZD
-        9P82Q/T/NkP0/zZD9P82QvThNUD0MTVC8+82Q/T/NkP0/zZD9P82Q/T/NkP0/zVD8/E1Q/PxNkP0/zZD
-        9P82Q/T/NkP0/zZD9P81QvPvNUD0Mf///wE1QPQxNULz7zZD9P82Q/T/NkP0/zZD9P82Q/T/NkP0/zZD
-        9P82Q/T/NkP0/zZD9P81QvPvNUD0Mf///wH///8B////ATVA9DE1QvPvNkP0/zZD9P82Q/T/NkP0/zZD
-        9P82Q/T/NkP0/zZD9P81QvPvNUD0Mf///wH///8B////Af///wH///8BNUD0MTVC8+82Q/T/NkP0/zZD
-        9P82Q/T/NkP0/zZD9P81QvPvNUD0Mf///wH///8B////Af///wH///8B////ATVA9DE1Q/PxNkP0/zZD
-        9P82Q/T/NkP0/zZD9P82Q/T/NUPz8TVA9DH///8B////Af///wH///8B////ATVA9DE1Q/PxNkP0/zZD
-        9P82Q/T/NkP0/zZD9P82Q/T/NkP0/zZD9P81Q/PxNUD0Mf///wH///8B////ATVA9DE1Q/PxNkP0/zZD
-        9P82Q/T/NkP0/zZD9P82Q/T/NkP0/zZD9P82Q/T/NkP0/zVD8/E1QPQx////ATVA9DE1Q/PxNkP0/zZD
-        9P82Q/T/NkP0/zZD9P81QvPvNULz7zZD9P82Q/T/NkP0/zZD9P82Q/T/NUPz8TVA9DE2QvThNkP0/zZD
-        9P82Q/T/NkP0/zZD9P81QvPvNUD0MTVA9DE1QvPvNkP0/zZD9P82Q/T/NkP0/zZD9P82QvThNETzQTZD
-        9P82Q/T/NkP0/zZD9P81QvPvNUD0Mf///wH///8BNUD0MTVC8+82Q/T/NkP0/zZD9P81QvPvNUD0Mf//
-        /wE1QvRhNkP0/zZD9P81QvPvNUD0Mf///wH///8B////Af///wE1QPQxNULz7zZD9P81QvPvNUD0Mf//
-        /wH///8B////ATVC9GE1QvPvNUD0Mf///wH///8B////Af///wH///8B////ATVA9DE2QvTfNUD0Mf//
-        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
-        //8AAP//AAD//w==
-</value>
-  </data>
 </root>

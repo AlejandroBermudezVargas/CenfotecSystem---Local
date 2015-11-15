@@ -1,20 +1,11 @@
 ﻿Public Class Producto
 
+    Private _idProducto As Integer
     Private _nombre As String
     Private _costo As Double
     Private _horario As String
     Private _codigo_producto As String
     Private _id_tipo_product As Integer
-    Private _id_Producto As Integer
-    Public Property Id_producto() As Integer
-        Get
-            Return _id_Producto
-        End Get
-        Set(ByVal value As Integer)
-            _id_Producto = value
-        End Set
-    End Property
-
     Public Property Id_Tipo_Product() As Integer
         Get
             Return _id_tipo_product
@@ -62,10 +53,10 @@
 
     Public Property Id() As String
         Get
-            Return _id_Producto
+            Return _idProducto
         End Get
         Set(ByVal value As String)
-            _id_Producto = value
+            _idProducto = value
         End Set
     End Property
 
