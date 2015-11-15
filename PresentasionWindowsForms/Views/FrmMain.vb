@@ -204,6 +204,11 @@ Public Class FrmMain
     End Sub
 
     Private Sub btnCrearProspecto_Click(sender As Object, e As EventArgs) Handles btnCrearProspecto.Click
+        If lblIdProspecto.Equals(-1) Then
+            lblCrearProspectos.Text = "Editar prospecto"
+        Else
+            lblCrearProspectos.Text = "Crear prospecto"
+        End If
         btnNuevoSeguimiento.Visible = False
         btnListarSeguimientos.Visible = False
         PnlListaProspectos.Visible = False
@@ -470,6 +475,91 @@ Public Class FrmMain
         data3.Clear()
         ltbProspAsignados.DataSource = Nothing
         llenarListBoxProspectos()
+    End Sub
+    '
+    'SEGUIMIENTOS
+    '
+    Private Sub lstSeguimientos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles lstSeguimientos.CellContentClick
+        Select Case e.ColumnIndex
+            Case 3
+                Dim id As String = lstSeguimientos.Rows(e.RowIndex).Cells(0).Value
+                Dim pseg As Seguimiento = SeguimientoController.getSeguimiento(id)
+                lblIdSeguimiento.Text = pseg.Id_seguimiento
+                txtFechaSeguimiento.Value = pseg.Fecha
+                txtComentarioSeguimiento.Text = pseg.Comentario
+                PnlListaSeguimientos.Visible = False
+                pnlSeguimientos.Visible = True
+            Case 4
+                Dim id As String = lstSeguimientos.Rows(e.RowIndex).Cells(0).Value
+                Dim resul = SeguimientoController.eliminar(id)
+                If (resul.Equals(True)) Then
+                    lstSeguimientos.Rows.Remove(lstSeguimientos.Rows(e.RowIndex))
+                    MsgBox("El registro se eliminó con éxito", MsgBoxStyle.Information)
+                Else
+                    MsgBox("Imposible eliminar el registro", MsgBoxStyle.Critical)
+                End If
+            Case Else
+                Exit Sub
+        End Select
+    End Sub
+
+    Private Sub limpiarFormSeguimiento()
+        txtComentarioSeguimiento.Clear()
+        txtFechaSeguimiento.Value = Date.Now
+    End Sub
+
+    Private Sub btnNuevoSeguimiento_Click(sender As Object, e As EventArgs) Handles btnNuevoSeguimiento.Click
+        If lblIdSeguimiento.Equals(-1) Then
+            lblCrearSeguimiento.Text = "Editar seguimiento"
+        Else
+            lblCrearSeguimiento.Text = "Crear seguimiento"
+        End If
+        PnlNuevoProspecto.Visible = False
+        pnlSeguimientos.Visible = True
+    End Sub
+
+    Private Sub btnCancelarSeguimiento_Click(sender As Object, e As EventArgs) Handles btnCancelarSeguimiento.Click
+        Me.limpiarFormSeguimiento()
+        PnlNuevoProspecto.Visible = True
+        pnlSeguimientos.Visible = False
+    End Sub
+
+    Private Sub btnGuardarSeguimiento_Click(sender As Object, e As EventArgs) Handles btnGuardarSeguimiento.Click
+        If String.IsNullOrEmpty(txtComentarioSeguimiento.Text) Then
+            ErrorProvider1.SetError(txtComentarioSeguimiento, ValidationsMessages.EMPTY_FIELD)
+        Else
+            Dim resul = SeguimientoController.guardarOActualizar(CInt(lblIdSeguimiento.Text), CInt(lblIdProspecto.Text), txtFechaSeguimiento.Value, txtComentarioSeguimiento.Text)
+            If (resul.Equals(True)) Then
+                MsgBox("El registro ha sido creado exitosamente", MsgBoxStyle.Information)
+                Me.limpiarFormSeguimiento()
+                PnlNuevoProspecto.Visible = True
+                pnlSeguimientos.Visible = False
+            Else
+                MsgBox("Hubo un error al guardar el registro", MsgBoxStyle.Critical)
+            End If
+            lblIdSeguimiento.Text = -1
+        End If
+    End Sub
+
+    Private Sub btnListarSeguimientos_Click(sender As Object, e As EventArgs) Handles btnListarSeguimientos.Click
+        Me.llenarListaSeguimientos()
+        PnlListaSeguimientos.Visible = True
+        PnlNuevoProspecto.Visible = False
+    End Sub
+
+    Private Sub btnCancelarListaSeguimiento_Click(sender As Object, e As EventArgs) Handles btnCancelarListaSeguimiento.Click
+        PnlListaSeguimientos.Visible = False
+        PnlNuevoProspecto.Visible = True
+    End Sub
+
+    Private Sub llenarListaSeguimientos()
+        lstSeguimientos.Rows.Clear()
+        Dim seguimientos = SeguimientoController.listar(CInt(lblIdProspecto.Text))
+        If (Not seguimientos.Equals(Nothing)) Then
+            For Each seg As Seguimiento In seguimientos
+                lstSeguimientos.Rows.Add(seg.Id_seguimiento, Format(seg.Fecha, "dd-MM-yyyy"), seg.Comentario)
+            Next
+        End If
     End Sub
 
     'VALIDACIONES
