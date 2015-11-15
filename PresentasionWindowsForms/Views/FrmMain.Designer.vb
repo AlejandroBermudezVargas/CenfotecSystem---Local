@@ -83,8 +83,22 @@ Partial Class FrmMain
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
+        Me.PnlListaProspectos = New MetroFramework.Controls.MetroPanel()
+        Me.btnAsignarProspecto = New MetroFramework.Controls.MetroButton()
+        Me.lblListaProspectos = New MetroFramework.Controls.MetroLabel()
+        Me.btnCrearProspecto = New MetroFramework.Controls.MetroButton()
+        Me.lstProspectos = New System.Windows.Forms.DataGridView()
+        Me.ColumnaIDProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaNombreProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaApellidosProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaNacimientoProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaProcedenciaProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTelefonoProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEmailProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEditarProspecto = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
+        Me.TabProspectos.SuspendLayout()
         Me.Eventos.SuspendLayout()
         Me.PanelListarEventos.SuspendLayout()
         CType(Me.DataListarEventos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,14 +108,16 @@ Partial Class FrmMain
         Me.pnlCrearKpiProducto.SuspendLayout()
         Me.pnlKpiProspectos.SuspendLayout()
         Me.panKpiVentas.SuspendLayout()
+        Me.PnlListaProspectos.SuspendLayout()
+        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Main
         '
         Me.Main.Controls.Add(Me.TabProductos)
-        Me.Main.Controls.Add(Me.TabConfiguracion)
-        Me.Main.Controls.Add(Me.TabProspectos)
         Me.Main.Controls.Add(Me.Eventos)
+        Me.Main.Controls.Add(Me.TabProspectos)
+        Me.Main.Controls.Add(Me.TabConfiguracion)
         Me.Main.Controls.Add(Me.KPIHolder)
         Me.Main.Controls.Add(Me.TabVentas)
         Me.Main.Controls.Add(Me.TabUsuarios)
@@ -111,7 +127,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 4
+        Me.Main.SelectedIndex = 2
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -174,6 +190,7 @@ Partial Class FrmMain
         '
         'TabProspectos
         '
+        Me.TabProspectos.Controls.Add(Me.PnlListaProspectos)
         Me.TabProspectos.HorizontalScrollbarBarColor = True
         Me.TabProspectos.HorizontalScrollbarHighlightOnWheel = False
         Me.TabProspectos.HorizontalScrollbarSize = 10
@@ -523,7 +540,7 @@ Partial Class FrmMain
         Me.checkBoxTotalProducto.AutoSize = True
         Me.checkBoxTotalProducto.Location = New System.Drawing.Point(15, 62)
         Me.checkBoxTotalProducto.Name = "checkBoxTotalProducto"
-        Me.checkBoxTotalProducto.Size = New System.Drawing.Size(102, 15)
+        Me.checkBoxTotalProducto.Size = New System.Drawing.Size(101, 15)
         Me.checkBoxTotalProducto.TabIndex = 12
         Me.checkBoxTotalProducto.Text = "Total Producto"
         Me.checkBoxTotalProducto.UseSelectable = True
@@ -588,7 +605,7 @@ Partial Class FrmMain
         Me.checkboxTotalProspetosCliente.AutoSize = True
         Me.checkboxTotalProspetosCliente.Location = New System.Drawing.Point(152, 60)
         Me.checkboxTotalProspetosCliente.Name = "checkboxTotalProspetosCliente"
-        Me.checkboxTotalProspetosCliente.Size = New System.Drawing.Size(167, 15)
+        Me.checkboxTotalProspetosCliente.Size = New System.Drawing.Size(166, 15)
         Me.checkboxTotalProspetosCliente.TabIndex = 13
         Me.checkboxTotalProspetosCliente.Text = "Total de Prospectos Cliente"
         Me.checkboxTotalProspetosCliente.UseSelectable = True
@@ -598,7 +615,7 @@ Partial Class FrmMain
         Me.checkBoxTotalProspectos.AutoSize = True
         Me.checkBoxTotalProspectos.Location = New System.Drawing.Point(19, 60)
         Me.checkBoxTotalProspectos.Name = "checkBoxTotalProspectos"
-        Me.checkBoxTotalProspectos.Size = New System.Drawing.Size(127, 15)
+        Me.checkBoxTotalProspectos.Size = New System.Drawing.Size(126, 15)
         Me.checkBoxTotalProspectos.TabIndex = 12
         Me.checkBoxTotalProspectos.Text = "Total de Prospectos"
         Me.checkBoxTotalProspectos.UseSelectable = True
@@ -663,7 +680,7 @@ Partial Class FrmMain
         Me.checkBoxMontoTotalVentas.AutoSize = True
         Me.checkBoxMontoTotalVentas.Location = New System.Drawing.Point(115, 69)
         Me.checkBoxMontoTotalVentas.Name = "checkBoxMontoTotalVentas"
-        Me.checkBoxMontoTotalVentas.Size = New System.Drawing.Size(143, 15)
+        Me.checkBoxMontoTotalVentas.Size = New System.Drawing.Size(141, 15)
         Me.checkBoxMontoTotalVentas.TabIndex = 14
         Me.checkBoxMontoTotalVentas.Text = "Monto Total de Ventas"
         Me.checkBoxMontoTotalVentas.UseSelectable = True
@@ -673,7 +690,7 @@ Partial Class FrmMain
         Me.checkBoxTotalVentas.AutoSize = True
         Me.checkBoxTotalVentas.Location = New System.Drawing.Point(21, 69)
         Me.checkBoxTotalVentas.Name = "checkBoxTotalVentas"
-        Me.checkBoxTotalVentas.Size = New System.Drawing.Size(88, 15)
+        Me.checkBoxTotalVentas.Size = New System.Drawing.Size(86, 15)
         Me.checkBoxTotalVentas.TabIndex = 12
         Me.checkBoxTotalVentas.Text = "Total Ventas"
         Me.checkBoxTotalVentas.UseSelectable = True
@@ -684,7 +701,7 @@ Partial Class FrmMain
         Me.crearKPIVentas.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.crearKPIVentas.Location = New System.Drawing.Point(4, 9)
         Me.crearKPIVentas.Name = "crearKPIVentas"
-        Me.crearKPIVentas.Size = New System.Drawing.Size(137, 25)
+        Me.crearKPIVentas.Size = New System.Drawing.Size(135, 25)
         Me.crearKPIVentas.TabIndex = 11
         Me.crearKPIVentas.Text = "Crear KPI Ventas"
         '
@@ -761,6 +778,117 @@ Partial Class FrmMain
         Me.checkBoxTopProduto.Text = "Top Producto"
         Me.checkBoxTopProduto.UseSelectable = True
         '
+        'PnlListaProspectos
+        '
+        Me.PnlListaProspectos.Controls.Add(Me.btnAsignarProspecto)
+        Me.PnlListaProspectos.Controls.Add(Me.lblListaProspectos)
+        Me.PnlListaProspectos.Controls.Add(Me.btnCrearProspecto)
+        Me.PnlListaProspectos.Controls.Add(Me.lstProspectos)
+        Me.PnlListaProspectos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlListaProspectos.HorizontalScrollbarBarColor = True
+        Me.PnlListaProspectos.HorizontalScrollbarHighlightOnWheel = False
+        Me.PnlListaProspectos.HorizontalScrollbarSize = 10
+        Me.PnlListaProspectos.Location = New System.Drawing.Point(0, 0)
+        Me.PnlListaProspectos.Name = "PnlListaProspectos"
+        Me.PnlListaProspectos.Size = New System.Drawing.Size(752, 472)
+        Me.PnlListaProspectos.Style = MetroFramework.MetroColorStyle.White
+        Me.PnlListaProspectos.TabIndex = 41
+        Me.PnlListaProspectos.VerticalScrollbarBarColor = True
+        Me.PnlListaProspectos.VerticalScrollbarHighlightOnWheel = False
+        Me.PnlListaProspectos.VerticalScrollbarSize = 10
+        '
+        'btnAsignarProspecto
+        '
+        Me.btnAsignarProspecto.Location = New System.Drawing.Point(4, 412)
+        Me.btnAsignarProspecto.Name = "btnAsignarProspecto"
+        Me.btnAsignarProspecto.Size = New System.Drawing.Size(123, 36)
+        Me.btnAsignarProspecto.TabIndex = 43
+        Me.btnAsignarProspecto.Text = "Asignar prospectos"
+        Me.btnAsignarProspecto.UseSelectable = True
+        '
+        'lblListaProspectos
+        '
+        Me.lblListaProspectos.AutoSize = True
+        Me.lblListaProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblListaProspectos.Location = New System.Drawing.Point(2, 9)
+        Me.lblListaProspectos.Name = "lblListaProspectos"
+        Me.lblListaProspectos.Size = New System.Drawing.Size(132, 25)
+        Me.lblListaProspectos.TabIndex = 10
+        Me.lblListaProspectos.Text = "Lista prospectos"
+        '
+        'btnCrearProspecto
+        '
+        Me.btnCrearProspecto.Location = New System.Drawing.Point(620, 412)
+        Me.btnCrearProspecto.Name = "btnCrearProspecto"
+        Me.btnCrearProspecto.Size = New System.Drawing.Size(122, 36)
+        Me.btnCrearProspecto.TabIndex = 9
+        Me.btnCrearProspecto.Text = "Nuevo prospecto"
+        Me.btnCrearProspecto.UseSelectable = True
+        '
+        'lstProspectos
+        '
+        Me.lstProspectos.AllowUserToAddRows = False
+        Me.lstProspectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.lstProspectos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDProspecto, Me.ColumnaNombreProspecto, Me.ColumnaApellidosProspecto, Me.ColumnaNacimientoProspecto, Me.ColumnaProcedenciaProspecto, Me.ColumnaTelefonoProspecto, Me.ColumnaEmailProspecto, Me.ColumnaEditarProspecto})
+        Me.lstProspectos.Location = New System.Drawing.Point(4, 37)
+        Me.lstProspectos.Name = "lstProspectos"
+        Me.lstProspectos.RowHeadersVisible = False
+        Me.lstProspectos.Size = New System.Drawing.Size(739, 344)
+        Me.lstProspectos.TabIndex = 8
+        '
+        'ColumnaIDProspecto
+        '
+        Me.ColumnaIDProspecto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaIDProspecto.HeaderText = "ID"
+        Me.ColumnaIDProspecto.Name = "ColumnaIDProspecto"
+        Me.ColumnaIDProspecto.ReadOnly = True
+        Me.ColumnaIDProspecto.Visible = False
+        '
+        'ColumnaNombreProspecto
+        '
+        Me.ColumnaNombreProspecto.HeaderText = "Nombre"
+        Me.ColumnaNombreProspecto.Name = "ColumnaNombreProspecto"
+        Me.ColumnaNombreProspecto.ReadOnly = True
+        '
+        'ColumnaApellidosProspecto
+        '
+        Me.ColumnaApellidosProspecto.HeaderText = "Apellidos"
+        Me.ColumnaApellidosProspecto.Name = "ColumnaApellidosProspecto"
+        Me.ColumnaApellidosProspecto.ReadOnly = True
+        '
+        'ColumnaNacimientoProspecto
+        '
+        Me.ColumnaNacimientoProspecto.HeaderText = "Nacimiento"
+        Me.ColumnaNacimientoProspecto.Name = "ColumnaNacimientoProspecto"
+        Me.ColumnaNacimientoProspecto.ReadOnly = True
+        '
+        'ColumnaProcedenciaProspecto
+        '
+        Me.ColumnaProcedenciaProspecto.HeaderText = "Procedencia"
+        Me.ColumnaProcedenciaProspecto.Name = "ColumnaProcedenciaProspecto"
+        Me.ColumnaProcedenciaProspecto.ReadOnly = True
+        '
+        'ColumnaTelefonoProspecto
+        '
+        Me.ColumnaTelefonoProspecto.HeaderText = "Teléfono"
+        Me.ColumnaTelefonoProspecto.Name = "ColumnaTelefonoProspecto"
+        Me.ColumnaTelefonoProspecto.ReadOnly = True
+        '
+        'ColumnaEmailProspecto
+        '
+        Me.ColumnaEmailProspecto.HeaderText = "E-mail"
+        Me.ColumnaEmailProspecto.Name = "ColumnaEmailProspecto"
+        Me.ColumnaEmailProspecto.ReadOnly = True
+        '
+        'ColumnaEditarProspecto
+        '
+        Me.ColumnaEditarProspecto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaEditarProspecto.HeaderText = ""
+        Me.ColumnaEditarProspecto.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.ColumnaEditarProspecto.Name = "ColumnaEditarProspecto"
+        Me.ColumnaEditarProspecto.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEditarProspecto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -774,6 +902,7 @@ Partial Class FrmMain
         Me.Text = "Menu Principal"
         Me.Main.ResumeLayout(False)
         Me.TabProductos.ResumeLayout(False)
+        Me.TabProspectos.ResumeLayout(False)
         Me.Eventos.ResumeLayout(False)
         Me.PanelListarEventos.ResumeLayout(False)
         Me.PanelListarEventos.PerformLayout()
@@ -788,6 +917,9 @@ Partial Class FrmMain
         Me.pnlKpiProspectos.PerformLayout()
         Me.panKpiVentas.ResumeLayout(False)
         Me.panKpiVentas.PerformLayout()
+        Me.PnlListaProspectos.ResumeLayout(False)
+        Me.PnlListaProspectos.PerformLayout()
+        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -852,4 +984,17 @@ Partial Class FrmMain
     Friend WithEvents TextBoxResultadosKpiProspectos As System.Windows.Forms.RichTextBox
     Friend WithEvents ContextMenuStrip2 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents checkBoxTopProduto As MetroFramework.Controls.MetroCheckBox
+    Friend WithEvents PnlListaProspectos As MetroFramework.Controls.MetroPanel
+    Friend WithEvents btnAsignarProspecto As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblListaProspectos As MetroFramework.Controls.MetroLabel
+    Friend WithEvents btnCrearProspecto As MetroFramework.Controls.MetroButton
+    Friend WithEvents lstProspectos As System.Windows.Forms.DataGridView
+    Friend WithEvents ColumnaIDProspecto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaNombreProspecto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaApellidosProspecto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaNacimientoProspecto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaProcedenciaProspecto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaTelefonoProspecto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEmailProspecto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEditarProspecto As System.Windows.Forms.DataGridViewImageColumn
 End Class

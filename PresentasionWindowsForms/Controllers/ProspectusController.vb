@@ -29,4 +29,17 @@ Public Class ProspectusController
         End If
         Return resultado
     End Function
+
+    Shared Function listar()
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Prospectus", Method.GET)
+        request.RequestFormat = DataFormat.Json
+        Dim response = client.Execute(request)
+        Dim prospectos As List(Of Prospecto) = JsonConvert.DeserializeObject(Of List(Of Prospecto))(response.Content)
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
+            Return prospectos
+        Else
+            Return Nothing
+        End If
+    End Function
 End Class
