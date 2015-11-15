@@ -25,6 +25,84 @@ Partial Class FrmMain
         Me.components = New System.ComponentModel.Container()
         Me.Main = New MetroFramework.Controls.MetroTabControl()
         Me.TabProductos = New MetroFramework.Controls.MetroTabPage()
+        Me.registrarActi_pnl = New MetroFramework.Controls.MetroPanel()
+        Me.fechaInicio_dp = New System.Windows.Forms.DateTimePicker()
+        Me.fechaInicioCurso = New MetroFramework.Controls.MetroLabel()
+        Me.cancelarAct_btn = New MetroFramework.Controls.MetroButton()
+        Me.guardarAct_btn = New MetroFramework.Controls.MetroButton()
+        Me.importarActis_lbl = New MetroFramework.Controls.MetroLink()
+        Me.minsFinActi_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.horaFinActi_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.minsFin5Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsFin4Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsFin3Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsFin2Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsFin1Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaFin5Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaFin4Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaFin3Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaFin2Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaFin1Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsIniActi_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.horaIniActi_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.minsIni5Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsIni4Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsIni3Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsIni2Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.minsIni1Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaIni5Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaIni4Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaIni3Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaIni2Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.horaIni1Acti_nmb = New System.Windows.Forms.NumericUpDown()
+        Me.dia5Acti_cmb = New System.Windows.Forms.ComboBox()
+        Me.dia4Acti_cmb = New System.Windows.Forms.ComboBox()
+        Me.dia3Acti_cmb = New System.Windows.Forms.ComboBox()
+        Me.dia2Acti_cmb = New System.Windows.Forms.ComboBox()
+        Me.dia1Acti_cmb = New System.Windows.Forms.ComboBox()
+        Me.horaFin = New MetroFramework.Controls.MetroLabel()
+        Me.horaIni = New MetroFramework.Controls.MetroLabel()
+        Me.dia5_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.dia4Acti_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.dia2Acti_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.dia3Acti_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.dia1Acti_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.tipoActi_cmb = New System.Windows.Forms.ComboBox()
+        Me.costoActi_text = New MetroFramework.Controls.MetroTextBox()
+        Me.nombreActi_text = New MetroFramework.Controls.MetroTextBox()
+        Me.codigoActi_text = New MetroFramework.Controls.MetroTextBox()
+        Me.nombreActi_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.tipoActi_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel22 = New MetroFramework.Controls.MetroLabel()
+        Me.codigoActi_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.acti_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.horariosActi_grp = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel26 = New MetroFramework.Controls.MetroLabel()
+        Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
+        Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
+        Me.MetroPanel4 = New MetroFramework.Controls.MetroPanel()
+        Me.MetroButton5 = New MetroFramework.Controls.MetroButton()
+        Me.MetroLabel54 = New MetroFramework.Controls.MetroLabel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn6 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.MetroLabel55 = New MetroFramework.Controls.MetroLabel()
+        Me.vovlerActi_btn = New MetroFramework.Controls.MetroButton()
+        Me.MetroLabel56 = New MetroFramework.Controls.MetroLabel()
+        Me.listaActis_dg = New System.Windows.Forms.DataGridView()
+        Me.IdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigoCosto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.horarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn7 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.listaActis_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.nuevoActi_btn = New MetroFramework.Controls.MetroButton()
         Me.btnActiIco = New MetroFramework.Controls.MetroTile()
         Me.btnCarrerasIcon = New MetroFramework.Controls.MetroTile()
         Me.Eventos = New MetroFramework.Controls.MetroTabPage()
@@ -158,105 +236,8 @@ Partial Class FrmMain
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
-        Me.registrarActi_pnl = New MetroFramework.Controls.MetroPanel()
-        Me.fechaInicio_dp = New System.Windows.Forms.DateTimePicker()
-        Me.fechaInicioCurso = New MetroFramework.Controls.MetroLabel()
-        Me.cancelarAct_btn = New MetroFramework.Controls.MetroButton()
-        Me.guardarAct_btn = New MetroFramework.Controls.MetroButton()
-        Me.importarActis_lbl = New MetroFramework.Controls.MetroLink()
-        Me.minsFinActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.horaFinActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.minsFin5Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsFin4Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsFin3Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsFin2Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsFin1Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaFin5Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaFin4Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaFin3Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaFin2Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaFin1Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsIniActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.horaIniActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.minsIni5Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsIni4Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsIni3Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsIni2Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsIni1Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaIni5Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaIni4Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaIni3Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaIni2Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.horaIni1Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.dia5Acti_cmb = New System.Windows.Forms.ComboBox()
-        Me.dia4Acti_cmb = New System.Windows.Forms.ComboBox()
-        Me.dia3Acti_cmb = New System.Windows.Forms.ComboBox()
-        Me.dia2Acti_cmb = New System.Windows.Forms.ComboBox()
-        Me.dia1Acti_cmb = New System.Windows.Forms.ComboBox()
-        Me.horaFin = New MetroFramework.Controls.MetroLabel()
-        Me.horaIni = New MetroFramework.Controls.MetroLabel()
-        Me.dia5_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.dia4Acti_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.dia2Acti_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.dia3Acti_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.dia1Acti_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.tipoActi_cmb = New System.Windows.Forms.ComboBox()
-        Me.costoActi_text = New MetroFramework.Controls.MetroTextBox()
-        Me.nombreActi_text = New MetroFramework.Controls.MetroTextBox()
-        Me.codigoActi_text = New MetroFramework.Controls.MetroTextBox()
-        Me.nombreActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.tipoActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel22 = New MetroFramework.Controls.MetroLabel()
-        Me.codigoActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.acti_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.horariosActi_grp = New System.Windows.Forms.GroupBox()
-        Me.MetroLabel26 = New MetroFramework.Controls.MetroLabel()
-        Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
-        Me.MetroPanel4 = New MetroFramework.Controls.MetroPanel()
-        Me.MetroButton5 = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel54 = New MetroFramework.Controls.MetroLabel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn6 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.MetroLabel55 = New MetroFramework.Controls.MetroLabel()
-        Me.vovlerActi_btn = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel56 = New MetroFramework.Controls.MetroLabel()
-        Me.listaActis_dg = New System.Windows.Forms.DataGridView()
-        Me.IdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.codigoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.codigoCosto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.horarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn7 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.listaActis_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.nuevoActi_btn = New MetroFramework.Controls.MetroButton()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
-        Me.Eventos.SuspendLayout()
-        Me.PanelListarEventos.SuspendLayout()
-        CType(Me.DataListarEventos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelCrearEvento.SuspendLayout()
-        Me.TabProspectos.SuspendLayout()
-        Me.PnlListaProspectos.SuspendLayout()
-        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlSeguimientos.SuspendLayout()
-        Me.PnlNuevoProspecto.SuspendLayout()
-        Me.PnlListaSeguimientos.SuspendLayout()
-        CType(Me.lstSeguimientos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlAsignarProspecto.SuspendLayout()
-        Me.KPIHolder.SuspendLayout()
-        Me.panSeleccionarTipoKPI.SuspendLayout()
-        Me.pnlCrearKpiProducto.SuspendLayout()
-        Me.pnlKpiProspectos.SuspendLayout()
-        Me.panKpiVentas.SuspendLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.listaActis_pnl.SuspendLayout()
         Me.registrarActi_pnl.SuspendLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minsFin4Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -279,9 +260,28 @@ Partial Class FrmMain
         CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.horariosActi_grp.SuspendLayout()
+        Me.listaActis_pnl.SuspendLayout()
         Me.MetroPanel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Eventos.SuspendLayout()
+        Me.PanelListarEventos.SuspendLayout()
+        CType(Me.DataListarEventos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelCrearEvento.SuspendLayout()
+        Me.TabProspectos.SuspendLayout()
+        Me.PnlListaProspectos.SuspendLayout()
+        CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlSeguimientos.SuspendLayout()
+        Me.PnlNuevoProspecto.SuspendLayout()
+        Me.PnlListaSeguimientos.SuspendLayout()
+        CType(Me.lstSeguimientos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlAsignarProspecto.SuspendLayout()
+        Me.KPIHolder.SuspendLayout()
+        Me.panSeleccionarTipoKPI.SuspendLayout()
+        Me.pnlCrearKpiProducto.SuspendLayout()
+        Me.pnlKpiProspectos.SuspendLayout()
+        Me.panKpiVentas.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Main
@@ -322,6 +322,827 @@ Partial Class FrmMain
         Me.TabProductos.VerticalScrollbarBarColor = True
         Me.TabProductos.VerticalScrollbarHighlightOnWheel = False
         Me.TabProductos.VerticalScrollbarSize = 10
+        '
+        'registrarActi_pnl
+        '
+        Me.registrarActi_pnl.Controls.Add(Me.fechaInicio_dp)
+        Me.registrarActi_pnl.Controls.Add(Me.fechaInicioCurso)
+        Me.registrarActi_pnl.Controls.Add(Me.cancelarAct_btn)
+        Me.registrarActi_pnl.Controls.Add(Me.guardarAct_btn)
+        Me.registrarActi_pnl.Controls.Add(Me.importarActis_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.minsFinActi_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.horaFinActi_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.minsFin5Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsFin4Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsFin3Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsFin2Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsFin1Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaFin5Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaFin4Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaFin3Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaFin2Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaFin1Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsIniActi_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.horaIniActi_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.minsIni5Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsIni4Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsIni3Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsIni2Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.minsIni1Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaIni5Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaIni4Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaIni3Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaIni2Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaIni1Acti_nmb)
+        Me.registrarActi_pnl.Controls.Add(Me.dia5Acti_cmb)
+        Me.registrarActi_pnl.Controls.Add(Me.dia4Acti_cmb)
+        Me.registrarActi_pnl.Controls.Add(Me.dia3Acti_cmb)
+        Me.registrarActi_pnl.Controls.Add(Me.dia2Acti_cmb)
+        Me.registrarActi_pnl.Controls.Add(Me.dia1Acti_cmb)
+        Me.registrarActi_pnl.Controls.Add(Me.horaFin)
+        Me.registrarActi_pnl.Controls.Add(Me.horaIni)
+        Me.registrarActi_pnl.Controls.Add(Me.dia5_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.dia4Acti_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.dia2Acti_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.dia3Acti_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.dia1Acti_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.tipoActi_cmb)
+        Me.registrarActi_pnl.Controls.Add(Me.costoActi_text)
+        Me.registrarActi_pnl.Controls.Add(Me.nombreActi_text)
+        Me.registrarActi_pnl.Controls.Add(Me.codigoActi_text)
+        Me.registrarActi_pnl.Controls.Add(Me.nombreActi_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.tipoActi_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.MetroLabel22)
+        Me.registrarActi_pnl.Controls.Add(Me.codigoActi_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.acti_lbl)
+        Me.registrarActi_pnl.Controls.Add(Me.GroupBox2)
+        Me.registrarActi_pnl.Controls.Add(Me.GroupBox6)
+        Me.registrarActi_pnl.Controls.Add(Me.horariosActi_grp)
+        Me.registrarActi_pnl.HorizontalScrollbarBarColor = True
+        Me.registrarActi_pnl.HorizontalScrollbarHighlightOnWheel = False
+        Me.registrarActi_pnl.HorizontalScrollbarSize = 10
+        Me.registrarActi_pnl.Location = New System.Drawing.Point(0, 3)
+        Me.registrarActi_pnl.Name = "registrarActi_pnl"
+        Me.registrarActi_pnl.Size = New System.Drawing.Size(746, 462)
+        Me.registrarActi_pnl.Style = MetroFramework.MetroColorStyle.Purple
+        Me.registrarActi_pnl.TabIndex = 84
+        Me.registrarActi_pnl.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.registrarActi_pnl.VerticalScrollbarBarColor = True
+        Me.registrarActi_pnl.VerticalScrollbarHighlightOnWheel = False
+        Me.registrarActi_pnl.VerticalScrollbarSize = 10
+        Me.registrarActi_pnl.Visible = False
+        '
+        'fechaInicio_dp
+        '
+        Me.fechaInicio_dp.Location = New System.Drawing.Point(463, 84)
+        Me.fechaInicio_dp.Name = "fechaInicio_dp"
+        Me.fechaInicio_dp.Size = New System.Drawing.Size(200, 20)
+        Me.fechaInicio_dp.TabIndex = 89
+        '
+        'fechaInicioCurso
+        '
+        Me.fechaInicioCurso.AutoSize = True
+        Me.fechaInicioCurso.Location = New System.Drawing.Point(375, 86)
+        Me.fechaInicioCurso.Name = "fechaInicioCurso"
+        Me.fechaInicioCurso.Size = New System.Drawing.Size(77, 19)
+        Me.fechaInicioCurso.TabIndex = 88
+        Me.fechaInicioCurso.Text = "Fecha Inicio"
+        '
+        'cancelarAct_btn
+        '
+        Me.cancelarAct_btn.Location = New System.Drawing.Point(427, 421)
+        Me.cancelarAct_btn.Name = "cancelarAct_btn"
+        Me.cancelarAct_btn.Size = New System.Drawing.Size(97, 23)
+        Me.cancelarAct_btn.TabIndex = 87
+        Me.cancelarAct_btn.Text = "Cancelar"
+        Me.cancelarAct_btn.UseSelectable = True
+        '
+        'guardarAct_btn
+        '
+        Me.guardarAct_btn.Location = New System.Drawing.Point(324, 421)
+        Me.guardarAct_btn.Name = "guardarAct_btn"
+        Me.guardarAct_btn.Size = New System.Drawing.Size(97, 23)
+        Me.guardarAct_btn.TabIndex = 86
+        Me.guardarAct_btn.Text = "Guardar"
+        Me.guardarAct_btn.UseSelectable = True
+        '
+        'importarActis_lbl
+        '
+        Me.importarActis_lbl.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.importarActis_lbl.FontSize = MetroFramework.MetroLinkSize.Tall
+        Me.importarActis_lbl.FontWeight = MetroFramework.MetroLinkWeight.Light
+        Me.importarActis_lbl.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.importarActis_lbl.Location = New System.Drawing.Point(187, 11)
+        Me.importarActis_lbl.Name = "importarActis_lbl"
+        Me.importarActis_lbl.Size = New System.Drawing.Size(147, 23)
+        Me.importarActis_lbl.TabIndex = 85
+        Me.importarActis_lbl.Text = "Importar Datos"
+        Me.importarActis_lbl.UseCustomForeColor = True
+        Me.importarActis_lbl.UseSelectable = True
+        '
+        'minsFinActi_lbl
+        '
+        Me.minsFinActi_lbl.AutoSize = True
+        Me.minsFinActi_lbl.Location = New System.Drawing.Point(594, 224)
+        Me.minsFinActi_lbl.Name = "minsFinActi_lbl"
+        Me.minsFinActi_lbl.Size = New System.Drawing.Size(55, 19)
+        Me.minsFinActi_lbl.TabIndex = 74
+        Me.minsFinActi_lbl.Text = "Minutos"
+        '
+        'horaFinActi_lbl
+        '
+        Me.horaFinActi_lbl.AutoSize = True
+        Me.horaFinActi_lbl.Location = New System.Drawing.Point(546, 224)
+        Me.horaFinActi_lbl.Name = "horaFinActi_lbl"
+        Me.horaFinActi_lbl.Size = New System.Drawing.Size(38, 19)
+        Me.horaFinActi_lbl.TabIndex = 73
+        Me.horaFinActi_lbl.Text = "Hora"
+        '
+        'minsFin5Acti_nmb
+        '
+        Me.minsFin5Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsFin5Acti_nmb.Location = New System.Drawing.Point(603, 354)
+        Me.minsFin5Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsFin5Acti_nmb.Name = "minsFin5Acti_nmb"
+        Me.minsFin5Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsFin5Acti_nmb.TabIndex = 53
+        '
+        'minsFin4Acti_nmb
+        '
+        Me.minsFin4Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsFin4Acti_nmb.Location = New System.Drawing.Point(603, 327)
+        Me.minsFin4Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsFin4Acti_nmb.Name = "minsFin4Acti_nmb"
+        Me.minsFin4Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsFin4Acti_nmb.TabIndex = 48
+        '
+        'minsFin3Acti_nmb
+        '
+        Me.minsFin3Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsFin3Acti_nmb.Location = New System.Drawing.Point(603, 300)
+        Me.minsFin3Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsFin3Acti_nmb.Name = "minsFin3Acti_nmb"
+        Me.minsFin3Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsFin3Acti_nmb.TabIndex = 43
+        '
+        'minsFin2Acti_nmb
+        '
+        Me.minsFin2Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsFin2Acti_nmb.Location = New System.Drawing.Point(603, 273)
+        Me.minsFin2Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsFin2Acti_nmb.Name = "minsFin2Acti_nmb"
+        Me.minsFin2Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsFin2Acti_nmb.TabIndex = 38
+        '
+        'minsFin1Acti_nmb
+        '
+        Me.minsFin1Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsFin1Acti_nmb.Location = New System.Drawing.Point(603, 246)
+        Me.minsFin1Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsFin1Acti_nmb.Name = "minsFin1Acti_nmb"
+        Me.minsFin1Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsFin1Acti_nmb.TabIndex = 33
+        '
+        'horaFin5Acti_nmb
+        '
+        Me.horaFin5Acti_nmb.Location = New System.Drawing.Point(546, 354)
+        Me.horaFin5Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaFin5Acti_nmb.Name = "horaFin5Acti_nmb"
+        Me.horaFin5Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaFin5Acti_nmb.TabIndex = 52
+        '
+        'horaFin4Acti_nmb
+        '
+        Me.horaFin4Acti_nmb.Location = New System.Drawing.Point(546, 327)
+        Me.horaFin4Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaFin4Acti_nmb.Name = "horaFin4Acti_nmb"
+        Me.horaFin4Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaFin4Acti_nmb.TabIndex = 47
+        '
+        'horaFin3Acti_nmb
+        '
+        Me.horaFin3Acti_nmb.Location = New System.Drawing.Point(546, 300)
+        Me.horaFin3Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaFin3Acti_nmb.Name = "horaFin3Acti_nmb"
+        Me.horaFin3Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaFin3Acti_nmb.TabIndex = 42
+        '
+        'horaFin2Acti_nmb
+        '
+        Me.horaFin2Acti_nmb.Location = New System.Drawing.Point(546, 273)
+        Me.horaFin2Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaFin2Acti_nmb.Name = "horaFin2Acti_nmb"
+        Me.horaFin2Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaFin2Acti_nmb.TabIndex = 37
+        '
+        'horaFin1Acti_nmb
+        '
+        Me.horaFin1Acti_nmb.Location = New System.Drawing.Point(546, 246)
+        Me.horaFin1Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaFin1Acti_nmb.Name = "horaFin1Acti_nmb"
+        Me.horaFin1Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaFin1Acti_nmb.TabIndex = 32
+        '
+        'minsIniActi_lbl
+        '
+        Me.minsIniActi_lbl.AutoSize = True
+        Me.minsIniActi_lbl.Location = New System.Drawing.Point(462, 224)
+        Me.minsIniActi_lbl.Name = "minsIniActi_lbl"
+        Me.minsIniActi_lbl.Size = New System.Drawing.Size(55, 19)
+        Me.minsIniActi_lbl.TabIndex = 62
+        Me.minsIniActi_lbl.Text = "Minutos"
+        '
+        'horaIniActi_lbl
+        '
+        Me.horaIniActi_lbl.AutoSize = True
+        Me.horaIniActi_lbl.Location = New System.Drawing.Point(414, 224)
+        Me.horaIniActi_lbl.Name = "horaIniActi_lbl"
+        Me.horaIniActi_lbl.Size = New System.Drawing.Size(38, 19)
+        Me.horaIniActi_lbl.TabIndex = 61
+        Me.horaIniActi_lbl.Text = "Hora"
+        '
+        'minsIni5Acti_nmb
+        '
+        Me.minsIni5Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsIni5Acti_nmb.Location = New System.Drawing.Point(471, 354)
+        Me.minsIni5Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsIni5Acti_nmb.Name = "minsIni5Acti_nmb"
+        Me.minsIni5Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsIni5Acti_nmb.TabIndex = 51
+        '
+        'minsIni4Acti_nmb
+        '
+        Me.minsIni4Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsIni4Acti_nmb.Location = New System.Drawing.Point(471, 327)
+        Me.minsIni4Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsIni4Acti_nmb.Name = "minsIni4Acti_nmb"
+        Me.minsIni4Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsIni4Acti_nmb.TabIndex = 46
+        '
+        'minsIni3Acti_nmb
+        '
+        Me.minsIni3Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsIni3Acti_nmb.Location = New System.Drawing.Point(471, 300)
+        Me.minsIni3Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsIni3Acti_nmb.Name = "minsIni3Acti_nmb"
+        Me.minsIni3Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsIni3Acti_nmb.TabIndex = 41
+        '
+        'minsIni2Acti_nmb
+        '
+        Me.minsIni2Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsIni2Acti_nmb.Location = New System.Drawing.Point(471, 273)
+        Me.minsIni2Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.minsIni2Acti_nmb.Name = "minsIni2Acti_nmb"
+        Me.minsIni2Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsIni2Acti_nmb.TabIndex = 36
+        '
+        'minsIni1Acti_nmb
+        '
+        Me.minsIni1Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.minsIni1Acti_nmb.Location = New System.Drawing.Point(471, 246)
+        Me.minsIni1Acti_nmb.Maximum = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.minsIni1Acti_nmb.Name = "minsIni1Acti_nmb"
+        Me.minsIni1Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.minsIni1Acti_nmb.TabIndex = 31
+        '
+        'horaIni5Acti_nmb
+        '
+        Me.horaIni5Acti_nmb.Location = New System.Drawing.Point(414, 354)
+        Me.horaIni5Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaIni5Acti_nmb.Name = "horaIni5Acti_nmb"
+        Me.horaIni5Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaIni5Acti_nmb.TabIndex = 50
+        '
+        'horaIni4Acti_nmb
+        '
+        Me.horaIni4Acti_nmb.Location = New System.Drawing.Point(414, 327)
+        Me.horaIni4Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaIni4Acti_nmb.Name = "horaIni4Acti_nmb"
+        Me.horaIni4Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaIni4Acti_nmb.TabIndex = 45
+        '
+        'horaIni3Acti_nmb
+        '
+        Me.horaIni3Acti_nmb.Location = New System.Drawing.Point(414, 300)
+        Me.horaIni3Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaIni3Acti_nmb.Name = "horaIni3Acti_nmb"
+        Me.horaIni3Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaIni3Acti_nmb.TabIndex = 40
+        '
+        'horaIni2Acti_nmb
+        '
+        Me.horaIni2Acti_nmb.Location = New System.Drawing.Point(414, 273)
+        Me.horaIni2Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaIni2Acti_nmb.Name = "horaIni2Acti_nmb"
+        Me.horaIni2Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaIni2Acti_nmb.TabIndex = 35
+        '
+        'horaIni1Acti_nmb
+        '
+        Me.horaIni1Acti_nmb.Location = New System.Drawing.Point(414, 246)
+        Me.horaIni1Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.horaIni1Acti_nmb.Name = "horaIni1Acti_nmb"
+        Me.horaIni1Acti_nmb.Size = New System.Drawing.Size(40, 20)
+        Me.horaIni1Acti_nmb.TabIndex = 30
+        '
+        'dia5Acti_cmb
+        '
+        Me.dia5Acti_cmb.FormattingEnabled = True
+        Me.dia5Acti_cmb.Location = New System.Drawing.Point(156, 351)
+        Me.dia5Acti_cmb.Name = "dia5Acti_cmb"
+        Me.dia5Acti_cmb.Size = New System.Drawing.Size(148, 21)
+        Me.dia5Acti_cmb.TabIndex = 49
+        '
+        'dia4Acti_cmb
+        '
+        Me.dia4Acti_cmb.FormattingEnabled = True
+        Me.dia4Acti_cmb.Location = New System.Drawing.Point(156, 324)
+        Me.dia4Acti_cmb.Name = "dia4Acti_cmb"
+        Me.dia4Acti_cmb.Size = New System.Drawing.Size(148, 21)
+        Me.dia4Acti_cmb.TabIndex = 44
+        '
+        'dia3Acti_cmb
+        '
+        Me.dia3Acti_cmb.FormattingEnabled = True
+        Me.dia3Acti_cmb.Location = New System.Drawing.Point(156, 297)
+        Me.dia3Acti_cmb.Name = "dia3Acti_cmb"
+        Me.dia3Acti_cmb.Size = New System.Drawing.Size(148, 21)
+        Me.dia3Acti_cmb.TabIndex = 39
+        '
+        'dia2Acti_cmb
+        '
+        Me.dia2Acti_cmb.FormattingEnabled = True
+        Me.dia2Acti_cmb.Location = New System.Drawing.Point(156, 270)
+        Me.dia2Acti_cmb.Name = "dia2Acti_cmb"
+        Me.dia2Acti_cmb.Size = New System.Drawing.Size(148, 21)
+        Me.dia2Acti_cmb.TabIndex = 34
+        '
+        'dia1Acti_cmb
+        '
+        Me.dia1Acti_cmb.FormattingEnabled = True
+        Me.dia1Acti_cmb.Location = New System.Drawing.Point(156, 243)
+        Me.dia1Acti_cmb.Name = "dia1Acti_cmb"
+        Me.dia1Acti_cmb.Size = New System.Drawing.Size(148, 21)
+        Me.dia1Acti_cmb.TabIndex = 29
+        '
+        'horaFin
+        '
+        Me.horaFin.AutoSize = True
+        Me.horaFin.Location = New System.Drawing.Point(562, 191)
+        Me.horaFin.Name = "horaFin"
+        Me.horaFin.Size = New System.Drawing.Size(59, 19)
+        Me.horaFin.TabIndex = 45
+        Me.horaFin.Text = "Hora Fin"
+        '
+        'horaIni
+        '
+        Me.horaIni.AutoSize = True
+        Me.horaIni.Location = New System.Drawing.Point(426, 191)
+        Me.horaIni.Name = "horaIni"
+        Me.horaIni.Size = New System.Drawing.Size(72, 19)
+        Me.horaIni.TabIndex = 44
+        Me.horaIni.Text = "Hora Inicio"
+        '
+        'dia5_lbl
+        '
+        Me.dia5_lbl.AutoSize = True
+        Me.dia5_lbl.Location = New System.Drawing.Point(111, 351)
+        Me.dia5_lbl.Name = "dia5_lbl"
+        Me.dia5_lbl.Size = New System.Drawing.Size(39, 19)
+        Me.dia5_lbl.TabIndex = 43
+        Me.dia5_lbl.Text = "Dia 5"
+        '
+        'dia4Acti_lbl
+        '
+        Me.dia4Acti_lbl.AutoSize = True
+        Me.dia4Acti_lbl.Location = New System.Drawing.Point(111, 324)
+        Me.dia4Acti_lbl.Name = "dia4Acti_lbl"
+        Me.dia4Acti_lbl.Size = New System.Drawing.Size(39, 19)
+        Me.dia4Acti_lbl.TabIndex = 42
+        Me.dia4Acti_lbl.Text = "Dia 4"
+        '
+        'dia2Acti_lbl
+        '
+        Me.dia2Acti_lbl.AutoSize = True
+        Me.dia2Acti_lbl.Location = New System.Drawing.Point(111, 270)
+        Me.dia2Acti_lbl.Name = "dia2Acti_lbl"
+        Me.dia2Acti_lbl.Size = New System.Drawing.Size(39, 19)
+        Me.dia2Acti_lbl.TabIndex = 41
+        Me.dia2Acti_lbl.Text = "Dia 2"
+        '
+        'dia3Acti_lbl
+        '
+        Me.dia3Acti_lbl.AutoSize = True
+        Me.dia3Acti_lbl.Location = New System.Drawing.Point(111, 297)
+        Me.dia3Acti_lbl.Name = "dia3Acti_lbl"
+        Me.dia3Acti_lbl.Size = New System.Drawing.Size(39, 19)
+        Me.dia3Acti_lbl.TabIndex = 40
+        Me.dia3Acti_lbl.Text = "Dia 3"
+        '
+        'dia1Acti_lbl
+        '
+        Me.dia1Acti_lbl.AutoSize = True
+        Me.dia1Acti_lbl.Location = New System.Drawing.Point(111, 243)
+        Me.dia1Acti_lbl.Name = "dia1Acti_lbl"
+        Me.dia1Acti_lbl.Size = New System.Drawing.Size(37, 19)
+        Me.dia1Acti_lbl.TabIndex = 39
+        Me.dia1Acti_lbl.Text = "Dia 1"
+        '
+        'tipoActi_cmb
+        '
+        Me.tipoActi_cmb.FormattingEnabled = True
+        Me.tipoActi_cmb.ItemHeight = 13
+        Me.tipoActi_cmb.Location = New System.Drawing.Point(157, 117)
+        Me.tipoActi_cmb.Name = "tipoActi_cmb"
+        Me.tipoActi_cmb.Size = New System.Drawing.Size(148, 21)
+        Me.tipoActi_cmb.TabIndex = 27
+        '
+        'costoActi_text
+        '
+        '
+        '
+        '
+        Me.costoActi_text.CustomButton.Image = Nothing
+        Me.costoActi_text.CustomButton.Location = New System.Drawing.Point(126, 1)
+        Me.costoActi_text.CustomButton.Name = ""
+        Me.costoActi_text.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.costoActi_text.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.costoActi_text.CustomButton.TabIndex = 1
+        Me.costoActi_text.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.costoActi_text.CustomButton.UseSelectable = True
+        Me.costoActi_text.CustomButton.Visible = False
+        Me.costoActi_text.Lines = New String(-1) {}
+        Me.costoActi_text.Location = New System.Drawing.Point(157, 146)
+        Me.costoActi_text.MaxLength = 8
+        Me.costoActi_text.Name = "costoActi_text"
+        Me.costoActi_text.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.costoActi_text.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.costoActi_text.SelectedText = ""
+        Me.costoActi_text.SelectionLength = 0
+        Me.costoActi_text.SelectionStart = 0
+        Me.costoActi_text.Size = New System.Drawing.Size(148, 23)
+        Me.costoActi_text.Style = MetroFramework.MetroColorStyle.Purple
+        Me.costoActi_text.TabIndex = 28
+        Me.costoActi_text.UseSelectable = True
+        Me.costoActi_text.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.costoActi_text.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'nombreActi_text
+        '
+        '
+        '
+        '
+        Me.nombreActi_text.CustomButton.Image = Nothing
+        Me.nombreActi_text.CustomButton.Location = New System.Drawing.Point(484, 1)
+        Me.nombreActi_text.CustomButton.Name = ""
+        Me.nombreActi_text.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.nombreActi_text.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.nombreActi_text.CustomButton.TabIndex = 1
+        Me.nombreActi_text.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.nombreActi_text.CustomButton.UseSelectable = True
+        Me.nombreActi_text.CustomButton.Visible = False
+        Me.nombreActi_text.Lines = New String(-1) {}
+        Me.nombreActi_text.Location = New System.Drawing.Point(157, 55)
+        Me.nombreActi_text.MaxLength = 100
+        Me.nombreActi_text.Name = "nombreActi_text"
+        Me.nombreActi_text.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.nombreActi_text.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.nombreActi_text.SelectedText = ""
+        Me.nombreActi_text.SelectionLength = 0
+        Me.nombreActi_text.SelectionStart = 0
+        Me.nombreActi_text.Size = New System.Drawing.Size(506, 23)
+        Me.nombreActi_text.Style = MetroFramework.MetroColorStyle.Purple
+        Me.nombreActi_text.TabIndex = 25
+        Me.nombreActi_text.UseSelectable = True
+        Me.nombreActi_text.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.nombreActi_text.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'codigoActi_text
+        '
+        '
+        '
+        '
+        Me.codigoActi_text.CustomButton.Image = Nothing
+        Me.codigoActi_text.CustomButton.Location = New System.Drawing.Point(126, 1)
+        Me.codigoActi_text.CustomButton.Name = ""
+        Me.codigoActi_text.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.codigoActi_text.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.codigoActi_text.CustomButton.TabIndex = 1
+        Me.codigoActi_text.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.codigoActi_text.CustomButton.UseSelectable = True
+        Me.codigoActi_text.CustomButton.Visible = False
+        Me.codigoActi_text.Lines = New String(-1) {}
+        Me.codigoActi_text.Location = New System.Drawing.Point(157, 84)
+        Me.codigoActi_text.MaxLength = 20
+        Me.codigoActi_text.Name = "codigoActi_text"
+        Me.codigoActi_text.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.codigoActi_text.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.codigoActi_text.SelectedText = ""
+        Me.codigoActi_text.SelectionLength = 0
+        Me.codigoActi_text.SelectionStart = 0
+        Me.codigoActi_text.Size = New System.Drawing.Size(148, 23)
+        Me.codigoActi_text.Style = MetroFramework.MetroColorStyle.Purple
+        Me.codigoActi_text.TabIndex = 26
+        Me.codigoActi_text.UseSelectable = True
+        Me.codigoActi_text.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.codigoActi_text.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'nombreActi_lbl
+        '
+        Me.nombreActi_lbl.AutoSize = True
+        Me.nombreActi_lbl.Location = New System.Drawing.Point(31, 55)
+        Me.nombreActi_lbl.Name = "nombreActi_lbl"
+        Me.nombreActi_lbl.Size = New System.Drawing.Size(59, 19)
+        Me.nombreActi_lbl.TabIndex = 14
+        Me.nombreActi_lbl.Text = "Nombre"
+        '
+        'tipoActi_lbl
+        '
+        Me.tipoActi_lbl.AutoSize = True
+        Me.tipoActi_lbl.Location = New System.Drawing.Point(31, 117)
+        Me.tipoActi_lbl.Name = "tipoActi_lbl"
+        Me.tipoActi_lbl.Size = New System.Drawing.Size(35, 19)
+        Me.tipoActi_lbl.TabIndex = 13
+        Me.tipoActi_lbl.Text = "Tipo"
+        '
+        'MetroLabel22
+        '
+        Me.MetroLabel22.AutoSize = True
+        Me.MetroLabel22.Location = New System.Drawing.Point(31, 146)
+        Me.MetroLabel22.Name = "MetroLabel22"
+        Me.MetroLabel22.Size = New System.Drawing.Size(43, 19)
+        Me.MetroLabel22.TabIndex = 12
+        Me.MetroLabel22.Text = "Costo"
+        '
+        'codigoActi_lbl
+        '
+        Me.codigoActi_lbl.AutoSize = True
+        Me.codigoActi_lbl.Location = New System.Drawing.Point(31, 86)
+        Me.codigoActi_lbl.Name = "codigoActi_lbl"
+        Me.codigoActi_lbl.Size = New System.Drawing.Size(79, 19)
+        Me.codigoActi_lbl.TabIndex = 11
+        Me.codigoActi_lbl.Text = "Codigo Acti"
+        '
+        'acti_lbl
+        '
+        Me.acti_lbl.AutoSize = True
+        Me.acti_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.acti_lbl.Location = New System.Drawing.Point(4, 9)
+        Me.acti_lbl.Name = "acti_lbl"
+        Me.acti_lbl.Size = New System.Drawing.Size(111, 25)
+        Me.acti_lbl.TabIndex = 10
+        Me.acti_lbl.Text = "Registrar Acti"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.SystemColors.Window
+        Me.GroupBox2.Location = New System.Drawing.Point(399, 200)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(124, 185)
+        Me.GroupBox2.TabIndex = 76
+        Me.GroupBox2.TabStop = False
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.BackColor = System.Drawing.SystemColors.Window
+        Me.GroupBox6.Location = New System.Drawing.Point(533, 200)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(124, 185)
+        Me.GroupBox6.TabIndex = 75
+        Me.GroupBox6.TabStop = False
+        '
+        'horariosActi_grp
+        '
+        Me.horariosActi_grp.BackColor = System.Drawing.SystemColors.Window
+        Me.horariosActi_grp.Controls.Add(Me.MetroLabel26)
+        Me.horariosActi_grp.Location = New System.Drawing.Point(30, 176)
+        Me.horariosActi_grp.Name = "horariosActi_grp"
+        Me.horariosActi_grp.Size = New System.Drawing.Size(678, 222)
+        Me.horariosActi_grp.TabIndex = 77
+        Me.horariosActi_grp.TabStop = False
+        '
+        'MetroLabel26
+        '
+        Me.MetroLabel26.AutoSize = True
+        Me.MetroLabel26.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel26.Location = New System.Drawing.Point(0, -5)
+        Me.MetroLabel26.Name = "MetroLabel26"
+        Me.MetroLabel26.Size = New System.Drawing.Size(76, 25)
+        Me.MetroLabel26.TabIndex = 38
+        Me.MetroLabel26.Text = "Horarios"
+        '
+        'listaActis_pnl
+        '
+        Me.listaActis_pnl.Controls.Add(Me.exportarActi_btn)
+        Me.listaActis_pnl.Controls.Add(Me.MetroPanel4)
+        Me.listaActis_pnl.Controls.Add(Me.vovlerActi_btn)
+        Me.listaActis_pnl.Controls.Add(Me.MetroLabel56)
+        Me.listaActis_pnl.Controls.Add(Me.listaActis_dg)
+        Me.listaActis_pnl.Controls.Add(Me.listaActis_lbl)
+        Me.listaActis_pnl.Controls.Add(Me.nuevoActi_btn)
+        Me.listaActis_pnl.HorizontalScrollbarBarColor = True
+        Me.listaActis_pnl.HorizontalScrollbarHighlightOnWheel = False
+        Me.listaActis_pnl.HorizontalScrollbarSize = 10
+        Me.listaActis_pnl.Location = New System.Drawing.Point(0, 3)
+        Me.listaActis_pnl.Name = "listaActis_pnl"
+        Me.listaActis_pnl.Size = New System.Drawing.Size(767, 461)
+        Me.listaActis_pnl.Style = MetroFramework.MetroColorStyle.Blue
+        Me.listaActis_pnl.TabIndex = 87
+        Me.listaActis_pnl.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.listaActis_pnl.VerticalScrollbarBarColor = True
+        Me.listaActis_pnl.VerticalScrollbarHighlightOnWheel = False
+        Me.listaActis_pnl.VerticalScrollbarSize = 10
+        Me.listaActis_pnl.Visible = False
+        '
+        'exportarActi_btn
+        '
+        Me.exportarActi_btn.Location = New System.Drawing.Point(485, 412)
+        Me.exportarActi_btn.Name = "exportarActi_btn"
+        Me.exportarActi_btn.Size = New System.Drawing.Size(123, 36)
+        Me.exportarActi_btn.TabIndex = 52
+        Me.exportarActi_btn.Text = "Exportar"
+        Me.exportarActi_btn.UseSelectable = True
+        '
+        'MetroPanel4
+        '
+        Me.MetroPanel4.Controls.Add(Me.MetroButton5)
+        Me.MetroPanel4.Controls.Add(Me.MetroLabel54)
+        Me.MetroPanel4.Controls.Add(Me.DataGridView1)
+        Me.MetroPanel4.Controls.Add(Me.MetroLabel55)
+        Me.MetroPanel4.HorizontalScrollbarBarColor = True
+        Me.MetroPanel4.HorizontalScrollbarHighlightOnWheel = False
+        Me.MetroPanel4.HorizontalScrollbarSize = 10
+        Me.MetroPanel4.Location = New System.Drawing.Point(548, 431)
+        Me.MetroPanel4.Name = "MetroPanel4"
+        Me.MetroPanel4.Size = New System.Drawing.Size(0, 3)
+        Me.MetroPanel4.Style = MetroFramework.MetroColorStyle.Blue
+        Me.MetroPanel4.TabIndex = 51
+        Me.MetroPanel4.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroPanel4.VerticalScrollbarBarColor = True
+        Me.MetroPanel4.VerticalScrollbarHighlightOnWheel = False
+        Me.MetroPanel4.VerticalScrollbarSize = 10
+        Me.MetroPanel4.Visible = False
+        '
+        'MetroButton5
+        '
+        Me.MetroButton5.Location = New System.Drawing.Point(7, 412)
+        Me.MetroButton5.Name = "MetroButton5"
+        Me.MetroButton5.Size = New System.Drawing.Size(123, 36)
+        Me.MetroButton5.TabIndex = 50
+        Me.MetroButton5.Text = "Volver"
+        Me.MetroButton5.UseSelectable = True
+        '
+        'MetroLabel54
+        '
+        Me.MetroLabel54.AutoSize = True
+        Me.MetroLabel54.Location = New System.Drawing.Point(723, 7)
+        Me.MetroLabel54.Name = "MetroLabel54"
+        Me.MetroLabel54.Size = New System.Drawing.Size(20, 19)
+        Me.MetroLabel54.TabIndex = 49
+        Me.MetroLabel54.Text = "id"
+        Me.MetroLabel54.Visible = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewImageColumn6})
+        Me.DataGridView1.Location = New System.Drawing.Point(7, 37)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.Size = New System.Drawing.Size(739, 344)
+        Me.DataGridView1.TabIndex = 12
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn16.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        Me.DataGridViewTextBoxColumn16.Visible = False
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.HeaderText = "Estado"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        '
+        'DataGridViewImageColumn6
+        '
+        Me.DataGridViewImageColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewImageColumn6.HeaderText = ""
+        Me.DataGridViewImageColumn6.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.DataGridViewImageColumn6.Name = "DataGridViewImageColumn6"
+        Me.DataGridViewImageColumn6.ReadOnly = True
+        Me.DataGridViewImageColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewImageColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'MetroLabel55
+        '
+        Me.MetroLabel55.AutoSize = True
+        Me.MetroLabel55.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel55.Location = New System.Drawing.Point(4, 9)
+        Me.MetroLabel55.Name = "MetroLabel55"
+        Me.MetroLabel55.Size = New System.Drawing.Size(107, 25)
+        Me.MetroLabel55.TabIndex = 10
+        Me.MetroLabel55.Text = "Listar Cursos"
+        '
+        'vovlerActi_btn
+        '
+        Me.vovlerActi_btn.Location = New System.Drawing.Point(7, 412)
+        Me.vovlerActi_btn.Name = "vovlerActi_btn"
+        Me.vovlerActi_btn.Size = New System.Drawing.Size(123, 36)
+        Me.vovlerActi_btn.TabIndex = 50
+        Me.vovlerActi_btn.Text = "Volver"
+        Me.vovlerActi_btn.UseSelectable = True
+        '
+        'MetroLabel56
+        '
+        Me.MetroLabel56.AutoSize = True
+        Me.MetroLabel56.Location = New System.Drawing.Point(723, 7)
+        Me.MetroLabel56.Name = "MetroLabel56"
+        Me.MetroLabel56.Size = New System.Drawing.Size(20, 19)
+        Me.MetroLabel56.TabIndex = 49
+        Me.MetroLabel56.Text = "id"
+        Me.MetroLabel56.Visible = False
+        '
+        'listaActis_dg
+        '
+        Me.listaActis_dg.AllowUserToAddRows = False
+        Me.listaActis_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.listaActis_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdActi, Me.nombreActi, Me.codigoActi, Me.codigoCosto, Me.horarioActi, Me.fechaInicioActi, Me.DataGridViewImageColumn7})
+        Me.listaActis_dg.Location = New System.Drawing.Point(7, 37)
+        Me.listaActis_dg.Name = "listaActis_dg"
+        Me.listaActis_dg.RowHeadersVisible = False
+        Me.listaActis_dg.Size = New System.Drawing.Size(739, 344)
+        Me.listaActis_dg.TabIndex = 12
+        '
+        'IdActi
+        '
+        Me.IdActi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdActi.HeaderText = "ID"
+        Me.IdActi.Name = "IdActi"
+        Me.IdActi.ReadOnly = True
+        Me.IdActi.Visible = False
+        '
+        'nombreActi
+        '
+        Me.nombreActi.HeaderText = "Nombre"
+        Me.nombreActi.Name = "nombreActi"
+        '
+        'codigoActi
+        '
+        Me.codigoActi.HeaderText = "Codigo"
+        Me.codigoActi.Name = "codigoActi"
+        '
+        'codigoCosto
+        '
+        Me.codigoCosto.HeaderText = "Costo"
+        Me.codigoCosto.Name = "codigoCosto"
+        '
+        'horarioActi
+        '
+        Me.horarioActi.HeaderText = "Horario"
+        Me.horarioActi.Name = "horarioActi"
+        '
+        'fechaInicioActi
+        '
+        Me.fechaInicioActi.HeaderText = "Fecha Inicio"
+        Me.fechaInicioActi.Name = "fechaInicioActi"
+        '
+        'DataGridViewImageColumn7
+        '
+        Me.DataGridViewImageColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewImageColumn7.HeaderText = ""
+        Me.DataGridViewImageColumn7.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.DataGridViewImageColumn7.Name = "DataGridViewImageColumn7"
+        Me.DataGridViewImageColumn7.ReadOnly = True
+        Me.DataGridViewImageColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewImageColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'listaActis_lbl
+        '
+        Me.listaActis_lbl.AutoSize = True
+        Me.listaActis_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.listaActis_lbl.Location = New System.Drawing.Point(0, 3)
+        Me.listaActis_lbl.Name = "listaActis_lbl"
+        Me.listaActis_lbl.Size = New System.Drawing.Size(91, 25)
+        Me.listaActis_lbl.TabIndex = 10
+        Me.listaActis_lbl.Text = "Listar Actis"
+        '
+        'nuevoActi_btn
+        '
+        Me.nuevoActi_btn.Location = New System.Drawing.Point(623, 412)
+        Me.nuevoActi_btn.Name = "nuevoActi_btn"
+        Me.nuevoActi_btn.Size = New System.Drawing.Size(123, 36)
+        Me.nuevoActi_btn.TabIndex = 9
+        Me.nuevoActi_btn.Text = "Nuevo Acti"
+        Me.nuevoActi_btn.UseSelectable = True
         '
         'btnActiIco
         '
@@ -1864,827 +2685,6 @@ Partial Class FrmMain
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'listaActis_pnl
-        '
-        Me.listaActis_pnl.Controls.Add(Me.exportarActi_btn)
-        Me.listaActis_pnl.Controls.Add(Me.MetroPanel4)
-        Me.listaActis_pnl.Controls.Add(Me.vovlerActi_btn)
-        Me.listaActis_pnl.Controls.Add(Me.MetroLabel56)
-        Me.listaActis_pnl.Controls.Add(Me.listaActis_dg)
-        Me.listaActis_pnl.Controls.Add(Me.listaActis_lbl)
-        Me.listaActis_pnl.Controls.Add(Me.nuevoActi_btn)
-        Me.listaActis_pnl.HorizontalScrollbarBarColor = True
-        Me.listaActis_pnl.HorizontalScrollbarHighlightOnWheel = False
-        Me.listaActis_pnl.HorizontalScrollbarSize = 10
-        Me.listaActis_pnl.Location = New System.Drawing.Point(0, 3)
-        Me.listaActis_pnl.Name = "listaActis_pnl"
-        Me.listaActis_pnl.Size = New System.Drawing.Size(767, 461)
-        Me.listaActis_pnl.Style = MetroFramework.MetroColorStyle.Blue
-        Me.listaActis_pnl.TabIndex = 87
-        Me.listaActis_pnl.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.listaActis_pnl.VerticalScrollbarBarColor = True
-        Me.listaActis_pnl.VerticalScrollbarHighlightOnWheel = False
-        Me.listaActis_pnl.VerticalScrollbarSize = 10
-        Me.listaActis_pnl.Visible = False
-        '
-        'registrarActi_pnl
-        '
-        Me.registrarActi_pnl.Controls.Add(Me.fechaInicio_dp)
-        Me.registrarActi_pnl.Controls.Add(Me.fechaInicioCurso)
-        Me.registrarActi_pnl.Controls.Add(Me.cancelarAct_btn)
-        Me.registrarActi_pnl.Controls.Add(Me.guardarAct_btn)
-        Me.registrarActi_pnl.Controls.Add(Me.importarActis_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.minsFinActi_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.horaFinActi_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.minsFin5Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsFin4Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsFin3Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsFin2Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsFin1Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaFin5Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaFin4Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaFin3Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaFin2Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaFin1Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsIniActi_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.horaIniActi_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.minsIni5Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsIni4Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsIni3Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsIni2Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.minsIni1Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaIni5Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaIni4Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaIni3Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaIni2Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaIni1Acti_nmb)
-        Me.registrarActi_pnl.Controls.Add(Me.dia5Acti_cmb)
-        Me.registrarActi_pnl.Controls.Add(Me.dia4Acti_cmb)
-        Me.registrarActi_pnl.Controls.Add(Me.dia3Acti_cmb)
-        Me.registrarActi_pnl.Controls.Add(Me.dia2Acti_cmb)
-        Me.registrarActi_pnl.Controls.Add(Me.dia1Acti_cmb)
-        Me.registrarActi_pnl.Controls.Add(Me.horaFin)
-        Me.registrarActi_pnl.Controls.Add(Me.horaIni)
-        Me.registrarActi_pnl.Controls.Add(Me.dia5_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.dia4Acti_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.dia2Acti_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.dia3Acti_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.dia1Acti_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.tipoActi_cmb)
-        Me.registrarActi_pnl.Controls.Add(Me.costoActi_text)
-        Me.registrarActi_pnl.Controls.Add(Me.nombreActi_text)
-        Me.registrarActi_pnl.Controls.Add(Me.codigoActi_text)
-        Me.registrarActi_pnl.Controls.Add(Me.nombreActi_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.tipoActi_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.MetroLabel22)
-        Me.registrarActi_pnl.Controls.Add(Me.codigoActi_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.acti_lbl)
-        Me.registrarActi_pnl.Controls.Add(Me.GroupBox2)
-        Me.registrarActi_pnl.Controls.Add(Me.GroupBox6)
-        Me.registrarActi_pnl.Controls.Add(Me.horariosActi_grp)
-        Me.registrarActi_pnl.HorizontalScrollbarBarColor = True
-        Me.registrarActi_pnl.HorizontalScrollbarHighlightOnWheel = False
-        Me.registrarActi_pnl.HorizontalScrollbarSize = 10
-        Me.registrarActi_pnl.Location = New System.Drawing.Point(0, 3)
-        Me.registrarActi_pnl.Name = "registrarActi_pnl"
-        Me.registrarActi_pnl.Size = New System.Drawing.Size(746, 462)
-        Me.registrarActi_pnl.Style = MetroFramework.MetroColorStyle.Purple
-        Me.registrarActi_pnl.TabIndex = 84
-        Me.registrarActi_pnl.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.registrarActi_pnl.VerticalScrollbarBarColor = True
-        Me.registrarActi_pnl.VerticalScrollbarHighlightOnWheel = False
-        Me.registrarActi_pnl.VerticalScrollbarSize = 10
-        Me.registrarActi_pnl.Visible = False
-        '
-        'fechaInicio_dp
-        '
-        Me.fechaInicio_dp.Location = New System.Drawing.Point(463, 84)
-        Me.fechaInicio_dp.Name = "fechaInicio_dp"
-        Me.fechaInicio_dp.Size = New System.Drawing.Size(200, 20)
-        Me.fechaInicio_dp.TabIndex = 89
-        '
-        'fechaInicioCurso
-        '
-        Me.fechaInicioCurso.AutoSize = True
-        Me.fechaInicioCurso.Location = New System.Drawing.Point(375, 86)
-        Me.fechaInicioCurso.Name = "fechaInicioCurso"
-        Me.fechaInicioCurso.Size = New System.Drawing.Size(77, 19)
-        Me.fechaInicioCurso.TabIndex = 88
-        Me.fechaInicioCurso.Text = "Fecha Inicio"
-        '
-        'cancelarAct_btn
-        '
-        Me.cancelarAct_btn.Location = New System.Drawing.Point(427, 421)
-        Me.cancelarAct_btn.Name = "cancelarAct_btn"
-        Me.cancelarAct_btn.Size = New System.Drawing.Size(97, 23)
-        Me.cancelarAct_btn.TabIndex = 87
-        Me.cancelarAct_btn.Text = "Cancelar"
-        Me.cancelarAct_btn.UseSelectable = True
-        '
-        'guardarAct_btn
-        '
-        Me.guardarAct_btn.Location = New System.Drawing.Point(324, 421)
-        Me.guardarAct_btn.Name = "guardarAct_btn"
-        Me.guardarAct_btn.Size = New System.Drawing.Size(97, 23)
-        Me.guardarAct_btn.TabIndex = 86
-        Me.guardarAct_btn.Text = "Guardar"
-        Me.guardarAct_btn.UseSelectable = True
-        '
-        'importarActis_lbl
-        '
-        Me.importarActis_lbl.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.importarActis_lbl.FontSize = MetroFramework.MetroLinkSize.Tall
-        Me.importarActis_lbl.FontWeight = MetroFramework.MetroLinkWeight.Light
-        Me.importarActis_lbl.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.importarActis_lbl.Location = New System.Drawing.Point(187, 11)
-        Me.importarActis_lbl.Name = "importarActis_lbl"
-        Me.importarActis_lbl.Size = New System.Drawing.Size(147, 23)
-        Me.importarActis_lbl.TabIndex = 85
-        Me.importarActis_lbl.Text = "Importar Datos"
-        Me.importarActis_lbl.UseCustomForeColor = True
-        Me.importarActis_lbl.UseSelectable = True
-        '
-        'minsFinActi_lbl
-        '
-        Me.minsFinActi_lbl.AutoSize = True
-        Me.minsFinActi_lbl.Location = New System.Drawing.Point(594, 224)
-        Me.minsFinActi_lbl.Name = "minsFinActi_lbl"
-        Me.minsFinActi_lbl.Size = New System.Drawing.Size(55, 19)
-        Me.minsFinActi_lbl.TabIndex = 74
-        Me.minsFinActi_lbl.Text = "Minutos"
-        '
-        'horaFinActi_lbl
-        '
-        Me.horaFinActi_lbl.AutoSize = True
-        Me.horaFinActi_lbl.Location = New System.Drawing.Point(546, 224)
-        Me.horaFinActi_lbl.Name = "horaFinActi_lbl"
-        Me.horaFinActi_lbl.Size = New System.Drawing.Size(38, 19)
-        Me.horaFinActi_lbl.TabIndex = 73
-        Me.horaFinActi_lbl.Text = "Hora"
-        '
-        'minsFin5Acti_nmb
-        '
-        Me.minsFin5Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsFin5Acti_nmb.Location = New System.Drawing.Point(603, 354)
-        Me.minsFin5Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsFin5Acti_nmb.Name = "minsFin5Acti_nmb"
-        Me.minsFin5Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsFin5Acti_nmb.TabIndex = 53
-        '
-        'minsFin4Acti_nmb
-        '
-        Me.minsFin4Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsFin4Acti_nmb.Location = New System.Drawing.Point(603, 327)
-        Me.minsFin4Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsFin4Acti_nmb.Name = "minsFin4Acti_nmb"
-        Me.minsFin4Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsFin4Acti_nmb.TabIndex = 48
-        '
-        'minsFin3Acti_nmb
-        '
-        Me.minsFin3Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsFin3Acti_nmb.Location = New System.Drawing.Point(603, 300)
-        Me.minsFin3Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsFin3Acti_nmb.Name = "minsFin3Acti_nmb"
-        Me.minsFin3Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsFin3Acti_nmb.TabIndex = 43
-        '
-        'minsFin2Acti_nmb
-        '
-        Me.minsFin2Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsFin2Acti_nmb.Location = New System.Drawing.Point(603, 273)
-        Me.minsFin2Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsFin2Acti_nmb.Name = "minsFin2Acti_nmb"
-        Me.minsFin2Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsFin2Acti_nmb.TabIndex = 38
-        '
-        'minsFin1Acti_nmb
-        '
-        Me.minsFin1Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsFin1Acti_nmb.Location = New System.Drawing.Point(603, 246)
-        Me.minsFin1Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsFin1Acti_nmb.Name = "minsFin1Acti_nmb"
-        Me.minsFin1Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsFin1Acti_nmb.TabIndex = 33
-        '
-        'horaFin5Acti_nmb
-        '
-        Me.horaFin5Acti_nmb.Location = New System.Drawing.Point(546, 354)
-        Me.horaFin5Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaFin5Acti_nmb.Name = "horaFin5Acti_nmb"
-        Me.horaFin5Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaFin5Acti_nmb.TabIndex = 52
-        '
-        'horaFin4Acti_nmb
-        '
-        Me.horaFin4Acti_nmb.Location = New System.Drawing.Point(546, 327)
-        Me.horaFin4Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaFin4Acti_nmb.Name = "horaFin4Acti_nmb"
-        Me.horaFin4Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaFin4Acti_nmb.TabIndex = 47
-        '
-        'horaFin3Acti_nmb
-        '
-        Me.horaFin3Acti_nmb.Location = New System.Drawing.Point(546, 300)
-        Me.horaFin3Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaFin3Acti_nmb.Name = "horaFin3Acti_nmb"
-        Me.horaFin3Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaFin3Acti_nmb.TabIndex = 42
-        '
-        'horaFin2Acti_nmb
-        '
-        Me.horaFin2Acti_nmb.Location = New System.Drawing.Point(546, 273)
-        Me.horaFin2Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaFin2Acti_nmb.Name = "horaFin2Acti_nmb"
-        Me.horaFin2Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaFin2Acti_nmb.TabIndex = 37
-        '
-        'horaFin1Acti_nmb
-        '
-        Me.horaFin1Acti_nmb.Location = New System.Drawing.Point(546, 246)
-        Me.horaFin1Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaFin1Acti_nmb.Name = "horaFin1Acti_nmb"
-        Me.horaFin1Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaFin1Acti_nmb.TabIndex = 32
-        '
-        'minsIniActi_lbl
-        '
-        Me.minsIniActi_lbl.AutoSize = True
-        Me.minsIniActi_lbl.Location = New System.Drawing.Point(462, 224)
-        Me.minsIniActi_lbl.Name = "minsIniActi_lbl"
-        Me.minsIniActi_lbl.Size = New System.Drawing.Size(55, 19)
-        Me.minsIniActi_lbl.TabIndex = 62
-        Me.minsIniActi_lbl.Text = "Minutos"
-        '
-        'horaIniActi_lbl
-        '
-        Me.horaIniActi_lbl.AutoSize = True
-        Me.horaIniActi_lbl.Location = New System.Drawing.Point(414, 224)
-        Me.horaIniActi_lbl.Name = "horaIniActi_lbl"
-        Me.horaIniActi_lbl.Size = New System.Drawing.Size(38, 19)
-        Me.horaIniActi_lbl.TabIndex = 61
-        Me.horaIniActi_lbl.Text = "Hora"
-        '
-        'minsIni5Acti_nmb
-        '
-        Me.minsIni5Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsIni5Acti_nmb.Location = New System.Drawing.Point(471, 354)
-        Me.minsIni5Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsIni5Acti_nmb.Name = "minsIni5Acti_nmb"
-        Me.minsIni5Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsIni5Acti_nmb.TabIndex = 51
-        '
-        'minsIni4Acti_nmb
-        '
-        Me.minsIni4Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsIni4Acti_nmb.Location = New System.Drawing.Point(471, 327)
-        Me.minsIni4Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsIni4Acti_nmb.Name = "minsIni4Acti_nmb"
-        Me.minsIni4Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsIni4Acti_nmb.TabIndex = 46
-        '
-        'minsIni3Acti_nmb
-        '
-        Me.minsIni3Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsIni3Acti_nmb.Location = New System.Drawing.Point(471, 300)
-        Me.minsIni3Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsIni3Acti_nmb.Name = "minsIni3Acti_nmb"
-        Me.minsIni3Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsIni3Acti_nmb.TabIndex = 41
-        '
-        'minsIni2Acti_nmb
-        '
-        Me.minsIni2Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsIni2Acti_nmb.Location = New System.Drawing.Point(471, 273)
-        Me.minsIni2Acti_nmb.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.minsIni2Acti_nmb.Name = "minsIni2Acti_nmb"
-        Me.minsIni2Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsIni2Acti_nmb.TabIndex = 36
-        '
-        'minsIni1Acti_nmb
-        '
-        Me.minsIni1Acti_nmb.Increment = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.minsIni1Acti_nmb.Location = New System.Drawing.Point(471, 246)
-        Me.minsIni1Acti_nmb.Maximum = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.minsIni1Acti_nmb.Name = "minsIni1Acti_nmb"
-        Me.minsIni1Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.minsIni1Acti_nmb.TabIndex = 31
-        '
-        'horaIni5Acti_nmb
-        '
-        Me.horaIni5Acti_nmb.Location = New System.Drawing.Point(414, 354)
-        Me.horaIni5Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaIni5Acti_nmb.Name = "horaIni5Acti_nmb"
-        Me.horaIni5Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaIni5Acti_nmb.TabIndex = 50
-        '
-        'horaIni4Acti_nmb
-        '
-        Me.horaIni4Acti_nmb.Location = New System.Drawing.Point(414, 327)
-        Me.horaIni4Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaIni4Acti_nmb.Name = "horaIni4Acti_nmb"
-        Me.horaIni4Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaIni4Acti_nmb.TabIndex = 45
-        '
-        'horaIni3Acti_nmb
-        '
-        Me.horaIni3Acti_nmb.Location = New System.Drawing.Point(414, 300)
-        Me.horaIni3Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaIni3Acti_nmb.Name = "horaIni3Acti_nmb"
-        Me.horaIni3Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaIni3Acti_nmb.TabIndex = 40
-        '
-        'horaIni2Acti_nmb
-        '
-        Me.horaIni2Acti_nmb.Location = New System.Drawing.Point(414, 273)
-        Me.horaIni2Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaIni2Acti_nmb.Name = "horaIni2Acti_nmb"
-        Me.horaIni2Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaIni2Acti_nmb.TabIndex = 35
-        '
-        'horaIni1Acti_nmb
-        '
-        Me.horaIni1Acti_nmb.Location = New System.Drawing.Point(414, 246)
-        Me.horaIni1Acti_nmb.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.horaIni1Acti_nmb.Name = "horaIni1Acti_nmb"
-        Me.horaIni1Acti_nmb.Size = New System.Drawing.Size(40, 20)
-        Me.horaIni1Acti_nmb.TabIndex = 30
-        '
-        'dia5Acti_cmb
-        '
-        Me.dia5Acti_cmb.FormattingEnabled = True
-        Me.dia5Acti_cmb.Location = New System.Drawing.Point(156, 351)
-        Me.dia5Acti_cmb.Name = "dia5Acti_cmb"
-        Me.dia5Acti_cmb.Size = New System.Drawing.Size(148, 21)
-        Me.dia5Acti_cmb.TabIndex = 49
-        '
-        'dia4Acti_cmb
-        '
-        Me.dia4Acti_cmb.FormattingEnabled = True
-        Me.dia4Acti_cmb.Location = New System.Drawing.Point(156, 324)
-        Me.dia4Acti_cmb.Name = "dia4Acti_cmb"
-        Me.dia4Acti_cmb.Size = New System.Drawing.Size(148, 21)
-        Me.dia4Acti_cmb.TabIndex = 44
-        '
-        'dia3Acti_cmb
-        '
-        Me.dia3Acti_cmb.FormattingEnabled = True
-        Me.dia3Acti_cmb.Location = New System.Drawing.Point(156, 297)
-        Me.dia3Acti_cmb.Name = "dia3Acti_cmb"
-        Me.dia3Acti_cmb.Size = New System.Drawing.Size(148, 21)
-        Me.dia3Acti_cmb.TabIndex = 39
-        '
-        'dia2Acti_cmb
-        '
-        Me.dia2Acti_cmb.FormattingEnabled = True
-        Me.dia2Acti_cmb.Location = New System.Drawing.Point(156, 270)
-        Me.dia2Acti_cmb.Name = "dia2Acti_cmb"
-        Me.dia2Acti_cmb.Size = New System.Drawing.Size(148, 21)
-        Me.dia2Acti_cmb.TabIndex = 34
-        '
-        'dia1Acti_cmb
-        '
-        Me.dia1Acti_cmb.FormattingEnabled = True
-        Me.dia1Acti_cmb.Location = New System.Drawing.Point(156, 243)
-        Me.dia1Acti_cmb.Name = "dia1Acti_cmb"
-        Me.dia1Acti_cmb.Size = New System.Drawing.Size(148, 21)
-        Me.dia1Acti_cmb.TabIndex = 29
-        '
-        'horaFin
-        '
-        Me.horaFin.AutoSize = True
-        Me.horaFin.Location = New System.Drawing.Point(562, 191)
-        Me.horaFin.Name = "horaFin"
-        Me.horaFin.Size = New System.Drawing.Size(59, 19)
-        Me.horaFin.TabIndex = 45
-        Me.horaFin.Text = "Hora Fin"
-        '
-        'horaIni
-        '
-        Me.horaIni.AutoSize = True
-        Me.horaIni.Location = New System.Drawing.Point(426, 191)
-        Me.horaIni.Name = "horaIni"
-        Me.horaIni.Size = New System.Drawing.Size(72, 19)
-        Me.horaIni.TabIndex = 44
-        Me.horaIni.Text = "Hora Inicio"
-        '
-        'dia5_lbl
-        '
-        Me.dia5_lbl.AutoSize = True
-        Me.dia5_lbl.Location = New System.Drawing.Point(111, 351)
-        Me.dia5_lbl.Name = "dia5_lbl"
-        Me.dia5_lbl.Size = New System.Drawing.Size(39, 19)
-        Me.dia5_lbl.TabIndex = 43
-        Me.dia5_lbl.Text = "Dia 5"
-        '
-        'dia4Acti_lbl
-        '
-        Me.dia4Acti_lbl.AutoSize = True
-        Me.dia4Acti_lbl.Location = New System.Drawing.Point(111, 324)
-        Me.dia4Acti_lbl.Name = "dia4Acti_lbl"
-        Me.dia4Acti_lbl.Size = New System.Drawing.Size(39, 19)
-        Me.dia4Acti_lbl.TabIndex = 42
-        Me.dia4Acti_lbl.Text = "Dia 4"
-        '
-        'dia2Acti_lbl
-        '
-        Me.dia2Acti_lbl.AutoSize = True
-        Me.dia2Acti_lbl.Location = New System.Drawing.Point(111, 270)
-        Me.dia2Acti_lbl.Name = "dia2Acti_lbl"
-        Me.dia2Acti_lbl.Size = New System.Drawing.Size(39, 19)
-        Me.dia2Acti_lbl.TabIndex = 41
-        Me.dia2Acti_lbl.Text = "Dia 2"
-        '
-        'dia3Acti_lbl
-        '
-        Me.dia3Acti_lbl.AutoSize = True
-        Me.dia3Acti_lbl.Location = New System.Drawing.Point(111, 297)
-        Me.dia3Acti_lbl.Name = "dia3Acti_lbl"
-        Me.dia3Acti_lbl.Size = New System.Drawing.Size(39, 19)
-        Me.dia3Acti_lbl.TabIndex = 40
-        Me.dia3Acti_lbl.Text = "Dia 3"
-        '
-        'dia1Acti_lbl
-        '
-        Me.dia1Acti_lbl.AutoSize = True
-        Me.dia1Acti_lbl.Location = New System.Drawing.Point(111, 243)
-        Me.dia1Acti_lbl.Name = "dia1Acti_lbl"
-        Me.dia1Acti_lbl.Size = New System.Drawing.Size(37, 19)
-        Me.dia1Acti_lbl.TabIndex = 39
-        Me.dia1Acti_lbl.Text = "Dia 1"
-        '
-        'tipoActi_cmb
-        '
-        Me.tipoActi_cmb.FormattingEnabled = True
-        Me.tipoActi_cmb.ItemHeight = 13
-        Me.tipoActi_cmb.Location = New System.Drawing.Point(157, 117)
-        Me.tipoActi_cmb.Name = "tipoActi_cmb"
-        Me.tipoActi_cmb.Size = New System.Drawing.Size(148, 21)
-        Me.tipoActi_cmb.TabIndex = 27
-        '
-        'costoActi_text
-        '
-        '
-        '
-        '
-        Me.costoActi_text.CustomButton.Image = Nothing
-        Me.costoActi_text.CustomButton.Location = New System.Drawing.Point(126, 1)
-        Me.costoActi_text.CustomButton.Name = ""
-        Me.costoActi_text.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.costoActi_text.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.costoActi_text.CustomButton.TabIndex = 1
-        Me.costoActi_text.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.costoActi_text.CustomButton.UseSelectable = True
-        Me.costoActi_text.CustomButton.Visible = False
-        Me.costoActi_text.Lines = New String(-1) {}
-        Me.costoActi_text.Location = New System.Drawing.Point(157, 146)
-        Me.costoActi_text.MaxLength = 8
-        Me.costoActi_text.Name = "costoActi_text"
-        Me.costoActi_text.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.costoActi_text.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.costoActi_text.SelectedText = ""
-        Me.costoActi_text.SelectionLength = 0
-        Me.costoActi_text.SelectionStart = 0
-        Me.costoActi_text.Size = New System.Drawing.Size(148, 23)
-        Me.costoActi_text.Style = MetroFramework.MetroColorStyle.Purple
-        Me.costoActi_text.TabIndex = 28
-        Me.costoActi_text.UseSelectable = True
-        Me.costoActi_text.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.costoActi_text.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'nombreActi_text
-        '
-        '
-        '
-        '
-        Me.nombreActi_text.CustomButton.Image = Nothing
-        Me.nombreActi_text.CustomButton.Location = New System.Drawing.Point(484, 1)
-        Me.nombreActi_text.CustomButton.Name = ""
-        Me.nombreActi_text.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.nombreActi_text.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.nombreActi_text.CustomButton.TabIndex = 1
-        Me.nombreActi_text.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.nombreActi_text.CustomButton.UseSelectable = True
-        Me.nombreActi_text.CustomButton.Visible = False
-        Me.nombreActi_text.Lines = New String(-1) {}
-        Me.nombreActi_text.Location = New System.Drawing.Point(157, 55)
-        Me.nombreActi_text.MaxLength = 100
-        Me.nombreActi_text.Name = "nombreActi_text"
-        Me.nombreActi_text.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.nombreActi_text.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.nombreActi_text.SelectedText = ""
-        Me.nombreActi_text.SelectionLength = 0
-        Me.nombreActi_text.SelectionStart = 0
-        Me.nombreActi_text.Size = New System.Drawing.Size(506, 23)
-        Me.nombreActi_text.Style = MetroFramework.MetroColorStyle.Purple
-        Me.nombreActi_text.TabIndex = 25
-        Me.nombreActi_text.UseSelectable = True
-        Me.nombreActi_text.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.nombreActi_text.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'codigoActi_text
-        '
-        '
-        '
-        '
-        Me.codigoActi_text.CustomButton.Image = Nothing
-        Me.codigoActi_text.CustomButton.Location = New System.Drawing.Point(126, 1)
-        Me.codigoActi_text.CustomButton.Name = ""
-        Me.codigoActi_text.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.codigoActi_text.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.codigoActi_text.CustomButton.TabIndex = 1
-        Me.codigoActi_text.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.codigoActi_text.CustomButton.UseSelectable = True
-        Me.codigoActi_text.CustomButton.Visible = False
-        Me.codigoActi_text.Lines = New String(-1) {}
-        Me.codigoActi_text.Location = New System.Drawing.Point(157, 84)
-        Me.codigoActi_text.MaxLength = 20
-        Me.codigoActi_text.Name = "codigoActi_text"
-        Me.codigoActi_text.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.codigoActi_text.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.codigoActi_text.SelectedText = ""
-        Me.codigoActi_text.SelectionLength = 0
-        Me.codigoActi_text.SelectionStart = 0
-        Me.codigoActi_text.Size = New System.Drawing.Size(148, 23)
-        Me.codigoActi_text.Style = MetroFramework.MetroColorStyle.Purple
-        Me.codigoActi_text.TabIndex = 26
-        Me.codigoActi_text.UseSelectable = True
-        Me.codigoActi_text.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.codigoActi_text.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'nombreActi_lbl
-        '
-        Me.nombreActi_lbl.AutoSize = True
-        Me.nombreActi_lbl.Location = New System.Drawing.Point(31, 55)
-        Me.nombreActi_lbl.Name = "nombreActi_lbl"
-        Me.nombreActi_lbl.Size = New System.Drawing.Size(59, 19)
-        Me.nombreActi_lbl.TabIndex = 14
-        Me.nombreActi_lbl.Text = "Nombre"
-        '
-        'tipoActi_lbl
-        '
-        Me.tipoActi_lbl.AutoSize = True
-        Me.tipoActi_lbl.Location = New System.Drawing.Point(31, 117)
-        Me.tipoActi_lbl.Name = "tipoActi_lbl"
-        Me.tipoActi_lbl.Size = New System.Drawing.Size(35, 19)
-        Me.tipoActi_lbl.TabIndex = 13
-        Me.tipoActi_lbl.Text = "Tipo"
-        '
-        'MetroLabel22
-        '
-        Me.MetroLabel22.AutoSize = True
-        Me.MetroLabel22.Location = New System.Drawing.Point(31, 146)
-        Me.MetroLabel22.Name = "MetroLabel22"
-        Me.MetroLabel22.Size = New System.Drawing.Size(43, 19)
-        Me.MetroLabel22.TabIndex = 12
-        Me.MetroLabel22.Text = "Costo"
-        '
-        'codigoActi_lbl
-        '
-        Me.codigoActi_lbl.AutoSize = True
-        Me.codigoActi_lbl.Location = New System.Drawing.Point(31, 86)
-        Me.codigoActi_lbl.Name = "codigoActi_lbl"
-        Me.codigoActi_lbl.Size = New System.Drawing.Size(79, 19)
-        Me.codigoActi_lbl.TabIndex = 11
-        Me.codigoActi_lbl.Text = "Codigo Acti"
-        '
-        'acti_lbl
-        '
-        Me.acti_lbl.AutoSize = True
-        Me.acti_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.acti_lbl.Location = New System.Drawing.Point(4, 9)
-        Me.acti_lbl.Name = "acti_lbl"
-        Me.acti_lbl.Size = New System.Drawing.Size(111, 25)
-        Me.acti_lbl.TabIndex = 10
-        Me.acti_lbl.Text = "Registrar Acti"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.SystemColors.Window
-        Me.GroupBox2.Location = New System.Drawing.Point(399, 200)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(124, 185)
-        Me.GroupBox2.TabIndex = 76
-        Me.GroupBox2.TabStop = False
-        '
-        'GroupBox6
-        '
-        Me.GroupBox6.BackColor = System.Drawing.SystemColors.Window
-        Me.GroupBox6.Location = New System.Drawing.Point(533, 200)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(124, 185)
-        Me.GroupBox6.TabIndex = 75
-        Me.GroupBox6.TabStop = False
-        '
-        'horariosActi_grp
-        '
-        Me.horariosActi_grp.BackColor = System.Drawing.SystemColors.Window
-        Me.horariosActi_grp.Controls.Add(Me.MetroLabel26)
-        Me.horariosActi_grp.Location = New System.Drawing.Point(30, 176)
-        Me.horariosActi_grp.Name = "horariosActi_grp"
-        Me.horariosActi_grp.Size = New System.Drawing.Size(678, 222)
-        Me.horariosActi_grp.TabIndex = 77
-        Me.horariosActi_grp.TabStop = False
-        '
-        'MetroLabel26
-        '
-        Me.MetroLabel26.AutoSize = True
-        Me.MetroLabel26.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel26.Location = New System.Drawing.Point(0, -5)
-        Me.MetroLabel26.Name = "MetroLabel26"
-        Me.MetroLabel26.Size = New System.Drawing.Size(76, 25)
-        Me.MetroLabel26.TabIndex = 38
-        Me.MetroLabel26.Text = "Horarios"
-        '
-        'exportarActi_btn
-        '
-        Me.exportarActi_btn.Location = New System.Drawing.Point(485, 412)
-        Me.exportarActi_btn.Name = "exportarActi_btn"
-        Me.exportarActi_btn.Size = New System.Drawing.Size(123, 36)
-        Me.exportarActi_btn.TabIndex = 52
-        Me.exportarActi_btn.Text = "Exportar"
-        Me.exportarActi_btn.UseSelectable = True
-        '
-        'MetroPanel4
-        '
-        Me.MetroPanel4.Controls.Add(Me.MetroButton5)
-        Me.MetroPanel4.Controls.Add(Me.MetroLabel54)
-        Me.MetroPanel4.Controls.Add(Me.DataGridView1)
-        Me.MetroPanel4.Controls.Add(Me.MetroLabel55)
-        Me.MetroPanel4.HorizontalScrollbarBarColor = True
-        Me.MetroPanel4.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroPanel4.HorizontalScrollbarSize = 10
-        Me.MetroPanel4.Location = New System.Drawing.Point(548, 431)
-        Me.MetroPanel4.Name = "MetroPanel4"
-        Me.MetroPanel4.Size = New System.Drawing.Size(0, 3)
-        Me.MetroPanel4.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroPanel4.TabIndex = 51
-        Me.MetroPanel4.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroPanel4.VerticalScrollbarBarColor = True
-        Me.MetroPanel4.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroPanel4.VerticalScrollbarSize = 10
-        Me.MetroPanel4.Visible = False
-        '
-        'MetroButton5
-        '
-        Me.MetroButton5.Location = New System.Drawing.Point(7, 412)
-        Me.MetroButton5.Name = "MetroButton5"
-        Me.MetroButton5.Size = New System.Drawing.Size(123, 36)
-        Me.MetroButton5.TabIndex = 50
-        Me.MetroButton5.Text = "Volver"
-        Me.MetroButton5.UseSelectable = True
-        '
-        'MetroLabel54
-        '
-        Me.MetroLabel54.AutoSize = True
-        Me.MetroLabel54.Location = New System.Drawing.Point(723, 7)
-        Me.MetroLabel54.Name = "MetroLabel54"
-        Me.MetroLabel54.Size = New System.Drawing.Size(20, 19)
-        Me.MetroLabel54.TabIndex = 49
-        Me.MetroLabel54.Text = "id"
-        Me.MetroLabel54.Visible = False
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewImageColumn6})
-        Me.DataGridView1.Location = New System.Drawing.Point(7, 37)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(739, 344)
-        Me.DataGridView1.TabIndex = 12
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn16.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        Me.DataGridViewTextBoxColumn16.Visible = False
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.HeaderText = "Nombre"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.HeaderText = "Estado"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        '
-        'DataGridViewImageColumn6
-        '
-        Me.DataGridViewImageColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewImageColumn6.HeaderText = ""
-        Me.DataGridViewImageColumn6.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.DataGridViewImageColumn6.Name = "DataGridViewImageColumn6"
-        Me.DataGridViewImageColumn6.ReadOnly = True
-        Me.DataGridViewImageColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewImageColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'MetroLabel55
-        '
-        Me.MetroLabel55.AutoSize = True
-        Me.MetroLabel55.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel55.Location = New System.Drawing.Point(4, 9)
-        Me.MetroLabel55.Name = "MetroLabel55"
-        Me.MetroLabel55.Size = New System.Drawing.Size(107, 25)
-        Me.MetroLabel55.TabIndex = 10
-        Me.MetroLabel55.Text = "Listar Cursos"
-        '
-        'vovlerActi_btn
-        '
-        Me.vovlerActi_btn.Location = New System.Drawing.Point(7, 412)
-        Me.vovlerActi_btn.Name = "vovlerActi_btn"
-        Me.vovlerActi_btn.Size = New System.Drawing.Size(123, 36)
-        Me.vovlerActi_btn.TabIndex = 50
-        Me.vovlerActi_btn.Text = "Volver"
-        Me.vovlerActi_btn.UseSelectable = True
-        '
-        'MetroLabel56
-        '
-        Me.MetroLabel56.AutoSize = True
-        Me.MetroLabel56.Location = New System.Drawing.Point(723, 7)
-        Me.MetroLabel56.Name = "MetroLabel56"
-        Me.MetroLabel56.Size = New System.Drawing.Size(20, 19)
-        Me.MetroLabel56.TabIndex = 49
-        Me.MetroLabel56.Text = "id"
-        Me.MetroLabel56.Visible = False
-        '
-        'listaActis_dg
-        '
-        Me.listaActis_dg.AllowUserToAddRows = False
-        Me.listaActis_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.listaActis_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdActi, Me.nombreActi, Me.codigoActi, Me.codigoCosto, Me.horarioActi, Me.fechaInicioActi, Me.DataGridViewImageColumn7})
-        Me.listaActis_dg.Location = New System.Drawing.Point(7, 37)
-        Me.listaActis_dg.Name = "listaActis_dg"
-        Me.listaActis_dg.RowHeadersVisible = False
-        Me.listaActis_dg.Size = New System.Drawing.Size(739, 344)
-        Me.listaActis_dg.TabIndex = 12
-        '
-        'IdActi
-        '
-        Me.IdActi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.IdActi.HeaderText = "ID"
-        Me.IdActi.Name = "IdActi"
-        Me.IdActi.ReadOnly = True
-        Me.IdActi.Visible = False
-        '
-        'nombreActi
-        '
-        Me.nombreActi.HeaderText = "Nombre"
-        Me.nombreActi.Name = "nombreActi"
-        '
-        'codigoActi
-        '
-        Me.codigoActi.HeaderText = "Codigo"
-        Me.codigoActi.Name = "codigoActi"
-        '
-        'codigoCosto
-        '
-        Me.codigoCosto.HeaderText = "Costo"
-        Me.codigoCosto.Name = "codigoCosto"
-        '
-        'horarioActi
-        '
-        Me.horarioActi.HeaderText = "Horario"
-        Me.horarioActi.Name = "horarioActi"
-        '
-        'fechaInicioActi
-        '
-        Me.fechaInicioActi.HeaderText = "Fecha Inicio"
-        Me.fechaInicioActi.Name = "fechaInicioActi"
-        '
-        'DataGridViewImageColumn7
-        '
-        Me.DataGridViewImageColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewImageColumn7.HeaderText = ""
-        Me.DataGridViewImageColumn7.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.DataGridViewImageColumn7.Name = "DataGridViewImageColumn7"
-        Me.DataGridViewImageColumn7.ReadOnly = True
-        Me.DataGridViewImageColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewImageColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'listaActis_lbl
-        '
-        Me.listaActis_lbl.AutoSize = True
-        Me.listaActis_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.listaActis_lbl.Location = New System.Drawing.Point(0, 3)
-        Me.listaActis_lbl.Name = "listaActis_lbl"
-        Me.listaActis_lbl.Size = New System.Drawing.Size(91, 25)
-        Me.listaActis_lbl.TabIndex = 10
-        Me.listaActis_lbl.Text = "Listar Actis"
-        '
-        'nuevoActi_btn
-        '
-        Me.nuevoActi_btn.Location = New System.Drawing.Point(623, 412)
-        Me.nuevoActi_btn.Name = "nuevoActi_btn"
-        Me.nuevoActi_btn.Size = New System.Drawing.Size(123, 36)
-        Me.nuevoActi_btn.TabIndex = 9
-        Me.nuevoActi_btn.Text = "Nuevo Acti"
-        Me.nuevoActi_btn.UseSelectable = True
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2698,6 +2698,36 @@ Partial Class FrmMain
         Me.Text = "Menu Principal"
         Me.Main.ResumeLayout(False)
         Me.TabProductos.ResumeLayout(False)
+        Me.registrarActi_pnl.ResumeLayout(False)
+        Me.registrarActi_pnl.PerformLayout()
+        CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsFin4Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsFin3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsFin2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsFin1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaFin5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaFin4Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaFin3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaFin2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaFin1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsIni5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsIni4Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsIni3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsIni2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minsIni1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaIni5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaIni4Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaIni3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.horariosActi_grp.ResumeLayout(False)
+        Me.horariosActi_grp.PerformLayout()
+        Me.listaActis_pnl.ResumeLayout(False)
+        Me.listaActis_pnl.PerformLayout()
+        Me.MetroPanel4.ResumeLayout(False)
+        Me.MetroPanel4.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Eventos.ResumeLayout(False)
         Me.PanelListarEventos.ResumeLayout(False)
         Me.PanelListarEventos.PerformLayout()
@@ -2726,36 +2756,6 @@ Partial Class FrmMain
         Me.panKpiVentas.ResumeLayout(False)
         Me.panKpiVentas.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.listaActis_pnl.ResumeLayout(False)
-        Me.listaActis_pnl.PerformLayout()
-        Me.registrarActi_pnl.ResumeLayout(False)
-        Me.registrarActi_pnl.PerformLayout()
-        CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsFin4Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsFin3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsFin2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsFin1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaFin5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaFin4Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaFin3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaFin2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaFin1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsIni5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsIni4Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsIni3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsIni2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.minsIni1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaIni5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaIni4Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaIni3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.horariosActi_grp.ResumeLayout(False)
-        Me.horariosActi_grp.PerformLayout()
-        Me.MetroPanel4.ResumeLayout(False)
-        Me.MetroPanel4.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -773,6 +773,10 @@ Public Class FrmMain
 
         Next
     End Sub
+
+    Private Sub cancelarAct_btn_Click(sender As Object, e As EventArgs) Handles cancelarAct_btn.Click
+        registrarActi_pnl.Visible = False
+    End Sub
 End Class
 
 

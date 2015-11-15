@@ -31,7 +31,7 @@ Public Class ProductsController
         Return resultado
     End Function
     Shared Function RegistrarProducto(ByVal nombre As String, ByVal costo As Double, ByVal codigo As String, _
-                                      ByVal horarios As String, ByVal id_tipo_product As Integer, ByVal fechaInicio As Date) As Boolean
+                                      ByVal horarios As String, ByVal id_tipo_product As Integer, ByVal fecha_Inicio As Date) As Boolean
 
         Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
         Dim request = New RestRequest("Products", Method.POST)
@@ -41,7 +41,7 @@ Public Class ProductsController
         producto.Codigo_Producto = codigo
         producto.Horario = horarios
         producto.Id_Tipo_Product = id_tipo_product
-        producto.Fecha_inicio = fechaInicio
+        producto.Fecha_Inicio = fecha_Inicio
         request.RequestFormat = DataFormat.Json
         request.AddBody(producto)
         Dim response = client.Execute(Of Producto)(request)
