@@ -21,9 +21,9 @@ Public Class FrmLogin
                     For Each permiso As PermissionModel In user.rol.permisos
                         Select Case permiso.nombre
                             Case "acti"
-                                'main.tActis.Visible = True
+                                main.btnActiIco.Visible = True
                             Case "carreras"
-                                'main.tCareers.Visible = True
+                                main.btnCarrerasIcon.Visible = True
                             Case "ventas"
                                 main.Main.TabPages.Add(main.TabVentas)
                             Case "prospectos"
@@ -39,9 +39,9 @@ Public Class FrmLogin
                             Case "configuracion"
                                 main.Main.TabPages.Add(main.TabConfiguracion)
                         End Select
-                        'If ((main.tActis.Visible) Or (main.tCareers.Visible)) Then
-                        'main.tabsContainer.TabPages.Add(main.tabProducts)
-                        'End If
+                        If ((main.btnActiIco.Visible) Or (main.btnCarrerasIcon.Visible)) Then
+                            main.Main.TabPages.Add(main.TabProductos)
+                        End If
                     Next
                     Me.Hide()
                     main.ShowDialog()
