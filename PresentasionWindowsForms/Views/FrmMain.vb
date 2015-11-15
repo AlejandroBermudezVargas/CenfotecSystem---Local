@@ -51,6 +51,7 @@ Public Class FrmMain
         cboUsuario.Text = "Usuario"
         Me.llenarEventos()
         Me.llenarListaProspectos()
+        llenarTablaCarreras()
     End Sub
 
     Private Sub btnCrearEvento_Click(sender As Object, e As EventArgs) Handles btnCrearEvento.Click
