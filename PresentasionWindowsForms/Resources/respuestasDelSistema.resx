@@ -120,4 +120,13 @@
   <data name="elUsuarioNoExiste" xml:space="preserve">
     <value>El usuario no existe en el sistema!</value>
   </data>
+  <data name="INACTIVE_ROL" xml:space="preserve">
+    <value>Tu rol se encuentra inactivo!</value>
+  </data>
+  <data name="INACTIVE_USER" xml:space="preserve">
+    <value>Tu usuario se encuentra inactivo en el sistema!</value>
+  </data>
+  <data name="USER_NOT_EXIST" xml:space="preserve">
+    <value>Combinación de password y contraseña incorrectos</value>
+  </data>
 </root>
