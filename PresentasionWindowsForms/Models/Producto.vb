@@ -51,7 +51,7 @@
         End Set
     End Property
 
-    Public Property Id() As String
+    Public Property Id_Producto() As String
         Get
             Return _idProducto
         End Get

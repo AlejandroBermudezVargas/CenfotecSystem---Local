@@ -30,4 +30,39 @@ Public Class ProductsController
         End If
         Return resultado
     End Function
+    Shared Function obtenerListaProductos() As List(Of Producto)
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Products", Method.GET)
+        request.RootElement = "result"
+        request.RequestFormat = DataFormat.Json
+        Dim response = client.Execute(request)
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
+            Dim productos As List(Of Producto) = JsonConvert.DeserializeObject(Of List(Of Producto))(response.Content)
+            Return productos
+        Else
+            Return Nothing
+        End If
+    End Function
+
+    Shared Function obtenerProducto(ByVal id_producto As Integer)
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Products/{id}", Method.GET)
+        request.RootElement = "result"
+        request.AddUrlSegment("id", id_producto)
+        request.RequestFormat = DataFormat.Json
+        Dim response = client.Execute(Of Producto)(request)
+
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
+            Dim prod = New Producto
+            prod.Id_Producto = response.Data.Id_Producto
+            prod.Costo = response.Data.Costo
+            prod.Nombre = response.Data.Nombre
+            prod.Codigo_Producto = response.Data.Codigo_Producto
+            prod.Id_Tipo_Product = response.Data.Id_Tipo_Product
+            prod.Horario = response.Data.Horario
+            Return prod
+        Else
+            Return Nothing
+        End If
+    End Function
 End Class
