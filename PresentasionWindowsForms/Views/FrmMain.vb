@@ -486,10 +486,10 @@ Public Class FrmMain
         Dim tipos As List(Of Tipo_Producto) = ProductTypeController.obtenerLista
         Dim comboSource As New Dictionary(Of String, String)()
 
+        comboSource.Add("", "")
         If IsNothing(tipos) Then
             MsgBox("Se ha producido un error y no se pueden cargar los datos de tipo de producto.", MsgBoxStyle.Critical)
         Else
-            comboSource.Add("", "")
             For Each tipo As Tipo_Producto In tipos
                 comboSource.Add(tipo.Id_Tipo_Producto.ToString, tipo.Nombre)
             Next
