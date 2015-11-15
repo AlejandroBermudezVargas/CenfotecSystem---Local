@@ -73,7 +73,7 @@ Partial Class FrmLogin
         Me.txtPasswordLogin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtPasswordLogin.CustomButton.UseSelectable = True
         Me.txtPasswordLogin.CustomButton.Visible = False
-        Me.txtPasswordLogin.Lines = New String() {"admin1379"}
+        Me.txtPasswordLogin.Lines = New String() {"Admin1379"}
         Me.txtPasswordLogin.Location = New System.Drawing.Point(117, 292)
         Me.txtPasswordLogin.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
         Me.txtPasswordLogin.MaxLength = 32767
@@ -86,7 +86,7 @@ Partial Class FrmLogin
         Me.txtPasswordLogin.Size = New System.Drawing.Size(266, 23)
         Me.txtPasswordLogin.Style = MetroFramework.MetroColorStyle.Purple
         Me.txtPasswordLogin.TabIndex = 12
-        Me.txtPasswordLogin.Text = "admin1379"
+        Me.txtPasswordLogin.Text = "Admin1379"
         Me.txtPasswordLogin.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtPasswordLogin.UseSelectable = True
         Me.txtPasswordLogin.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
