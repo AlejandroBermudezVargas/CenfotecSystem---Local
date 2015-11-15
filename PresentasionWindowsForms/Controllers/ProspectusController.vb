@@ -80,4 +80,17 @@ Public Class ProspectusController
             Return Nothing
         End If
     End Function
+
+    Shared Function getProspecto(ByVal id As Integer)
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Prospectus", Method.GET)
+        request.AddParameter("id", id)
+        request.RequestFormat = DataFormat.Json
+        Dim response = client.Execute(Of Prospecto)(request)
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
+            Return response.Data
+        Else
+            Return Nothing
+        End If
+    End Function
 End Class
