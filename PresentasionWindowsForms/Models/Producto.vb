@@ -1,0 +1,63 @@
+﻿Public Class Producto
+
+    Private _idProducto As Integer
+    Private _nombre As String
+    Private _costo As Double
+    Private _horario As String
+    Private _codigo_producto As String
+    Private _id_tipo_product As Integer
+    Public Property Id_Tipo_Product() As Integer
+        Get
+            Return _id_tipo_product
+        End Get
+        Set(ByVal value As Integer)
+            _id_tipo_product = value
+        End Set
+    End Property
+
+    Public Property Codigo_Producto As String
+        Get
+            Return _codigo_producto
+        End Get
+        Set(ByVal value As String)
+            _codigo_producto = value
+        End Set
+    End Property
+
+    Public Property Horario() As String
+        Get
+            Return _horario
+        End Get
+        Set(ByVal value As String)
+            _horario = value
+        End Set
+    End Property
+
+    Public Property Nombre() As String
+        Get
+            Return _nombre
+        End Get
+        Set(ByVal value As String)
+            _nombre = value
+        End Set
+    End Property
+
+    Public Property Costo() As Double
+        Get
+            Return _costo
+        End Get
+        Set(ByVal value As Double)
+            _costo = value
+        End Set
+    End Property
+
+    Public Property Id() As String
+        Get
+            Return _idProducto
+        End Get
+        Set(ByVal value As String)
+            _idProducto = value
+        End Set
+    End Property
+
+End Class
