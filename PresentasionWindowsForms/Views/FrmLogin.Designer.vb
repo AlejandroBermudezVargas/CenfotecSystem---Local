@@ -22,6 +22,7 @@ Partial Class FrmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblForgotPasswordLogin = New MetroFramework.Controls.MetroLink()
         Me.btnSignUpLogin = New MetroFramework.Controls.MetroButton()
         Me.txtPasswordLogin = New MetroFramework.Controls.MetroTextBox()
@@ -29,6 +30,8 @@ Partial Class FrmLogin
         Me.txtEmailLogin = New MetroFramework.Controls.MetroTextBox()
         Me.lblPasswordLogin = New MetroFramework.Controls.MetroLabel()
         Me.lblLogoLogin = New MetroFramework.Drawing.Html.HtmlLabel()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblForgotPasswordLogin
@@ -70,7 +73,7 @@ Partial Class FrmLogin
         Me.txtPasswordLogin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtPasswordLogin.CustomButton.UseSelectable = True
         Me.txtPasswordLogin.CustomButton.Visible = False
-        Me.txtPasswordLogin.Lines = New String(-1) {}
+        Me.txtPasswordLogin.Lines = New String() {"admin1379"}
         Me.txtPasswordLogin.Location = New System.Drawing.Point(117, 292)
         Me.txtPasswordLogin.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
         Me.txtPasswordLogin.MaxLength = 32767
@@ -83,6 +86,7 @@ Partial Class FrmLogin
         Me.txtPasswordLogin.Size = New System.Drawing.Size(266, 23)
         Me.txtPasswordLogin.Style = MetroFramework.MetroColorStyle.Purple
         Me.txtPasswordLogin.TabIndex = 12
+        Me.txtPasswordLogin.Text = "admin1379"
         Me.txtPasswordLogin.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtPasswordLogin.UseSelectable = True
         Me.txtPasswordLogin.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -111,7 +115,7 @@ Partial Class FrmLogin
         Me.txtEmailLogin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtEmailLogin.CustomButton.UseSelectable = True
         Me.txtEmailLogin.CustomButton.Visible = False
-        Me.txtEmailLogin.Lines = New String(-1) {}
+        Me.txtEmailLogin.Lines = New String() {"admin@ucenfotec.ac.cr"}
         Me.txtEmailLogin.Location = New System.Drawing.Point(117, 245)
         Me.txtEmailLogin.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
         Me.txtEmailLogin.MaxLength = 32767
@@ -124,6 +128,7 @@ Partial Class FrmLogin
         Me.txtEmailLogin.Size = New System.Drawing.Size(266, 23)
         Me.txtEmailLogin.Style = MetroFramework.MetroColorStyle.Purple
         Me.txtEmailLogin.TabIndex = 10
+        Me.txtEmailLogin.Text = "admin@ucenfotec.ac.cr"
         Me.txtEmailLogin.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtEmailLogin.UseSelectable = True
         Me.txtEmailLogin.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -151,6 +156,10 @@ Partial Class FrmLogin
         Me.lblLogoLogin.Size = New System.Drawing.Size(210, 105)
         Me.lblLogoLogin.TabIndex = 8
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -166,6 +175,7 @@ Partial Class FrmLogin
         Me.Name = "FrmLogin"
         Me.Style = MetroFramework.MetroColorStyle.Purple
         Me.Text = "Inicio de sesión"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -177,4 +187,5 @@ Partial Class FrmLogin
     Friend WithEvents txtEmailLogin As MetroFramework.Controls.MetroTextBox
     Friend WithEvents lblPasswordLogin As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblLogoLogin As MetroFramework.Drawing.Html.HtmlLabel
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class
