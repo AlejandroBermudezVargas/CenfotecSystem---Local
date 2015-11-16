@@ -1026,6 +1026,18 @@ Public Class FrmMain
                 showCreateRolForm(id)
         End Select
     End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Create rol</usecase>
+    ''' <usecase>Update rol</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub btnCancelRol_Click(sender As Object, e As EventArgs) Handles btnCancelRol.Click
+        hideCreateRolForm()
+        showListOfRols()
+    End Sub
 End Class
 
 

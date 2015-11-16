@@ -2511,8 +2511,8 @@ Partial Class FrmMain
         '
         'TabUsuarios
         '
-        Me.TabUsuarios.Controls.Add(Me.pnlListRols)
         Me.TabUsuarios.Controls.Add(Me.pnlCreateRol)
+        Me.TabUsuarios.Controls.Add(Me.pnlListRols)
         Me.TabUsuarios.HorizontalScrollbarBarColor = True
         Me.TabUsuarios.HorizontalScrollbarHighlightOnWheel = False
         Me.TabUsuarios.HorizontalScrollbarSize = 10
