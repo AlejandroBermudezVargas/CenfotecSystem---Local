@@ -138,4 +138,19 @@
   <data name="CREATE_USER_ERROR" xml:space="preserve">
     <value>Hubo un error al crear el usuario</value>
   </data>
+  <data name="CREATE_ROL_ERROR" xml:space="preserve">
+    <value>No se pudo crear el rol!</value>
+  </data>
+  <data name="CREATE_ROL_SUCCESS" xml:space="preserve">
+    <value>Rol creado correctamente!</value>
+  </data>
+  <data name="POPULATE_FILLS_ERROR" xml:space="preserve">
+    <value>No se pudieron cargar los datos!</value>
+  </data>
+  <data name="UPDATE_ROL_ERROR" xml:space="preserve">
+    <value>No se ha podido actualizar el rol!</value>
+  </data>
+  <data name="UPDATE_ROL_SUCCESS" xml:space="preserve">
+    <value>Rol actualizado correctamente</value>
+  </data>
 </root>
