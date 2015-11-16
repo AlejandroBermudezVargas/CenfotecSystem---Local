@@ -803,6 +803,52 @@ Public Class FrmMain
         Users_controller.signOut(user)
         Application.Exit()
     End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>List rols</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub showListOfRols()
+        pnlListRols.Show()
+        populateListOfRols()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>List rols</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub hideListOfRols()
+        pnlListRols.Hide()
+    End Sub
+
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>List rols</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub populateListOfRols()
+        lstListRols.Rows.Clear()
+        Dim estado = "Inactivo"
+        Dim rols As List(Of RolModel) = RolsController.obtener()
+        If (Not rols Is Nothing) Then
+            For Each rol As RolModel In rols
+                If rol.activo Then
+                    estado = "Activo"
+                End If
+                lstListRols.Rows.Add(rol.id_rol, rol.nombre, estado)
+            Next
+        End If
+    End Sub
+
+    Private Sub Main_Click(sender As Object, e As EventArgs) Handles Main.Click
+        showListOfRols()
+    End Sub
 End Class
 
 

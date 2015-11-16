@@ -215,6 +215,16 @@ Partial Class FrmMain
         Me.TabConfiguracion = New MetroFramework.Controls.MetroTabPage()
         Me.TabVentas = New MetroFramework.Controls.MetroTabPage()
         Me.TabUsuarios = New MetroFramework.Controls.MetroTabPage()
+        Me.pnlListRols = New MetroFramework.Controls.MetroPanel()
+        Me.btnBackRolsUsers = New MetroFramework.Controls.MetroButton()
+        Me.lblIdRol = New MetroFramework.Controls.MetroLabel()
+        Me.lstListRols = New System.Windows.Forms.DataGridView()
+        Me.colIdListRols = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colNameRol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStateRol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEditListRol = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.lblListOfRols = New MetroFramework.Controls.MetroLabel()
+        Me.btnNewRol = New MetroFramework.Controls.MetroButton()
         Me.TabReportes = New MetroFramework.Controls.MetroTabPage()
         Me.IdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -270,6 +280,9 @@ Partial Class FrmMain
         Me.pnlCrearKpiProducto.SuspendLayout()
         Me.pnlKpiProspectos.SuspendLayout()
         Me.panKpiVentas.SuspendLayout()
+        Me.TabUsuarios.SuspendLayout()
+        Me.pnlListRols.SuspendLayout()
+        CType(Me.lstListRols, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -288,7 +301,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 0
+        Me.Main.SelectedIndex = 6
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -2465,6 +2478,7 @@ Partial Class FrmMain
         '
         'TabUsuarios
         '
+        Me.TabUsuarios.Controls.Add(Me.pnlListRols)
         Me.TabUsuarios.HorizontalScrollbarBarColor = True
         Me.TabUsuarios.HorizontalScrollbarHighlightOnWheel = False
         Me.TabUsuarios.HorizontalScrollbarSize = 10
@@ -2476,6 +2490,103 @@ Partial Class FrmMain
         Me.TabUsuarios.VerticalScrollbarBarColor = True
         Me.TabUsuarios.VerticalScrollbarHighlightOnWheel = False
         Me.TabUsuarios.VerticalScrollbarSize = 10
+        '
+        'pnlListRols
+        '
+        Me.pnlListRols.Controls.Add(Me.btnBackRolsUsers)
+        Me.pnlListRols.Controls.Add(Me.lblIdRol)
+        Me.pnlListRols.Controls.Add(Me.lstListRols)
+        Me.pnlListRols.Controls.Add(Me.lblListOfRols)
+        Me.pnlListRols.Controls.Add(Me.btnNewRol)
+        Me.pnlListRols.HorizontalScrollbarBarColor = True
+        Me.pnlListRols.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlListRols.HorizontalScrollbarSize = 10
+        Me.pnlListRols.Location = New System.Drawing.Point(0, 6)
+        Me.pnlListRols.Name = "pnlListRols"
+        Me.pnlListRols.Size = New System.Drawing.Size(749, 461)
+        Me.pnlListRols.Style = MetroFramework.MetroColorStyle.Blue
+        Me.pnlListRols.TabIndex = 50
+        Me.pnlListRols.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnlListRols.VerticalScrollbarBarColor = True
+        Me.pnlListRols.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlListRols.VerticalScrollbarSize = 10
+        '
+        'btnBackRolsUsers
+        '
+        Me.btnBackRolsUsers.Location = New System.Drawing.Point(7, 412)
+        Me.btnBackRolsUsers.Name = "btnBackRolsUsers"
+        Me.btnBackRolsUsers.Size = New System.Drawing.Size(123, 36)
+        Me.btnBackRolsUsers.TabIndex = 50
+        Me.btnBackRolsUsers.Text = "Volver"
+        Me.btnBackRolsUsers.UseSelectable = True
+        '
+        'lblIdRol
+        '
+        Me.lblIdRol.AutoSize = True
+        Me.lblIdRol.Location = New System.Drawing.Point(723, 7)
+        Me.lblIdRol.Name = "lblIdRol"
+        Me.lblIdRol.Size = New System.Drawing.Size(20, 19)
+        Me.lblIdRol.TabIndex = 49
+        Me.lblIdRol.Text = "id"
+        Me.lblIdRol.Visible = False
+        '
+        'lstListRols
+        '
+        Me.lstListRols.AllowUserToAddRows = False
+        Me.lstListRols.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.lstListRols.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdListRols, Me.colNameRol, Me.colStateRol, Me.colEditListRol})
+        Me.lstListRols.Location = New System.Drawing.Point(7, 37)
+        Me.lstListRols.Name = "lstListRols"
+        Me.lstListRols.RowHeadersVisible = False
+        Me.lstListRols.Size = New System.Drawing.Size(739, 344)
+        Me.lstListRols.TabIndex = 12
+        '
+        'colIdListRols
+        '
+        Me.colIdListRols.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.colIdListRols.HeaderText = "ID"
+        Me.colIdListRols.Name = "colIdListRols"
+        Me.colIdListRols.ReadOnly = True
+        Me.colIdListRols.Visible = False
+        '
+        'colNameRol
+        '
+        Me.colNameRol.HeaderText = "Nombre"
+        Me.colNameRol.Name = "colNameRol"
+        '
+        'colStateRol
+        '
+        Me.colStateRol.HeaderText = "Estado"
+        Me.colStateRol.Name = "colStateRol"
+        '
+        'colEditListRol
+        '
+        Me.colEditListRol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.colEditListRol.HeaderText = ""
+        Me.colEditListRol.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.colEditListRol.Name = "colEditListRol"
+        Me.colEditListRol.ReadOnly = True
+        Me.colEditListRol.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colEditListRol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'lblListOfRols
+        '
+        Me.lblListOfRols.AutoSize = True
+        Me.lblListOfRols.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblListOfRols.Location = New System.Drawing.Point(4, 9)
+        Me.lblListOfRols.Name = "lblListOfRols"
+        Me.lblListOfRols.Size = New System.Drawing.Size(92, 25)
+        Me.lblListOfRols.TabIndex = 10
+        Me.lblListOfRols.Text = "Listar roles"
+        '
+        'btnNewRol
+        '
+        Me.btnNewRol.Location = New System.Drawing.Point(623, 412)
+        Me.btnNewRol.Name = "btnNewRol"
+        Me.btnNewRol.Size = New System.Drawing.Size(123, 36)
+        Me.btnNewRol.TabIndex = 9
+        Me.btnNewRol.Text = "Nuevo rol"
+        Me.btnNewRol.UseSelectable = True
         '
         'TabReportes
         '
@@ -2622,6 +2733,10 @@ Partial Class FrmMain
         Me.pnlKpiProspectos.PerformLayout()
         Me.panKpiVentas.ResumeLayout(False)
         Me.panKpiVentas.PerformLayout()
+        Me.TabUsuarios.ResumeLayout(False)
+        Me.pnlListRols.ResumeLayout(False)
+        Me.pnlListRols.PerformLayout()
+        CType(Me.lstListRols, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -2831,4 +2946,14 @@ Partial Class FrmMain
     Friend WithEvents colFechaInicioActi As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents editarActi As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents lblCloseSession As MetroFramework.Controls.MetroLink
+    Friend WithEvents pnlListRols As MetroFramework.Controls.MetroPanel
+    Friend WithEvents btnBackRolsUsers As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblIdRol As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lstListRols As System.Windows.Forms.DataGridView
+    Friend WithEvents colIdListRols As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colNameRol As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStateRol As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colEditListRol As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents lblListOfRols As MetroFramework.Controls.MetroLabel
+    Friend WithEvents btnNewRol As MetroFramework.Controls.MetroButton
 End Class

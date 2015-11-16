@@ -4,6 +4,13 @@ Imports RestSharp.Deserializers
 Imports Newtonsoft.Json
 
 Public Class RolsController
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>List rols</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
     Shared Function obtener() As List(Of RolModel)
         Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
         Dim request = New RestRequest("Rols", Method.GET)
