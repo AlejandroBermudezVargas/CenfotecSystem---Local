@@ -1241,6 +1241,7 @@ Public Class FrmMain
             txtPasswordCreateUser.Enabled = True
             chkChangeUserPassword.Visible = False
         Else
+            chkChangeUserPassword.Visible = True
             lblCreateUserTittle.Text = "Modificar usuario"
             Dim user As UserModel = Users_controller.getUser(id)
             If (Not user Is Nothing) Then
