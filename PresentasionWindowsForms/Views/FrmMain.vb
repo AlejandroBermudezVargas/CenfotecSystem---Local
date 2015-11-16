@@ -944,6 +944,7 @@ Public Class FrmMain
     ''' <autor>Alejandro Bermudez Vargas</autor>
     ''' <Date>3-11-2015</Date>
     ''' <usecase>Create rol</usecase>
+    ''' <usecase>Update rol</usecase>
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub btnSaveRol_Click(sender As Object, e As EventArgs) Handles btnSaveRol.Click
@@ -997,6 +998,18 @@ Public Class FrmMain
         Else
             ErrorProvider1.SetError(txtRolName, ValidationsMessages.ONLY_TEXT_ALLOW_SPACES)
         End If
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Create rol</usecase>
+    ''' <usecase>Update rol</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub btnNewRol_Click(sender As Object, e As EventArgs) Handles btnNewRol.Click
+        showCreateRolForm("-1")
+        hideListOfRols()
     End Sub
 End Class
 
