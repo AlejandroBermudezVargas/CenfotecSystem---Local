@@ -48,7 +48,6 @@ Public Class FrmMain
     Dim idEventoModificar As Integer
 
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cboUsuario.Text = "Usuario"
         Me.llenarEventos()
         Me.llenarListaProspectos()
         llenarTablaActis()
@@ -776,6 +775,33 @@ Public Class FrmMain
 
     Private Sub cancelarAct_btn_Click(sender As Object, e As EventArgs) Handles cancelarAct_btn.Click
         registrarActi_pnl.Visible = False
+    End Sub
+
+    'USERS
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Close Session</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub lblCloseSession_Click(sender As Object, e As EventArgs) Handles lblCloseSession.Click
+        Dim login As New FrmLogin()
+        Me.Hide()
+        login.ShowDialog()
+        Me.Close()
+    End Sub
+
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Close Session</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub FrmMain_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Users_controller.signOut(user)
+        Application.Exit()
     End Sub
 End Class
 
