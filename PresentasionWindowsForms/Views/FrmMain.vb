@@ -1288,10 +1288,151 @@ Public Class FrmMain
         txtPasswordCreateUser.Text = lblPasswordUserBackup.Text
     End Sub
 
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Update user</usecase>
+    ''' <usecase>Create user</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub btnCancelCreateUser_Click(sender As Object, e As EventArgs) Handles btnCancelCreateUser.Click
         hideCreateUserForm()
         showListUserForm()
         clearCreateUserForm()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub btnSaveUpdateUserInfo_Click(sender As Object, e As EventArgs) Handles btnSaveUpdateUserInfo.Click
+        If (validateUpdateUserForm()) Then
+            If Not (Users_controller.login(user.correo, txtPasswordUpdateUserInfo.Text)) Is Nothing Then
+                If tgChangePassUpdateUserInfo.Checked Then
+                    If (Users_controller.updateUserAndPassword(user.id_usuario, txtIdUpdateUserInfo.Text, txtNameUpdateUserInfo.Text, txtLastNameUpdateUserInfo.Text,
+                                            txtEmailUpdateUserInfo.Text, txtPhoneUpdateUserInfo.Text, txtNewPassUpdateUserInfo.Text, user.id_rol, user.activo, cboDateUpdateUserInfo.Value)) Then
+                        MsgBox(respuestasDelSistema.UPDATE_USER_SUCCESS, MsgBoxStyle.Information)
+                        hideUpdateUserInfo()
+                    Else
+                        MsgBox(respuestasDelSistema.UPDATE__USER_ERROR, MsgBoxStyle.Critical)
+                    End If
+                Else 'No quiere actualizar la contraseña
+                    If (Users_controller.update(user.id_usuario, txtIdUpdateUserInfo.Text, txtNameUpdateUserInfo.Text, txtLastNameUpdateUserInfo.Text,
+                                            txtEmailUpdateUserInfo.Text, txtPhoneUpdateUserInfo.Text, user.password, user.id_rol, user.activo, cboDateUpdateUserInfo.Value)) Then
+                        MsgBox(respuestasDelSistema.UPDATE_USER_SUCCESS, MsgBoxStyle.Information)
+                        hideUpdateUserInfo()
+                    Else
+                        MsgBox(respuestasDelSistema.UPDATE__USER_ERROR, MsgBoxStyle.Critical)
+                    End If
+                End If
+            Else
+                MsgBox(MsgBox(respuestasDelSistema.USER_NOT_EXIST, MsgBoxStyle.Critical))
+            End If
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Function validateUpdateUserForm() As Boolean
+        Dim result As Boolean = True
+        If isAUserId(txtIdUpdateUserInfo.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtIdUpdateUserInfo, ValidationsMessages.INVALID_USER_ID)
+            txtIdUpdateUserInfo.WithError = True
+        End If
+        If Not OnlyTextAllowSpaces(txtNameUpdateUserInfo.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtNameUpdateUserInfo, ValidationsMessages.ONLY_TEXT_ALLOW_SPACES)
+        End If
+        If Not OnlyTextAllowSpaces(txtLastNameUpdateUserInfo.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtLastNameUpdateUserInfo, ValidationsMessages.ONLY_TEXT_ALLOW_SPACES)
+        End If
+        If Not IsEmail(txtEmailUpdateUserInfo.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtEmailUpdateUserInfo, ValidationsMessages.INVALID_EMAIL)
+        End If
+        If Not isAPhoneNumber(txtPhoneUpdateUserInfo.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtPhoneUpdateUserInfo, ValidationsMessages.INVALID_PHONE_NUMBER)
+        End If
+        If Not IsGoodPassword(txtPasswordUpdateUserInfo.Text) Then
+            ErrorProvider1.SetError(txtPasswordUpdateUserInfo, ValidationsMessages.PASSWORD_INCORRECT_FORMAT)
+            result = False
+        End If
+        Return result
+    End Function
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub hideUpdateUserInfo()
+        pnlUpdateUserInfo.Hide()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub showUpdateUserInfo()
+        Dim usuario As UserModel = Users_controller.getUser(user.id_usuario)
+        If (Not usuario Is Nothing) Then
+            txtIdUpdateUserInfo.Text = usuario.cedula
+            txtNameUpdateUserInfo.Text = usuario.nombre
+            txtLastNameUpdateUserInfo.Text = usuario.apellido
+            txtEmailUpdateUserInfo.Text = usuario.correo
+            txtPhoneUpdateUserInfo.Text = usuario.telefono
+            txtPasswordUpdateUserInfo.Text = ""
+            txtNewPassUpdateUserInfo.Text = user.password
+            tgChangePassUpdateUserInfo.Checked = False
+            txtNewPassUpdateUserInfo.Enabled = False
+        Else
+            MsgBox(respuestasDelSistema.POPULATE_FILLS_ERROR, MsgBoxStyle.Critical)
+        End If
+        pnlUpdateUserInfo.Show()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub tileChangeInformation_Click(sender As Object, e As EventArgs) Handles tileChangeInformation.Click
+        showUpdateUserInfo()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub tgChangePassUpdateUserInfo_Click(sender As Object, e As EventArgs) Handles tgChangePassUpdateUserInfo.Click
+        txtNewPassUpdateUserInfo.Enabled = tgChangePassUpdateUserInfo.Checked
+        lblNewpassUpdateUserInfo.Enabled = tgChangePassUpdateUserInfo.Checked
+        txtNewPassUpdateUserInfo.Text = ""
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub btnCancelUpdateUserInfo_Click(sender As Object, e As EventArgs) Handles btnCancelUpdateUserInfo.Click
+        hideUpdateUserInfo()
     End Sub
 End Class
 

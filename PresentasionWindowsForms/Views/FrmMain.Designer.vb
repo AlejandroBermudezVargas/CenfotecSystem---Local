@@ -306,6 +306,29 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
+        Me.tileChangeInformation = New MetroFramework.Controls.MetroTile()
+        Me.pnlUpdateUserInfo = New MetroFramework.Controls.MetroPanel()
+        Me.tgChangePassUpdateUserInfo = New MetroFramework.Controls.MetroToggle()
+        Me.txtPasswordUpdateUserInfo = New MetroFramework.Controls.MetroTextBox()
+        Me.lblCheckPasswordUpdate = New MetroFramework.Controls.MetroLabel()
+        Me.txtNewPassUpdateUserInfo = New MetroFramework.Controls.MetroTextBox()
+        Me.lblNewpassUpdateUserInfo = New MetroFramework.Controls.MetroLabel()
+        Me.cboDateUpdateUserInfo = New MetroFramework.Controls.MetroDateTime()
+        Me.lblDateUpdateUserInfo = New MetroFramework.Controls.MetroLabel()
+        Me.txtEmailUpdateUserInfo = New MetroFramework.Controls.MetroTextBox()
+        Me.lblEmailUpdateUserInfo = New MetroFramework.Controls.MetroLabel()
+        Me.txtLastNameUpdateUserInfo = New MetroFramework.Controls.MetroTextBox()
+        Me.txtPhoneUpdateUserInfo = New MetroFramework.Controls.MetroTextBox()
+        Me.txtNameUpdateUserInfo = New MetroFramework.Controls.MetroTextBox()
+        Me.txtIdUpdateUserInfo = New MetroFramework.Controls.MetroTextBox()
+        Me.btnCancelUpdateUserInfo = New MetroFramework.Controls.MetroButton()
+        Me.btnSaveUpdateUserInfo = New MetroFramework.Controls.MetroButton()
+        Me.lblPasswordUpdateUserInfo = New MetroFramework.Controls.MetroLabel()
+        Me.lblPhoneUpdateUserInfo = New MetroFramework.Controls.MetroLabel()
+        Me.lblNameUpdateUserInfo = New MetroFramework.Controls.MetroLabel()
+        Me.lblLastNameUpdateUserInfo = New MetroFramework.Controls.MetroLabel()
+        Me.lblIdUpdateUserInfo = New MetroFramework.Controls.MetroLabel()
+        Me.lblChangePasswordTittle = New MetroFramework.Controls.MetroLabel()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.listaActis_pnl.SuspendLayout()
@@ -348,6 +371,7 @@ Partial Class FrmMain
         Me.pnlCrearKpiProducto.SuspendLayout()
         Me.pnlKpiProspectos.SuspendLayout()
         Me.panKpiVentas.SuspendLayout()
+        Me.TabConfiguracion.SuspendLayout()
         Me.TabUsuarios.SuspendLayout()
         Me.pnlCreateUser.SuspendLayout()
         Me.pnListUsers.SuspendLayout()
@@ -358,6 +382,7 @@ Partial Class FrmMain
         Me.gboPermissionsRol.SuspendLayout()
         Me.gboPorductsSectionRol.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlUpdateUserInfo.SuspendLayout()
         Me.SuspendLayout()
         '
         'Main
@@ -375,7 +400,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 6
+        Me.Main.SelectedIndex = 4
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -2523,6 +2548,8 @@ Partial Class FrmMain
         '
         'TabConfiguracion
         '
+        Me.TabConfiguracion.Controls.Add(Me.pnlUpdateUserInfo)
+        Me.TabConfiguracion.Controls.Add(Me.tileChangeInformation)
         Me.TabConfiguracion.HorizontalScrollbarBarColor = True
         Me.TabConfiguracion.HorizontalScrollbarHighlightOnWheel = False
         Me.TabConfiguracion.HorizontalScrollbarSize = 10
@@ -3601,6 +3628,396 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
+        'tileChangeInformation
+        '
+        Me.tileChangeInformation.ActiveControl = Nothing
+        Me.tileChangeInformation.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.tileChangeInformation.Location = New System.Drawing.Point(24, 27)
+        Me.tileChangeInformation.Name = "tileChangeInformation"
+        Me.tileChangeInformation.Size = New System.Drawing.Size(124, 119)
+        Me.tileChangeInformation.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tileChangeInformation.TabIndex = 4
+        Me.tileChangeInformation.Text = "Cambiar datos"
+        Me.tileChangeInformation.UseSelectable = True
+        '
+        'pnlUpdateUserInfo
+        '
+        Me.pnlUpdateUserInfo.Controls.Add(Me.tgChangePassUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.txtPasswordUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblCheckPasswordUpdate)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.txtNewPassUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblNewpassUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.cboDateUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblDateUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.txtEmailUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblEmailUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.txtLastNameUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.txtPhoneUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.txtNameUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.txtIdUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.btnCancelUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.btnSaveUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblPasswordUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblPhoneUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblNameUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblLastNameUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblIdUpdateUserInfo)
+        Me.pnlUpdateUserInfo.Controls.Add(Me.lblChangePasswordTittle)
+        Me.pnlUpdateUserInfo.HorizontalScrollbarBarColor = True
+        Me.pnlUpdateUserInfo.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlUpdateUserInfo.HorizontalScrollbarSize = 10
+        Me.pnlUpdateUserInfo.Location = New System.Drawing.Point(3, 5)
+        Me.pnlUpdateUserInfo.Name = "pnlUpdateUserInfo"
+        Me.pnlUpdateUserInfo.Size = New System.Drawing.Size(746, 462)
+        Me.pnlUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.pnlUpdateUserInfo.TabIndex = 7
+        Me.pnlUpdateUserInfo.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnlUpdateUserInfo.VerticalScrollbarBarColor = True
+        Me.pnlUpdateUserInfo.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlUpdateUserInfo.VerticalScrollbarSize = 10
+        Me.pnlUpdateUserInfo.Visible = False
+        '
+        'tgChangePassUpdateUserInfo
+        '
+        Me.tgChangePassUpdateUserInfo.AutoSize = True
+        Me.tgChangePassUpdateUserInfo.Location = New System.Drawing.Point(181, 250)
+        Me.tgChangePassUpdateUserInfo.Name = "tgChangePassUpdateUserInfo"
+        Me.tgChangePassUpdateUserInfo.Size = New System.Drawing.Size(80, 17)
+        Me.tgChangePassUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgChangePassUpdateUserInfo.TabIndex = 50
+        Me.tgChangePassUpdateUserInfo.Text = "Off"
+        Me.tgChangePassUpdateUserInfo.UseSelectable = True
+        '
+        'txtPasswordUpdateUserInfo
+        '
+        '
+        '
+        '
+        Me.txtPasswordUpdateUserInfo.CustomButton.Image = Nothing
+        Me.txtPasswordUpdateUserInfo.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtPasswordUpdateUserInfo.CustomButton.Name = ""
+        Me.txtPasswordUpdateUserInfo.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtPasswordUpdateUserInfo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtPasswordUpdateUserInfo.CustomButton.TabIndex = 1
+        Me.txtPasswordUpdateUserInfo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtPasswordUpdateUserInfo.CustomButton.UseSelectable = True
+        Me.txtPasswordUpdateUserInfo.CustomButton.Visible = False
+        Me.txtPasswordUpdateUserInfo.Lines = New String(-1) {}
+        Me.txtPasswordUpdateUserInfo.Location = New System.Drawing.Point(181, 308)
+        Me.txtPasswordUpdateUserInfo.MaxLength = 50
+        Me.txtPasswordUpdateUserInfo.Name = "txtPasswordUpdateUserInfo"
+        Me.txtPasswordUpdateUserInfo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtPasswordUpdateUserInfo.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtPasswordUpdateUserInfo.SelectedText = ""
+        Me.txtPasswordUpdateUserInfo.SelectionLength = 0
+        Me.txtPasswordUpdateUserInfo.SelectionStart = 0
+        Me.txtPasswordUpdateUserInfo.Size = New System.Drawing.Size(367, 23)
+        Me.txtPasswordUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtPasswordUpdateUserInfo.TabIndex = 49
+        Me.txtPasswordUpdateUserInfo.UseSelectable = True
+        Me.txtPasswordUpdateUserInfo.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtPasswordUpdateUserInfo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'lblCheckPasswordUpdate
+        '
+        Me.lblCheckPasswordUpdate.AutoSize = True
+        Me.lblCheckPasswordUpdate.Location = New System.Drawing.Point(25, 312)
+        Me.lblCheckPasswordUpdate.Name = "lblCheckPasswordUpdate"
+        Me.lblCheckPasswordUpdate.Size = New System.Drawing.Size(136, 19)
+        Me.lblCheckPasswordUpdate.TabIndex = 48
+        Me.lblCheckPasswordUpdate.Text = "Confirmar contraseña"
+        '
+        'txtNewPassUpdateUserInfo
+        '
+        '
+        '
+        '
+        Me.txtNewPassUpdateUserInfo.CustomButton.Image = Nothing
+        Me.txtNewPassUpdateUserInfo.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtNewPassUpdateUserInfo.CustomButton.Name = ""
+        Me.txtNewPassUpdateUserInfo.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtNewPassUpdateUserInfo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtNewPassUpdateUserInfo.CustomButton.TabIndex = 1
+        Me.txtNewPassUpdateUserInfo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNewPassUpdateUserInfo.CustomButton.UseSelectable = True
+        Me.txtNewPassUpdateUserInfo.CustomButton.Visible = False
+        Me.txtNewPassUpdateUserInfo.Enabled = False
+        Me.txtNewPassUpdateUserInfo.Lines = New String(-1) {}
+        Me.txtNewPassUpdateUserInfo.Location = New System.Drawing.Point(181, 277)
+        Me.txtNewPassUpdateUserInfo.MaxLength = 50
+        Me.txtNewPassUpdateUserInfo.Name = "txtNewPassUpdateUserInfo"
+        Me.txtNewPassUpdateUserInfo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtNewPassUpdateUserInfo.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtNewPassUpdateUserInfo.SelectedText = ""
+        Me.txtNewPassUpdateUserInfo.SelectionLength = 0
+        Me.txtNewPassUpdateUserInfo.SelectionStart = 0
+        Me.txtNewPassUpdateUserInfo.Size = New System.Drawing.Size(367, 23)
+        Me.txtNewPassUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtNewPassUpdateUserInfo.TabIndex = 47
+        Me.txtNewPassUpdateUserInfo.UseSelectable = True
+        Me.txtNewPassUpdateUserInfo.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNewPassUpdateUserInfo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'lblNewpassUpdateUserInfo
+        '
+        Me.lblNewpassUpdateUserInfo.AutoSize = True
+        Me.lblNewpassUpdateUserInfo.Enabled = False
+        Me.lblNewpassUpdateUserInfo.Location = New System.Drawing.Point(25, 281)
+        Me.lblNewpassUpdateUserInfo.Name = "lblNewpassUpdateUserInfo"
+        Me.lblNewpassUpdateUserInfo.Size = New System.Drawing.Size(118, 19)
+        Me.lblNewpassUpdateUserInfo.TabIndex = 46
+        Me.lblNewpassUpdateUserInfo.Text = "Nueva constraseña"
+        '
+        'cboDateUpdateUserInfo
+        '
+        Me.cboDateUpdateUserInfo.Location = New System.Drawing.Point(181, 175)
+        Me.cboDateUpdateUserInfo.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.cboDateUpdateUserInfo.Name = "cboDateUpdateUserInfo"
+        Me.cboDateUpdateUserInfo.Size = New System.Drawing.Size(366, 29)
+        Me.cboDateUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.cboDateUpdateUserInfo.TabIndex = 45
+        '
+        'lblDateUpdateUserInfo
+        '
+        Me.lblDateUpdateUserInfo.AutoSize = True
+        Me.lblDateUpdateUserInfo.Location = New System.Drawing.Point(24, 185)
+        Me.lblDateUpdateUserInfo.Name = "lblDateUpdateUserInfo"
+        Me.lblDateUpdateUserInfo.Size = New System.Drawing.Size(111, 19)
+        Me.lblDateUpdateUserInfo.TabIndex = 44
+        Me.lblDateUpdateUserInfo.Text = "Fecha nacimiento"
+        '
+        'txtEmailUpdateUserInfo
+        '
+        '
+        '
+        '
+        Me.txtEmailUpdateUserInfo.CustomButton.Image = Nothing
+        Me.txtEmailUpdateUserInfo.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtEmailUpdateUserInfo.CustomButton.Name = ""
+        Me.txtEmailUpdateUserInfo.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtEmailUpdateUserInfo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtEmailUpdateUserInfo.CustomButton.TabIndex = 1
+        Me.txtEmailUpdateUserInfo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtEmailUpdateUserInfo.CustomButton.UseSelectable = True
+        Me.txtEmailUpdateUserInfo.CustomButton.Visible = False
+        Me.txtEmailUpdateUserInfo.Lines = New String(-1) {}
+        Me.txtEmailUpdateUserInfo.Location = New System.Drawing.Point(181, 144)
+        Me.txtEmailUpdateUserInfo.MaxLength = 50
+        Me.txtEmailUpdateUserInfo.Name = "txtEmailUpdateUserInfo"
+        Me.txtEmailUpdateUserInfo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtEmailUpdateUserInfo.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtEmailUpdateUserInfo.SelectedText = ""
+        Me.txtEmailUpdateUserInfo.SelectionLength = 0
+        Me.txtEmailUpdateUserInfo.SelectionStart = 0
+        Me.txtEmailUpdateUserInfo.Size = New System.Drawing.Size(367, 23)
+        Me.txtEmailUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtEmailUpdateUserInfo.TabIndex = 43
+        Me.txtEmailUpdateUserInfo.UseSelectable = True
+        Me.txtEmailUpdateUserInfo.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtEmailUpdateUserInfo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'lblEmailUpdateUserInfo
+        '
+        Me.lblEmailUpdateUserInfo.AutoSize = True
+        Me.lblEmailUpdateUserInfo.Location = New System.Drawing.Point(24, 148)
+        Me.lblEmailUpdateUserInfo.Name = "lblEmailUpdateUserInfo"
+        Me.lblEmailUpdateUserInfo.Size = New System.Drawing.Size(51, 19)
+        Me.lblEmailUpdateUserInfo.TabIndex = 42
+        Me.lblEmailUpdateUserInfo.Text = "Correo"
+        '
+        'txtLastNameUpdateUserInfo
+        '
+        '
+        '
+        '
+        Me.txtLastNameUpdateUserInfo.CustomButton.Image = Nothing
+        Me.txtLastNameUpdateUserInfo.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtLastNameUpdateUserInfo.CustomButton.Name = ""
+        Me.txtLastNameUpdateUserInfo.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtLastNameUpdateUserInfo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtLastNameUpdateUserInfo.CustomButton.TabIndex = 1
+        Me.txtLastNameUpdateUserInfo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtLastNameUpdateUserInfo.CustomButton.UseSelectable = True
+        Me.txtLastNameUpdateUserInfo.CustomButton.Visible = False
+        Me.txtLastNameUpdateUserInfo.Lines = New String(-1) {}
+        Me.txtLastNameUpdateUserInfo.Location = New System.Drawing.Point(181, 113)
+        Me.txtLastNameUpdateUserInfo.MaxLength = 50
+        Me.txtLastNameUpdateUserInfo.Name = "txtLastNameUpdateUserInfo"
+        Me.txtLastNameUpdateUserInfo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtLastNameUpdateUserInfo.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtLastNameUpdateUserInfo.SelectedText = ""
+        Me.txtLastNameUpdateUserInfo.SelectionLength = 0
+        Me.txtLastNameUpdateUserInfo.SelectionStart = 0
+        Me.txtLastNameUpdateUserInfo.Size = New System.Drawing.Size(367, 23)
+        Me.txtLastNameUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtLastNameUpdateUserInfo.TabIndex = 41
+        Me.txtLastNameUpdateUserInfo.UseSelectable = True
+        Me.txtLastNameUpdateUserInfo.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtLastNameUpdateUserInfo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtPhoneUpdateUserInfo
+        '
+        '
+        '
+        '
+        Me.txtPhoneUpdateUserInfo.CustomButton.Image = Nothing
+        Me.txtPhoneUpdateUserInfo.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtPhoneUpdateUserInfo.CustomButton.Name = ""
+        Me.txtPhoneUpdateUserInfo.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtPhoneUpdateUserInfo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtPhoneUpdateUserInfo.CustomButton.TabIndex = 1
+        Me.txtPhoneUpdateUserInfo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtPhoneUpdateUserInfo.CustomButton.UseSelectable = True
+        Me.txtPhoneUpdateUserInfo.CustomButton.Visible = False
+        Me.txtPhoneUpdateUserInfo.Lines = New String(-1) {}
+        Me.txtPhoneUpdateUserInfo.Location = New System.Drawing.Point(181, 215)
+        Me.txtPhoneUpdateUserInfo.MaxLength = 30
+        Me.txtPhoneUpdateUserInfo.Name = "txtPhoneUpdateUserInfo"
+        Me.txtPhoneUpdateUserInfo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPhoneUpdateUserInfo.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtPhoneUpdateUserInfo.SelectedText = ""
+        Me.txtPhoneUpdateUserInfo.SelectionLength = 0
+        Me.txtPhoneUpdateUserInfo.SelectionStart = 0
+        Me.txtPhoneUpdateUserInfo.Size = New System.Drawing.Size(367, 23)
+        Me.txtPhoneUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtPhoneUpdateUserInfo.TabIndex = 33
+        Me.txtPhoneUpdateUserInfo.UseSelectable = True
+        Me.txtPhoneUpdateUserInfo.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtPhoneUpdateUserInfo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtNameUpdateUserInfo
+        '
+        '
+        '
+        '
+        Me.txtNameUpdateUserInfo.CustomButton.Image = Nothing
+        Me.txtNameUpdateUserInfo.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtNameUpdateUserInfo.CustomButton.Name = ""
+        Me.txtNameUpdateUserInfo.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtNameUpdateUserInfo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtNameUpdateUserInfo.CustomButton.TabIndex = 1
+        Me.txtNameUpdateUserInfo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNameUpdateUserInfo.CustomButton.UseSelectable = True
+        Me.txtNameUpdateUserInfo.CustomButton.Visible = False
+        Me.txtNameUpdateUserInfo.Lines = New String(-1) {}
+        Me.txtNameUpdateUserInfo.Location = New System.Drawing.Point(181, 82)
+        Me.txtNameUpdateUserInfo.MaxLength = 50
+        Me.txtNameUpdateUserInfo.Name = "txtNameUpdateUserInfo"
+        Me.txtNameUpdateUserInfo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNameUpdateUserInfo.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtNameUpdateUserInfo.SelectedText = ""
+        Me.txtNameUpdateUserInfo.SelectionLength = 0
+        Me.txtNameUpdateUserInfo.SelectionStart = 0
+        Me.txtNameUpdateUserInfo.Size = New System.Drawing.Size(367, 23)
+        Me.txtNameUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtNameUpdateUserInfo.TabIndex = 25
+        Me.txtNameUpdateUserInfo.UseSelectable = True
+        Me.txtNameUpdateUserInfo.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNameUpdateUserInfo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtIdUpdateUserInfo
+        '
+        '
+        '
+        '
+        Me.txtIdUpdateUserInfo.CustomButton.Image = Nothing
+        Me.txtIdUpdateUserInfo.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtIdUpdateUserInfo.CustomButton.Name = ""
+        Me.txtIdUpdateUserInfo.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtIdUpdateUserInfo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtIdUpdateUserInfo.CustomButton.TabIndex = 1
+        Me.txtIdUpdateUserInfo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtIdUpdateUserInfo.CustomButton.UseSelectable = True
+        Me.txtIdUpdateUserInfo.CustomButton.Visible = False
+        Me.txtIdUpdateUserInfo.Lines = New String(-1) {}
+        Me.txtIdUpdateUserInfo.Location = New System.Drawing.Point(181, 51)
+        Me.txtIdUpdateUserInfo.MaxLength = 50
+        Me.txtIdUpdateUserInfo.Name = "txtIdUpdateUserInfo"
+        Me.txtIdUpdateUserInfo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtIdUpdateUserInfo.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtIdUpdateUserInfo.SelectedText = ""
+        Me.txtIdUpdateUserInfo.SelectionLength = 0
+        Me.txtIdUpdateUserInfo.SelectionStart = 0
+        Me.txtIdUpdateUserInfo.Size = New System.Drawing.Size(367, 23)
+        Me.txtIdUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtIdUpdateUserInfo.TabIndex = 24
+        Me.txtIdUpdateUserInfo.UseSelectable = True
+        Me.txtIdUpdateUserInfo.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtIdUpdateUserInfo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'btnCancelUpdateUserInfo
+        '
+        Me.btnCancelUpdateUserInfo.Location = New System.Drawing.Point(450, 436)
+        Me.btnCancelUpdateUserInfo.Name = "btnCancelUpdateUserInfo"
+        Me.btnCancelUpdateUserInfo.Size = New System.Drawing.Size(97, 23)
+        Me.btnCancelUpdateUserInfo.TabIndex = 23
+        Me.btnCancelUpdateUserInfo.Text = "Cancelar"
+        Me.btnCancelUpdateUserInfo.UseSelectable = True
+        '
+        'btnSaveUpdateUserInfo
+        '
+        Me.btnSaveUpdateUserInfo.Location = New System.Drawing.Point(347, 436)
+        Me.btnSaveUpdateUserInfo.Name = "btnSaveUpdateUserInfo"
+        Me.btnSaveUpdateUserInfo.Size = New System.Drawing.Size(97, 23)
+        Me.btnSaveUpdateUserInfo.TabIndex = 22
+        Me.btnSaveUpdateUserInfo.Text = "Guardar"
+        Me.btnSaveUpdateUserInfo.UseSelectable = True
+        '
+        'lblPasswordUpdateUserInfo
+        '
+        Me.lblPasswordUpdateUserInfo.AutoSize = True
+        Me.lblPasswordUpdateUserInfo.Location = New System.Drawing.Point(24, 250)
+        Me.lblPasswordUpdateUserInfo.Name = "lblPasswordUpdateUserInfo"
+        Me.lblPasswordUpdateUserInfo.Size = New System.Drawing.Size(127, 19)
+        Me.lblPasswordUpdateUserInfo.TabIndex = 19
+        Me.lblPasswordUpdateUserInfo.Text = "Cambiar contraseña"
+        '
+        'lblPhoneUpdateUserInfo
+        '
+        Me.lblPhoneUpdateUserInfo.AutoSize = True
+        Me.lblPhoneUpdateUserInfo.Location = New System.Drawing.Point(24, 215)
+        Me.lblPhoneUpdateUserInfo.Name = "lblPhoneUpdateUserInfo"
+        Me.lblPhoneUpdateUserInfo.Size = New System.Drawing.Size(58, 19)
+        Me.lblPhoneUpdateUserInfo.TabIndex = 15
+        Me.lblPhoneUpdateUserInfo.Text = "Telefono"
+        '
+        'lblNameUpdateUserInfo
+        '
+        Me.lblNameUpdateUserInfo.AutoSize = True
+        Me.lblNameUpdateUserInfo.Location = New System.Drawing.Point(24, 82)
+        Me.lblNameUpdateUserInfo.Name = "lblNameUpdateUserInfo"
+        Me.lblNameUpdateUserInfo.Size = New System.Drawing.Size(59, 19)
+        Me.lblNameUpdateUserInfo.TabIndex = 14
+        Me.lblNameUpdateUserInfo.Text = "Nombre"
+        '
+        'lblLastNameUpdateUserInfo
+        '
+        Me.lblLastNameUpdateUserInfo.AutoSize = True
+        Me.lblLastNameUpdateUserInfo.Location = New System.Drawing.Point(25, 114)
+        Me.lblLastNameUpdateUserInfo.Name = "lblLastNameUpdateUserInfo"
+        Me.lblLastNameUpdateUserInfo.Size = New System.Drawing.Size(58, 19)
+        Me.lblLastNameUpdateUserInfo.TabIndex = 13
+        Me.lblLastNameUpdateUserInfo.Text = "Apellido"
+        '
+        'lblIdUpdateUserInfo
+        '
+        Me.lblIdUpdateUserInfo.AutoSize = True
+        Me.lblIdUpdateUserInfo.Location = New System.Drawing.Point(24, 51)
+        Me.lblIdUpdateUserInfo.Name = "lblIdUpdateUserInfo"
+        Me.lblIdUpdateUserInfo.Size = New System.Drawing.Size(50, 19)
+        Me.lblIdUpdateUserInfo.TabIndex = 11
+        Me.lblIdUpdateUserInfo.Text = "Cedula"
+        '
+        'lblChangePasswordTittle
+        '
+        Me.lblChangePasswordTittle.AutoSize = True
+        Me.lblChangePasswordTittle.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblChangePasswordTittle.Location = New System.Drawing.Point(4, 9)
+        Me.lblChangePasswordTittle.Name = "lblChangePasswordTittle"
+        Me.lblChangePasswordTittle.Size = New System.Drawing.Size(214, 25)
+        Me.lblChangePasswordTittle.TabIndex = 10
+        Me.lblChangePasswordTittle.Text = "Modificar datos de usuario"
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3666,6 +4083,7 @@ Partial Class FrmMain
         Me.pnlKpiProspectos.PerformLayout()
         Me.panKpiVentas.ResumeLayout(False)
         Me.panKpiVentas.PerformLayout()
+        Me.TabConfiguracion.ResumeLayout(False)
         Me.TabUsuarios.ResumeLayout(False)
         Me.pnlCreateUser.ResumeLayout(False)
         Me.pnlCreateUser.PerformLayout()
@@ -3682,6 +4100,8 @@ Partial Class FrmMain
         Me.gboPorductsSectionRol.ResumeLayout(False)
         Me.gboPorductsSectionRol.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlUpdateUserInfo.ResumeLayout(False)
+        Me.pnlUpdateUserInfo.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3968,4 +4388,27 @@ Partial Class FrmMain
     Friend WithEvents lblLastNameCreateUser As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblCedulaCreateUser As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblCreateUserTittle As MetroFramework.Controls.MetroLabel
+    Friend WithEvents tileChangeInformation As MetroFramework.Controls.MetroTile
+    Friend WithEvents pnlUpdateUserInfo As MetroFramework.Controls.MetroPanel
+    Friend WithEvents tgChangePassUpdateUserInfo As MetroFramework.Controls.MetroToggle
+    Friend WithEvents txtPasswordUpdateUserInfo As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents lblCheckPasswordUpdate As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtNewPassUpdateUserInfo As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents lblNewpassUpdateUserInfo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cboDateUpdateUserInfo As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents lblDateUpdateUserInfo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtEmailUpdateUserInfo As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents lblEmailUpdateUserInfo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtLastNameUpdateUserInfo As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtPhoneUpdateUserInfo As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtNameUpdateUserInfo As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtIdUpdateUserInfo As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents btnCancelUpdateUserInfo As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnSaveUpdateUserInfo As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblPasswordUpdateUserInfo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblPhoneUpdateUserInfo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblNameUpdateUserInfo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblLastNameUpdateUserInfo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblIdUpdateUserInfo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblChangePasswordTittle As MetroFramework.Controls.MetroLabel
 End Class
