@@ -1118,9 +1118,9 @@ Public Class FrmMain
                 If (Users_controller.create(txtIdCreateUser.Text, txtNameCreateUser.Text, txtLastNameCreateUser.Text,
                                     txtEmailCreateUser.Text, txtPhoneCreateUser.Text, txtPasswordCreateUser.Text,
                                     id_rol, tgEnableCreateUser.Checked, cboDateCreateUser.Value)) Then
-                    showListUserForm()
-                    hideListUserForm()
                     MsgBox(respuestasDelSistema.CREATE_USER_SUCCESS, MsgBoxStyle.Information)
+                    hideCreateUserForm()
+                    showListUserForm()
                 Else
                     MsgBox(respuestasDelSistema.UPDATE__USER_ERROR, MsgBoxStyle.Critical)
                 End If
@@ -1130,8 +1130,8 @@ Public Class FrmMain
                                                 txtEmailCreateUser.Text, txtPhoneCreateUser.Text, txtPasswordCreateUser.Text,
                                                 id_rol, tgEnableCreateUser.Checked, cboDateCreateUser.Value)) Then
                         MsgBox(respuestasDelSistema.UPDATE_USER_SUCCESS, MsgBoxStyle.Information)
+                        hideCreateUserForm()
                         showListUserForm()
-                        hideListUserForm()
                     Else
                         MsgBox(respuestasDelSistema.UPDATE__USER_ERROR, MsgBoxStyle.Critical)
                     End If
@@ -1140,8 +1140,8 @@ Public Class FrmMain
                                                 txtEmailCreateUser.Text, txtPhoneCreateUser.Text, txtPasswordCreateUser.Text,
                                                 id_rol, tgEnableCreateUser.Checked, cboDateCreateUser.Value)) Then
                         MsgBox(respuestasDelSistema.UPDATE_USER_SUCCESS, MsgBoxStyle.Information)
+                        hideCreateUserForm()
                         showListUserForm()
-                        hideListUserForm()
                     Else
                         MsgBox(respuestasDelSistema.UPDATE__USER_ERROR, MsgBoxStyle.Critical)
                     End If
@@ -1188,6 +1188,79 @@ Public Class FrmMain
         End If
         Return result
     End Function
+
+    Private Sub btnCreateUser_Click(sender As Object, e As EventArgs) Handles btnCreateUser.Click
+        hideListUserForm()
+        showCreateUserForm("-1")
+    End Sub
+
+    Private Sub hideCreateUserForm()
+        Me.pnlCreateUser.Hide()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Create user</usecase>
+    ''' <usecase>Update user</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub clearCreateUserForm()
+        txtIdCreateUser.Text = ""
+        txtNameCreateUser.Text = ""
+        txtLastNameCreateUser.Text = ""
+        txtPasswordCreateUser.Text = ""
+        txtPhoneCreateUser.Text = ""
+        txtEmailCreateUser.Text = ""
+        tgEnableCreateUser.Checked = False
+        chkChangeUserPassword.Checked = False
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Create user</usecase>
+    ''' <usecase>Update user</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub showCreateUserForm(ByVal id As String)
+        clearCreateUserForm()
+        Me.pnlCreateUser.Visible = True
+        Dim roles As List(Of RolModel) = RolsController.obtener()
+        'Llenar roles
+        Dim comboSource As New Dictionary(Of String, String)()
+        For Each rol As RolModel In roles
+            comboSource.Add(rol.id_rol.ToString, rol.nombre)
+        Next
+        cboRolCreateUser.DataSource = New BindingSource(comboSource, Nothing)
+        lblCreateUpdateUserId.Text = id
+        cboRolCreateUser.DisplayMember = "Value"
+        cboRolCreateUser.ValueMember = "Key"
+        If id = "-1" Then
+            lblCreateUserTittle.Text = "Crear usuario"
+            txtPasswordCreateUser.Enabled = True
+            chkChangeUserPassword.Visible = False
+        Else
+            lblCreateUserTittle.Text = "Modificar usuario"
+            Dim user As UserModel = Users_controller.getUser(id)
+            If (Not user Is Nothing) Then
+                txtIdCreateUser.Text = user.cedula
+                txtNameCreateUser.Text = user.nombre
+                txtLastNameCreateUser.Text = user.apellido
+                txtEmailCreateUser.Text = user.correo
+                txtPhoneCreateUser.Text = user.telefono
+                txtPasswordCreateUser.Text = user.password
+                cboRolCreateUser.SelectedIndex = cboRolCreateUser.FindStringExact(user.rol.nombre)
+                tgEnableCreateUser.Checked = user.activo
+                cboDateCreateUser.Value = user.fecha_nacimiento
+                txtPasswordCreateUser.Enabled = False
+                lblPasswordUserBackup.Text = user.password
+            Else
+                MsgBox(respuestasDelSistema.POPULATE_FILLS_ERROR, MsgBoxStyle.Critical)
+            End If
+        End If
+    End Sub
+
 End Class
 
 

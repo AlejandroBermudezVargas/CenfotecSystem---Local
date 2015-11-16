@@ -2815,6 +2815,7 @@ Partial Class FrmMain
         Me.pnlCreateRol.VerticalScrollbarBarColor = True
         Me.pnlCreateRol.VerticalScrollbarHighlightOnWheel = False
         Me.pnlCreateRol.VerticalScrollbarSize = 10
+        Me.pnlCreateRol.Visible = False
         '
         'gboPermissionsRol
         '
