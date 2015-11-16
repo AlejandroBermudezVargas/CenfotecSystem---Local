@@ -306,6 +306,7 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
+        Me.tileChangeInformation = New MetroFramework.Controls.MetroTile()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.listaActis_pnl.SuspendLayout()
@@ -348,6 +349,7 @@ Partial Class FrmMain
         Me.pnlCrearKpiProducto.SuspendLayout()
         Me.pnlKpiProspectos.SuspendLayout()
         Me.panKpiVentas.SuspendLayout()
+        Me.TabConfiguracion.SuspendLayout()
         Me.TabUsuarios.SuspendLayout()
         Me.pnlCreateUser.SuspendLayout()
         Me.pnListUsers.SuspendLayout()
@@ -375,7 +377,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 6
+        Me.Main.SelectedIndex = 4
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -2523,6 +2525,7 @@ Partial Class FrmMain
         '
         'TabConfiguracion
         '
+        Me.TabConfiguracion.Controls.Add(Me.tileChangeInformation)
         Me.TabConfiguracion.HorizontalScrollbarBarColor = True
         Me.TabConfiguracion.HorizontalScrollbarHighlightOnWheel = False
         Me.TabConfiguracion.HorizontalScrollbarSize = 10
@@ -3601,6 +3604,18 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
+        'tileChangeInformation
+        '
+        Me.tileChangeInformation.ActiveControl = Nothing
+        Me.tileChangeInformation.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.tileChangeInformation.Location = New System.Drawing.Point(24, 27)
+        Me.tileChangeInformation.Name = "tileChangeInformation"
+        Me.tileChangeInformation.Size = New System.Drawing.Size(124, 119)
+        Me.tileChangeInformation.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tileChangeInformation.TabIndex = 4
+        Me.tileChangeInformation.Text = "Cambiar datos"
+        Me.tileChangeInformation.UseSelectable = True
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3666,6 +3681,7 @@ Partial Class FrmMain
         Me.pnlKpiProspectos.PerformLayout()
         Me.panKpiVentas.ResumeLayout(False)
         Me.panKpiVentas.PerformLayout()
+        Me.TabConfiguracion.ResumeLayout(False)
         Me.TabUsuarios.ResumeLayout(False)
         Me.pnlCreateUser.ResumeLayout(False)
         Me.pnlCreateUser.PerformLayout()
@@ -3968,4 +3984,5 @@ Partial Class FrmMain
     Friend WithEvents lblLastNameCreateUser As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblCedulaCreateUser As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblCreateUserTittle As MetroFramework.Controls.MetroLabel
+    Friend WithEvents tileChangeInformation As MetroFramework.Controls.MetroTile
 End Class
