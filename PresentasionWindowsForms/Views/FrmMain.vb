@@ -1286,6 +1286,12 @@ Public Class FrmMain
         txtPasswordCreateUser.Enabled = chkChangeUserPassword.Checked
         txtPasswordCreateUser.Text = lblPasswordUserBackup.Text
     End Sub
+
+    Private Sub btnCancelCreateUser_Click(sender As Object, e As EventArgs) Handles btnCancelCreateUser.Click
+        hideCreateUserForm()
+        showListUserForm()
+        clearCreateUserForm()
+    End Sub
 End Class
 
 
