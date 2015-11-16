@@ -1457,15 +1457,23 @@ Public Class FrmMain
         tipo = tipo_prodVenta_cmb.Text
         fecha = Today
         totalPagar = calcularTotal()
-        Dim isCorrect = SalesController.RegistrarVenta(fecha, totalPagar, id_usuario, tipo)
-        If isCorrect Then
-            MsgBox("La nueva venta se ha agregado con exito.", MsgBoxStyle.Information)
-            LimpiarFormVenta()
-            llenarTablaVentas()
-            pnlRegistrarVenta.Visible = False
-            pnlListaVentas.Visible = True
+        If cod_prod_cmb.SelectedIndex = 0 Then
+            ErrorProvider1.SetError(cod_prod_cmb, "Debe seleccionar código de producto o un producto.")
+            Exit Sub
+        ElseIf productos_cmb.SelectedIndex = 0 Then
+            ErrorProvider1.SetError(productos_cmb, "Debe seleccionar un producto o un código de producto.")
+            Exit Sub
         Else
-            MsgBox("No se ha podido ingresar la nueva venta.", MsgBoxStyle.Critical)
+            Dim isCorrect = SalesController.RegistrarVenta(fecha, totalPagar, id_usuario, tipo)
+            If isCorrect Then
+                MsgBox("La nueva venta se ha agregado con exito.", MsgBoxStyle.Information)
+                LimpiarFormVenta()
+                llenarTablaVentas()
+                pnlRegistrarVenta.Visible = False
+                pnlListaVentas.Visible = True
+            Else
+                MsgBox("No se ha podido ingresar la nueva venta.", MsgBoxStyle.Critical)
+            End If
         End If
     End Sub
 
@@ -1603,7 +1611,13 @@ Public Class FrmMain
 
     Private Sub btnVolverVenta_Click(sender As Object, e As EventArgs) Handles btnVolverVenta.Click
         pnlListaVentas.Visible = False
+    End Sub
 
+    Private Sub btnNuevaVenta_Click(sender As Object, e As EventArgs) Handles btnNuevaVenta.Click
+        llenarComboProductos()
+        llenarComboCodigos()
+        llenarComboTipoVenta()
+        pnlRegistrarVenta.Visible = True
     End Sub
 End Class
 

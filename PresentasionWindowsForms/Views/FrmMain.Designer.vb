@@ -25,6 +25,7 @@ Partial Class FrmMain
         Me.components = New System.ComponentModel.Container()
         Me.Main = New MetroFramework.Controls.MetroTabControl()
         Me.TabProductos = New MetroFramework.Controls.MetroTabPage()
+        Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
         Me.registrarActi_pnl = New MetroFramework.Controls.MetroPanel()
         Me.fechaInicio_dp = New System.Windows.Forms.DateTimePicker()
         Me.fechaInicioCurso = New MetroFramework.Controls.MetroLabel()
@@ -76,7 +77,6 @@ Partial Class FrmMain
         Me.acti_lbl = New MetroFramework.Controls.MetroLabel()
         Me.horariosActi_grp = New System.Windows.Forms.GroupBox()
         Me.importarActis_lbl = New MetroFramework.Controls.MetroLink()
-        Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
         Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
         Me.vovlerActi_btn = New MetroFramework.Controls.MetroButton()
         Me.listaActis_dg = New System.Windows.Forms.DataGridView()
@@ -237,6 +237,7 @@ Partial Class FrmMain
         Me.lblChangePasswordTittle = New MetroFramework.Controls.MetroLabel()
         Me.tileChangeInformation = New MetroFramework.Controls.MetroTile()
         Me.TabVentas = New MetroFramework.Controls.MetroTabPage()
+        Me.pnlListaVentas = New MetroFramework.Controls.MetroPanel()
         Me.pnlRegistrarVenta = New MetroFramework.Controls.MetroPanel()
         Me.totalVenta_text = New MetroFramework.Controls.MetroTextBox()
         Me.lblTotalVenta = New MetroFramework.Controls.MetroLabel()
@@ -253,7 +254,6 @@ Partial Class FrmMain
         Me.lblTipoProdVenta = New MetroFramework.Controls.MetroLabel()
         Me.lblNombreProdVenta = New MetroFramework.Controls.MetroLabel()
         Me.lblRegistrarVenta = New MetroFramework.Controls.MetroLabel()
-        Me.pnlListaVentas = New MetroFramework.Controls.MetroPanel()
         Me.lblListaVentas = New MetroFramework.Controls.MetroLabel()
         Me.btnVolverVenta = New MetroFramework.Controls.MetroButton()
         Me.btnNuevaVenta = New MetroFramework.Controls.MetroButton()
@@ -361,6 +361,7 @@ Partial Class FrmMain
         Me.editarVenta = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
+        Me.listaActis_pnl.SuspendLayout()
         Me.registrarActi_pnl.SuspendLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minsFin4Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -382,7 +383,6 @@ Partial Class FrmMain
         CType(Me.horaIni3Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.listaActis_pnl.SuspendLayout()
         CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Eventos.SuspendLayout()
         Me.PanelListarEventos.SuspendLayout()
@@ -404,8 +404,8 @@ Partial Class FrmMain
         Me.TabConfiguracion.SuspendLayout()
         Me.pnlUpdateUserInfo.SuspendLayout()
         Me.TabVentas.SuspendLayout()
-        Me.pnlRegistrarVenta.SuspendLayout()
         Me.pnlListaVentas.SuspendLayout()
+        Me.pnlRegistrarVenta.SuspendLayout()
         CType(Me.listaVentas_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabUsuarios.SuspendLayout()
         Me.pnlCreateUser.SuspendLayout()
@@ -456,6 +456,28 @@ Partial Class FrmMain
         Me.TabProductos.VerticalScrollbarBarColor = True
         Me.TabProductos.VerticalScrollbarHighlightOnWheel = False
         Me.TabProductos.VerticalScrollbarSize = 10
+        '
+        'listaActis_pnl
+        '
+        Me.listaActis_pnl.Controls.Add(Me.registrarActi_pnl)
+        Me.listaActis_pnl.Controls.Add(Me.exportarActi_btn)
+        Me.listaActis_pnl.Controls.Add(Me.vovlerActi_btn)
+        Me.listaActis_pnl.Controls.Add(Me.listaActis_dg)
+        Me.listaActis_pnl.Controls.Add(Me.nuevoActi_btn)
+        Me.listaActis_pnl.Controls.Add(Me.listaActis_lbl)
+        Me.listaActis_pnl.HorizontalScrollbarBarColor = True
+        Me.listaActis_pnl.HorizontalScrollbarHighlightOnWheel = False
+        Me.listaActis_pnl.HorizontalScrollbarSize = 10
+        Me.listaActis_pnl.Location = New System.Drawing.Point(0, 3)
+        Me.listaActis_pnl.Name = "listaActis_pnl"
+        Me.listaActis_pnl.Size = New System.Drawing.Size(767, 461)
+        Me.listaActis_pnl.Style = MetroFramework.MetroColorStyle.Blue
+        Me.listaActis_pnl.TabIndex = 87
+        Me.listaActis_pnl.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.listaActis_pnl.VerticalScrollbarBarColor = True
+        Me.listaActis_pnl.VerticalScrollbarHighlightOnWheel = False
+        Me.listaActis_pnl.VerticalScrollbarSize = 10
+        Me.listaActis_pnl.Visible = False
         '
         'registrarActi_pnl
         '
@@ -1024,28 +1046,6 @@ Partial Class FrmMain
         Me.importarActis_lbl.Text = "Importar Datos"
         Me.importarActis_lbl.UseCustomForeColor = True
         Me.importarActis_lbl.UseSelectable = True
-        '
-        'listaActis_pnl
-        '
-        Me.listaActis_pnl.Controls.Add(Me.registrarActi_pnl)
-        Me.listaActis_pnl.Controls.Add(Me.exportarActi_btn)
-        Me.listaActis_pnl.Controls.Add(Me.vovlerActi_btn)
-        Me.listaActis_pnl.Controls.Add(Me.listaActis_dg)
-        Me.listaActis_pnl.Controls.Add(Me.nuevoActi_btn)
-        Me.listaActis_pnl.Controls.Add(Me.listaActis_lbl)
-        Me.listaActis_pnl.HorizontalScrollbarBarColor = True
-        Me.listaActis_pnl.HorizontalScrollbarHighlightOnWheel = False
-        Me.listaActis_pnl.HorizontalScrollbarSize = 10
-        Me.listaActis_pnl.Location = New System.Drawing.Point(0, 3)
-        Me.listaActis_pnl.Name = "listaActis_pnl"
-        Me.listaActis_pnl.Size = New System.Drawing.Size(767, 461)
-        Me.listaActis_pnl.Style = MetroFramework.MetroColorStyle.Blue
-        Me.listaActis_pnl.TabIndex = 87
-        Me.listaActis_pnl.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.listaActis_pnl.VerticalScrollbarBarColor = True
-        Me.listaActis_pnl.VerticalScrollbarHighlightOnWheel = False
-        Me.listaActis_pnl.VerticalScrollbarSize = 10
-        Me.listaActis_pnl.Visible = False
         '
         'exportarActi_btn
         '
@@ -2989,6 +2989,7 @@ Partial Class FrmMain
         '
         'TabVentas
         '
+        Me.TabVentas.Controls.Add(Me.pnlRegistrarVenta)
         Me.TabVentas.Controls.Add(Me.pnlListaVentas)
         Me.TabVentas.Controls.Add(Me.btnRegistrarVentasIcon)
         Me.TabVentas.Controls.Add(Me.btnConsultarVentasIcon)
@@ -3004,6 +3005,24 @@ Partial Class FrmMain
         Me.TabVentas.VerticalScrollbarBarColor = True
         Me.TabVentas.VerticalScrollbarHighlightOnWheel = False
         Me.TabVentas.VerticalScrollbarSize = 10
+        '
+        'pnlListaVentas
+        '
+        Me.pnlListaVentas.Controls.Add(Me.lblListaVentas)
+        Me.pnlListaVentas.Controls.Add(Me.btnVolverVenta)
+        Me.pnlListaVentas.Controls.Add(Me.btnNuevaVenta)
+        Me.pnlListaVentas.Controls.Add(Me.listaVentas_dg)
+        Me.pnlListaVentas.HorizontalScrollbarBarColor = True
+        Me.pnlListaVentas.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlListaVentas.HorizontalScrollbarSize = 10
+        Me.pnlListaVentas.Location = New System.Drawing.Point(0, 3)
+        Me.pnlListaVentas.Name = "pnlListaVentas"
+        Me.pnlListaVentas.Size = New System.Drawing.Size(746, 462)
+        Me.pnlListaVentas.TabIndex = 2
+        Me.pnlListaVentas.VerticalScrollbarBarColor = True
+        Me.pnlListaVentas.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlListaVentas.VerticalScrollbarSize = 10
+        Me.pnlListaVentas.Visible = False
         '
         'pnlRegistrarVenta
         '
@@ -3025,7 +3044,7 @@ Partial Class FrmMain
         Me.pnlRegistrarVenta.HorizontalScrollbarBarColor = True
         Me.pnlRegistrarVenta.HorizontalScrollbarHighlightOnWheel = False
         Me.pnlRegistrarVenta.HorizontalScrollbarSize = 10
-        Me.pnlRegistrarVenta.Location = New System.Drawing.Point(553, 123)
+        Me.pnlRegistrarVenta.Location = New System.Drawing.Point(0, 3)
         Me.pnlRegistrarVenta.Name = "pnlRegistrarVenta"
         Me.pnlRegistrarVenta.Size = New System.Drawing.Size(746, 462)
         Me.pnlRegistrarVenta.Style = MetroFramework.MetroColorStyle.Purple
@@ -3237,25 +3256,6 @@ Partial Class FrmMain
         Me.lblRegistrarVenta.Size = New System.Drawing.Size(125, 25)
         Me.lblRegistrarVenta.TabIndex = 10
         Me.lblRegistrarVenta.Text = "Registrar Venta"
-        '
-        'pnlListaVentas
-        '
-        Me.pnlListaVentas.Controls.Add(Me.pnlRegistrarVenta)
-        Me.pnlListaVentas.Controls.Add(Me.lblListaVentas)
-        Me.pnlListaVentas.Controls.Add(Me.btnVolverVenta)
-        Me.pnlListaVentas.Controls.Add(Me.btnNuevaVenta)
-        Me.pnlListaVentas.Controls.Add(Me.listaVentas_dg)
-        Me.pnlListaVentas.HorizontalScrollbarBarColor = True
-        Me.pnlListaVentas.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnlListaVentas.HorizontalScrollbarSize = 10
-        Me.pnlListaVentas.Location = New System.Drawing.Point(0, 3)
-        Me.pnlListaVentas.Name = "pnlListaVentas"
-        Me.pnlListaVentas.Size = New System.Drawing.Size(746, 462)
-        Me.pnlListaVentas.TabIndex = 2
-        Me.pnlListaVentas.VerticalScrollbarBarColor = True
-        Me.pnlListaVentas.VerticalScrollbarHighlightOnWheel = False
-        Me.pnlListaVentas.VerticalScrollbarSize = 10
-        Me.pnlListaVentas.Visible = False
         '
         'lblListaVentas
         '
@@ -4413,6 +4413,7 @@ Partial Class FrmMain
         '
         Me.editarVenta.HeaderText = ""
         Me.editarVenta.Name = "editarVenta"
+        Me.editarVenta.Width = 350
         '
         'FrmMain
         '
@@ -4427,6 +4428,8 @@ Partial Class FrmMain
         Me.Text = "Menu Principal"
         Me.Main.ResumeLayout(False)
         Me.TabProductos.ResumeLayout(False)
+        Me.listaActis_pnl.ResumeLayout(False)
+        Me.listaActis_pnl.PerformLayout()
         Me.registrarActi_pnl.ResumeLayout(False)
         Me.registrarActi_pnl.PerformLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4449,8 +4452,6 @@ Partial Class FrmMain
         CType(Me.horaIni3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.listaActis_pnl.ResumeLayout(False)
-        Me.listaActis_pnl.PerformLayout()
         CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Eventos.ResumeLayout(False)
         Me.PanelListarEventos.ResumeLayout(False)
@@ -4483,10 +4484,10 @@ Partial Class FrmMain
         Me.pnlUpdateUserInfo.ResumeLayout(False)
         Me.pnlUpdateUserInfo.PerformLayout()
         Me.TabVentas.ResumeLayout(False)
-        Me.pnlRegistrarVenta.ResumeLayout(False)
-        Me.pnlRegistrarVenta.PerformLayout()
         Me.pnlListaVentas.ResumeLayout(False)
         Me.pnlListaVentas.PerformLayout()
+        Me.pnlRegistrarVenta.ResumeLayout(False)
+        Me.pnlRegistrarVenta.PerformLayout()
         CType(Me.listaVentas_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabUsuarios.ResumeLayout(False)
         Me.pnlCreateUser.ResumeLayout(False)
