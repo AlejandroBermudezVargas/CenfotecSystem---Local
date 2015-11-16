@@ -26,6 +26,18 @@ Partial Class FrmMain
         Me.Main = New MetroFramework.Controls.MetroTabControl()
         Me.TabProductos = New MetroFramework.Controls.MetroTabPage()
         Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
+        Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
+        Me.vovlerActi_btn = New MetroFramework.Controls.MetroButton()
+        Me.listaActis_dg = New System.Windows.Forms.DataGridView()
+        Me.colIdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colNombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCodigoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCostoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colHorarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colFechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editarActi = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.listaActis_lbl = New MetroFramework.Controls.MetroLabel()
+        Me.nuevoActi_btn = New MetroFramework.Controls.MetroButton()
         Me.registrarActi_pnl = New MetroFramework.Controls.MetroPanel()
         Me.fechaInicio_dp = New System.Windows.Forms.DateTimePicker()
         Me.fechaInicioCurso = New MetroFramework.Controls.MetroLabel()
@@ -77,18 +89,6 @@ Partial Class FrmMain
         Me.codigoActi_lbl = New MetroFramework.Controls.MetroLabel()
         Me.acti_lbl = New MetroFramework.Controls.MetroLabel()
         Me.horariosActi_grp = New System.Windows.Forms.GroupBox()
-        Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
-        Me.vovlerActi_btn = New MetroFramework.Controls.MetroButton()
-        Me.listaActis_dg = New System.Windows.Forms.DataGridView()
-        Me.colIdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCodigoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCostoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colHorarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colFechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editarActi = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.listaActis_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.nuevoActi_btn = New MetroFramework.Controls.MetroButton()
         Me.btnActiIco = New MetroFramework.Controls.MetroTile()
         Me.btnCarrerasIcon = New MetroFramework.Controls.MetroTile()
         Me.Eventos = New MetroFramework.Controls.MetroTabPage()
@@ -215,6 +215,20 @@ Partial Class FrmMain
         Me.TabConfiguracion = New MetroFramework.Controls.MetroTabPage()
         Me.TabVentas = New MetroFramework.Controls.MetroTabPage()
         Me.TabUsuarios = New MetroFramework.Controls.MetroTabPage()
+        Me.pnListUsers = New MetroFramework.Controls.MetroPanel()
+        Me.lblCreateUpdateUserId = New MetroFramework.Controls.MetroLabel()
+        Me.lstUsers = New System.Windows.Forms.DataGridView()
+        Me.colIdLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.identificationLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userNameLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userLastNameLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userPhoneLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userEmailLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userStateLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userEditLstUsers = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.lblRolsSection = New MetroFramework.Controls.MetroLink()
+        Me.lblListOfUsersTittle = New MetroFramework.Controls.MetroLabel()
+        Me.btnCreateUser = New MetroFramework.Controls.MetroButton()
         Me.pnlListRols = New MetroFramework.Controls.MetroPanel()
         Me.btnBackRolsUsers = New MetroFramework.Controls.MetroButton()
         Me.lblIdRol = New MetroFramework.Controls.MetroLabel()
@@ -268,23 +282,10 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
-        Me.pnListUsers = New MetroFramework.Controls.MetroPanel()
-        Me.lblCreateUpdateUserId = New MetroFramework.Controls.MetroLabel()
-        Me.lstUsers = New System.Windows.Forms.DataGridView()
-        Me.lblRolsSection = New MetroFramework.Controls.MetroLink()
-        Me.lblListOfUsersTittle = New MetroFramework.Controls.MetroLabel()
-        Me.btnCreateUser = New MetroFramework.Controls.MetroButton()
-        Me.colIdLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.identificationLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.userNameLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.userLastNameLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.userPhoneLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.userEmailLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.userStateLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.userEditLstUsers = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.listaActis_pnl.SuspendLayout()
+        CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.registrarActi_pnl.SuspendLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minsFin4Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -306,7 +307,6 @@ Partial Class FrmMain
         CType(Me.horaIni3Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Eventos.SuspendLayout()
         Me.PanelListarEventos.SuspendLayout()
         CType(Me.DataListarEventos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -325,14 +325,14 @@ Partial Class FrmMain
         Me.pnlKpiProspectos.SuspendLayout()
         Me.panKpiVentas.SuspendLayout()
         Me.TabUsuarios.SuspendLayout()
+        Me.pnListUsers.SuspendLayout()
+        CType(Me.lstUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlListRols.SuspendLayout()
         CType(Me.lstListRols, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCreateRol.SuspendLayout()
         Me.gboPermissionsRol.SuspendLayout()
         Me.gboPorductsSectionRol.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnListUsers.SuspendLayout()
-        CType(Me.lstUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Main
@@ -394,6 +394,90 @@ Partial Class FrmMain
         Me.listaActis_pnl.VerticalScrollbarHighlightOnWheel = False
         Me.listaActis_pnl.VerticalScrollbarSize = 10
         Me.listaActis_pnl.Visible = False
+        '
+        'exportarActi_btn
+        '
+        Me.exportarActi_btn.Location = New System.Drawing.Point(485, 412)
+        Me.exportarActi_btn.Name = "exportarActi_btn"
+        Me.exportarActi_btn.Size = New System.Drawing.Size(123, 36)
+        Me.exportarActi_btn.TabIndex = 52
+        Me.exportarActi_btn.Text = "Exportar"
+        Me.exportarActi_btn.UseSelectable = True
+        '
+        'vovlerActi_btn
+        '
+        Me.vovlerActi_btn.Location = New System.Drawing.Point(7, 412)
+        Me.vovlerActi_btn.Name = "vovlerActi_btn"
+        Me.vovlerActi_btn.Size = New System.Drawing.Size(123, 36)
+        Me.vovlerActi_btn.TabIndex = 50
+        Me.vovlerActi_btn.Text = "Volver"
+        Me.vovlerActi_btn.UseSelectable = True
+        '
+        'listaActis_dg
+        '
+        Me.listaActis_dg.AllowUserToAddRows = False
+        Me.listaActis_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.listaActis_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdActi, Me.colNombreActi, Me.colCodigoActi, Me.colCostoActi, Me.colHorarioActi, Me.colFechaInicioActi, Me.editarActi})
+        Me.listaActis_dg.Location = New System.Drawing.Point(7, 37)
+        Me.listaActis_dg.Name = "listaActis_dg"
+        Me.listaActis_dg.RowHeadersVisible = False
+        Me.listaActis_dg.Size = New System.Drawing.Size(739, 344)
+        Me.listaActis_dg.TabIndex = 12
+        '
+        'colIdActi
+        '
+        Me.colIdActi.HeaderText = "Id"
+        Me.colIdActi.Name = "colIdActi"
+        Me.colIdActi.Visible = False
+        '
+        'colNombreActi
+        '
+        Me.colNombreActi.HeaderText = "Nombre"
+        Me.colNombreActi.Name = "colNombreActi"
+        '
+        'colCodigoActi
+        '
+        Me.colCodigoActi.HeaderText = "Codigo"
+        Me.colCodigoActi.Name = "colCodigoActi"
+        '
+        'colCostoActi
+        '
+        Me.colCostoActi.HeaderText = "Costo"
+        Me.colCostoActi.Name = "colCostoActi"
+        '
+        'colHorarioActi
+        '
+        Me.colHorarioActi.HeaderText = "Horario"
+        Me.colHorarioActi.Name = "colHorarioActi"
+        '
+        'colFechaInicioActi
+        '
+        Me.colFechaInicioActi.HeaderText = "Fecha Inicio"
+        Me.colFechaInicioActi.Name = "colFechaInicioActi"
+        '
+        'editarActi
+        '
+        Me.editarActi.HeaderText = ""
+        Me.editarActi.Name = "editarActi"
+        '
+        'listaActis_lbl
+        '
+        Me.listaActis_lbl.AutoSize = True
+        Me.listaActis_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.listaActis_lbl.Location = New System.Drawing.Point(0, 3)
+        Me.listaActis_lbl.Name = "listaActis_lbl"
+        Me.listaActis_lbl.Size = New System.Drawing.Size(91, 25)
+        Me.listaActis_lbl.TabIndex = 10
+        Me.listaActis_lbl.Text = "Listar Actis"
+        '
+        'nuevoActi_btn
+        '
+        Me.nuevoActi_btn.Location = New System.Drawing.Point(623, 412)
+        Me.nuevoActi_btn.Name = "nuevoActi_btn"
+        Me.nuevoActi_btn.Size = New System.Drawing.Size(123, 36)
+        Me.nuevoActi_btn.TabIndex = 9
+        Me.nuevoActi_btn.Text = "Nuevo Acti"
+        Me.nuevoActi_btn.UseSelectable = True
         '
         'registrarActi_pnl
         '
@@ -962,90 +1046,6 @@ Partial Class FrmMain
         Me.horariosActi_grp.Size = New System.Drawing.Size(678, 222)
         Me.horariosActi_grp.TabIndex = 77
         Me.horariosActi_grp.TabStop = False
-        '
-        'exportarActi_btn
-        '
-        Me.exportarActi_btn.Location = New System.Drawing.Point(485, 412)
-        Me.exportarActi_btn.Name = "exportarActi_btn"
-        Me.exportarActi_btn.Size = New System.Drawing.Size(123, 36)
-        Me.exportarActi_btn.TabIndex = 52
-        Me.exportarActi_btn.Text = "Exportar"
-        Me.exportarActi_btn.UseSelectable = True
-        '
-        'vovlerActi_btn
-        '
-        Me.vovlerActi_btn.Location = New System.Drawing.Point(7, 412)
-        Me.vovlerActi_btn.Name = "vovlerActi_btn"
-        Me.vovlerActi_btn.Size = New System.Drawing.Size(123, 36)
-        Me.vovlerActi_btn.TabIndex = 50
-        Me.vovlerActi_btn.Text = "Volver"
-        Me.vovlerActi_btn.UseSelectable = True
-        '
-        'listaActis_dg
-        '
-        Me.listaActis_dg.AllowUserToAddRows = False
-        Me.listaActis_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.listaActis_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdActi, Me.colNombreActi, Me.colCodigoActi, Me.colCostoActi, Me.colHorarioActi, Me.colFechaInicioActi, Me.editarActi})
-        Me.listaActis_dg.Location = New System.Drawing.Point(7, 37)
-        Me.listaActis_dg.Name = "listaActis_dg"
-        Me.listaActis_dg.RowHeadersVisible = False
-        Me.listaActis_dg.Size = New System.Drawing.Size(739, 344)
-        Me.listaActis_dg.TabIndex = 12
-        '
-        'colIdActi
-        '
-        Me.colIdActi.HeaderText = "Id"
-        Me.colIdActi.Name = "colIdActi"
-        Me.colIdActi.Visible = False
-        '
-        'colNombreActi
-        '
-        Me.colNombreActi.HeaderText = "Nombre"
-        Me.colNombreActi.Name = "colNombreActi"
-        '
-        'colCodigoActi
-        '
-        Me.colCodigoActi.HeaderText = "Codigo"
-        Me.colCodigoActi.Name = "colCodigoActi"
-        '
-        'colCostoActi
-        '
-        Me.colCostoActi.HeaderText = "Costo"
-        Me.colCostoActi.Name = "colCostoActi"
-        '
-        'colHorarioActi
-        '
-        Me.colHorarioActi.HeaderText = "Horario"
-        Me.colHorarioActi.Name = "colHorarioActi"
-        '
-        'colFechaInicioActi
-        '
-        Me.colFechaInicioActi.HeaderText = "Fecha Inicio"
-        Me.colFechaInicioActi.Name = "colFechaInicioActi"
-        '
-        'editarActi
-        '
-        Me.editarActi.HeaderText = ""
-        Me.editarActi.Name = "editarActi"
-        '
-        'listaActis_lbl
-        '
-        Me.listaActis_lbl.AutoSize = True
-        Me.listaActis_lbl.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.listaActis_lbl.Location = New System.Drawing.Point(0, 3)
-        Me.listaActis_lbl.Name = "listaActis_lbl"
-        Me.listaActis_lbl.Size = New System.Drawing.Size(91, 25)
-        Me.listaActis_lbl.TabIndex = 10
-        Me.listaActis_lbl.Text = "Listar Actis"
-        '
-        'nuevoActi_btn
-        '
-        Me.nuevoActi_btn.Location = New System.Drawing.Point(623, 412)
-        Me.nuevoActi_btn.Name = "nuevoActi_btn"
-        Me.nuevoActi_btn.Size = New System.Drawing.Size(123, 36)
-        Me.nuevoActi_btn.TabIndex = 9
-        Me.nuevoActi_btn.Text = "Nuevo Acti"
-        Me.nuevoActi_btn.UseSelectable = True
         '
         'btnActiIco
         '
@@ -2542,6 +2542,132 @@ Partial Class FrmMain
         Me.TabUsuarios.VerticalScrollbarHighlightOnWheel = False
         Me.TabUsuarios.VerticalScrollbarSize = 10
         '
+        'pnListUsers
+        '
+        Me.pnListUsers.Controls.Add(Me.lblCreateUpdateUserId)
+        Me.pnListUsers.Controls.Add(Me.lstUsers)
+        Me.pnListUsers.Controls.Add(Me.lblRolsSection)
+        Me.pnListUsers.Controls.Add(Me.lblListOfUsersTittle)
+        Me.pnListUsers.Controls.Add(Me.btnCreateUser)
+        Me.pnListUsers.HorizontalScrollbarBarColor = True
+        Me.pnListUsers.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnListUsers.HorizontalScrollbarSize = 10
+        Me.pnListUsers.Location = New System.Drawing.Point(0, 6)
+        Me.pnListUsers.Name = "pnListUsers"
+        Me.pnListUsers.Size = New System.Drawing.Size(753, 462)
+        Me.pnListUsers.Style = MetroFramework.MetroColorStyle.Blue
+        Me.pnListUsers.TabIndex = 52
+        Me.pnListUsers.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnListUsers.VerticalScrollbarBarColor = True
+        Me.pnListUsers.VerticalScrollbarHighlightOnWheel = False
+        Me.pnListUsers.VerticalScrollbarSize = 10
+        '
+        'lblCreateUpdateUserId
+        '
+        Me.lblCreateUpdateUserId.AutoSize = True
+        Me.lblCreateUpdateUserId.Location = New System.Drawing.Point(723, 7)
+        Me.lblCreateUpdateUserId.Name = "lblCreateUpdateUserId"
+        Me.lblCreateUpdateUserId.Size = New System.Drawing.Size(20, 19)
+        Me.lblCreateUpdateUserId.TabIndex = 49
+        Me.lblCreateUpdateUserId.Text = "id"
+        Me.lblCreateUpdateUserId.Visible = False
+        '
+        'lstUsers
+        '
+        Me.lstUsers.AllowUserToAddRows = False
+        Me.lstUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.lstUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdLstUsers, Me.identificationLstUsers, Me.userNameLstUsers, Me.userLastNameLstUsers, Me.userPhoneLstUsers, Me.userEmailLstUsers, Me.userStateLstUsers, Me.userEditLstUsers})
+        Me.lstUsers.Location = New System.Drawing.Point(7, 37)
+        Me.lstUsers.Name = "lstUsers"
+        Me.lstUsers.RowHeadersVisible = False
+        Me.lstUsers.Size = New System.Drawing.Size(739, 344)
+        Me.lstUsers.TabIndex = 12
+        '
+        'colIdLstUsers
+        '
+        Me.colIdLstUsers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.colIdLstUsers.HeaderText = "ID"
+        Me.colIdLstUsers.Name = "colIdLstUsers"
+        Me.colIdLstUsers.ReadOnly = True
+        Me.colIdLstUsers.Visible = False
+        '
+        'identificationLstUsers
+        '
+        Me.identificationLstUsers.HeaderText = "Cédula"
+        Me.identificationLstUsers.Name = "identificationLstUsers"
+        '
+        'userNameLstUsers
+        '
+        Me.userNameLstUsers.HeaderText = "Nombre"
+        Me.userNameLstUsers.Name = "userNameLstUsers"
+        Me.userNameLstUsers.ReadOnly = True
+        '
+        'userLastNameLstUsers
+        '
+        Me.userLastNameLstUsers.HeaderText = "Apellidos"
+        Me.userLastNameLstUsers.Name = "userLastNameLstUsers"
+        Me.userLastNameLstUsers.ReadOnly = True
+        '
+        'userPhoneLstUsers
+        '
+        Me.userPhoneLstUsers.HeaderText = "Teléfono"
+        Me.userPhoneLstUsers.Name = "userPhoneLstUsers"
+        Me.userPhoneLstUsers.ReadOnly = True
+        '
+        'userEmailLstUsers
+        '
+        Me.userEmailLstUsers.HeaderText = "E-mail"
+        Me.userEmailLstUsers.Name = "userEmailLstUsers"
+        Me.userEmailLstUsers.ReadOnly = True
+        '
+        'userStateLstUsers
+        '
+        Me.userStateLstUsers.HeaderText = "Estado"
+        Me.userStateLstUsers.Name = "userStateLstUsers"
+        '
+        'userEditLstUsers
+        '
+        Me.userEditLstUsers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.userEditLstUsers.HeaderText = ""
+        Me.userEditLstUsers.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.userEditLstUsers.Name = "userEditLstUsers"
+        Me.userEditLstUsers.ReadOnly = True
+        Me.userEditLstUsers.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userEditLstUsers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'lblRolsSection
+        '
+        Me.lblRolsSection.BackColor = System.Drawing.Color.Ivory
+        Me.lblRolsSection.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblRolsSection.FontSize = MetroFramework.MetroLinkSize.Medium
+        Me.lblRolsSection.Location = New System.Drawing.Point(3, 425)
+        Me.lblRolsSection.Name = "lblRolsSection"
+        Me.lblRolsSection.Size = New System.Drawing.Size(217, 23)
+        Me.lblRolsSection.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lblRolsSection.TabIndex = 11
+        Me.lblRolsSection.Text = "Administrar roles de usuario"
+        Me.lblRolsSection.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.lblRolsSection.UseSelectable = True
+        '
+        'lblListOfUsersTittle
+        '
+        Me.lblListOfUsersTittle.AutoSize = True
+        Me.lblListOfUsersTittle.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblListOfUsersTittle.Location = New System.Drawing.Point(4, 9)
+        Me.lblListOfUsersTittle.Name = "lblListOfUsersTittle"
+        Me.lblListOfUsersTittle.Size = New System.Drawing.Size(113, 25)
+        Me.lblListOfUsersTittle.TabIndex = 10
+        Me.lblListOfUsersTittle.Text = "Lista usuarios"
+        '
+        'btnCreateUser
+        '
+        Me.btnCreateUser.Location = New System.Drawing.Point(620, 412)
+        Me.btnCreateUser.Name = "btnCreateUser"
+        Me.btnCreateUser.Size = New System.Drawing.Size(123, 36)
+        Me.btnCreateUser.TabIndex = 9
+        Me.btnCreateUser.Text = "Nuevo usuario"
+        Me.btnCreateUser.UseSelectable = True
+        '
         'pnlListRols
         '
         Me.pnlListRols.Controls.Add(Me.btnBackRolsUsers)
@@ -2561,6 +2687,7 @@ Partial Class FrmMain
         Me.pnlListRols.VerticalScrollbarBarColor = True
         Me.pnlListRols.VerticalScrollbarHighlightOnWheel = False
         Me.pnlListRols.VerticalScrollbarSize = 10
+        Me.pnlListRols.Visible = False
         '
         'btnBackRolsUsers
         '
@@ -2662,7 +2789,6 @@ Partial Class FrmMain
         Me.pnlCreateRol.VerticalScrollbarBarColor = True
         Me.pnlCreateRol.VerticalScrollbarHighlightOnWheel = False
         Me.pnlCreateRol.VerticalScrollbarSize = 10
-        Me.pnlCreateRol.Visible = False
         '
         'gboPermissionsRol
         '
@@ -3067,132 +3193,6 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
-        'pnListUsers
-        '
-        Me.pnListUsers.Controls.Add(Me.lblCreateUpdateUserId)
-        Me.pnListUsers.Controls.Add(Me.lstUsers)
-        Me.pnListUsers.Controls.Add(Me.lblRolsSection)
-        Me.pnListUsers.Controls.Add(Me.lblListOfUsersTittle)
-        Me.pnListUsers.Controls.Add(Me.btnCreateUser)
-        Me.pnListUsers.HorizontalScrollbarBarColor = True
-        Me.pnListUsers.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnListUsers.HorizontalScrollbarSize = 10
-        Me.pnListUsers.Location = New System.Drawing.Point(0, 6)
-        Me.pnListUsers.Name = "pnListUsers"
-        Me.pnListUsers.Size = New System.Drawing.Size(753, 462)
-        Me.pnListUsers.Style = MetroFramework.MetroColorStyle.Blue
-        Me.pnListUsers.TabIndex = 52
-        Me.pnListUsers.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.pnListUsers.VerticalScrollbarBarColor = True
-        Me.pnListUsers.VerticalScrollbarHighlightOnWheel = False
-        Me.pnListUsers.VerticalScrollbarSize = 10
-        '
-        'lblCreateUpdateUserId
-        '
-        Me.lblCreateUpdateUserId.AutoSize = True
-        Me.lblCreateUpdateUserId.Location = New System.Drawing.Point(723, 7)
-        Me.lblCreateUpdateUserId.Name = "lblCreateUpdateUserId"
-        Me.lblCreateUpdateUserId.Size = New System.Drawing.Size(20, 19)
-        Me.lblCreateUpdateUserId.TabIndex = 49
-        Me.lblCreateUpdateUserId.Text = "id"
-        Me.lblCreateUpdateUserId.Visible = False
-        '
-        'lstUsers
-        '
-        Me.lstUsers.AllowUserToAddRows = False
-        Me.lstUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.lstUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdLstUsers, Me.identificationLstUsers, Me.userNameLstUsers, Me.userLastNameLstUsers, Me.userPhoneLstUsers, Me.userEmailLstUsers, Me.userStateLstUsers, Me.userEditLstUsers})
-        Me.lstUsers.Location = New System.Drawing.Point(7, 37)
-        Me.lstUsers.Name = "lstUsers"
-        Me.lstUsers.RowHeadersVisible = False
-        Me.lstUsers.Size = New System.Drawing.Size(739, 344)
-        Me.lstUsers.TabIndex = 12
-        '
-        'lblRolsSection
-        '
-        Me.lblRolsSection.BackColor = System.Drawing.Color.Ivory
-        Me.lblRolsSection.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblRolsSection.FontSize = MetroFramework.MetroLinkSize.Medium
-        Me.lblRolsSection.Location = New System.Drawing.Point(3, 425)
-        Me.lblRolsSection.Name = "lblRolsSection"
-        Me.lblRolsSection.Size = New System.Drawing.Size(217, 23)
-        Me.lblRolsSection.Style = MetroFramework.MetroColorStyle.Purple
-        Me.lblRolsSection.TabIndex = 11
-        Me.lblRolsSection.Text = "Administrar roles de usuario"
-        Me.lblRolsSection.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.lblRolsSection.UseSelectable = True
-        '
-        'lblListOfUsersTittle
-        '
-        Me.lblListOfUsersTittle.AutoSize = True
-        Me.lblListOfUsersTittle.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblListOfUsersTittle.Location = New System.Drawing.Point(4, 9)
-        Me.lblListOfUsersTittle.Name = "lblListOfUsersTittle"
-        Me.lblListOfUsersTittle.Size = New System.Drawing.Size(113, 25)
-        Me.lblListOfUsersTittle.TabIndex = 10
-        Me.lblListOfUsersTittle.Text = "Lista usuarios"
-        '
-        'btnCreateUser
-        '
-        Me.btnCreateUser.Location = New System.Drawing.Point(620, 412)
-        Me.btnCreateUser.Name = "btnCreateUser"
-        Me.btnCreateUser.Size = New System.Drawing.Size(123, 36)
-        Me.btnCreateUser.TabIndex = 9
-        Me.btnCreateUser.Text = "Nuevo usuario"
-        Me.btnCreateUser.UseSelectable = True
-        '
-        'colIdLstUsers
-        '
-        Me.colIdLstUsers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.colIdLstUsers.HeaderText = "ID"
-        Me.colIdLstUsers.Name = "colIdLstUsers"
-        Me.colIdLstUsers.ReadOnly = True
-        Me.colIdLstUsers.Visible = False
-        '
-        'identificationLstUsers
-        '
-        Me.identificationLstUsers.HeaderText = "Cédula"
-        Me.identificationLstUsers.Name = "identificationLstUsers"
-        '
-        'userNameLstUsers
-        '
-        Me.userNameLstUsers.HeaderText = "Nombre"
-        Me.userNameLstUsers.Name = "userNameLstUsers"
-        Me.userNameLstUsers.ReadOnly = True
-        '
-        'userLastNameLstUsers
-        '
-        Me.userLastNameLstUsers.HeaderText = "Apellidos"
-        Me.userLastNameLstUsers.Name = "userLastNameLstUsers"
-        Me.userLastNameLstUsers.ReadOnly = True
-        '
-        'userPhoneLstUsers
-        '
-        Me.userPhoneLstUsers.HeaderText = "Teléfono"
-        Me.userPhoneLstUsers.Name = "userPhoneLstUsers"
-        Me.userPhoneLstUsers.ReadOnly = True
-        '
-        'userEmailLstUsers
-        '
-        Me.userEmailLstUsers.HeaderText = "E-mail"
-        Me.userEmailLstUsers.Name = "userEmailLstUsers"
-        Me.userEmailLstUsers.ReadOnly = True
-        '
-        'userStateLstUsers
-        '
-        Me.userStateLstUsers.HeaderText = "Estado"
-        Me.userStateLstUsers.Name = "userStateLstUsers"
-        '
-        'userEditLstUsers
-        '
-        Me.userEditLstUsers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.userEditLstUsers.HeaderText = ""
-        Me.userEditLstUsers.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.userEditLstUsers.Name = "userEditLstUsers"
-        Me.userEditLstUsers.ReadOnly = True
-        Me.userEditLstUsers.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userEditLstUsers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3208,6 +3208,7 @@ Partial Class FrmMain
         Me.TabProductos.ResumeLayout(False)
         Me.listaActis_pnl.ResumeLayout(False)
         Me.listaActis_pnl.PerformLayout()
+        CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.registrarActi_pnl.ResumeLayout(False)
         Me.registrarActi_pnl.PerformLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3230,7 +3231,6 @@ Partial Class FrmMain
         CType(Me.horaIni3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Eventos.ResumeLayout(False)
         Me.PanelListarEventos.ResumeLayout(False)
         Me.PanelListarEventos.PerformLayout()
@@ -3259,6 +3259,9 @@ Partial Class FrmMain
         Me.panKpiVentas.ResumeLayout(False)
         Me.panKpiVentas.PerformLayout()
         Me.TabUsuarios.ResumeLayout(False)
+        Me.pnListUsers.ResumeLayout(False)
+        Me.pnListUsers.PerformLayout()
+        CType(Me.lstUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlListRols.ResumeLayout(False)
         Me.pnlListRols.PerformLayout()
         CType(Me.lstListRols, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3269,9 +3272,6 @@ Partial Class FrmMain
         Me.gboPorductsSectionRol.ResumeLayout(False)
         Me.gboPorductsSectionRol.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnListUsers.ResumeLayout(False)
-        Me.pnListUsers.PerformLayout()
-        CType(Me.lstUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

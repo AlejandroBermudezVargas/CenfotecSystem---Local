@@ -854,7 +854,7 @@ Public Class FrmMain
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub Main_Click(sender As Object, e As EventArgs) Handles Main.Click
-        showListOfRols()
+        showListUserForm()
     End Sub
 
     ''' <summary>
@@ -1037,6 +1037,59 @@ Public Class FrmMain
     Private Sub btnCancelRol_Click(sender As Object, e As EventArgs) Handles btnCancelRol.Click
         hideCreateRolForm()
         showListOfRols()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>List users</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub showListUserForm()
+        Me.pnListUsers.Show()
+        populateListOfUsers()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>List users</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub hideListUserForm()
+        Me.pnListUsers.Hide()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>List users</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub populateListOfUsers()
+        lstUsers.Rows.Clear()
+        Dim estado = "Inactivo"
+        Dim usuarios As List(Of UserModel) = Users_controller.getUsers()
+        If (Not usuarios Is Nothing) Then
+            For Each usuario As UserModel In usuarios
+                If usuario.activo Then
+                    estado = "Activo"
+                End If
+                lstUsers.Rows.Add(usuario.id_usuario, usuario.cedula, usuario.nombre, usuario.apellido, usuario.telefono,
+                                      usuario.correo, estado)
+            Next
+        End If
+    End Sub
+
+    Private Sub lblRolsSection_Click(sender As Object, e As EventArgs) Handles lblRolsSection.Click
+        populateListOfRols()
+        hideListUserForm()
+        showListOfRols()
+    End Sub
+
+    Private Sub btnBackRolsUsers_Click(sender As Object, e As EventArgs) Handles btnBackRolsUsers.Click
+        hideListOfRols()
+        showListUserForm()
     End Sub
 End Class
 
