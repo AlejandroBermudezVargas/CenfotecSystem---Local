@@ -400,7 +400,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 6
+        Me.Main.SelectedIndex = 4
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -3675,6 +3675,7 @@ Partial Class FrmMain
         Me.pnlUpdateUserInfo.VerticalScrollbarBarColor = True
         Me.pnlUpdateUserInfo.VerticalScrollbarHighlightOnWheel = False
         Me.pnlUpdateUserInfo.VerticalScrollbarSize = 10
+        Me.pnlUpdateUserInfo.Visible = False
         '
         'tgChangePassUpdateUserInfo
         '

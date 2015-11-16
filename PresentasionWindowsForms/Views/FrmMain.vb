@@ -1393,10 +1393,46 @@ Public Class FrmMain
             txtLastNameUpdateUserInfo.Text = usuario.apellido
             txtEmailUpdateUserInfo.Text = usuario.correo
             txtPhoneUpdateUserInfo.Text = usuario.telefono
+            txtPasswordUpdateUserInfo.Text = ""
+            txtNewPassUpdateUserInfo.Text = user.password
+            tgChangePassUpdateUserInfo.Checked = False
+            txtNewPassUpdateUserInfo.Enabled = False
         Else
             MsgBox(respuestasDelSistema.POPULATE_FILLS_ERROR, MsgBoxStyle.Critical)
         End If
         pnlUpdateUserInfo.Show()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub tileChangeInformation_Click(sender As Object, e As EventArgs) Handles tileChangeInformation.Click
+        showUpdateUserInfo()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub tgChangePassUpdateUserInfo_Click(sender As Object, e As EventArgs) Handles tgChangePassUpdateUserInfo.Click
+        txtNewPassUpdateUserInfo.Enabled = tgChangePassUpdateUserInfo.Checked
+        lblNewpassUpdateUserInfo.Enabled = tgChangePassUpdateUserInfo.Checked
+        txtNewPassUpdateUserInfo.Text = ""
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Change password</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub btnCancelUpdateUserInfo_Click(sender As Object, e As EventArgs) Handles btnCancelUpdateUserInfo.Click
+        hideUpdateUserInfo()
     End Sub
 End Class
 
