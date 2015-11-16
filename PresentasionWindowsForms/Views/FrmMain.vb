@@ -846,8 +846,170 @@ Public Class FrmMain
         End If
     End Sub
 
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>List rols</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub Main_Click(sender As Object, e As EventArgs) Handles Main.Click
         showListOfRols()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Create rol</usecase>
+    ''' <usecase>Update rol</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub hideCreateRolForm()
+        pnlCreateRol.Hide()
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Create rol</usecase>
+    ''' <usecase>Update rol</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub cleanCreateRolForm()
+        txtRolName.Text = ""
+        tgEnabledRol.Checked = False
+        tgKpiRol.Checked = False
+        tgActiRol.Checked = False
+        tgSalesRol.Checked = False
+        tgProspectusRol.Checked = False
+        tgEventsRol.Checked = False
+        tgReportsRol.Checked = False
+        tgConfigurationRol.Checked = False
+        tgUsersRol.Checked = False
+        tgCareersRol.Checked = False
+    End Sub
+
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Create rol</usecase>
+    ''' <usecase>Update rol</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub showCreateRolForm(ByVal id As String)
+        lblIdRol.Text = id
+        pnlCreateRol.Show()
+        cleanCreateRolForm()
+        If id = "-1" Then
+            lblCreateRolTittle.Text = "Crear rol"
+        Else
+            lblCreateRolTittle.Text = "Modificar rol"
+            Dim rol As RolModel = RolsController.getRol(id)
+            If (Not rol Is Nothing) Then
+                txtRolName.Text = rol.nombre
+                tgEnabledRol.Checked = rol.activo
+                For Each permiso As PermissionModel In rol.permisos
+                    Select Case permiso.nombre
+                        Case "acti"
+                            tgActiRol.Checked = True
+                        Case "carreras"
+                            tgCareersRol.Checked = True
+                        Case "ventas"
+                            tgSalesRol.Checked = True
+                        Case "prospectos"
+                            tgProspectusRol.Checked = True
+                        Case "usuarios"
+                            tgUsersRol.Checked = True
+                        Case "eventos"
+                            tgEventsRol.Checked = True
+                        Case "kpis"
+                            tgKpiRol.Checked = True
+                        Case "reportes"
+                            tgReportsRol.Checked = True
+                        Case "configuracion"
+                            tgConfigurationRol.Checked = True
+                    End Select
+                Next
+            Else
+                MsgBox(respuestasDelSistema.POPULATE_FILLS_ERROR, MsgBoxStyle.Critical)
+            End If
+        End If
+    End Sub
+
+
+
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Create rol</usecase>
+    ''' <usecase>Update rol</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub btnSaveRol_Click(sender As Object, e As EventArgs) Handles btnSaveRol.Click
+        If (OnlyTextAllowSpaces(txtRolName.Text)) Then
+            Dim permissions As New List(Of PermissionModel)
+            If tgActiRol.Checked Then
+                permissions.Add(New PermissionModel(1))
+            End If
+            If tgCareersRol.Checked Then
+                permissions.Add(New PermissionModel(2))
+            End If
+            If tgSalesRol.Checked Then
+                permissions.Add(New PermissionModel(3))
+            End If
+            If tgProspectusRol.Checked Then
+                permissions.Add(New PermissionModel(4))
+            End If
+            If tgEventsRol.Checked Then
+                permissions.Add(New PermissionModel(5))
+            End If
+            If tgKpiRol.Checked Then
+                permissions.Add(New PermissionModel(6))
+            End If
+            If tgUsersRol.Checked Then
+                permissions.Add(New PermissionModel(7))
+            End If
+            If tgReportsRol.Checked Then
+                permissions.Add(New PermissionModel(8))
+            End If
+            If tgConfigurationRol.Checked Then
+                permissions.Add(New PermissionModel(9))
+            End If
+            If String.Compare(lblIdRol.Text, "-1") = 0 Then
+                If (RolsController.create(txtRolName.Text, tgEnabledRol.Checked, permissions)) Then
+                    MsgBox(respuestasDelSistema.CREATE_ROL_SUCCESS, MsgBoxStyle.Information)
+                    showListOfRols()
+                    hideCreateRolForm()
+                Else
+                    MsgBox(respuestasDelSistema.CREATE_ROL_ERROR, MsgBoxStyle.Critical)
+                End If
+            Else
+                If (RolsController.update(lblIdRol.Text, txtRolName.Text, tgEnabledRol.Checked, permissions)) Then
+                    MsgBox(respuestasDelSistema.UPDATE_ROL_SUCCESS, MsgBoxStyle.Information)
+                    showListOfRols()
+                    hideCreateRolForm()
+                Else
+                    MsgBox(respuestasDelSistema.UPDATE_ROL_ERROR, MsgBoxStyle.Critical)
+                End If
+            End If
+
+        Else
+            ErrorProvider1.SetError(txtRolName, ValidationsMessages.ONLY_TEXT_ALLOW_SPACES)
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Create rol</usecase>
+    ''' <usecase>Update rol</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub btnNewRol_Click(sender As Object, e As EventArgs) Handles btnNewRol.Click
+        showCreateRolForm("-1")
+        hideListOfRols()
     End Sub
 End Class
 
