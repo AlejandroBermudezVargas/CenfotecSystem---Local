@@ -282,6 +282,30 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
+        Me.pnlCreateUser = New MetroFramework.Controls.MetroPanel()
+        Me.lblPasswordUserBackup = New System.Windows.Forms.Label()
+        Me.chkChangeUserPassword = New MetroFramework.Controls.MetroCheckBox()
+        Me.cboDateCreateUser = New MetroFramework.Controls.MetroDateTime()
+        Me.lblDateCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.txtEmailCreateUser = New MetroFramework.Controls.MetroTextBox()
+        Me.lblEmailCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.txtLastNameCreateUser = New MetroFramework.Controls.MetroTextBox()
+        Me.cboRolCreateUser = New MetroFramework.Controls.MetroComboBox()
+        Me.tgEnableCreateUser = New MetroFramework.Controls.MetroToggle()
+        Me.lblRolCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.lblEnabledCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.txtPhoneCreateUser = New MetroFramework.Controls.MetroTextBox()
+        Me.txtPasswordCreateUser = New MetroFramework.Controls.MetroTextBox()
+        Me.txtNameCreateUser = New MetroFramework.Controls.MetroTextBox()
+        Me.txtIdCreateUser = New MetroFramework.Controls.MetroTextBox()
+        Me.btnCancelCreateUser = New MetroFramework.Controls.MetroButton()
+        Me.btnSaveCreateUser = New MetroFramework.Controls.MetroButton()
+        Me.lblPaswordCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.lblPhoneCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.lblNameCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.lblLastNameCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.lblCedulaCreateUser = New MetroFramework.Controls.MetroLabel()
+        Me.lblCreateUserTittle = New MetroFramework.Controls.MetroLabel()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.listaActis_pnl.SuspendLayout()
@@ -333,6 +357,7 @@ Partial Class FrmMain
         Me.gboPermissionsRol.SuspendLayout()
         Me.gboPorductsSectionRol.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlCreateUser.SuspendLayout()
         Me.SuspendLayout()
         '
         'Main
@@ -2527,6 +2552,7 @@ Partial Class FrmMain
         '
         'TabUsuarios
         '
+        Me.TabUsuarios.Controls.Add(Me.pnlCreateUser)
         Me.TabUsuarios.Controls.Add(Me.pnListUsers)
         Me.TabUsuarios.Controls.Add(Me.pnlListRols)
         Me.TabUsuarios.Controls.Add(Me.pnlCreateRol)
@@ -3193,6 +3219,386 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
+        'pnlCreateUser
+        '
+        Me.pnlCreateUser.Controls.Add(Me.lblPasswordUserBackup)
+        Me.pnlCreateUser.Controls.Add(Me.chkChangeUserPassword)
+        Me.pnlCreateUser.Controls.Add(Me.cboDateCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblDateCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.txtEmailCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblEmailCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.txtLastNameCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.cboRolCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.tgEnableCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblRolCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblEnabledCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.txtPhoneCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.txtPasswordCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.txtNameCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.txtIdCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.btnCancelCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.btnSaveCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblPaswordCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblPhoneCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblNameCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblLastNameCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblCedulaCreateUser)
+        Me.pnlCreateUser.Controls.Add(Me.lblCreateUserTittle)
+        Me.pnlCreateUser.HorizontalScrollbarBarColor = True
+        Me.pnlCreateUser.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlCreateUser.HorizontalScrollbarSize = 10
+        Me.pnlCreateUser.Location = New System.Drawing.Point(3, 5)
+        Me.pnlCreateUser.Name = "pnlCreateUser"
+        Me.pnlCreateUser.Size = New System.Drawing.Size(746, 462)
+        Me.pnlCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.pnlCreateUser.TabIndex = 53
+        Me.pnlCreateUser.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnlCreateUser.VerticalScrollbarBarColor = True
+        Me.pnlCreateUser.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlCreateUser.VerticalScrollbarSize = 10
+        '
+        'lblPasswordUserBackup
+        '
+        Me.lblPasswordUserBackup.AutoSize = True
+        Me.lblPasswordUserBackup.Location = New System.Drawing.Point(20, 436)
+        Me.lblPasswordUserBackup.Name = "lblPasswordUserBackup"
+        Me.lblPasswordUserBackup.Size = New System.Drawing.Size(122, 13)
+        Me.lblPasswordUserBackup.TabIndex = 48
+        Me.lblPasswordUserBackup.Text = "lblPasswordUserBackup"
+        Me.lblPasswordUserBackup.Visible = False
+        '
+        'chkChangeUserPassword
+        '
+        Me.chkChangeUserPassword.AutoSize = True
+        Me.chkChangeUserPassword.Location = New System.Drawing.Point(531, 254)
+        Me.chkChangeUserPassword.Name = "chkChangeUserPassword"
+        Me.chkChangeUserPassword.Size = New System.Drawing.Size(68, 15)
+        Me.chkChangeUserPassword.Style = MetroFramework.MetroColorStyle.Purple
+        Me.chkChangeUserPassword.TabIndex = 47
+        Me.chkChangeUserPassword.Text = "Cambiar"
+        Me.chkChangeUserPassword.UseSelectable = True
+        '
+        'cboDateCreateUser
+        '
+        Me.cboDateCreateUser.Location = New System.Drawing.Point(158, 175)
+        Me.cboDateCreateUser.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.cboDateCreateUser.Name = "cboDateCreateUser"
+        Me.cboDateCreateUser.Size = New System.Drawing.Size(366, 29)
+        Me.cboDateCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.cboDateCreateUser.TabIndex = 5
+        '
+        'lblDateCreateUser
+        '
+        Me.lblDateCreateUser.AutoSize = True
+        Me.lblDateCreateUser.Location = New System.Drawing.Point(24, 185)
+        Me.lblDateCreateUser.Name = "lblDateCreateUser"
+        Me.lblDateCreateUser.Size = New System.Drawing.Size(111, 19)
+        Me.lblDateCreateUser.TabIndex = 44
+        Me.lblDateCreateUser.Text = "Fecha nacimiento"
+        '
+        'txtEmailCreateUser
+        '
+        '
+        '
+        '
+        Me.txtEmailCreateUser.CustomButton.Image = Nothing
+        Me.txtEmailCreateUser.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtEmailCreateUser.CustomButton.Name = ""
+        Me.txtEmailCreateUser.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtEmailCreateUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtEmailCreateUser.CustomButton.TabIndex = 1
+        Me.txtEmailCreateUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtEmailCreateUser.CustomButton.UseSelectable = True
+        Me.txtEmailCreateUser.CustomButton.Visible = False
+        Me.txtEmailCreateUser.Lines = New String(-1) {}
+        Me.txtEmailCreateUser.Location = New System.Drawing.Point(158, 144)
+        Me.txtEmailCreateUser.MaxLength = 49
+        Me.txtEmailCreateUser.Name = "txtEmailCreateUser"
+        Me.txtEmailCreateUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtEmailCreateUser.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtEmailCreateUser.SelectedText = ""
+        Me.txtEmailCreateUser.SelectionLength = 0
+        Me.txtEmailCreateUser.SelectionStart = 0
+        Me.txtEmailCreateUser.Size = New System.Drawing.Size(367, 23)
+        Me.txtEmailCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtEmailCreateUser.TabIndex = 4
+        Me.txtEmailCreateUser.UseSelectable = True
+        Me.txtEmailCreateUser.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtEmailCreateUser.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'lblEmailCreateUser
+        '
+        Me.lblEmailCreateUser.AutoSize = True
+        Me.lblEmailCreateUser.Location = New System.Drawing.Point(24, 148)
+        Me.lblEmailCreateUser.Name = "lblEmailCreateUser"
+        Me.lblEmailCreateUser.Size = New System.Drawing.Size(51, 19)
+        Me.lblEmailCreateUser.TabIndex = 42
+        Me.lblEmailCreateUser.Text = "Correo"
+        '
+        'txtLastNameCreateUser
+        '
+        '
+        '
+        '
+        Me.txtLastNameCreateUser.CustomButton.Image = Nothing
+        Me.txtLastNameCreateUser.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtLastNameCreateUser.CustomButton.Name = ""
+        Me.txtLastNameCreateUser.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtLastNameCreateUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtLastNameCreateUser.CustomButton.TabIndex = 1
+        Me.txtLastNameCreateUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtLastNameCreateUser.CustomButton.UseSelectable = True
+        Me.txtLastNameCreateUser.CustomButton.Visible = False
+        Me.txtLastNameCreateUser.Lines = New String(-1) {}
+        Me.txtLastNameCreateUser.Location = New System.Drawing.Point(158, 113)
+        Me.txtLastNameCreateUser.MaxLength = 49
+        Me.txtLastNameCreateUser.Name = "txtLastNameCreateUser"
+        Me.txtLastNameCreateUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtLastNameCreateUser.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtLastNameCreateUser.SelectedText = ""
+        Me.txtLastNameCreateUser.SelectionLength = 0
+        Me.txtLastNameCreateUser.SelectionStart = 0
+        Me.txtLastNameCreateUser.Size = New System.Drawing.Size(367, 23)
+        Me.txtLastNameCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtLastNameCreateUser.TabIndex = 3
+        Me.txtLastNameCreateUser.UseSelectable = True
+        Me.txtLastNameCreateUser.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtLastNameCreateUser.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'cboRolCreateUser
+        '
+        Me.cboRolCreateUser.FormattingEnabled = True
+        Me.cboRolCreateUser.ItemHeight = 23
+        Me.cboRolCreateUser.Location = New System.Drawing.Point(158, 277)
+        Me.cboRolCreateUser.Name = "cboRolCreateUser"
+        Me.cboRolCreateUser.Size = New System.Drawing.Size(367, 29)
+        Me.cboRolCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.cboRolCreateUser.TabIndex = 8
+        Me.cboRolCreateUser.UseSelectable = True
+        '
+        'tgEnableCreateUser
+        '
+        Me.tgEnableCreateUser.AutoSize = True
+        Me.tgEnableCreateUser.Location = New System.Drawing.Point(158, 321)
+        Me.tgEnableCreateUser.Name = "tgEnableCreateUser"
+        Me.tgEnableCreateUser.Size = New System.Drawing.Size(80, 17)
+        Me.tgEnableCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgEnableCreateUser.TabIndex = 9
+        Me.tgEnableCreateUser.Text = "Off"
+        Me.tgEnableCreateUser.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.tgEnableCreateUser.UseSelectable = True
+        '
+        'lblRolCreateUser
+        '
+        Me.lblRolCreateUser.AutoSize = True
+        Me.lblRolCreateUser.Location = New System.Drawing.Point(26, 287)
+        Me.lblRolCreateUser.Name = "lblRolCreateUser"
+        Me.lblRolCreateUser.Size = New System.Drawing.Size(28, 19)
+        Me.lblRolCreateUser.TabIndex = 39
+        Me.lblRolCreateUser.Text = "Rol"
+        '
+        'lblEnabledCreateUser
+        '
+        Me.lblEnabledCreateUser.AutoSize = True
+        Me.lblEnabledCreateUser.Location = New System.Drawing.Point(26, 319)
+        Me.lblEnabledCreateUser.Name = "lblEnabledCreateUser"
+        Me.lblEnabledCreateUser.Size = New System.Drawing.Size(45, 19)
+        Me.lblEnabledCreateUser.TabIndex = 37
+        Me.lblEnabledCreateUser.Text = "Activo"
+        '
+        'txtPhoneCreateUser
+        '
+        '
+        '
+        '
+        Me.txtPhoneCreateUser.CustomButton.Image = Nothing
+        Me.txtPhoneCreateUser.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtPhoneCreateUser.CustomButton.Name = ""
+        Me.txtPhoneCreateUser.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtPhoneCreateUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtPhoneCreateUser.CustomButton.TabIndex = 1
+        Me.txtPhoneCreateUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtPhoneCreateUser.CustomButton.UseSelectable = True
+        Me.txtPhoneCreateUser.CustomButton.Visible = False
+        Me.txtPhoneCreateUser.Lines = New String(-1) {}
+        Me.txtPhoneCreateUser.Location = New System.Drawing.Point(158, 215)
+        Me.txtPhoneCreateUser.MaxLength = 30
+        Me.txtPhoneCreateUser.Name = "txtPhoneCreateUser"
+        Me.txtPhoneCreateUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPhoneCreateUser.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtPhoneCreateUser.SelectedText = ""
+        Me.txtPhoneCreateUser.SelectionLength = 0
+        Me.txtPhoneCreateUser.SelectionStart = 0
+        Me.txtPhoneCreateUser.Size = New System.Drawing.Size(367, 23)
+        Me.txtPhoneCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtPhoneCreateUser.TabIndex = 6
+        Me.txtPhoneCreateUser.UseSelectable = True
+        Me.txtPhoneCreateUser.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtPhoneCreateUser.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtPasswordCreateUser
+        '
+        '
+        '
+        '
+        Me.txtPasswordCreateUser.CustomButton.Image = Nothing
+        Me.txtPasswordCreateUser.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtPasswordCreateUser.CustomButton.Name = ""
+        Me.txtPasswordCreateUser.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtPasswordCreateUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtPasswordCreateUser.CustomButton.TabIndex = 1
+        Me.txtPasswordCreateUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtPasswordCreateUser.CustomButton.UseSelectable = True
+        Me.txtPasswordCreateUser.CustomButton.Visible = False
+        Me.txtPasswordCreateUser.Lines = New String(-1) {}
+        Me.txtPasswordCreateUser.Location = New System.Drawing.Point(158, 246)
+        Me.txtPasswordCreateUser.MaxLength = 49
+        Me.txtPasswordCreateUser.Name = "txtPasswordCreateUser"
+        Me.txtPasswordCreateUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtPasswordCreateUser.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtPasswordCreateUser.SelectedText = ""
+        Me.txtPasswordCreateUser.SelectionLength = 0
+        Me.txtPasswordCreateUser.SelectionStart = 0
+        Me.txtPasswordCreateUser.Size = New System.Drawing.Size(367, 23)
+        Me.txtPasswordCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtPasswordCreateUser.TabIndex = 7
+        Me.txtPasswordCreateUser.UseSelectable = True
+        Me.txtPasswordCreateUser.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtPasswordCreateUser.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtNameCreateUser
+        '
+        '
+        '
+        '
+        Me.txtNameCreateUser.CustomButton.Image = Nothing
+        Me.txtNameCreateUser.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtNameCreateUser.CustomButton.Name = ""
+        Me.txtNameCreateUser.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtNameCreateUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtNameCreateUser.CustomButton.TabIndex = 1
+        Me.txtNameCreateUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNameCreateUser.CustomButton.UseSelectable = True
+        Me.txtNameCreateUser.CustomButton.Visible = False
+        Me.txtNameCreateUser.Lines = New String(-1) {}
+        Me.txtNameCreateUser.Location = New System.Drawing.Point(158, 82)
+        Me.txtNameCreateUser.MaxLength = 49
+        Me.txtNameCreateUser.Name = "txtNameCreateUser"
+        Me.txtNameCreateUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNameCreateUser.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtNameCreateUser.SelectedText = ""
+        Me.txtNameCreateUser.SelectionLength = 0
+        Me.txtNameCreateUser.SelectionStart = 0
+        Me.txtNameCreateUser.Size = New System.Drawing.Size(367, 23)
+        Me.txtNameCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtNameCreateUser.TabIndex = 2
+        Me.txtNameCreateUser.UseSelectable = True
+        Me.txtNameCreateUser.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNameCreateUser.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtIdCreateUser
+        '
+        '
+        '
+        '
+        Me.txtIdCreateUser.CustomButton.Image = Nothing
+        Me.txtIdCreateUser.CustomButton.Location = New System.Drawing.Point(345, 1)
+        Me.txtIdCreateUser.CustomButton.Name = ""
+        Me.txtIdCreateUser.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtIdCreateUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtIdCreateUser.CustomButton.TabIndex = 1
+        Me.txtIdCreateUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtIdCreateUser.CustomButton.UseSelectable = True
+        Me.txtIdCreateUser.CustomButton.Visible = False
+        Me.txtIdCreateUser.Lines = New String(-1) {}
+        Me.txtIdCreateUser.Location = New System.Drawing.Point(158, 51)
+        Me.txtIdCreateUser.MaxLength = 49
+        Me.txtIdCreateUser.Name = "txtIdCreateUser"
+        Me.txtIdCreateUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtIdCreateUser.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtIdCreateUser.SelectedText = ""
+        Me.txtIdCreateUser.SelectionLength = 0
+        Me.txtIdCreateUser.SelectionStart = 0
+        Me.txtIdCreateUser.Size = New System.Drawing.Size(367, 23)
+        Me.txtIdCreateUser.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtIdCreateUser.TabIndex = 1
+        Me.txtIdCreateUser.UseSelectable = True
+        Me.txtIdCreateUser.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtIdCreateUser.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'btnCancelCreateUser
+        '
+        Me.btnCancelCreateUser.Location = New System.Drawing.Point(427, 436)
+        Me.btnCancelCreateUser.Name = "btnCancelCreateUser"
+        Me.btnCancelCreateUser.Size = New System.Drawing.Size(97, 23)
+        Me.btnCancelCreateUser.TabIndex = 11
+        Me.btnCancelCreateUser.Text = "Cancelar"
+        Me.btnCancelCreateUser.UseSelectable = True
+        '
+        'btnSaveCreateUser
+        '
+        Me.btnSaveCreateUser.Location = New System.Drawing.Point(324, 436)
+        Me.btnSaveCreateUser.Name = "btnSaveCreateUser"
+        Me.btnSaveCreateUser.Size = New System.Drawing.Size(97, 23)
+        Me.btnSaveCreateUser.TabIndex = 10
+        Me.btnSaveCreateUser.Text = "Guardar"
+        Me.btnSaveCreateUser.UseSelectable = True
+        '
+        'lblPaswordCreateUser
+        '
+        Me.lblPaswordCreateUser.AutoSize = True
+        Me.lblPaswordCreateUser.Location = New System.Drawing.Point(25, 246)
+        Me.lblPaswordCreateUser.Name = "lblPaswordCreateUser"
+        Me.lblPaswordCreateUser.Size = New System.Drawing.Size(75, 19)
+        Me.lblPaswordCreateUser.TabIndex = 19
+        Me.lblPaswordCreateUser.Text = "Contraseña"
+        '
+        'lblPhoneCreateUser
+        '
+        Me.lblPhoneCreateUser.AutoSize = True
+        Me.lblPhoneCreateUser.Location = New System.Drawing.Point(24, 215)
+        Me.lblPhoneCreateUser.Name = "lblPhoneCreateUser"
+        Me.lblPhoneCreateUser.Size = New System.Drawing.Size(58, 19)
+        Me.lblPhoneCreateUser.TabIndex = 15
+        Me.lblPhoneCreateUser.Text = "Telefono"
+        '
+        'lblNameCreateUser
+        '
+        Me.lblNameCreateUser.AutoSize = True
+        Me.lblNameCreateUser.Location = New System.Drawing.Point(24, 82)
+        Me.lblNameCreateUser.Name = "lblNameCreateUser"
+        Me.lblNameCreateUser.Size = New System.Drawing.Size(59, 19)
+        Me.lblNameCreateUser.TabIndex = 14
+        Me.lblNameCreateUser.Text = "Nombre"
+        '
+        'lblLastNameCreateUser
+        '
+        Me.lblLastNameCreateUser.AutoSize = True
+        Me.lblLastNameCreateUser.Location = New System.Drawing.Point(25, 114)
+        Me.lblLastNameCreateUser.Name = "lblLastNameCreateUser"
+        Me.lblLastNameCreateUser.Size = New System.Drawing.Size(58, 19)
+        Me.lblLastNameCreateUser.TabIndex = 13
+        Me.lblLastNameCreateUser.Text = "Apellido"
+        '
+        'lblCedulaCreateUser
+        '
+        Me.lblCedulaCreateUser.AutoSize = True
+        Me.lblCedulaCreateUser.Location = New System.Drawing.Point(24, 51)
+        Me.lblCedulaCreateUser.Name = "lblCedulaCreateUser"
+        Me.lblCedulaCreateUser.Size = New System.Drawing.Size(50, 19)
+        Me.lblCedulaCreateUser.TabIndex = 11
+        Me.lblCedulaCreateUser.Text = "Cedula"
+        '
+        'lblCreateUserTittle
+        '
+        Me.lblCreateUserTittle.AutoSize = True
+        Me.lblCreateUserTittle.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblCreateUserTittle.Location = New System.Drawing.Point(4, 9)
+        Me.lblCreateUserTittle.Name = "lblCreateUserTittle"
+        Me.lblCreateUserTittle.Size = New System.Drawing.Size(114, 25)
+        Me.lblCreateUserTittle.TabIndex = 10
+        Me.lblCreateUserTittle.Text = "Crear usuario"
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3272,6 +3678,8 @@ Partial Class FrmMain
         Me.gboPorductsSectionRol.ResumeLayout(False)
         Me.gboPorductsSectionRol.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlCreateUser.ResumeLayout(False)
+        Me.pnlCreateUser.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3534,4 +3942,28 @@ Partial Class FrmMain
     Friend WithEvents userEmailLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents userStateLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents userEditLstUsers As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents pnlCreateUser As MetroFramework.Controls.MetroPanel
+    Friend WithEvents lblPasswordUserBackup As System.Windows.Forms.Label
+    Friend WithEvents chkChangeUserPassword As MetroFramework.Controls.MetroCheckBox
+    Friend WithEvents cboDateCreateUser As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents lblDateCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtEmailCreateUser As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents lblEmailCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtLastNameCreateUser As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents cboRolCreateUser As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents tgEnableCreateUser As MetroFramework.Controls.MetroToggle
+    Friend WithEvents lblRolCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblEnabledCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtPhoneCreateUser As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtPasswordCreateUser As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtNameCreateUser As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtIdCreateUser As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents btnCancelCreateUser As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnSaveCreateUser As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblPaswordCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblPhoneCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblNameCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblLastNameCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblCedulaCreateUser As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblCreateUserTittle As MetroFramework.Controls.MetroLabel
 End Class
