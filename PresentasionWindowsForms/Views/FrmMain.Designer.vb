@@ -25,6 +25,7 @@ Partial Class FrmMain
         Me.components = New System.ComponentModel.Container()
         Me.Main = New MetroFramework.Controls.MetroTabControl()
         Me.TabProductos = New MetroFramework.Controls.MetroTabPage()
+        Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
         Me.registrarActi_pnl = New MetroFramework.Controls.MetroPanel()
         Me.fechaInicio_dp = New System.Windows.Forms.DateTimePicker()
         Me.fechaInicioCurso = New MetroFramework.Controls.MetroLabel()
@@ -76,10 +77,16 @@ Partial Class FrmMain
         Me.codigoActi_lbl = New MetroFramework.Controls.MetroLabel()
         Me.acti_lbl = New MetroFramework.Controls.MetroLabel()
         Me.horariosActi_grp = New System.Windows.Forms.GroupBox()
-        Me.listaActis_pnl = New MetroFramework.Controls.MetroPanel()
         Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
         Me.vovlerActi_btn = New MetroFramework.Controls.MetroButton()
         Me.listaActis_dg = New System.Windows.Forms.DataGridView()
+        Me.colIdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colNombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCodigoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCostoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colHorarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colFechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editarActi = New System.Windows.Forms.DataGridViewImageColumn()
         Me.listaActis_lbl = New MetroFramework.Controls.MetroLabel()
         Me.nuevoActi_btn = New MetroFramework.Controls.MetroButton()
         Me.btnActiIco = New MetroFramework.Controls.MetroTile()
@@ -215,21 +222,15 @@ Partial Class FrmMain
         Me.codigoCosto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.horarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cboUsuario = New MetroFramework.Controls.MetroComboBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.colIdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCodigoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCostoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colHorarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colFechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editarActi = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
+        Me.listaActis_pnl.SuspendLayout()
         Me.registrarActi_pnl.SuspendLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minsFin4Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -251,7 +252,6 @@ Partial Class FrmMain
         CType(Me.horaIni3Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.listaActis_pnl.SuspendLayout()
         CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Eventos.SuspendLayout()
         Me.PanelListarEventos.SuspendLayout()
@@ -310,6 +310,28 @@ Partial Class FrmMain
         Me.TabProductos.VerticalScrollbarBarColor = True
         Me.TabProductos.VerticalScrollbarHighlightOnWheel = False
         Me.TabProductos.VerticalScrollbarSize = 10
+        '
+        'listaActis_pnl
+        '
+        Me.listaActis_pnl.Controls.Add(Me.registrarActi_pnl)
+        Me.listaActis_pnl.Controls.Add(Me.exportarActi_btn)
+        Me.listaActis_pnl.Controls.Add(Me.vovlerActi_btn)
+        Me.listaActis_pnl.Controls.Add(Me.listaActis_dg)
+        Me.listaActis_pnl.Controls.Add(Me.listaActis_lbl)
+        Me.listaActis_pnl.Controls.Add(Me.nuevoActi_btn)
+        Me.listaActis_pnl.HorizontalScrollbarBarColor = True
+        Me.listaActis_pnl.HorizontalScrollbarHighlightOnWheel = False
+        Me.listaActis_pnl.HorizontalScrollbarSize = 10
+        Me.listaActis_pnl.Location = New System.Drawing.Point(0, 3)
+        Me.listaActis_pnl.Name = "listaActis_pnl"
+        Me.listaActis_pnl.Size = New System.Drawing.Size(767, 461)
+        Me.listaActis_pnl.Style = MetroFramework.MetroColorStyle.Blue
+        Me.listaActis_pnl.TabIndex = 87
+        Me.listaActis_pnl.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.listaActis_pnl.VerticalScrollbarBarColor = True
+        Me.listaActis_pnl.VerticalScrollbarHighlightOnWheel = False
+        Me.listaActis_pnl.VerticalScrollbarSize = 10
+        Me.listaActis_pnl.Visible = False
         '
         'registrarActi_pnl
         '
@@ -879,28 +901,6 @@ Partial Class FrmMain
         Me.horariosActi_grp.TabIndex = 77
         Me.horariosActi_grp.TabStop = False
         '
-        'listaActis_pnl
-        '
-        Me.listaActis_pnl.Controls.Add(Me.registrarActi_pnl)
-        Me.listaActis_pnl.Controls.Add(Me.exportarActi_btn)
-        Me.listaActis_pnl.Controls.Add(Me.vovlerActi_btn)
-        Me.listaActis_pnl.Controls.Add(Me.listaActis_dg)
-        Me.listaActis_pnl.Controls.Add(Me.listaActis_lbl)
-        Me.listaActis_pnl.Controls.Add(Me.nuevoActi_btn)
-        Me.listaActis_pnl.HorizontalScrollbarBarColor = True
-        Me.listaActis_pnl.HorizontalScrollbarHighlightOnWheel = False
-        Me.listaActis_pnl.HorizontalScrollbarSize = 10
-        Me.listaActis_pnl.Location = New System.Drawing.Point(0, 3)
-        Me.listaActis_pnl.Name = "listaActis_pnl"
-        Me.listaActis_pnl.Size = New System.Drawing.Size(767, 461)
-        Me.listaActis_pnl.Style = MetroFramework.MetroColorStyle.Blue
-        Me.listaActis_pnl.TabIndex = 87
-        Me.listaActis_pnl.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.listaActis_pnl.VerticalScrollbarBarColor = True
-        Me.listaActis_pnl.VerticalScrollbarHighlightOnWheel = False
-        Me.listaActis_pnl.VerticalScrollbarSize = 10
-        Me.listaActis_pnl.Visible = False
-        '
         'exportarActi_btn
         '
         Me.exportarActi_btn.Location = New System.Drawing.Point(485, 412)
@@ -929,6 +929,42 @@ Partial Class FrmMain
         Me.listaActis_dg.RowHeadersVisible = False
         Me.listaActis_dg.Size = New System.Drawing.Size(739, 344)
         Me.listaActis_dg.TabIndex = 12
+        '
+        'colIdActi
+        '
+        Me.colIdActi.HeaderText = "Id"
+        Me.colIdActi.Name = "colIdActi"
+        Me.colIdActi.Visible = False
+        '
+        'colNombreActi
+        '
+        Me.colNombreActi.HeaderText = "Nombre"
+        Me.colNombreActi.Name = "colNombreActi"
+        '
+        'colCodigoActi
+        '
+        Me.colCodigoActi.HeaderText = "Codigo"
+        Me.colCodigoActi.Name = "colCodigoActi"
+        '
+        'colCostoActi
+        '
+        Me.colCostoActi.HeaderText = "Costo"
+        Me.colCostoActi.Name = "colCostoActi"
+        '
+        'colHorarioActi
+        '
+        Me.colHorarioActi.HeaderText = "Horario"
+        Me.colHorarioActi.Name = "colHorarioActi"
+        '
+        'colFechaInicioActi
+        '
+        Me.colFechaInicioActi.HeaderText = "Fecha Inicio"
+        Me.colFechaInicioActi.Name = "colFechaInicioActi"
+        '
+        'editarActi
+        '
+        Me.editarActi.HeaderText = ""
+        Me.editarActi.Name = "editarActi"
         '
         'listaActis_lbl
         '
@@ -2488,17 +2524,6 @@ Partial Class FrmMain
         Me.fechaInicioActi.HeaderText = "Fecha Inicio"
         Me.fechaInicioActi.Name = "fechaInicioActi"
         '
-        'cboUsuario
-        '
-        Me.cboUsuario.FormattingEnabled = True
-        Me.cboUsuario.ItemHeight = 23
-        Me.cboUsuario.Items.AddRange(New Object() {"Usuario", "Cerrar sesion", "Salir del sistema"})
-        Me.cboUsuario.Location = New System.Drawing.Point(601, 28)
-        Me.cboUsuario.Name = "cboUsuario"
-        Me.cboUsuario.Size = New System.Drawing.Size(179, 29)
-        Me.cboUsuario.TabIndex = 5
-        Me.cboUsuario.UseSelectable = True
-        '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
@@ -2523,48 +2548,21 @@ Partial Class FrmMain
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'colIdActi
+        'lblCloseSession
         '
-        Me.colIdActi.HeaderText = "Id"
-        Me.colIdActi.Name = "colIdActi"
-        Me.colIdActi.Visible = False
-        '
-        'colNombreActi
-        '
-        Me.colNombreActi.HeaderText = "Nombre"
-        Me.colNombreActi.Name = "colNombreActi"
-        '
-        'colCodigoActi
-        '
-        Me.colCodigoActi.HeaderText = "Codigo"
-        Me.colCodigoActi.Name = "colCodigoActi"
-        '
-        'colCostoActi
-        '
-        Me.colCostoActi.HeaderText = "Costo"
-        Me.colCostoActi.Name = "colCostoActi"
-        '
-        'colHorarioActi
-        '
-        Me.colHorarioActi.HeaderText = "Horario"
-        Me.colHorarioActi.Name = "colHorarioActi"
-        '
-        'colFechaInicioActi
-        '
-        Me.colFechaInicioActi.HeaderText = "Fecha Inicio"
-        Me.colFechaInicioActi.Name = "colFechaInicioActi"
-        '
-        'editarActi
-        '
-        Me.editarActi.HeaderText = ""
-        Me.editarActi.Name = "editarActi"
+        Me.lblCloseSession.Location = New System.Drawing.Point(694, 25)
+        Me.lblCloseSession.Name = "lblCloseSession"
+        Me.lblCloseSession.Size = New System.Drawing.Size(82, 23)
+        Me.lblCloseSession.TabIndex = 5
+        Me.lblCloseSession.Text = "Cerrar sesion"
+        Me.lblCloseSession.UseSelectable = True
         '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 600)
-        Me.Controls.Add(Me.cboUsuario)
+        Me.Controls.Add(Me.lblCloseSession)
         Me.Controls.Add(Me.Main)
         Me.Name = "FrmMain"
         Me.Resizable = False
@@ -2572,6 +2570,8 @@ Partial Class FrmMain
         Me.Text = "Menu Principal"
         Me.Main.ResumeLayout(False)
         Me.TabProductos.ResumeLayout(False)
+        Me.listaActis_pnl.ResumeLayout(False)
+        Me.listaActis_pnl.PerformLayout()
         Me.registrarActi_pnl.ResumeLayout(False)
         Me.registrarActi_pnl.PerformLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2594,8 +2594,6 @@ Partial Class FrmMain
         CType(Me.horaIni3Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.horaIni2Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.horaIni1Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.listaActis_pnl.ResumeLayout(False)
-        Me.listaActis_pnl.PerformLayout()
         CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Eventos.ResumeLayout(False)
         Me.PanelListarEventos.ResumeLayout(False)
@@ -2638,7 +2636,6 @@ Partial Class FrmMain
     Friend WithEvents Eventos As MetroFramework.Controls.MetroTabPage
     Friend WithEvents TabConfiguracion As MetroFramework.Controls.MetroTabPage
     Friend WithEvents btnActiIco As MetroFramework.Controls.MetroTile
-    Friend WithEvents cboUsuario As MetroFramework.Controls.MetroComboBox
     Friend WithEvents TabVentas As MetroFramework.Controls.MetroTabPage
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
@@ -2833,4 +2830,5 @@ Partial Class FrmMain
     Friend WithEvents colHorarioActi As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colFechaInicioActi As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents editarActi As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents lblCloseSession As MetroFramework.Controls.MetroLink
 End Class

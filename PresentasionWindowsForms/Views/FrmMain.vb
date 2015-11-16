@@ -777,6 +777,10 @@ Public Class FrmMain
     Private Sub cancelarAct_btn_Click(sender As Object, e As EventArgs) Handles cancelarAct_btn.Click
         registrarActi_pnl.Visible = False
     End Sub
+
+    Private Sub lblCloseSession_Click(sender As Object, e As EventArgs) Handles lblCloseSession.Click
+
+    End Sub
 End Class
 
 
