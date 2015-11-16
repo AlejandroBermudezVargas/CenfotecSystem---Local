@@ -268,6 +268,20 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
+        Me.pnListUsers = New MetroFramework.Controls.MetroPanel()
+        Me.lblCreateUpdateUserId = New MetroFramework.Controls.MetroLabel()
+        Me.lstUsers = New System.Windows.Forms.DataGridView()
+        Me.lblRolsSection = New MetroFramework.Controls.MetroLink()
+        Me.lblListOfUsersTittle = New MetroFramework.Controls.MetroLabel()
+        Me.btnCreateUser = New MetroFramework.Controls.MetroButton()
+        Me.colIdLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.identificationLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userNameLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userLastNameLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userPhoneLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userEmailLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userStateLstUsers = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.userEditLstUsers = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.listaActis_pnl.SuspendLayout()
@@ -317,6 +331,8 @@ Partial Class FrmMain
         Me.gboPermissionsRol.SuspendLayout()
         Me.gboPorductsSectionRol.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnListUsers.SuspendLayout()
+        CType(Me.lstUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Main
@@ -2511,8 +2527,9 @@ Partial Class FrmMain
         '
         'TabUsuarios
         '
-        Me.TabUsuarios.Controls.Add(Me.pnlCreateRol)
+        Me.TabUsuarios.Controls.Add(Me.pnListUsers)
         Me.TabUsuarios.Controls.Add(Me.pnlListRols)
+        Me.TabUsuarios.Controls.Add(Me.pnlCreateRol)
         Me.TabUsuarios.HorizontalScrollbarBarColor = True
         Me.TabUsuarios.HorizontalScrollbarHighlightOnWheel = False
         Me.TabUsuarios.HorizontalScrollbarSize = 10
@@ -3050,6 +3067,132 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
+        'pnListUsers
+        '
+        Me.pnListUsers.Controls.Add(Me.lblCreateUpdateUserId)
+        Me.pnListUsers.Controls.Add(Me.lstUsers)
+        Me.pnListUsers.Controls.Add(Me.lblRolsSection)
+        Me.pnListUsers.Controls.Add(Me.lblListOfUsersTittle)
+        Me.pnListUsers.Controls.Add(Me.btnCreateUser)
+        Me.pnListUsers.HorizontalScrollbarBarColor = True
+        Me.pnListUsers.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnListUsers.HorizontalScrollbarSize = 10
+        Me.pnListUsers.Location = New System.Drawing.Point(0, 6)
+        Me.pnListUsers.Name = "pnListUsers"
+        Me.pnListUsers.Size = New System.Drawing.Size(753, 462)
+        Me.pnListUsers.Style = MetroFramework.MetroColorStyle.Blue
+        Me.pnListUsers.TabIndex = 52
+        Me.pnListUsers.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnListUsers.VerticalScrollbarBarColor = True
+        Me.pnListUsers.VerticalScrollbarHighlightOnWheel = False
+        Me.pnListUsers.VerticalScrollbarSize = 10
+        '
+        'lblCreateUpdateUserId
+        '
+        Me.lblCreateUpdateUserId.AutoSize = True
+        Me.lblCreateUpdateUserId.Location = New System.Drawing.Point(723, 7)
+        Me.lblCreateUpdateUserId.Name = "lblCreateUpdateUserId"
+        Me.lblCreateUpdateUserId.Size = New System.Drawing.Size(20, 19)
+        Me.lblCreateUpdateUserId.TabIndex = 49
+        Me.lblCreateUpdateUserId.Text = "id"
+        Me.lblCreateUpdateUserId.Visible = False
+        '
+        'lstUsers
+        '
+        Me.lstUsers.AllowUserToAddRows = False
+        Me.lstUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.lstUsers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdLstUsers, Me.identificationLstUsers, Me.userNameLstUsers, Me.userLastNameLstUsers, Me.userPhoneLstUsers, Me.userEmailLstUsers, Me.userStateLstUsers, Me.userEditLstUsers})
+        Me.lstUsers.Location = New System.Drawing.Point(7, 37)
+        Me.lstUsers.Name = "lstUsers"
+        Me.lstUsers.RowHeadersVisible = False
+        Me.lstUsers.Size = New System.Drawing.Size(739, 344)
+        Me.lstUsers.TabIndex = 12
+        '
+        'lblRolsSection
+        '
+        Me.lblRolsSection.BackColor = System.Drawing.Color.Ivory
+        Me.lblRolsSection.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblRolsSection.FontSize = MetroFramework.MetroLinkSize.Medium
+        Me.lblRolsSection.Location = New System.Drawing.Point(3, 425)
+        Me.lblRolsSection.Name = "lblRolsSection"
+        Me.lblRolsSection.Size = New System.Drawing.Size(217, 23)
+        Me.lblRolsSection.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lblRolsSection.TabIndex = 11
+        Me.lblRolsSection.Text = "Administrar roles de usuario"
+        Me.lblRolsSection.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.lblRolsSection.UseSelectable = True
+        '
+        'lblListOfUsersTittle
+        '
+        Me.lblListOfUsersTittle.AutoSize = True
+        Me.lblListOfUsersTittle.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblListOfUsersTittle.Location = New System.Drawing.Point(4, 9)
+        Me.lblListOfUsersTittle.Name = "lblListOfUsersTittle"
+        Me.lblListOfUsersTittle.Size = New System.Drawing.Size(113, 25)
+        Me.lblListOfUsersTittle.TabIndex = 10
+        Me.lblListOfUsersTittle.Text = "Lista usuarios"
+        '
+        'btnCreateUser
+        '
+        Me.btnCreateUser.Location = New System.Drawing.Point(620, 412)
+        Me.btnCreateUser.Name = "btnCreateUser"
+        Me.btnCreateUser.Size = New System.Drawing.Size(123, 36)
+        Me.btnCreateUser.TabIndex = 9
+        Me.btnCreateUser.Text = "Nuevo usuario"
+        Me.btnCreateUser.UseSelectable = True
+        '
+        'colIdLstUsers
+        '
+        Me.colIdLstUsers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.colIdLstUsers.HeaderText = "ID"
+        Me.colIdLstUsers.Name = "colIdLstUsers"
+        Me.colIdLstUsers.ReadOnly = True
+        Me.colIdLstUsers.Visible = False
+        '
+        'identificationLstUsers
+        '
+        Me.identificationLstUsers.HeaderText = "Cédula"
+        Me.identificationLstUsers.Name = "identificationLstUsers"
+        '
+        'userNameLstUsers
+        '
+        Me.userNameLstUsers.HeaderText = "Nombre"
+        Me.userNameLstUsers.Name = "userNameLstUsers"
+        Me.userNameLstUsers.ReadOnly = True
+        '
+        'userLastNameLstUsers
+        '
+        Me.userLastNameLstUsers.HeaderText = "Apellidos"
+        Me.userLastNameLstUsers.Name = "userLastNameLstUsers"
+        Me.userLastNameLstUsers.ReadOnly = True
+        '
+        'userPhoneLstUsers
+        '
+        Me.userPhoneLstUsers.HeaderText = "Teléfono"
+        Me.userPhoneLstUsers.Name = "userPhoneLstUsers"
+        Me.userPhoneLstUsers.ReadOnly = True
+        '
+        'userEmailLstUsers
+        '
+        Me.userEmailLstUsers.HeaderText = "E-mail"
+        Me.userEmailLstUsers.Name = "userEmailLstUsers"
+        Me.userEmailLstUsers.ReadOnly = True
+        '
+        'userStateLstUsers
+        '
+        Me.userStateLstUsers.HeaderText = "Estado"
+        Me.userStateLstUsers.Name = "userStateLstUsers"
+        '
+        'userEditLstUsers
+        '
+        Me.userEditLstUsers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.userEditLstUsers.HeaderText = ""
+        Me.userEditLstUsers.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.userEditLstUsers.Name = "userEditLstUsers"
+        Me.userEditLstUsers.ReadOnly = True
+        Me.userEditLstUsers.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userEditLstUsers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3126,6 +3269,9 @@ Partial Class FrmMain
         Me.gboPorductsSectionRol.ResumeLayout(False)
         Me.gboPorductsSectionRol.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnListUsers.ResumeLayout(False)
+        Me.pnListUsers.PerformLayout()
+        CType(Me.lstUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3374,4 +3520,18 @@ Partial Class FrmMain
     Friend WithEvents btnEnabledRol As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblNameRol As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblCreateRolTittle As MetroFramework.Controls.MetroLabel
+    Friend WithEvents pnListUsers As MetroFramework.Controls.MetroPanel
+    Friend WithEvents lblCreateUpdateUserId As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lstUsers As System.Windows.Forms.DataGridView
+    Friend WithEvents lblRolsSection As MetroFramework.Controls.MetroLink
+    Friend WithEvents lblListOfUsersTittle As MetroFramework.Controls.MetroLabel
+    Friend WithEvents btnCreateUser As MetroFramework.Controls.MetroButton
+    Friend WithEvents colIdLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents identificationLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents userNameLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents userLastNameLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents userPhoneLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents userEmailLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents userStateLstUsers As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents userEditLstUsers As System.Windows.Forms.DataGridViewImageColumn
 End Class
