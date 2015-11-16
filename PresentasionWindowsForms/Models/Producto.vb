@@ -6,6 +6,7 @@
     Private _horario As String
     Private _codigo_producto As String
     Private _id_tipo_product As Integer
+
     Public Property Id_Tipo_Product() As Integer
         Get
             Return _id_tipo_product
