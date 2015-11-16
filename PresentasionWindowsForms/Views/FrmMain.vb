@@ -1011,6 +1011,21 @@ Public Class FrmMain
         showCreateRolForm("-1")
         hideListOfRols()
     End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>3-11-2015</Date>
+    ''' <usecase>Update rol</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub lstListRols_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles lstListRols.CellContentClick
+        Dim id As String = lstListRols.Rows(e.RowIndex).Cells(0).Value
+        Select Case e.ColumnIndex
+            Case 3
+                hideListOfRols()
+                showCreateRolForm(id)
+        End Select
+    End Sub
 End Class
 
 
