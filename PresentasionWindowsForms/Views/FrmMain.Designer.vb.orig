@@ -79,7 +79,6 @@ Partial Class FrmMain
         Me.tSignOutUser = New MetroFramework.Controls.MetroTile()
         Me.tabUsers = New MetroFramework.Controls.MetroTabPage()
         Me.pnlCreateRol = New MetroFramework.Controls.MetroPanel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.tgUsersRol = New MetroFramework.Controls.MetroToggle()
         Me.lblUsersRol = New MetroFramework.Controls.MetroLabel()
         Me.gboPorductsSectionRol = New System.Windows.Forms.GroupBox()
@@ -119,14 +118,8 @@ Partial Class FrmMain
         Me.pnListUsers = New MetroFramework.Controls.MetroPanel()
         Me.lblCreateUpdateUserId = New MetroFramework.Controls.MetroLabel()
         Me.lstUsers = New System.Windows.Forms.DataGridView()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colIdentificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colState = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblRols = New MetroFramework.Controls.MetroLink()
         Me.btnCreateUser = New MetroFramework.Controls.MetroButton()
         Me.pnlCreateUser = New MetroFramework.Controls.MetroPanel()
@@ -156,7 +149,6 @@ Partial Class FrmMain
         Me.lblIdProspecto = New MetroFramework.Controls.MetroLabel()
         Me.btnCancelarListaSeguimiento = New MetroFramework.Controls.MetroButton()
         Me.lstSeguimientos = New System.Windows.Forms.DataGridView()
-         Me.Column10 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblListaSeguimientos = New MetroFramework.Controls.MetroLabel()
         Me.tabProspectus = New MetroFramework.Controls.MetroTabPage()
         Me.PnlListaProspectos = New MetroFramework.Controls.MetroPanel()
@@ -212,8 +204,6 @@ Partial Class FrmMain
         Me.horaFin3Acti_nmb = New System.Windows.Forms.NumericUpDown()
         Me.horaFin2Acti_nmb = New System.Windows.Forms.NumericUpDown()
         Me.horaFin1Acti_nmb = New System.Windows.Forms.NumericUpDown()
-        Me.minsIniActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.horaIniActi_lbl = New MetroFramework.Controls.MetroLabel()
         Me.minsIni5Acti_nmb = New System.Windows.Forms.NumericUpDown()
         Me.minsIni4Acti_nmb = New System.Windows.Forms.NumericUpDown()
         Me.minsIni3Acti_nmb = New System.Windows.Forms.NumericUpDown()
@@ -235,15 +225,6 @@ Partial Class FrmMain
         Me.dia3Acti_lbl = New MetroFramework.Controls.MetroLabel()
         Me.dia1Acti_lbl = New MetroFramework.Controls.MetroLabel()
         Me.tipoActi_cmb = New System.Windows.Forms.ComboBox()
-        Me.costoActi_text = New MetroFramework.Controls.MetroTextBox()
-        Me.nombreActi_text = New MetroFramework.Controls.MetroTextBox()
-        Me.codigoActi_text = New MetroFramework.Controls.MetroTextBox()
-        Me.nombreActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.tipoActi_lbl = New MetroFramework.Controls.MetroLabel()
-         Me.codigoActi_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.acti_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.horariosActi_grp = New System.Windows.Forms.GroupBox()
         Me.listaCarreras_pnl = New MetroFramework.Controls.MetroPanel()
         Me.listaCursos_pnl = New MetroFramework.Controls.MetroPanel()
@@ -308,9 +289,6 @@ Partial Class FrmMain
         Me.costoCarrera_lbl = New MetroFramework.Controls.MetroLabel()
         Me.carreraCodigo_lbl = New MetroFramework.Controls.MetroLabel()
         Me.registrarCarrera_lbl = New MetroFramework.Controls.MetroLabel()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.tCareers = New MetroFramework.Controls.MetroTile()
         Me.tActis = New MetroFramework.Controls.MetroTile()
         Me.tabsContainer = New MetroFramework.Controls.MetroTabControl()
@@ -370,7 +348,6 @@ Partial Class FrmMain
         CType(Me.listaCursos_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.listaCarreras_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.listaActis_pnl.SuspendLayout()
-        Me.MetroPanel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.listaActis_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.registrarCarrera_pnl.SuspendLayout()
@@ -394,7 +371,6 @@ Partial Class FrmMain
         CType(Me.horaIni3_nmbr, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni2_nmbr, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.horaIni1_nmbr, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox5.SuspendLayout()
         Me.tabsContainer.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -3641,25 +3617,6 @@ Partial Class FrmMain
         Me.acti_lbl.Size = New System.Drawing.Size(111, 25)
         Me.acti_lbl.TabIndex = 10
         Me.acti_lbl.Text = "Registrar Acti"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.SystemColors.Window
-        Me.GroupBox2.Location = New System.Drawing.Point(399, 200)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(124, 185)
-        Me.GroupBox2.TabIndex = 76
-        Me.GroupBox2.TabStop = False
-        '
-        'GroupBox6
-        '
-        Me.GroupBox6.BackColor = System.Drawing.SystemColors.Window
-        Me.GroupBox6.Location = New System.Drawing.Point(533, 200)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(124, 185)
-        Me.GroupBox6.TabIndex = 75
-        Me.GroupBox6.TabStop = False
-        '
         'horariosActi_grp
         '
         Me.horariosActi_grp.BackColor = System.Drawing.SystemColors.Window
@@ -5372,8 +5329,6 @@ Partial Class FrmMain
         CType(Me.horaIni3_nmbr, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.horaIni2_nmbr, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.horaIni1_nmbr, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
         Me.tabsContainer.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -5391,24 +5346,11 @@ Partial Class FrmMain
     Friend WithEvents PnlListaSeguimientos As MetroFramework.Controls.MetroPanel
     Friend WithEvents btnCancelarListaSeguimiento As MetroFramework.Controls.MetroButton
     Friend WithEvents lstSeguimientos As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn3 As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents Column10 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents lblListaSeguimientos As MetroFramework.Controls.MetroLabel
     Friend WithEvents PnlListaProspectos As MetroFramework.Controls.MetroPanel
     Friend WithEvents lblListaProspectos As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnCrearProspecto As MetroFramework.Controls.MetroButton
     Friend WithEvents lstProspectos As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn1 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents PnlNuevoProspecto As MetroFramework.Controls.MetroPanel
     Friend WithEvents btnListarSeguimientos As MetroFramework.Controls.MetroButton
     Friend WithEvents btnNuevoSeguimiento As MetroFramework.Controls.MetroButton
@@ -5484,23 +5426,15 @@ Partial Class FrmMain
     Friend WithEvents btnBackRolsUsers As MetroFramework.Controls.MetroButton
     Friend WithEvents lblIdRol As MetroFramework.Controls.MetroLabel
     Friend WithEvents lstRols As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colNameRol As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colStateRol As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn2 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents lblListOfRols As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnNewRol As MetroFramework.Controls.MetroButton
     Friend WithEvents pnListUsers As MetroFramework.Controls.MetroPanel
     Friend WithEvents lblCreateUpdateUserId As MetroFramework.Controls.MetroLabel
     Friend WithEvents lstUsers As System.Windows.Forms.DataGridView
-    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colIdentificacion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colState As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewImageColumn
+     Friend WithEvents colIdentificacion As System.Windows.Forms.DataGridViewTextBoxColumn
+     Friend WithEvents colState As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents lblRols As MetroFramework.Controls.MetroLink
     Friend WithEvents btnCreateUser As MetroFramework.Controls.MetroButton
     Friend WithEvents pnlCreateUser As MetroFramework.Controls.MetroPanel
@@ -5527,7 +5461,6 @@ Partial Class FrmMain
     Friend WithEvents lblCreateUserTittle As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblPermissionsRol As MetroFramework.Controls.MetroLabel
     Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents tgProspectusRol As MetroFramework.Controls.MetroToggle
     Friend WithEvents tgSalesRol As MetroFramework.Controls.MetroToggle
     Friend WithEvents lblConfigurationRol As MetroFramework.Controls.MetroLabel
@@ -5548,10 +5481,6 @@ Partial Class FrmMain
     Friend WithEvents listaCursos_pnl As MetroFramework.Controls.MetroPanel
     Friend WithEvents listaCursosVolver_btn As MetroFramework.Controls.MetroButton
     Friend WithEvents listaCursos_dg As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn5 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents listaCursos_lbl As MetroFramework.Controls.MetroLabel
     Friend WithEvents registrarCarrera_pnl As MetroFramework.Controls.MetroPanel
     Friend WithEvents min2_lbl As MetroFramework.Controls.MetroLabel
@@ -5641,15 +5570,8 @@ Partial Class FrmMain
     Friend WithEvents tipoActi_lbl As MetroFramework.Controls.MetroLabel
     Friend WithEvents codigoActi_lbl As MetroFramework.Controls.MetroLabel
     Friend WithEvents acti_lbl As MetroFramework.Controls.MetroLabel
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
-    Friend WithEvents horariosActi_grp As System.Windows.Forms.GroupBox
+     Friend WithEvents horariosActi_grp As System.Windows.Forms.GroupBox
     Friend WithEvents listaActis_pnl As MetroFramework.Controls.MetroPanel
-     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn6 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents vovlerActi_btn As MetroFramework.Controls.MetroButton
     Friend WithEvents listaActis_dg As System.Windows.Forms.DataGridView
     Friend WithEvents listaActis_lbl As MetroFramework.Controls.MetroLabel
