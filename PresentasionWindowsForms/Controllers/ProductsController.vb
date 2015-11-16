@@ -30,4 +30,39 @@ Public Class ProductsController
         End If
         Return resultado
     End Function
+    Shared Function RegistrarProducto(ByVal nombre As String, ByVal costo As Double, ByVal codigo As String, _
+                                      ByVal horarios As String, ByVal id_tipo_product As Integer, ByVal fecha_Inicio As Date) As Boolean
+
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Products", Method.POST)
+        Dim producto = New Producto
+        producto.Nombre = nombre
+        producto.Costo = costo
+        producto.Codigo_Producto = codigo
+        producto.Horario = horarios
+        producto.Id_Tipo_Product = id_tipo_product
+        producto.Fecha_Inicio = fecha_Inicio
+        request.RequestFormat = DataFormat.Json
+        request.AddBody(producto)
+        Dim response = client.Execute(Of Producto)(request)
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.Created)) Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+    Shared Function obtenerListaProductos() As List(Of Producto)
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Products", Method.GET)
+        request.RootElement = "result"
+        request.RequestFormat = DataFormat.Json
+        Dim response = client.Execute(request)
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
+            Dim productos As List(Of Producto) = JsonConvert.DeserializeObject(Of List(Of Producto))(response.Content)
+            Return productos
+        Else
+            Return Nothing
+        End If
+    End Function
 End Class

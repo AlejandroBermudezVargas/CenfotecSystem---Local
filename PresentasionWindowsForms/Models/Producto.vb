@@ -1,6 +1,6 @@
 ﻿Public Class Producto
 
-    Private _idProducto As Integer
+    Private _id_Producto As Integer
     Private _nombre As String
     Private _costo As Double
     Private _horario As String
@@ -51,12 +51,21 @@
         End Set
     End Property
 
-    Public Property Id() As String
+    Public Property Id_producto() As String
         Get
-            Return _idProducto
+            Return _id_Producto
         End Get
         Set(ByVal value As String)
-            _idProducto = value
+            _id_Producto = value
+        End Set
+    End Property
+    Private _fecha_inicio As Date
+    Public Property Fecha_Inicio() As Date
+        Get
+            Return _fecha_inicio
+        End Get
+        Set(ByVal value As Date)
+            _fecha_inicio = value
         End Set
     End Property
 

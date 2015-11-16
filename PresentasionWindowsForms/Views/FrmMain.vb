@@ -3,7 +3,7 @@ Imports System.Net.Mail
 Imports PresentasionWindowsForms.My.Resources
 
 Public Class FrmMain
-
+    Shared modProduct As Boolean = False
     Private user As UserModel
 
     ''' <summary>
@@ -51,6 +51,7 @@ Public Class FrmMain
         cboUsuario.Text = "Usuario"
         Me.llenarEventos()
         Me.llenarListaProspectos()
+        llenarTablaActis()
     End Sub
 
     Private Sub btnCrearEvento_Click(sender As Object, e As EventArgs) Handles btnCrearEvento.Click
@@ -590,6 +591,192 @@ Public Class FrmMain
         Static regularExpression As New Regex("^[a-zA-Z ]*$")
         Return regularExpression.IsMatch(text)
     End Function
+
+    Private Sub btnActiIco_Click(sender As Object, e As EventArgs) Handles btnActiIco.Click
+        listaActis_pnl.Visible = True
+    End Sub
+
+    Private Sub nuevoActi_btn_Click(sender As Object, e As EventArgs) Handles nuevoActi_btn.Click
+        llenarActi()
+        LlenarComboDias()
+        registrarActi_pnl.Visible = True
+    End Sub
+
+    Private Sub guardarAct_btn_Click(sender As Object, e As EventArgs) Handles guardarAct_btn.Click
+        ErrorProvider1.Clear()
+
+        Dim horarios = crearHorariosActi()
+        Dim id_tipo = (DirectCast(tipoActi_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
+        If nombreActi_text.Text = "" Then
+            ErrorProvider1.SetError(nombreActi_text, "Debe ingresar un nombre para el nuevo curso.")
+            Exit Sub
+        ElseIf codigoActi_text.Text = "" Then
+            ErrorProvider1.SetError(codigoActi_text, "Debe ingresar un código para el nuevo curso.")
+            Exit Sub
+        ElseIf costoActi_text.Text = "" Then
+            ErrorProvider1.SetError(costoActi_text, "Debe ingresar un costo para el nuevo curso.")
+            Exit Sub
+        ElseIf horarios.Length = 8 Then
+            horaIni1Acti_nmb.ToString()
+            ErrorProvider1.SetError(horariosActi_grp, "Debe elegir al menos un dia y una hora para el nuevo curso.")
+            Exit Sub
+        ElseIf Not modProduct Then
+            Dim IsCorrect = ProductsController.RegistrarProducto(nombreActi_text.Text, costoActi_text.Text, codigoActi_text.Text, horarios, id_tipo, fechaInicio_dp.Value)
+            If IsCorrect Then
+                MsgBox("El nuevo curso se ha agregado con exito.", MsgBoxStyle.Information)
+                limpiarFormActi()
+                llenarTablaActis()
+                listaActis_pnl.Visible = True
+            Else
+                MsgBox("No se ha podido ingresar el nuevo curso.", MsgBoxStyle.Critical)
+            End If
+        Else
+            Dim IsCorrect = ProductsController.RegistrarProducto(nombreActi_text.Text, costoActi_text.Text, codigoActi_text.Text, horarios, id_tipo, fechaInicio_dp.Value)
+            If IsCorrect Then
+                MsgBox("El nuevo curso se ha agregado con exito.", MsgBoxStyle.Information)
+                limpiarFormActi()
+                llenarTablaActis()
+                listaActis_pnl.Visible = True
+            Else
+                MsgBox("No se ha podido ingresar el nuevo curso.", MsgBoxStyle.Critical)
+            End If
+
+        End If
+    End Sub
+    Private Function crearHorariosActi() As String
+
+        Dim horario1 As String = ""
+        Dim horario2 As String = ""
+        Dim horario3 As String = ""
+        Dim horario4 As String = ""
+        Dim horario5 As String = ""
+
+        If horaIni1Acti_nmb.Value <> 0 Then
+            Dim horaIni = horaIni1Acti_nmb.Value.ToString("00")
+            Dim minIni = minsIni1Acti_nmb.Value.ToString("00")
+            Dim horaFin = horaFin1Acti_nmb.Value.ToString("00")
+            Dim minFin = minsFin1Acti_nmb.Value.ToString("00")
+            horario1 = dia1Acti_cmb.Text & " de " & horaIni & ":" & minIni & " a " & horaFin & ":" & minFin
+        End If
+
+        If horaIni2Acti_nmb.Value <> 0 Then
+            Dim horaIni = horaIni2Acti_nmb.Value.ToString("00")
+            Dim minIni = minsIni2Acti_nmb.Value.ToString("00")
+            Dim horaFin = horaFin2Acti_nmb.Value.ToString("00")
+            Dim minFin = minsFin2Acti_nmb.Value.ToString("00")
+            horario2 = dia2Acti_cmb.Text & " de " & horaIni & ":" & minIni & " a " & horaFin & ":" & minFin
+        End If
+
+        If horaIni3Acti_nmb.Value <> 0 Then
+            Dim horaIni = horaIni3Acti_nmb.Value.ToString("00")
+            Dim minIni = minsIni3Acti_nmb.Value.ToString("00")
+            Dim horaFin = horaFin3Acti_nmb.Value.ToString("00")
+            Dim minFin = minsFin3Acti_nmb.Value.ToString("00")
+            horario3 = dia3Acti_cmb.Text & " de " & horaIni & ":" & minIni & " a " & horaFin & ":" & minFin
+        End If
+
+        If horaIni4Acti_nmb.Value <> 0 Then
+            Dim horaIni = horaIni4Acti_nmb.Value.ToString("00")
+            Dim minIni = minsIni4Acti_nmb.Value.ToString("00")
+            Dim horaFin = horaFin4Acti_nmb.Value.ToString("00")
+            Dim minFin = minsFin4Acti_nmb.Value.ToString("00")
+            horario4 = dia4Acti_cmb.Text & " de " & horaIni & ":" & minIni & " a " & horaFin & ":" & minFin
+        End If
+
+        If horaIni5Acti_nmb.Value <> 0 Then
+            Dim horaIni = horaIni5Acti_nmb.Value.ToString("00")
+            Dim minIni = minsIni5Acti_nmb.Value.ToString("00")
+            Dim horaFin = horaFin5Acti_nmb.Value.ToString("00")
+            Dim minFin = minsFin5Acti_nmb.Value.ToString("00")
+            horario5 = dia5Acti_cmb.Text & " de " & horaIni & ":" & minIni & " a " & horaFin & ":" & minFin
+
+        End If
+
+        Dim resul As String = Trim(horario1 & vbNewLine & horario2 & vbNewLine & horario3 & vbNewLine & horario4 & vbNewLine & horario5)
+        Return resul
+    End Function
+
+    Private Sub llenarActi()
+
+        'Dim tipos As List(Of Tipo_Producto) = ProductTypeController.obtenerLista
+        Dim comboSource As New Dictionary(Of String, String)()
+        'For Each tipo As Tipo_Producto In tipos
+        comboSource.Add(1, "Acti")
+        'Next
+        tipoActi_cmb.DataSource = New BindingSource(comboSource, Nothing)
+        tipoActi_cmb.DisplayMember = "Value"
+        tipoActi_cmb.ValueMember = "Key"
+    End Sub
+    Private Sub limpiarFormActi()
+
+        nombreActi_text.Text = ""
+        costoActi_text.Text = ""
+        codigoActi_text.Text = ""
+        dia1Acti_cmb.Text = ""
+        dia2Acti_cmb.Text = ""
+        dia3Acti_cmb.Text = ""
+        dia4Acti_cmb.Text = ""
+        dia5Acti_cmb.Text = ""
+        horaFin1Acti_nmb.Value = 0
+        horaFin2Acti_nmb.Value = 0
+        horaFin3Acti_nmb.Value = 0
+        horaFin4Acti_nmb.Value = 0
+        horaIni1Acti_nmb.Value = 0
+        horaIni2Acti_nmb.Value = 0
+        horaIni3Acti_nmb.Value = 0
+        horaIni4Acti_nmb.Value = 0
+        minsFin1Acti_nmb.Value = 0
+        minsFin2Acti_nmb.Value = 0
+        minsFin3Acti_nmb.Value = 0
+        minsFin4Acti_nmb.Value = 0
+        minsFin5Acti_nmb.Value = 0
+        minsIni1Acti_nmb.Value = 0
+        minsIni2Acti_nmb.Value = 0
+        minsIni3Acti_nmb.Value = 0
+        minsIni4Acti_nmb.Value = 0
+        minsIni5Acti_nmb.Value = 0
+        registrarActi_pnl.Visible = False
+    End Sub
+
+    Private Sub llenarTablaActis()
+        listaActis_dg.Rows.Clear()
+        Dim actis As List(Of Producto) = ProductsController.obtenerListaProductos()
+        If (Not actis Is Nothing) Then
+            For Each acti As Producto In actis
+                If (acti.Id_Tipo_Product = 1) Then
+                    listaActis_dg.Rows.Add(acti.Id_producto, acti.Nombre, acti.Codigo_Producto, acti.Costo, acti.Horario, Format(acti.Fecha_inicio, "dd-MM-yyyy"))
+                End If
+            Next
+        End If
+    End Sub
+
+    Private Sub vovlerActi_btn_Click(sender As Object, e As EventArgs) Handles vovlerActi_btn.Click
+        listaActis_pnl.Visible = False
+    End Sub
+
+    Private Sub LlenarComboDias()
+
+        Dim dias() As String = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes"}
+
+        dia1Acti_cmb.MaxDropDownItems = dias.Length
+        dia2Acti_cmb.MaxDropDownItems = dias.Length
+        dia3Acti_cmb.MaxDropDownItems = dias.Length
+        dia4Acti_cmb.MaxDropDownItems = dias.Length
+        dia5Acti_cmb.MaxDropDownItems = dias.Length
+
+        For i = 0 To (dias.Length - 1)
+            dia1Acti_cmb.Items.Add(dias(i))
+            dia2Acti_cmb.Items.Add(dias(i))
+            dia3Acti_cmb.Items.Add(dias(i))
+            dia4Acti_cmb.Items.Add(dias(i))
+            dia5Acti_cmb.Items.Add(dias(i))
+
+        Next
+    End Sub
+
+    Private Sub cancelarAct_btn_Click(sender As Object, e As EventArgs) Handles cancelarAct_btn.Click
+        registrarActi_pnl.Visible = False
+    End Sub
 End Class
 
 
