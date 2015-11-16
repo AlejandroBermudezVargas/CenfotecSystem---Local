@@ -146,6 +146,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a No se ha podido actualizar el usuario!.
+        '''</summary>
+        Friend Shared ReadOnly Property UPDATE__USER_ERROR() As String
+            Get
+                Return ResourceManager.GetString("UPDATE__USER_ERROR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a No se ha podido actualizar el rol!.
         '''</summary>
         Friend Shared ReadOnly Property UPDATE_ROL_ERROR() As String
@@ -160,6 +169,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property UPDATE_ROL_SUCCESS() As String
             Get
                 Return ResourceManager.GetString("UPDATE_ROL_SUCCESS", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Usuario actualizado correctamente!.
+        '''</summary>
+        Friend Shared ReadOnly Property UPDATE_USER_SUCCESS() As String
+            Get
+                Return ResourceManager.GetString("UPDATE_USER_SUCCESS", resourceCulture)
             End Get
         End Property
         

@@ -3256,6 +3256,7 @@ Partial Class FrmMain
         Me.pnlCreateUser.VerticalScrollbarBarColor = True
         Me.pnlCreateUser.VerticalScrollbarHighlightOnWheel = False
         Me.pnlCreateUser.VerticalScrollbarSize = 10
+        Me.pnlCreateUser.Visible = False
         '
         'lblPasswordUserBackup
         '

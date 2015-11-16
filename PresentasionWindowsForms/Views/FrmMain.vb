@@ -1081,16 +1081,113 @@ Public Class FrmMain
         End If
     End Sub
 
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>List users</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub lblRolsSection_Click(sender As Object, e As EventArgs) Handles lblRolsSection.Click
         populateListOfRols()
         hideListUserForm()
         showListOfRols()
     End Sub
 
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>List rols</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub btnBackRolsUsers_Click(sender As Object, e As EventArgs) Handles btnBackRolsUsers.Click
         hideListOfRols()
         showListUserForm()
     End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Create user</usecase>
+    ''' <usecase>Update user</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub btnSaveCreateUser_Click(sender As Object, e As EventArgs) Handles btnSaveCreateUser.Click
+        Dim id_rol As String = DirectCast(cboRolCreateUser.SelectedItem, KeyValuePair(Of String, String)).Key
+        If (validateCreateUserForm()) Then
+            If String.Compare(lblCreateUpdateUserId.Text, "-1") = 0 Then
+                If (Users_controller.create(txtIdCreateUser.Text, txtNameCreateUser.Text, txtLastNameCreateUser.Text,
+                                    txtEmailCreateUser.Text, txtPhoneCreateUser.Text, txtPasswordCreateUser.Text,
+                                    id_rol, tgEnableCreateUser.Checked, cboDateCreateUser.Value)) Then
+                    showListUserForm()
+                    hideListUserForm()
+                    MsgBox(respuestasDelSistema.CREATE_USER_SUCCESS, MsgBoxStyle.Information)
+                Else
+                    MsgBox(respuestasDelSistema.UPDATE__USER_ERROR, MsgBoxStyle.Critical)
+                End If
+            Else
+                If (chkChangeUserPassword.Checked) Then
+                    If (Users_controller.updateUserAndPassword(lblCreateUpdateUserId.Text, txtIdCreateUser.Text, txtNameCreateUser.Text, txtLastNameCreateUser.Text,
+                                                txtEmailCreateUser.Text, txtPhoneCreateUser.Text, txtPasswordCreateUser.Text,
+                                                id_rol, tgEnableCreateUser.Checked, cboDateCreateUser.Value)) Then
+                        MsgBox(respuestasDelSistema.UPDATE_USER_SUCCESS, MsgBoxStyle.Information)
+                        showListUserForm()
+                        hideListUserForm()
+                    Else
+                        MsgBox(respuestasDelSistema.UPDATE__USER_ERROR, MsgBoxStyle.Critical)
+                    End If
+                Else
+                    If (Users_controller.update(lblCreateUpdateUserId.Text, txtIdCreateUser.Text, txtNameCreateUser.Text, txtLastNameCreateUser.Text,
+                                                txtEmailCreateUser.Text, txtPhoneCreateUser.Text, txtPasswordCreateUser.Text,
+                                                id_rol, tgEnableCreateUser.Checked, cboDateCreateUser.Value)) Then
+                        MsgBox(respuestasDelSistema.UPDATE_USER_SUCCESS, MsgBoxStyle.Information)
+                        showListUserForm()
+                        hideListUserForm()
+                    Else
+                        MsgBox(respuestasDelSistema.UPDATE__USER_ERROR, MsgBoxStyle.Critical)
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Create user</usecase>
+    ''' <usecase>Update user</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Function validateCreateUserForm() As Boolean
+        Dim result As Boolean = True
+        If isAUserId(txtIdCreateUser.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtIdCreateUser, ValidationsMessages.INVALID_USER_ID)
+            txtIdCreateUser.WithError = True
+        End If
+        If Not OnlyTextAllowSpaces(txtNameCreateUser.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtNameCreateUser, ValidationsMessages.ONLY_TEXT_ALLOW_SPACES)
+        End If
+        If Not OnlyTextAllowSpaces(txtLastNameCreateUser.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtLastNameCreateUser, ValidationsMessages.ONLY_TEXT_ALLOW_SPACES)
+        End If
+        If Not IsEmail(txtEmailCreateUser.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtEmailCreateUser, ValidationsMessages.INVALID_EMAIL)
+        End If
+        If Not isAPhoneNumber(txtPhoneCreateUser.Text) Or txtPhoneCreateUser.Text.Length < 8 Then
+            result = False
+            ErrorProvider1.SetError(txtPhoneCreateUser, ValidationsMessages.INVALID_PHONE_NUMBER)
+        End If
+        If (chkChangeUserPassword.Checked) Then
+            If Not IsGoodPassword(txtPasswordCreateUser.Text) Then
+                ErrorProvider1.SetError(txtPasswordCreateUser, ValidationsMessages.PASSWORD_INCORRECT_FORMAT)
+                result = False
+            End If
+        End If
+        Return result
+    End Function
 End Class
 
 
