@@ -1261,6 +1261,31 @@ Public Class FrmMain
         End If
     End Sub
 
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Update user</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub lstUsers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles lstUsers.CellContentClick
+        Select Case e.ColumnIndex
+            Case 7
+                Dim id As String = lstUsers.Rows(e.RowIndex).Cells(0).Value
+                hideListUserForm()
+                showCreateUserForm(id)
+        End Select
+    End Sub
+
+    ''' <summary>
+    ''' <autor>Alejandro Bermudez Vargas</autor>
+    ''' <Date>5-11-2015</Date>
+    ''' <usecase>Update user</usecase>
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub chkChangeUserPassword_Click(sender As Object, e As EventArgs) Handles chkChangeUserPassword.Click
+        txtPasswordCreateUser.Enabled = chkChangeUserPassword.Checked
+        txtPasswordCreateUser.Text = lblPasswordUserBackup.Text
+    End Sub
 End Class
 
 
