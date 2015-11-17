@@ -73,12 +73,12 @@ Partial Class FrmLogin
         Me.txtPasswordLogin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtPasswordLogin.CustomButton.UseSelectable = True
         Me.txtPasswordLogin.CustomButton.Visible = False
-        Me.txtPasswordLogin.Lines = New String() {"Admin1379"}
+        Me.txtPasswordLogin.Lines = New String(-1) {}
         Me.txtPasswordLogin.Location = New System.Drawing.Point(117, 292)
         Me.txtPasswordLogin.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
         Me.txtPasswordLogin.MaxLength = 32767
         Me.txtPasswordLogin.Name = "txtPasswordLogin"
-        Me.txtPasswordLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPasswordLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.txtPasswordLogin.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.txtPasswordLogin.SelectedText = ""
         Me.txtPasswordLogin.SelectionLength = 0
@@ -86,7 +86,6 @@ Partial Class FrmLogin
         Me.txtPasswordLogin.Size = New System.Drawing.Size(266, 23)
         Me.txtPasswordLogin.Style = MetroFramework.MetroColorStyle.Purple
         Me.txtPasswordLogin.TabIndex = 12
-        Me.txtPasswordLogin.Text = "Admin1379"
         Me.txtPasswordLogin.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtPasswordLogin.UseSelectable = True
         Me.txtPasswordLogin.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -115,7 +114,7 @@ Partial Class FrmLogin
         Me.txtEmailLogin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtEmailLogin.CustomButton.UseSelectable = True
         Me.txtEmailLogin.CustomButton.Visible = False
-        Me.txtEmailLogin.Lines = New String() {"admin@ucenfotec.ac.cr"}
+        Me.txtEmailLogin.Lines = New String(-1) {}
         Me.txtEmailLogin.Location = New System.Drawing.Point(117, 245)
         Me.txtEmailLogin.Margin = New System.Windows.Forms.Padding(4, 10, 3, 3)
         Me.txtEmailLogin.MaxLength = 32767
@@ -128,7 +127,6 @@ Partial Class FrmLogin
         Me.txtEmailLogin.Size = New System.Drawing.Size(266, 23)
         Me.txtEmailLogin.Style = MetroFramework.MetroColorStyle.Purple
         Me.txtEmailLogin.TabIndex = 10
-        Me.txtEmailLogin.Text = "admin@ucenfotec.ac.cr"
         Me.txtEmailLogin.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtEmailLogin.UseSelectable = True
         Me.txtEmailLogin.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))

@@ -1159,7 +1159,7 @@ Public Class FrmMain
     ''' <remarks></remarks>
     Private Function validateCreateUserForm() As Boolean
         Dim result As Boolean = True
-        If isAUserId(txtIdCreateUser.Text) Then
+        If Not isAUserId(txtIdCreateUser.Text) Then
             result = False
             ErrorProvider1.SetError(txtIdCreateUser, ValidationsMessages.INVALID_USER_ID)
             txtIdCreateUser.WithError = True
