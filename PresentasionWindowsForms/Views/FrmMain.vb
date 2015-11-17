@@ -1434,6 +1434,88 @@ Public Class FrmMain
     Private Sub btnCancelUpdateUserInfo_Click(sender As Object, e As EventArgs) Handles btnCancelUpdateUserInfo.Click
         hideUpdateUserInfo()
     End Sub
+
+    Private Sub btnCarrerasIcon_Click(sender As Object, e As EventArgs) Handles btnCarrerasIcon.Click
+        llenarTablaCarreras()
+        pnlListaCarreras.Visible = True
+    End Sub
+
+    Private Sub btnGuardarCarrera_Click(sender As Object, e As EventArgs) Handles btnGuardarCarrera.Click
+        ErrorProvider1.Clear()
+        Dim horarios = "-"
+        Dim fechaInicio = CDate("01-01-1900")
+        Dim id_tipo = (DirectCast(tipoCarrera_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
+        If nombreCarrera_text.Text = "" Then
+            ErrorProvider1.SetError(nombreCarrera_text, "Debe ingresar un nombre para la nueva carrera.")
+            Exit Sub
+        ElseIf codigoCarrera_text.Text = "" Then
+            ErrorProvider1.SetError(codigoCarrera_text, "Debe ingresar un código para la nueva carrera.")
+            Exit Sub
+        ElseIf costoCarrera_text.Text = "" Then
+            ErrorProvider1.SetError(costoCarrera_text, "Debe ingresar un costo para la nueva carrera.")
+            Exit Sub
+        Else
+
+            Dim IsCorrect = ProductsController.RegistrarProducto(nombreCarrera_text.Text, costoCarrera_text.Text, codigoCarrera_text.Text, horarios, id_tipo, fechaInicio)
+
+            If IsCorrect Then
+                MsgBox("La nueva carrera se ha agregado con exito.", MsgBoxStyle.Information)
+                limpiarFormCarrera()
+                llenarTablaCarreras()
+                pnlRegistrarCarrera.Visible = False
+                pnlListaCarreras.Visible = True
+            Else
+                MsgBox("No se ha podido ingresar la nueva carrera.", MsgBoxStyle.Critical)
+            End If
+        End If
+    End Sub
+
+    Private Sub btnCancelarCarrera_Click(sender As Object, e As EventArgs) Handles btnCancelarCarrera.Click
+        pnlRegistrarCarrera.Visible = False
+    End Sub
+
+    Private Sub limpiarFormCarrera()
+        nombreCarrera_text.Text = ""
+        costoCarrera_text.Text = ""
+        codigoCarrera_text.Text = ""
+        pnlRegistrarCarrera.Visible = False
+    End Sub
+
+    Private Sub btnVolver_Carrera_Click(sender As Object, e As EventArgs) Handles btnVolver_Carrera.Click
+        pnlListaCarreras.Visible = False
+    End Sub
+
+    Private Sub btnNueva_Carrera_Click(sender As Object, e As EventArgs) Handles btnNueva_Carrera.Click
+        llenarComboTiposCarrera()
+        pnlRegistrarCarrera.Visible = True
+    End Sub
+
+    Private Sub llenarTablaCarreras()
+        listaCarreras_dg.Rows.Clear()
+        Dim carreras As List(Of Producto) = ProductsController.obtenerListaProductos()
+        If (Not carreras Is Nothing) Then
+            For Each prod As Producto In carreras
+                If (prod.Id_Tipo_Product = 2) Then
+                    listaCarreras_dg.Rows.Add(prod.Id_producto, prod.Nombre, prod.Codigo_Producto, prod.Costo)
+                End If
+            Next
+        Else
+            MsgBox("No se han encontrado carreras para cargar", vbCritical)
+        End If
+    End Sub
+
+    Private Sub llenarComboTiposCarrera()
+
+        Dim comboSource As New Dictionary(Of String, String)()
+        comboSource.Add(2, "Carrera")
+        tipoCarrera_cmb.DataSource = New BindingSource(comboSource, Nothing)
+        tipoCarrera_cmb.DisplayMember = "Value"
+        tipoCarrera_cmb.ValueMember = "Key"
+    End Sub
+
+    Private Sub btnExportar_Carreras_Click(sender As Object, e As EventArgs) Handles btnExportar_Carreras.Click
+
+    End Sub
 End Class
 
 
