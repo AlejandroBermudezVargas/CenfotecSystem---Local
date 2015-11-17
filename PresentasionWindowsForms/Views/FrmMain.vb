@@ -76,9 +76,14 @@ Public Class FrmMain
             MsgBox("El Evento se creo con exito", MsgBoxStyle.Critical, "Error")
         End If
         idEventoModificar = Nothing
+        PanelListarEventos.Visible = True
+        PanelListarEventos.Enabled = True
+        PanelCrearEvento.Enabled = False
+        PanelCrearEvento.Visible = False
     End Sub
 
     Private Sub llenarEventos()
+        DataListarEventos.Rows.Clear()
         Dim eventos = EventosController.ListarEventos()
         If (Not eventos.Equals(Nothing)) Then
             For Each eve As Evento In eventos
