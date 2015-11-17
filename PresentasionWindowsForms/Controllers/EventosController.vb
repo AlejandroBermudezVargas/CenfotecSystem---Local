@@ -13,7 +13,7 @@ Public Class EventosController
         Dim request As RestRequest
         If (id <> Nothing) Then
             evento.IdEvento = id
-            request = New RestRequest("Events/" + evento.IdEvento.ToString, Method.PUT) 'esta basura no sirve
+            request = New RestRequest("Events/" + evento.IdEvento.ToString, Method.PUT)
             request.RequestFormat = DataFormat.Json
         Else
             request = New RestRequest("Events", Method.POST)
@@ -21,7 +21,7 @@ Public Class EventosController
         End If
         request.AddBody(evento)
         Dim response = cliente.Execute(Of Evento)(request)
-        If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.Created)) Or (response.StatusCode.Equals(System.Net.HttpStatusCode.NoContent)) Then
             Return True
         Else
             Return Nothing
