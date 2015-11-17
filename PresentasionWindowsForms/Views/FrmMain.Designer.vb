@@ -42,11 +42,6 @@ Partial Class FrmMain
         Me.btnExportar_Carreras = New MetroFramework.Controls.MetroButton()
         Me.btnVolver_Carrera = New MetroFramework.Controls.MetroButton()
         Me.listaCarreras_dg = New System.Windows.Forms.DataGridView()
-        Me.id_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.codigo_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.costo_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editarCarrera = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblListaCrreras = New MetroFramework.Controls.MetroLabel()
         Me.btnNueva_Carrera = New MetroFramework.Controls.MetroButton()
         Me.registrarActi_pnl = New MetroFramework.Controls.MetroPanel()
@@ -355,6 +350,11 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
+        Me.id_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigo_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.costo_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editarCarrera = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.pnlRegistrarCarrera.SuspendLayout()
@@ -708,32 +708,6 @@ Partial Class FrmMain
         Me.listaCarreras_dg.RowHeadersVisible = False
         Me.listaCarreras_dg.Size = New System.Drawing.Size(739, 344)
         Me.listaCarreras_dg.TabIndex = 12
-        '
-        'id_carrera
-        '
-        Me.id_carrera.HeaderText = "Id"
-        Me.id_carrera.Name = "id_carrera"
-        Me.id_carrera.Visible = False
-        '
-        'nombre_carrera
-        '
-        Me.nombre_carrera.HeaderText = "Nombre"
-        Me.nombre_carrera.Name = "nombre_carrera"
-        '
-        'codigo_carrera
-        '
-        Me.codigo_carrera.HeaderText = "Codigo"
-        Me.codigo_carrera.Name = "codigo_carrera"
-        '
-        'costo_carrera
-        '
-        Me.costo_carrera.HeaderText = "Costo"
-        Me.costo_carrera.Name = "costo_carrera"
-        '
-        'editarCarrera
-        '
-        Me.editarCarrera.HeaderText = ""
-        Me.editarCarrera.Name = "editarCarrera"
         '
         'lblListaCrreras
         '
@@ -4367,6 +4341,33 @@ Partial Class FrmMain
         Me.lblCloseSession.TabIndex = 5
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
+        '
+        'id_carrera
+        '
+        Me.id_carrera.HeaderText = "Id"
+        Me.id_carrera.Name = "id_carrera"
+        Me.id_carrera.Visible = False
+        '
+        'nombre_carrera
+        '
+        Me.nombre_carrera.HeaderText = "Nombre"
+        Me.nombre_carrera.Name = "nombre_carrera"
+        '
+        'codigo_carrera
+        '
+        Me.codigo_carrera.HeaderText = "Codigo"
+        Me.codigo_carrera.Name = "codigo_carrera"
+        '
+        'costo_carrera
+        '
+        Me.costo_carrera.HeaderText = "Costo"
+        Me.costo_carrera.Name = "costo_carrera"
+        '
+        'editarCarrera
+        '
+        Me.editarCarrera.HeaderText = ""
+        Me.editarCarrera.Name = "editarCarrera"
+        Me.editarCarrera.Width = 500
         '
         'FrmMain
         '
