@@ -1,5 +1,15 @@
 ﻿Public Class Sale
 
+    Private _id_sale As Integer
+    Public Property Id_Sale() As Integer
+        Get
+            Return _id_sale
+        End Get
+        Set(ByVal value As Integer)
+            _id_sale = value
+        End Set
+    End Property
+
     Private _fecha As Date
     Public Property Fecha() As Date
         Get
