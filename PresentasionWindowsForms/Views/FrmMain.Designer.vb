@@ -121,6 +121,11 @@ Partial Class FrmMain
         Me.PanelListarEventos = New MetroFramework.Controls.MetroPanel()
         Me.btnCrearEvento = New MetroFramework.Controls.MetroButton()
         Me.DataListarEventos = New System.Windows.Forms.DataGridView()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaInicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaFin = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEvento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editar = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblEventos = New MetroFramework.Controls.MetroLabel()
         Me.PanelCrearEvento = New MetroFramework.Controls.MetroPanel()
         Me.dateFin = New MetroFramework.Controls.MetroDateTime()
@@ -349,11 +354,6 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaInicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaFin = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEvento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editar = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.pnlRegistrarCarrera.SuspendLayout()
@@ -429,7 +429,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 1
+        Me.Main.SelectedIndex = 0
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -1174,7 +1174,7 @@ Partial Class FrmMain
         Me.dia1Acti_lbl.AutoSize = True
         Me.dia1Acti_lbl.Location = New System.Drawing.Point(111, 243)
         Me.dia1Acti_lbl.Name = "dia1Acti_lbl"
-        Me.dia1Acti_lbl.Size = New System.Drawing.Size(39, 19)
+        Me.dia1Acti_lbl.Size = New System.Drawing.Size(37, 19)
         Me.dia1Acti_lbl.TabIndex = 39
         Me.dia1Acti_lbl.Text = "Dia 1"
         '
@@ -1521,6 +1521,33 @@ Partial Class FrmMain
         Me.DataListarEventos.Name = "DataListarEventos"
         Me.DataListarEventos.Size = New System.Drawing.Size(643, 357)
         Me.DataListarEventos.TabIndex = 13
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Lugar"
+        Me.Nombre.Name = "Nombre"
+        '
+        'FechaInicio
+        '
+        Me.FechaInicio.HeaderText = "Fecha Inicio"
+        Me.FechaInicio.Name = "FechaInicio"
+        '
+        'FechaFin
+        '
+        Me.FechaFin.HeaderText = "Finaliza"
+        Me.FechaFin.Name = "FechaFin"
+        '
+        'IdEvento
+        '
+        Me.IdEvento.HeaderText = "ID"
+        Me.IdEvento.Name = "IdEvento"
+        '
+        'editar
+        '
+        Me.editar.HeaderText = "Editar"
+        Me.editar.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.editar.Name = "editar"
+        Me.editar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'lblEventos
         '
@@ -1945,7 +1972,7 @@ Partial Class FrmMain
         Me.lblIdSeguimiento.AutoSize = True
         Me.lblIdSeguimiento.Location = New System.Drawing.Point(648, 9)
         Me.lblIdSeguimiento.Name = "lblIdSeguimiento"
-        Me.lblIdSeguimiento.Size = New System.Drawing.Size(22, 19)
+        Me.lblIdSeguimiento.Size = New System.Drawing.Size(20, 19)
         Me.lblIdSeguimiento.TabIndex = 48
         Me.lblIdSeguimiento.Text = "-1"
         Me.lblIdSeguimiento.Visible = False
@@ -1955,7 +1982,7 @@ Partial Class FrmMain
         Me.lblIdProspecto.AutoSize = True
         Me.lblIdProspecto.Location = New System.Drawing.Point(671, 9)
         Me.lblIdProspecto.Name = "lblIdProspecto"
-        Me.lblIdProspecto.Size = New System.Drawing.Size(22, 19)
+        Me.lblIdProspecto.Size = New System.Drawing.Size(20, 19)
         Me.lblIdProspecto.TabIndex = 47
         Me.lblIdProspecto.Text = "-1"
         Me.lblIdProspecto.Visible = False
@@ -2291,7 +2318,7 @@ Partial Class FrmMain
         Me.lblTelefonoProspecto.AutoSize = True
         Me.lblTelefonoProspecto.Location = New System.Drawing.Point(24, 180)
         Me.lblTelefonoProspecto.Name = "lblTelefonoProspecto"
-        Me.lblTelefonoProspecto.Size = New System.Drawing.Size(60, 19)
+        Me.lblTelefonoProspecto.Size = New System.Drawing.Size(58, 19)
         Me.lblTelefonoProspecto.TabIndex = 16
         Me.lblTelefonoProspecto.Text = "Telefono"
         '
@@ -2564,7 +2591,7 @@ Partial Class FrmMain
         Me.lblVendedoresSlt.AutoSize = True
         Me.lblVendedoresSlt.Location = New System.Drawing.Point(22, 64)
         Me.lblVendedoresSlt.Name = "lblVendedoresSlt"
-        Me.lblVendedoresSlt.Size = New System.Drawing.Size(79, 19)
+        Me.lblVendedoresSlt.Size = New System.Drawing.Size(78, 19)
         Me.lblVendedoresSlt.TabIndex = 15
         Me.lblVendedoresSlt.Text = "Vendedores"
         '
@@ -2859,7 +2886,7 @@ Partial Class FrmMain
         Me.crearKPIVentas.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.crearKPIVentas.Location = New System.Drawing.Point(4, 9)
         Me.crearKPIVentas.Name = "crearKPIVentas"
-        Me.crearKPIVentas.Size = New System.Drawing.Size(137, 25)
+        Me.crearKPIVentas.Size = New System.Drawing.Size(135, 25)
         Me.crearKPIVentas.TabIndex = 11
         Me.crearKPIVentas.Text = "Crear KPI Ventas"
         '
@@ -3217,7 +3244,7 @@ Partial Class FrmMain
         Me.lblPhoneUpdateUserInfo.AutoSize = True
         Me.lblPhoneUpdateUserInfo.Location = New System.Drawing.Point(24, 215)
         Me.lblPhoneUpdateUserInfo.Name = "lblPhoneUpdateUserInfo"
-        Me.lblPhoneUpdateUserInfo.Size = New System.Drawing.Size(60, 19)
+        Me.lblPhoneUpdateUserInfo.Size = New System.Drawing.Size(58, 19)
         Me.lblPhoneUpdateUserInfo.TabIndex = 15
         Me.lblPhoneUpdateUserInfo.Text = "Telefono"
         '
@@ -3628,7 +3655,7 @@ Partial Class FrmMain
         Me.lblPhoneCreateUser.AutoSize = True
         Me.lblPhoneCreateUser.Location = New System.Drawing.Point(24, 215)
         Me.lblPhoneCreateUser.Name = "lblPhoneCreateUser"
-        Me.lblPhoneCreateUser.Size = New System.Drawing.Size(60, 19)
+        Me.lblPhoneCreateUser.Size = New System.Drawing.Size(58, 19)
         Me.lblPhoneCreateUser.TabIndex = 15
         Me.lblPhoneCreateUser.Text = "Telefono"
         '
@@ -4105,7 +4132,7 @@ Partial Class FrmMain
         Me.lblReportsRol.AutoSize = True
         Me.lblReportsRol.Location = New System.Drawing.Point(7, 171)
         Me.lblReportsRol.Name = "lblReportsRol"
-        Me.lblReportsRol.Size = New System.Drawing.Size(61, 19)
+        Me.lblReportsRol.Size = New System.Drawing.Size(62, 19)
         Me.lblReportsRol.TabIndex = 34
         Me.lblReportsRol.Text = "Reportes"
         '
@@ -4141,7 +4168,7 @@ Partial Class FrmMain
         Me.lblSalesRol.AutoSize = True
         Me.lblSalesRol.Location = New System.Drawing.Point(6, 59)
         Me.lblSalesRol.Name = "lblSalesRol"
-        Me.lblSalesRol.Size = New System.Drawing.Size(47, 19)
+        Me.lblSalesRol.Size = New System.Drawing.Size(46, 19)
         Me.lblSalesRol.TabIndex = 29
         Me.lblSalesRol.Text = "Ventas"
         '
@@ -4150,7 +4177,7 @@ Partial Class FrmMain
         Me.lblPermissionsRol.AutoSize = True
         Me.lblPermissionsRol.Location = New System.Drawing.Point(23, 133)
         Me.lblPermissionsRol.Name = "lblPermissionsRol"
-        Me.lblPermissionsRol.Size = New System.Drawing.Size(62, 19)
+        Me.lblPermissionsRol.Size = New System.Drawing.Size(61, 19)
         Me.lblPermissionsRol.TabIndex = 26
         Me.lblPermissionsRol.Text = "Permisos"
         '
@@ -4334,33 +4361,6 @@ Partial Class FrmMain
         Me.lblCloseSession.TabIndex = 5
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Lugar"
-        Me.Nombre.Name = "Nombre"
-        '
-        'FechaInicio
-        '
-        Me.FechaInicio.HeaderText = "Fecha Inicio"
-        Me.FechaInicio.Name = "FechaInicio"
-        '
-        'FechaFin
-        '
-        Me.FechaFin.HeaderText = "Finaliza"
-        Me.FechaFin.Name = "FechaFin"
-        '
-        'IdEvento
-        '
-        Me.IdEvento.HeaderText = "ID"
-        Me.IdEvento.Name = "IdEvento"
-        '
-        'editar
-        '
-        Me.editar.HeaderText = "Editar"
-        Me.editar.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.editar.Name = "editar"
-        Me.editar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'FrmMain
         '
