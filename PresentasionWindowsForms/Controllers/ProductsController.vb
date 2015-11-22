@@ -107,7 +107,9 @@ Public Class ProductsController
         Dim fecha_inicio As Date
         Dim errores As Boolean
         Dim registrosError As String
+        Dim cantRegistros As Integer
 
+        cantRegistros = 0
         tipoProdImport = ptipoProdImport
         horario = ""
         nombreProd = ""
@@ -126,7 +128,13 @@ Public Class ProductsController
                    & "Verifique el archivo e inténtelo de nuevo.", MsgBoxStyle.Critical)
             Exit Sub
         Else
-            MsgBox("Se importarán " & rowCount - 1 & " registros.", MsgBoxStyle.Information)
+
+            For i = 2 To rowCount
+                If CStr(rango.Cells(i, 4).Value) = ptipoProdImport Then
+                    cantRegistros = cantRegistros + 1
+                End If
+            Next
+            MsgBox("Se importarán " & cantRegistros & " registros.", MsgBoxStyle.Information)
             For i = 2 To rowCount
                 For j = 1 To colCount
                     fieldNum = j
