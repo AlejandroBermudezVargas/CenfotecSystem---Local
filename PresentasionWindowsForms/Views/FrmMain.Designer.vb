@@ -25,12 +25,6 @@ Partial Class FrmMain
         Me.components = New System.ComponentModel.Container()
         Me.Main = New MetroFramework.Controls.MetroTabControl()
         Me.TabProductos = New MetroFramework.Controls.MetroTabPage()
-        Me.pnlListaCarreras = New MetroFramework.Controls.MetroPanel()
-        Me.btnExportar_Carreras = New MetroFramework.Controls.MetroButton()
-        Me.btnVolver_Carrera = New MetroFramework.Controls.MetroButton()
-        Me.listaCarreras_dg = New System.Windows.Forms.DataGridView()
-        Me.lblListaCrreras = New MetroFramework.Controls.MetroLabel()
-        Me.btnNueva_Carrera = New MetroFramework.Controls.MetroButton()
         Me.pnlRegistrarCarrera = New MetroFramework.Controls.MetroPanel()
         Me.btnCancelarCarrera = New MetroFramework.Controls.MetroButton()
         Me.lblCostoCarrera = New MetroFramework.Controls.MetroLabel()
@@ -44,6 +38,17 @@ Partial Class FrmMain
         Me.nombreCarrera_text = New MetroFramework.Controls.MetroTextBox()
         Me.lblNombreActi = New MetroFramework.Controls.MetroLabel()
         Me.lblRegistrarCarrera = New MetroFramework.Controls.MetroLabel()
+        Me.pnlListaCarreras = New MetroFramework.Controls.MetroPanel()
+        Me.btnExportar_Carreras = New MetroFramework.Controls.MetroButton()
+        Me.btnVolver_Carrera = New MetroFramework.Controls.MetroButton()
+        Me.listaCarreras_dg = New System.Windows.Forms.DataGridView()
+        Me.id_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigo_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.costo_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editarCarrera = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.lblListaCrreras = New MetroFramework.Controls.MetroLabel()
+        Me.btnNueva_Carrera = New MetroFramework.Controls.MetroButton()
         Me.registrarActi_pnl = New MetroFramework.Controls.MetroPanel()
         Me.fechaInicio_dp = New System.Windows.Forms.DateTimePicker()
         Me.fechaInicioCurso = New MetroFramework.Controls.MetroLabel()
@@ -101,6 +106,13 @@ Partial Class FrmMain
         Me.exportarActi_btn = New MetroFramework.Controls.MetroButton()
         Me.vovlerActi_btn = New MetroFramework.Controls.MetroButton()
         Me.listaActis_dg = New System.Windows.Forms.DataGridView()
+        Me.colIdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colNombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCodigoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCostoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colHorarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colFechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editarActi = New System.Windows.Forms.DataGridViewImageColumn()
         Me.listaActis_lbl = New MetroFramework.Controls.MetroLabel()
         Me.nuevoActi_btn = New MetroFramework.Controls.MetroButton()
         Me.btnActiIco = New MetroFramework.Controls.MetroTile()
@@ -329,6 +341,27 @@ Partial Class FrmMain
         Me.lblNameRol = New MetroFramework.Controls.MetroLabel()
         Me.lblCreateRolTittle = New MetroFramework.Controls.MetroLabel()
         Me.TabVentas = New MetroFramework.Controls.MetroTabPage()
+        Me.pnlListarVentas = New MetroFramework.Controls.MetroPanel()
+        Me.pnlConsultarVentas = New MetroFramework.Controls.MetroPanel()
+        Me.btnVolverConsultaVentas = New MetroFramework.Controls.MetroButton()
+        Me.grpConsultaIngresos = New System.Windows.Forms.GroupBox()
+        Me.ingresosConsulta_dg = New System.Windows.Forms.DataGridView()
+        Me.nombreUsuarioIngresos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IngresosConsulta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.periodoIngresos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblIngresos = New MetroFramework.Controls.MetroLabel()
+        Me.grpConsultaVentas = New System.Windows.Forms.GroupBox()
+        Me.ventasConsulta_dg = New System.Windows.Forms.DataGridView()
+        Me.idConsultaVentas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreUsuarioConsultaVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidadVentasConsulta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.periodoConsultaVentas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblVentas = New MetroFramework.Controls.MetroLabel()
+        Me.periodos_cmb = New System.Windows.Forms.ComboBox()
+        Me.lblPeriodoConsultarVenta = New MetroFramework.Controls.MetroLabel()
+        Me.usuarioConsulta_cmb = New System.Windows.Forms.ComboBox()
+        Me.lblUsuarioConsultarVenta = New MetroFramework.Controls.MetroLabel()
+        Me.lblConsultarVentas = New MetroFramework.Controls.MetroLabel()
         Me.pnlRegistrarVenta = New MetroFramework.Controls.MetroPanel()
         Me.totalVenta_text = New MetroFramework.Controls.MetroTextBox()
         Me.lblTotalVenta = New MetroFramework.Controls.MetroLabel()
@@ -345,9 +378,14 @@ Partial Class FrmMain
         Me.lblProductoVenta = New MetroFramework.Controls.MetroLabel()
         Me.lblCodProductoVenta = New MetroFramework.Controls.MetroLabel()
         Me.lblRegistrarVenta = New MetroFramework.Controls.MetroLabel()
-        Me.pnlListarVentas = New MetroFramework.Controls.MetroPanel()
         Me.btnVolverListarVenta = New MetroFramework.Controls.MetroButton()
         Me.dgListaVentas = New System.Windows.Forms.DataGridView()
+        Me.idListarVentas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechaVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreVendedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.totalVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tipoVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editarVenta = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblListaVentas = New MetroFramework.Controls.MetroLabel()
         Me.btnNuevaVenta = New MetroFramework.Controls.MetroButton()
         Me.btnListarVentasIcon = New MetroFramework.Controls.MetroTile()
@@ -366,29 +404,11 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
-        Me.editarCarrera = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.costo_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.codigo_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.id_carrera = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colIdActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNombreActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCodigoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCostoActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colHorarioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colFechaInicioActi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editarActi = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.idListarVentas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fechaVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombreVendedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.totalVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tipoVenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editarVenta = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
+        Me.pnlRegistrarCarrera.SuspendLayout()
         Me.pnlListaCarreras.SuspendLayout()
         CType(Me.listaCarreras_dg, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlRegistrarCarrera.SuspendLayout()
         Me.registrarActi_pnl.SuspendLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minsFin4Acti_nmb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -442,8 +462,13 @@ Partial Class FrmMain
         Me.gboPermissionsRol.SuspendLayout()
         Me.gboPorductsSectionRol.SuspendLayout()
         Me.TabVentas.SuspendLayout()
-        Me.pnlRegistrarVenta.SuspendLayout()
         Me.pnlListarVentas.SuspendLayout()
+        Me.pnlConsultarVentas.SuspendLayout()
+        Me.grpConsultaIngresos.SuspendLayout()
+        CType(Me.ingresosConsulta_dg, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpConsultaVentas.SuspendLayout()
+        CType(Me.ventasConsulta_dg, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlRegistrarVenta.SuspendLayout()
         CType(Me.dgListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -488,75 +513,6 @@ Partial Class FrmMain
         Me.TabProductos.VerticalScrollbarBarColor = True
         Me.TabProductos.VerticalScrollbarHighlightOnWheel = False
         Me.TabProductos.VerticalScrollbarSize = 10
-        '
-        'pnlListaCarreras
-        '
-        Me.pnlListaCarreras.Controls.Add(Me.btnExportar_Carreras)
-        Me.pnlListaCarreras.Controls.Add(Me.btnVolver_Carrera)
-        Me.pnlListaCarreras.Controls.Add(Me.listaCarreras_dg)
-        Me.pnlListaCarreras.Controls.Add(Me.lblListaCrreras)
-        Me.pnlListaCarreras.Controls.Add(Me.btnNueva_Carrera)
-        Me.pnlListaCarreras.HorizontalScrollbarBarColor = True
-        Me.pnlListaCarreras.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnlListaCarreras.HorizontalScrollbarSize = 10
-        Me.pnlListaCarreras.Location = New System.Drawing.Point(0, 3)
-        Me.pnlListaCarreras.Name = "pnlListaCarreras"
-        Me.pnlListaCarreras.Size = New System.Drawing.Size(767, 461)
-        Me.pnlListaCarreras.Style = MetroFramework.MetroColorStyle.Blue
-        Me.pnlListaCarreras.TabIndex = 88
-        Me.pnlListaCarreras.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.pnlListaCarreras.VerticalScrollbarBarColor = True
-        Me.pnlListaCarreras.VerticalScrollbarHighlightOnWheel = False
-        Me.pnlListaCarreras.VerticalScrollbarSize = 10
-        Me.pnlListaCarreras.Visible = False
-        '
-        'btnExportar_Carreras
-        '
-        Me.btnExportar_Carreras.Location = New System.Drawing.Point(485, 412)
-        Me.btnExportar_Carreras.Name = "btnExportar_Carreras"
-        Me.btnExportar_Carreras.Size = New System.Drawing.Size(123, 36)
-        Me.btnExportar_Carreras.TabIndex = 52
-        Me.btnExportar_Carreras.Text = "Exportar"
-        Me.btnExportar_Carreras.UseSelectable = True
-        '
-        'btnVolver_Carrera
-        '
-        Me.btnVolver_Carrera.Location = New System.Drawing.Point(7, 412)
-        Me.btnVolver_Carrera.Name = "btnVolver_Carrera"
-        Me.btnVolver_Carrera.Size = New System.Drawing.Size(123, 36)
-        Me.btnVolver_Carrera.TabIndex = 50
-        Me.btnVolver_Carrera.Text = "Volver"
-        Me.btnVolver_Carrera.UseSelectable = True
-        '
-        'listaCarreras_dg
-        '
-        Me.listaCarreras_dg.AllowUserToAddRows = False
-        Me.listaCarreras_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.listaCarreras_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_carrera, Me.nombre_carrera, Me.codigo_carrera, Me.costo_carrera, Me.editarCarrera})
-        Me.listaCarreras_dg.Location = New System.Drawing.Point(7, 37)
-        Me.listaCarreras_dg.Name = "listaCarreras_dg"
-        Me.listaCarreras_dg.RowHeadersVisible = False
-        Me.listaCarreras_dg.Size = New System.Drawing.Size(739, 344)
-        Me.listaCarreras_dg.TabIndex = 12
-        '
-        'lblListaCrreras
-        '
-        Me.lblListaCrreras.AutoSize = True
-        Me.lblListaCrreras.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblListaCrreras.Location = New System.Drawing.Point(2, 3)
-        Me.lblListaCrreras.Name = "lblListaCrreras"
-        Me.lblListaCrreras.Size = New System.Drawing.Size(119, 25)
-        Me.lblListaCrreras.TabIndex = 10
-        Me.lblListaCrreras.Text = "Listar Carreras"
-        '
-        'btnNueva_Carrera
-        '
-        Me.btnNueva_Carrera.Location = New System.Drawing.Point(623, 412)
-        Me.btnNueva_Carrera.Name = "btnNueva_Carrera"
-        Me.btnNueva_Carrera.Size = New System.Drawing.Size(123, 36)
-        Me.btnNueva_Carrera.TabIndex = 9
-        Me.btnNueva_Carrera.Text = "Nueva Carrera"
-        Me.btnNueva_Carrera.UseSelectable = True
         '
         'pnlRegistrarCarrera
         '
@@ -760,6 +716,103 @@ Partial Class FrmMain
         Me.lblRegistrarCarrera.Size = New System.Drawing.Size(139, 25)
         Me.lblRegistrarCarrera.TabIndex = 86
         Me.lblRegistrarCarrera.Text = "Registrar Carrera"
+        '
+        'pnlListaCarreras
+        '
+        Me.pnlListaCarreras.Controls.Add(Me.btnExportar_Carreras)
+        Me.pnlListaCarreras.Controls.Add(Me.btnVolver_Carrera)
+        Me.pnlListaCarreras.Controls.Add(Me.listaCarreras_dg)
+        Me.pnlListaCarreras.Controls.Add(Me.lblListaCrreras)
+        Me.pnlListaCarreras.Controls.Add(Me.btnNueva_Carrera)
+        Me.pnlListaCarreras.HorizontalScrollbarBarColor = True
+        Me.pnlListaCarreras.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlListaCarreras.HorizontalScrollbarSize = 10
+        Me.pnlListaCarreras.Location = New System.Drawing.Point(0, 3)
+        Me.pnlListaCarreras.Name = "pnlListaCarreras"
+        Me.pnlListaCarreras.Size = New System.Drawing.Size(767, 461)
+        Me.pnlListaCarreras.Style = MetroFramework.MetroColorStyle.Blue
+        Me.pnlListaCarreras.TabIndex = 88
+        Me.pnlListaCarreras.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnlListaCarreras.VerticalScrollbarBarColor = True
+        Me.pnlListaCarreras.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlListaCarreras.VerticalScrollbarSize = 10
+        Me.pnlListaCarreras.Visible = False
+        '
+        'btnExportar_Carreras
+        '
+        Me.btnExportar_Carreras.Location = New System.Drawing.Point(485, 412)
+        Me.btnExportar_Carreras.Name = "btnExportar_Carreras"
+        Me.btnExportar_Carreras.Size = New System.Drawing.Size(123, 36)
+        Me.btnExportar_Carreras.TabIndex = 52
+        Me.btnExportar_Carreras.Text = "Exportar"
+        Me.btnExportar_Carreras.UseSelectable = True
+        '
+        'btnVolver_Carrera
+        '
+        Me.btnVolver_Carrera.Location = New System.Drawing.Point(7, 412)
+        Me.btnVolver_Carrera.Name = "btnVolver_Carrera"
+        Me.btnVolver_Carrera.Size = New System.Drawing.Size(123, 36)
+        Me.btnVolver_Carrera.TabIndex = 50
+        Me.btnVolver_Carrera.Text = "Volver"
+        Me.btnVolver_Carrera.UseSelectable = True
+        '
+        'listaCarreras_dg
+        '
+        Me.listaCarreras_dg.AllowUserToAddRows = False
+        Me.listaCarreras_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.listaCarreras_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_carrera, Me.nombre_carrera, Me.codigo_carrera, Me.costo_carrera, Me.editarCarrera})
+        Me.listaCarreras_dg.Location = New System.Drawing.Point(7, 37)
+        Me.listaCarreras_dg.Name = "listaCarreras_dg"
+        Me.listaCarreras_dg.RowHeadersVisible = False
+        Me.listaCarreras_dg.Size = New System.Drawing.Size(739, 344)
+        Me.listaCarreras_dg.TabIndex = 12
+        '
+        'id_carrera
+        '
+        Me.id_carrera.HeaderText = "Id"
+        Me.id_carrera.Name = "id_carrera"
+        Me.id_carrera.Visible = False
+        '
+        'nombre_carrera
+        '
+        Me.nombre_carrera.HeaderText = "Nombre"
+        Me.nombre_carrera.Name = "nombre_carrera"
+        '
+        'codigo_carrera
+        '
+        Me.codigo_carrera.HeaderText = "Codigo"
+        Me.codigo_carrera.Name = "codigo_carrera"
+        '
+        'costo_carrera
+        '
+        Me.costo_carrera.HeaderText = "Costo"
+        Me.costo_carrera.Name = "costo_carrera"
+        '
+        'editarCarrera
+        '
+        Me.editarCarrera.HeaderText = ""
+        Me.editarCarrera.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.editarCarrera.Name = "editarCarrera"
+        Me.editarCarrera.Width = 500
+        '
+        'lblListaCrreras
+        '
+        Me.lblListaCrreras.AutoSize = True
+        Me.lblListaCrreras.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblListaCrreras.Location = New System.Drawing.Point(2, 3)
+        Me.lblListaCrreras.Name = "lblListaCrreras"
+        Me.lblListaCrreras.Size = New System.Drawing.Size(119, 25)
+        Me.lblListaCrreras.TabIndex = 10
+        Me.lblListaCrreras.Text = "Listar Carreras"
+        '
+        'btnNueva_Carrera
+        '
+        Me.btnNueva_Carrera.Location = New System.Drawing.Point(623, 412)
+        Me.btnNueva_Carrera.Name = "btnNueva_Carrera"
+        Me.btnNueva_Carrera.Size = New System.Drawing.Size(123, 36)
+        Me.btnNueva_Carrera.TabIndex = 9
+        Me.btnNueva_Carrera.Text = "Nueva Carrera"
+        Me.btnNueva_Carrera.UseSelectable = True
         '
         'registrarActi_pnl
         '
@@ -1398,6 +1451,44 @@ Partial Class FrmMain
         Me.listaActis_dg.RowHeadersVisible = False
         Me.listaActis_dg.Size = New System.Drawing.Size(739, 344)
         Me.listaActis_dg.TabIndex = 12
+        '
+        'colIdActi
+        '
+        Me.colIdActi.HeaderText = "Id"
+        Me.colIdActi.Name = "colIdActi"
+        Me.colIdActi.Visible = False
+        '
+        'colNombreActi
+        '
+        Me.colNombreActi.HeaderText = "Nombre"
+        Me.colNombreActi.Name = "colNombreActi"
+        '
+        'colCodigoActi
+        '
+        Me.colCodigoActi.HeaderText = "Codigo"
+        Me.colCodigoActi.Name = "colCodigoActi"
+        '
+        'colCostoActi
+        '
+        Me.colCostoActi.HeaderText = "Costo"
+        Me.colCostoActi.Name = "colCostoActi"
+        '
+        'colHorarioActi
+        '
+        Me.colHorarioActi.HeaderText = "Horario"
+        Me.colHorarioActi.Name = "colHorarioActi"
+        '
+        'colFechaInicioActi
+        '
+        Me.colFechaInicioActi.HeaderText = "Fecha Inicio"
+        Me.colFechaInicioActi.Name = "colFechaInicioActi"
+        '
+        'editarActi
+        '
+        Me.editarActi.HeaderText = ""
+        Me.editarActi.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.editarActi.Name = "editarActi"
+        Me.editarActi.Width = 300
         '
         'listaActis_lbl
         '
@@ -4242,6 +4333,7 @@ Partial Class FrmMain
         'TabVentas
         '
         Me.TabVentas.Controls.Add(Me.pnlRegistrarVenta)
+        Me.TabVentas.Controls.Add(Me.pnlConsultarVentas)
         Me.TabVentas.Controls.Add(Me.pnlListarVentas)
         Me.TabVentas.Controls.Add(Me.btnListarVentasIcon)
         Me.TabVentas.Controls.Add(Me.btnRegistrarVentaIcon)
@@ -4257,6 +4349,207 @@ Partial Class FrmMain
         Me.TabVentas.VerticalScrollbarBarColor = True
         Me.TabVentas.VerticalScrollbarHighlightOnWheel = False
         Me.TabVentas.VerticalScrollbarSize = 10
+        '
+        'pnlListarVentas
+        '
+        Me.pnlListarVentas.Controls.Add(Me.btnVolverListarVenta)
+        Me.pnlListarVentas.Controls.Add(Me.dgListaVentas)
+        Me.pnlListarVentas.Controls.Add(Me.lblListaVentas)
+        Me.pnlListarVentas.Controls.Add(Me.btnNuevaVenta)
+        Me.pnlListarVentas.HorizontalScrollbarBarColor = True
+        Me.pnlListarVentas.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlListarVentas.HorizontalScrollbarSize = 10
+        Me.pnlListarVentas.Location = New System.Drawing.Point(0, 3)
+        Me.pnlListarVentas.Name = "pnlListarVentas"
+        Me.pnlListarVentas.Size = New System.Drawing.Size(767, 461)
+        Me.pnlListarVentas.Style = MetroFramework.MetroColorStyle.Blue
+        Me.pnlListarVentas.TabIndex = 89
+        Me.pnlListarVentas.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnlListarVentas.VerticalScrollbarBarColor = True
+        Me.pnlListarVentas.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlListarVentas.VerticalScrollbarSize = 10
+        Me.pnlListarVentas.Visible = False
+        '
+        'pnlConsultarVentas
+        '
+        Me.pnlConsultarVentas.Controls.Add(Me.btnVolverConsultaVentas)
+        Me.pnlConsultarVentas.Controls.Add(Me.grpConsultaIngresos)
+        Me.pnlConsultarVentas.Controls.Add(Me.grpConsultaVentas)
+        Me.pnlConsultarVentas.Controls.Add(Me.periodos_cmb)
+        Me.pnlConsultarVentas.Controls.Add(Me.lblPeriodoConsultarVenta)
+        Me.pnlConsultarVentas.Controls.Add(Me.usuarioConsulta_cmb)
+        Me.pnlConsultarVentas.Controls.Add(Me.lblUsuarioConsultarVenta)
+        Me.pnlConsultarVentas.Controls.Add(Me.lblConsultarVentas)
+        Me.pnlConsultarVentas.HorizontalScrollbarBarColor = True
+        Me.pnlConsultarVentas.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlConsultarVentas.HorizontalScrollbarSize = 10
+        Me.pnlConsultarVentas.Location = New System.Drawing.Point(0, 3)
+        Me.pnlConsultarVentas.Name = "pnlConsultarVentas"
+        Me.pnlConsultarVentas.Size = New System.Drawing.Size(746, 462)
+        Me.pnlConsultarVentas.TabIndex = 8
+        Me.pnlConsultarVentas.VerticalScrollbarBarColor = True
+        Me.pnlConsultarVentas.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlConsultarVentas.VerticalScrollbarSize = 10
+        Me.pnlConsultarVentas.Visible = False
+        '
+        'btnVolverConsultaVentas
+        '
+        Me.btnVolverConsultaVentas.Location = New System.Drawing.Point(22, 402)
+        Me.btnVolverConsultaVentas.Name = "btnVolverConsultaVentas"
+        Me.btnVolverConsultaVentas.Size = New System.Drawing.Size(123, 36)
+        Me.btnVolverConsultaVentas.TabIndex = 10
+        Me.btnVolverConsultaVentas.Text = "Volver"
+        Me.btnVolverConsultaVentas.UseSelectable = True
+        '
+        'grpConsultaIngresos
+        '
+        Me.grpConsultaIngresos.BackColor = System.Drawing.SystemColors.Window
+        Me.grpConsultaIngresos.Controls.Add(Me.ingresosConsulta_dg)
+        Me.grpConsultaIngresos.Controls.Add(Me.lblIngresos)
+        Me.grpConsultaIngresos.Location = New System.Drawing.Point(22, 252)
+        Me.grpConsultaIngresos.Name = "grpConsultaIngresos"
+        Me.grpConsultaIngresos.Size = New System.Drawing.Size(678, 124)
+        Me.grpConsultaIngresos.TabIndex = 105
+        Me.grpConsultaIngresos.TabStop = False
+        '
+        'ingresosConsulta_dg
+        '
+        Me.ingresosConsulta_dg.AllowUserToAddRows = False
+        Me.ingresosConsulta_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ingresosConsulta_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombreUsuarioIngresos, Me.IngresosConsulta, Me.periodoIngresos})
+        Me.ingresosConsulta_dg.Location = New System.Drawing.Point(14, 16)
+        Me.ingresosConsulta_dg.Name = "ingresosConsulta_dg"
+        Me.ingresosConsulta_dg.RowHeadersVisible = False
+        Me.ingresosConsulta_dg.Size = New System.Drawing.Size(651, 100)
+        Me.ingresosConsulta_dg.TabIndex = 108
+        '
+        'nombreUsuarioIngresos
+        '
+        Me.nombreUsuarioIngresos.HeaderText = "Nombre Usuario"
+        Me.nombreUsuarioIngresos.Name = "nombreUsuarioIngresos"
+        Me.nombreUsuarioIngresos.Width = 250
+        '
+        'IngresosConsulta
+        '
+        Me.IngresosConsulta.HeaderText = "Total de Ingresos"
+        Me.IngresosConsulta.Name = "IngresosConsulta"
+        Me.IngresosConsulta.Width = 150
+        '
+        'periodoIngresos
+        '
+        Me.periodoIngresos.HeaderText = "Periodo"
+        Me.periodoIngresos.Name = "periodoIngresos"
+        Me.periodoIngresos.Width = 250
+        '
+        'lblIngresos
+        '
+        Me.lblIngresos.AutoSize = True
+        Me.lblIngresos.Location = New System.Drawing.Point(9, -4)
+        Me.lblIngresos.Name = "lblIngresos"
+        Me.lblIngresos.Size = New System.Drawing.Size(100, 19)
+        Me.lblIngresos.TabIndex = 107
+        Me.lblIngresos.Text = "Ingresos Totales"
+        '
+        'grpConsultaVentas
+        '
+        Me.grpConsultaVentas.BackColor = System.Drawing.SystemColors.Window
+        Me.grpConsultaVentas.Controls.Add(Me.ventasConsulta_dg)
+        Me.grpConsultaVentas.Controls.Add(Me.lblVentas)
+        Me.grpConsultaVentas.Location = New System.Drawing.Point(22, 113)
+        Me.grpConsultaVentas.Name = "grpConsultaVentas"
+        Me.grpConsultaVentas.Size = New System.Drawing.Size(678, 124)
+        Me.grpConsultaVentas.TabIndex = 104
+        Me.grpConsultaVentas.TabStop = False
+        '
+        'ventasConsulta_dg
+        '
+        Me.ventasConsulta_dg.AllowUserToAddRows = False
+        Me.ventasConsulta_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ventasConsulta_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idConsultaVentas, Me.nombreUsuarioConsultaVenta, Me.cantidadVentasConsulta, Me.periodoConsultaVentas})
+        Me.ventasConsulta_dg.Location = New System.Drawing.Point(15, 17)
+        Me.ventasConsulta_dg.Name = "ventasConsulta_dg"
+        Me.ventasConsulta_dg.RowHeadersVisible = False
+        Me.ventasConsulta_dg.Size = New System.Drawing.Size(651, 100)
+        Me.ventasConsulta_dg.TabIndex = 106
+        '
+        'idConsultaVentas
+        '
+        Me.idConsultaVentas.HeaderText = "Id"
+        Me.idConsultaVentas.Name = "idConsultaVentas"
+        Me.idConsultaVentas.Visible = False
+        '
+        'nombreUsuarioConsultaVenta
+        '
+        Me.nombreUsuarioConsultaVenta.HeaderText = "Nombre Usuario"
+        Me.nombreUsuarioConsultaVenta.Name = "nombreUsuarioConsultaVenta"
+        Me.nombreUsuarioConsultaVenta.Width = 250
+        '
+        'cantidadVentasConsulta
+        '
+        Me.cantidadVentasConsulta.HeaderText = "Cantidad de Ventas"
+        Me.cantidadVentasConsulta.Name = "cantidadVentasConsulta"
+        Me.cantidadVentasConsulta.Width = 150
+        '
+        'periodoConsultaVentas
+        '
+        Me.periodoConsultaVentas.HeaderText = "Periodo"
+        Me.periodoConsultaVentas.Name = "periodoConsultaVentas"
+        Me.periodoConsultaVentas.Width = 250
+        '
+        'lblVentas
+        '
+        Me.lblVentas.AutoSize = True
+        Me.lblVentas.Location = New System.Drawing.Point(9, -3)
+        Me.lblVentas.Name = "lblVentas"
+        Me.lblVentas.Size = New System.Drawing.Size(122, 19)
+        Me.lblVentas.TabIndex = 106
+        Me.lblVentas.Text = "Cantidad de Ventas"
+        '
+        'periodos_cmb
+        '
+        Me.periodos_cmb.FormattingEnabled = True
+        Me.periodos_cmb.ItemHeight = 13
+        Me.periodos_cmb.Location = New System.Drawing.Point(518, 62)
+        Me.periodos_cmb.Name = "periodos_cmb"
+        Me.periodos_cmb.Size = New System.Drawing.Size(182, 21)
+        Me.periodos_cmb.TabIndex = 103
+        '
+        'lblPeriodoConsultarVenta
+        '
+        Me.lblPeriodoConsultarVenta.AutoSize = True
+        Me.lblPeriodoConsultarVenta.Location = New System.Drawing.Point(457, 62)
+        Me.lblPeriodoConsultarVenta.Name = "lblPeriodoConsultarVenta"
+        Me.lblPeriodoConsultarVenta.Size = New System.Drawing.Size(55, 19)
+        Me.lblPeriodoConsultarVenta.TabIndex = 102
+        Me.lblPeriodoConsultarVenta.Text = "Periodo"
+        '
+        'usuarioConsulta_cmb
+        '
+        Me.usuarioConsulta_cmb.FormattingEnabled = True
+        Me.usuarioConsulta_cmb.ItemHeight = 13
+        Me.usuarioConsulta_cmb.Location = New System.Drawing.Point(81, 60)
+        Me.usuarioConsulta_cmb.Name = "usuarioConsulta_cmb"
+        Me.usuarioConsulta_cmb.Size = New System.Drawing.Size(182, 21)
+        Me.usuarioConsulta_cmb.TabIndex = 96
+        '
+        'lblUsuarioConsultarVenta
+        '
+        Me.lblUsuarioConsultarVenta.AutoSize = True
+        Me.lblUsuarioConsultarVenta.Location = New System.Drawing.Point(22, 62)
+        Me.lblUsuarioConsultarVenta.Name = "lblUsuarioConsultarVenta"
+        Me.lblUsuarioConsultarVenta.Size = New System.Drawing.Size(53, 19)
+        Me.lblUsuarioConsultarVenta.TabIndex = 87
+        Me.lblUsuarioConsultarVenta.Text = "Usuario"
+        '
+        'lblConsultarVentas
+        '
+        Me.lblConsultarVentas.AutoSize = True
+        Me.lblConsultarVentas.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblConsultarVentas.Location = New System.Drawing.Point(22, 16)
+        Me.lblConsultarVentas.Name = "lblConsultarVentas"
+        Me.lblConsultarVentas.Size = New System.Drawing.Size(220, 25)
+        Me.lblConsultarVentas.TabIndex = 86
+        Me.lblConsultarVentas.Text = "Consultar Ventas e Ingresos"
         '
         'pnlRegistrarVenta
         '
@@ -4489,26 +4782,6 @@ Partial Class FrmMain
         Me.lblRegistrarVenta.TabIndex = 86
         Me.lblRegistrarVenta.Text = "Registrar Venta"
         '
-        'pnlListarVentas
-        '
-        Me.pnlListarVentas.Controls.Add(Me.btnVolverListarVenta)
-        Me.pnlListarVentas.Controls.Add(Me.dgListaVentas)
-        Me.pnlListarVentas.Controls.Add(Me.lblListaVentas)
-        Me.pnlListarVentas.Controls.Add(Me.btnNuevaVenta)
-        Me.pnlListarVentas.HorizontalScrollbarBarColor = True
-        Me.pnlListarVentas.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnlListarVentas.HorizontalScrollbarSize = 10
-        Me.pnlListarVentas.Location = New System.Drawing.Point(0, 3)
-        Me.pnlListarVentas.Name = "pnlListarVentas"
-        Me.pnlListarVentas.Size = New System.Drawing.Size(767, 461)
-        Me.pnlListarVentas.Style = MetroFramework.MetroColorStyle.Blue
-        Me.pnlListarVentas.TabIndex = 89
-        Me.pnlListarVentas.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.pnlListarVentas.VerticalScrollbarBarColor = True
-        Me.pnlListarVentas.VerticalScrollbarHighlightOnWheel = False
-        Me.pnlListarVentas.VerticalScrollbarSize = 10
-        Me.pnlListarVentas.Visible = False
-        '
         'btnVolverListarVenta
         '
         Me.btnVolverListarVenta.Location = New System.Drawing.Point(7, 412)
@@ -4528,6 +4801,39 @@ Partial Class FrmMain
         Me.dgListaVentas.RowHeadersVisible = False
         Me.dgListaVentas.Size = New System.Drawing.Size(739, 344)
         Me.dgListaVentas.TabIndex = 12
+        '
+        'idListarVentas
+        '
+        Me.idListarVentas.HeaderText = "Id"
+        Me.idListarVentas.Name = "idListarVentas"
+        Me.idListarVentas.Visible = False
+        '
+        'fechaVenta
+        '
+        Me.fechaVenta.HeaderText = "Fecha"
+        Me.fechaVenta.Name = "fechaVenta"
+        '
+        'nombreVendedor
+        '
+        Me.nombreVendedor.HeaderText = "Nombre"
+        Me.nombreVendedor.Name = "nombreVendedor"
+        '
+        'totalVenta
+        '
+        Me.totalVenta.HeaderText = "Venta Total"
+        Me.totalVenta.Name = "totalVenta"
+        '
+        'tipoVenta
+        '
+        Me.tipoVenta.HeaderText = "Tipo"
+        Me.tipoVenta.Name = "tipoVenta"
+        '
+        'editarVenta
+        '
+        Me.editarVenta.HeaderText = ""
+        Me.editarVenta.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.editarVenta.Name = "editarVenta"
+        Me.editarVenta.Width = 500
         '
         'lblListaVentas
         '
@@ -4664,105 +4970,6 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
-        'editarCarrera
-        '
-        Me.editarCarrera.HeaderText = ""
-        Me.editarCarrera.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.editarCarrera.Name = "editarCarrera"
-        Me.editarCarrera.Width = 500
-        '
-        'costo_carrera
-        '
-        Me.costo_carrera.HeaderText = "Costo"
-        Me.costo_carrera.Name = "costo_carrera"
-        '
-        'codigo_carrera
-        '
-        Me.codigo_carrera.HeaderText = "Codigo"
-        Me.codigo_carrera.Name = "codigo_carrera"
-        '
-        'nombre_carrera
-        '
-        Me.nombre_carrera.HeaderText = "Nombre"
-        Me.nombre_carrera.Name = "nombre_carrera"
-        '
-        'id_carrera
-        '
-        Me.id_carrera.HeaderText = "Id"
-        Me.id_carrera.Name = "id_carrera"
-        Me.id_carrera.Visible = False
-        '
-        'colIdActi
-        '
-        Me.colIdActi.HeaderText = "Id"
-        Me.colIdActi.Name = "colIdActi"
-        Me.colIdActi.Visible = False
-        '
-        'colNombreActi
-        '
-        Me.colNombreActi.HeaderText = "Nombre"
-        Me.colNombreActi.Name = "colNombreActi"
-        '
-        'colCodigoActi
-        '
-        Me.colCodigoActi.HeaderText = "Codigo"
-        Me.colCodigoActi.Name = "colCodigoActi"
-        '
-        'colCostoActi
-        '
-        Me.colCostoActi.HeaderText = "Costo"
-        Me.colCostoActi.Name = "colCostoActi"
-        '
-        'colHorarioActi
-        '
-        Me.colHorarioActi.HeaderText = "Horario"
-        Me.colHorarioActi.Name = "colHorarioActi"
-        '
-        'colFechaInicioActi
-        '
-        Me.colFechaInicioActi.HeaderText = "Fecha Inicio"
-        Me.colFechaInicioActi.Name = "colFechaInicioActi"
-        '
-        'editarActi
-        '
-        Me.editarActi.HeaderText = ""
-        Me.editarActi.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.editarActi.Name = "editarActi"
-        Me.editarActi.Width = 300
-        '
-        'idListarVentas
-        '
-        Me.idListarVentas.HeaderText = "Id"
-        Me.idListarVentas.Name = "idListarVentas"
-        Me.idListarVentas.Visible = False
-        '
-        'fechaVenta
-        '
-        Me.fechaVenta.HeaderText = "Fecha"
-        Me.fechaVenta.Name = "fechaVenta"
-        '
-        'nombreVendedor
-        '
-        Me.nombreVendedor.HeaderText = "Nombre"
-        Me.nombreVendedor.Name = "nombreVendedor"
-        '
-        'totalVenta
-        '
-        Me.totalVenta.HeaderText = "Venta Total"
-        Me.totalVenta.Name = "totalVenta"
-        '
-        'tipoVenta
-        '
-        Me.tipoVenta.HeaderText = "Tipo"
-        Me.tipoVenta.Name = "tipoVenta"
-        '
-        'editarVenta
-        '
-        Me.editarVenta.HeaderText = ""
-        Me.editarVenta.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.editarVenta.Name = "editarVenta"
-        Me.editarVenta.Width = 500
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4776,11 +4983,11 @@ Partial Class FrmMain
         Me.Text = "Menu Principal"
         Me.Main.ResumeLayout(False)
         Me.TabProductos.ResumeLayout(False)
+        Me.pnlRegistrarCarrera.ResumeLayout(False)
+        Me.pnlRegistrarCarrera.PerformLayout()
         Me.pnlListaCarreras.ResumeLayout(False)
         Me.pnlListaCarreras.PerformLayout()
         CType(Me.listaCarreras_dg, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlRegistrarCarrera.ResumeLayout(False)
-        Me.pnlRegistrarCarrera.PerformLayout()
         Me.registrarActi_pnl.ResumeLayout(False)
         Me.registrarActi_pnl.PerformLayout()
         CType(Me.minsFin5Acti_nmb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4854,10 +5061,18 @@ Partial Class FrmMain
         Me.gboPorductsSectionRol.ResumeLayout(False)
         Me.gboPorductsSectionRol.PerformLayout()
         Me.TabVentas.ResumeLayout(False)
-        Me.pnlRegistrarVenta.ResumeLayout(False)
-        Me.pnlRegistrarVenta.PerformLayout()
         Me.pnlListarVentas.ResumeLayout(False)
         Me.pnlListarVentas.PerformLayout()
+        Me.pnlConsultarVentas.ResumeLayout(False)
+        Me.pnlConsultarVentas.PerformLayout()
+        Me.grpConsultaIngresos.ResumeLayout(False)
+        Me.grpConsultaIngresos.PerformLayout()
+        CType(Me.ingresosConsulta_dg, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpConsultaVentas.ResumeLayout(False)
+        Me.grpConsultaVentas.PerformLayout()
+        CType(Me.ventasConsulta_dg, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlRegistrarVenta.ResumeLayout(False)
+        Me.pnlRegistrarVenta.PerformLayout()
         CType(Me.dgListaVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -5224,4 +5439,24 @@ Partial Class FrmMain
     Friend WithEvents totalVenta As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tipoVenta As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents editarVenta As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents pnlConsultarVentas As MetroFramework.Controls.MetroPanel
+    Friend WithEvents periodos_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents lblPeriodoConsultarVenta As MetroFramework.Controls.MetroLabel
+    Friend WithEvents usuarioConsulta_cmb As System.Windows.Forms.ComboBox
+    Friend WithEvents lblUsuarioConsultarVenta As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblConsultarVentas As MetroFramework.Controls.MetroLabel
+    Friend WithEvents grpConsultaIngresos As System.Windows.Forms.GroupBox
+    Friend WithEvents grpConsultaVentas As System.Windows.Forms.GroupBox
+    Friend WithEvents lblIngresos As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblVentas As MetroFramework.Controls.MetroLabel
+    Friend WithEvents ventasConsulta_dg As System.Windows.Forms.DataGridView
+    Friend WithEvents ingresosConsulta_dg As System.Windows.Forms.DataGridView
+    Friend WithEvents idConsultaVentas As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nombreUsuarioConsultaVenta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cantidadVentasConsulta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents periodoConsultaVentas As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nombreUsuarioIngresos As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IngresosConsulta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents periodoIngresos As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnVolverConsultaVentas As MetroFramework.Controls.MetroButton
 End Class
