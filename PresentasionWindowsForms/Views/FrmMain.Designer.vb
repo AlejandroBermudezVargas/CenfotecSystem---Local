@@ -341,7 +341,22 @@ Partial Class FrmMain
         Me.lblNameRol = New MetroFramework.Controls.MetroLabel()
         Me.lblCreateRolTittle = New MetroFramework.Controls.MetroLabel()
         Me.TabVentas = New MetroFramework.Controls.MetroTabPage()
-        Me.pnlListarVentas = New MetroFramework.Controls.MetroPanel()
+        Me.pnlRegistrarVenta = New MetroFramework.Controls.MetroPanel()
+        Me.totalVenta_text = New MetroFramework.Controls.MetroTextBox()
+        Me.lblTotalVenta = New MetroFramework.Controls.MetroLabel()
+        Me.lblMatriculaVenta = New MetroFramework.Controls.MetroLabel()
+        Me.matricula_text = New MetroFramework.Controls.MetroTextBox()
+        Me.productos_cmb = New System.Windows.Forms.ComboBox()
+        Me.cod_prod_cmb = New System.Windows.Forms.ComboBox()
+        Me.btnCancelarVenta = New MetroFramework.Controls.MetroButton()
+        Me.lblCostoVenta = New MetroFramework.Controls.MetroLabel()
+        Me.costoVenta_text = New MetroFramework.Controls.MetroTextBox()
+        Me.btnGuardarVenta = New MetroFramework.Controls.MetroButton()
+        Me.tipo_prodVenta_cmb = New System.Windows.Forms.ComboBox()
+        Me.lblTipoVenta = New MetroFramework.Controls.MetroLabel()
+        Me.lblProductoVenta = New MetroFramework.Controls.MetroLabel()
+        Me.lblCodProductoVenta = New MetroFramework.Controls.MetroLabel()
+        Me.lblRegistrarVenta = New MetroFramework.Controls.MetroLabel()
         Me.pnlConsultarVentas = New MetroFramework.Controls.MetroPanel()
         Me.btnVolverConsultaVentas = New MetroFramework.Controls.MetroButton()
         Me.grpConsultaIngresos = New System.Windows.Forms.GroupBox()
@@ -362,22 +377,7 @@ Partial Class FrmMain
         Me.usuarioConsulta_cmb = New System.Windows.Forms.ComboBox()
         Me.lblUsuarioConsultarVenta = New MetroFramework.Controls.MetroLabel()
         Me.lblConsultarVentas = New MetroFramework.Controls.MetroLabel()
-        Me.pnlRegistrarVenta = New MetroFramework.Controls.MetroPanel()
-        Me.totalVenta_text = New MetroFramework.Controls.MetroTextBox()
-        Me.lblTotalVenta = New MetroFramework.Controls.MetroLabel()
-        Me.lblMatriculaVenta = New MetroFramework.Controls.MetroLabel()
-        Me.matricula_text = New MetroFramework.Controls.MetroTextBox()
-        Me.productos_cmb = New System.Windows.Forms.ComboBox()
-        Me.cod_prod_cmb = New System.Windows.Forms.ComboBox()
-        Me.btnCancelarVenta = New MetroFramework.Controls.MetroButton()
-        Me.lblCostoVenta = New MetroFramework.Controls.MetroLabel()
-        Me.costoVenta_text = New MetroFramework.Controls.MetroTextBox()
-        Me.btnGuardarVenta = New MetroFramework.Controls.MetroButton()
-        Me.tipo_prodVenta_cmb = New System.Windows.Forms.ComboBox()
-        Me.lblTipoVenta = New MetroFramework.Controls.MetroLabel()
-        Me.lblProductoVenta = New MetroFramework.Controls.MetroLabel()
-        Me.lblCodProductoVenta = New MetroFramework.Controls.MetroLabel()
-        Me.lblRegistrarVenta = New MetroFramework.Controls.MetroLabel()
+        Me.pnlListarVentas = New MetroFramework.Controls.MetroPanel()
         Me.btnVolverListarVenta = New MetroFramework.Controls.MetroButton()
         Me.dgListaVentas = New System.Windows.Forms.DataGridView()
         Me.idListarVentas = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -462,13 +462,13 @@ Partial Class FrmMain
         Me.gboPermissionsRol.SuspendLayout()
         Me.gboPorductsSectionRol.SuspendLayout()
         Me.TabVentas.SuspendLayout()
-        Me.pnlListarVentas.SuspendLayout()
+        Me.pnlRegistrarVenta.SuspendLayout()
         Me.pnlConsultarVentas.SuspendLayout()
         Me.grpConsultaIngresos.SuspendLayout()
         CType(Me.ingresosConsulta_dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpConsultaVentas.SuspendLayout()
         CType(Me.ventasConsulta_dg, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlRegistrarVenta.SuspendLayout()
+        Me.pnlListarVentas.SuspendLayout()
         CType(Me.dgListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -488,7 +488,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 0
+        Me.Main.SelectedIndex = 2
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -1746,11 +1746,11 @@ Partial Class FrmMain
         '
         'TabProspectos
         '
-        Me.TabProspectos.Controls.Add(Me.PnlListaProspectos)
-        Me.TabProspectos.Controls.Add(Me.pnlSeguimientos)
         Me.TabProspectos.Controls.Add(Me.PnlNuevoProspecto)
         Me.TabProspectos.Controls.Add(Me.PnlListaSeguimientos)
         Me.TabProspectos.Controls.Add(Me.pnlAsignarProspecto)
+        Me.TabProspectos.Controls.Add(Me.PnlListaProspectos)
+        Me.TabProspectos.Controls.Add(Me.pnlSeguimientos)
         Me.TabProspectos.HorizontalScrollbarBarColor = True
         Me.TabProspectos.HorizontalScrollbarHighlightOnWheel = False
         Me.TabProspectos.HorizontalScrollbarSize = 10
@@ -1966,7 +1966,7 @@ Partial Class FrmMain
         '
         Me.txtFechaSeguimiento.CustomFormat = ""
         Me.txtFechaSeguimiento.Location = New System.Drawing.Point(155, 52)
-        Me.txtFechaSeguimiento.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.txtFechaSeguimiento.MinimumSize = New System.Drawing.Size(0, 29)
         Me.txtFechaSeguimiento.Name = "txtFechaSeguimiento"
         Me.txtFechaSeguimiento.Size = New System.Drawing.Size(367, 29)
         Me.txtFechaSeguimiento.Style = MetroFramework.MetroColorStyle.Purple
@@ -2116,7 +2116,7 @@ Partial Class FrmMain
         '
         Me.txtFechaNacProspecto.CustomFormat = ""
         Me.txtFechaNacProspecto.Location = New System.Drawing.Point(158, 112)
-        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(0, 29)
         Me.txtFechaNacProspecto.Name = "txtFechaNacProspecto"
         Me.txtFechaNacProspecto.Size = New System.Drawing.Size(367, 29)
         Me.txtFechaNacProspecto.Style = MetroFramework.MetroColorStyle.Purple
@@ -2787,7 +2787,7 @@ Partial Class FrmMain
         Me.checkBoxTotalProducto.AutoSize = True
         Me.checkBoxTotalProducto.Location = New System.Drawing.Point(15, 62)
         Me.checkBoxTotalProducto.Name = "checkBoxTotalProducto"
-        Me.checkBoxTotalProducto.Size = New System.Drawing.Size(102, 15)
+        Me.checkBoxTotalProducto.Size = New System.Drawing.Size(101, 15)
         Me.checkBoxTotalProducto.TabIndex = 12
         Me.checkBoxTotalProducto.Text = "Total Producto"
         Me.checkBoxTotalProducto.UseSelectable = True
@@ -2852,7 +2852,7 @@ Partial Class FrmMain
         Me.checkboxTotalProspetosCliente.AutoSize = True
         Me.checkboxTotalProspetosCliente.Location = New System.Drawing.Point(152, 60)
         Me.checkboxTotalProspetosCliente.Name = "checkboxTotalProspetosCliente"
-        Me.checkboxTotalProspetosCliente.Size = New System.Drawing.Size(167, 15)
+        Me.checkboxTotalProspetosCliente.Size = New System.Drawing.Size(166, 15)
         Me.checkboxTotalProspetosCliente.TabIndex = 13
         Me.checkboxTotalProspetosCliente.Text = "Total de Prospectos Cliente"
         Me.checkboxTotalProspetosCliente.UseSelectable = True
@@ -2862,7 +2862,7 @@ Partial Class FrmMain
         Me.checkBoxTotalProspectos.AutoSize = True
         Me.checkBoxTotalProspectos.Location = New System.Drawing.Point(19, 60)
         Me.checkBoxTotalProspectos.Name = "checkBoxTotalProspectos"
-        Me.checkBoxTotalProspectos.Size = New System.Drawing.Size(127, 15)
+        Me.checkBoxTotalProspectos.Size = New System.Drawing.Size(126, 15)
         Me.checkBoxTotalProspectos.TabIndex = 12
         Me.checkBoxTotalProspectos.Text = "Total de Prospectos"
         Me.checkBoxTotalProspectos.UseSelectable = True
@@ -2927,7 +2927,7 @@ Partial Class FrmMain
         Me.checkBoxMontoTotalVentas.AutoSize = True
         Me.checkBoxMontoTotalVentas.Location = New System.Drawing.Point(115, 69)
         Me.checkBoxMontoTotalVentas.Name = "checkBoxMontoTotalVentas"
-        Me.checkBoxMontoTotalVentas.Size = New System.Drawing.Size(143, 15)
+        Me.checkBoxMontoTotalVentas.Size = New System.Drawing.Size(141, 15)
         Me.checkBoxMontoTotalVentas.TabIndex = 14
         Me.checkBoxMontoTotalVentas.Text = "Monto Total de Ventas"
         Me.checkBoxMontoTotalVentas.UseSelectable = True
@@ -2937,7 +2937,7 @@ Partial Class FrmMain
         Me.checkBoxTotalVentas.AutoSize = True
         Me.checkBoxTotalVentas.Location = New System.Drawing.Point(21, 69)
         Me.checkBoxTotalVentas.Name = "checkBoxTotalVentas"
-        Me.checkBoxTotalVentas.Size = New System.Drawing.Size(88, 15)
+        Me.checkBoxTotalVentas.Size = New System.Drawing.Size(86, 15)
         Me.checkBoxTotalVentas.TabIndex = 12
         Me.checkBoxTotalVentas.Text = "Total Ventas"
         Me.checkBoxTotalVentas.UseSelectable = True
@@ -4350,207 +4350,6 @@ Partial Class FrmMain
         Me.TabVentas.VerticalScrollbarHighlightOnWheel = False
         Me.TabVentas.VerticalScrollbarSize = 10
         '
-        'pnlListarVentas
-        '
-        Me.pnlListarVentas.Controls.Add(Me.btnVolverListarVenta)
-        Me.pnlListarVentas.Controls.Add(Me.dgListaVentas)
-        Me.pnlListarVentas.Controls.Add(Me.lblListaVentas)
-        Me.pnlListarVentas.Controls.Add(Me.btnNuevaVenta)
-        Me.pnlListarVentas.HorizontalScrollbarBarColor = True
-        Me.pnlListarVentas.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnlListarVentas.HorizontalScrollbarSize = 10
-        Me.pnlListarVentas.Location = New System.Drawing.Point(0, 3)
-        Me.pnlListarVentas.Name = "pnlListarVentas"
-        Me.pnlListarVentas.Size = New System.Drawing.Size(767, 461)
-        Me.pnlListarVentas.Style = MetroFramework.MetroColorStyle.Blue
-        Me.pnlListarVentas.TabIndex = 89
-        Me.pnlListarVentas.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.pnlListarVentas.VerticalScrollbarBarColor = True
-        Me.pnlListarVentas.VerticalScrollbarHighlightOnWheel = False
-        Me.pnlListarVentas.VerticalScrollbarSize = 10
-        Me.pnlListarVentas.Visible = False
-        '
-        'pnlConsultarVentas
-        '
-        Me.pnlConsultarVentas.Controls.Add(Me.btnVolverConsultaVentas)
-        Me.pnlConsultarVentas.Controls.Add(Me.grpConsultaIngresos)
-        Me.pnlConsultarVentas.Controls.Add(Me.grpConsultaVentas)
-        Me.pnlConsultarVentas.Controls.Add(Me.periodos_cmb)
-        Me.pnlConsultarVentas.Controls.Add(Me.lblPeriodoConsultarVenta)
-        Me.pnlConsultarVentas.Controls.Add(Me.usuarioConsulta_cmb)
-        Me.pnlConsultarVentas.Controls.Add(Me.lblUsuarioConsultarVenta)
-        Me.pnlConsultarVentas.Controls.Add(Me.lblConsultarVentas)
-        Me.pnlConsultarVentas.HorizontalScrollbarBarColor = True
-        Me.pnlConsultarVentas.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnlConsultarVentas.HorizontalScrollbarSize = 10
-        Me.pnlConsultarVentas.Location = New System.Drawing.Point(0, 3)
-        Me.pnlConsultarVentas.Name = "pnlConsultarVentas"
-        Me.pnlConsultarVentas.Size = New System.Drawing.Size(746, 462)
-        Me.pnlConsultarVentas.TabIndex = 8
-        Me.pnlConsultarVentas.VerticalScrollbarBarColor = True
-        Me.pnlConsultarVentas.VerticalScrollbarHighlightOnWheel = False
-        Me.pnlConsultarVentas.VerticalScrollbarSize = 10
-        Me.pnlConsultarVentas.Visible = False
-        '
-        'btnVolverConsultaVentas
-        '
-        Me.btnVolverConsultaVentas.Location = New System.Drawing.Point(22, 402)
-        Me.btnVolverConsultaVentas.Name = "btnVolverConsultaVentas"
-        Me.btnVolverConsultaVentas.Size = New System.Drawing.Size(123, 36)
-        Me.btnVolverConsultaVentas.TabIndex = 10
-        Me.btnVolverConsultaVentas.Text = "Volver"
-        Me.btnVolverConsultaVentas.UseSelectable = True
-        '
-        'grpConsultaIngresos
-        '
-        Me.grpConsultaIngresos.BackColor = System.Drawing.SystemColors.Window
-        Me.grpConsultaIngresos.Controls.Add(Me.ingresosConsulta_dg)
-        Me.grpConsultaIngresos.Controls.Add(Me.lblIngresos)
-        Me.grpConsultaIngresos.Location = New System.Drawing.Point(22, 252)
-        Me.grpConsultaIngresos.Name = "grpConsultaIngresos"
-        Me.grpConsultaIngresos.Size = New System.Drawing.Size(678, 124)
-        Me.grpConsultaIngresos.TabIndex = 105
-        Me.grpConsultaIngresos.TabStop = False
-        '
-        'ingresosConsulta_dg
-        '
-        Me.ingresosConsulta_dg.AllowUserToAddRows = False
-        Me.ingresosConsulta_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ingresosConsulta_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombreUsuarioIngresos, Me.IngresosConsulta, Me.periodoIngresos})
-        Me.ingresosConsulta_dg.Location = New System.Drawing.Point(14, 16)
-        Me.ingresosConsulta_dg.Name = "ingresosConsulta_dg"
-        Me.ingresosConsulta_dg.RowHeadersVisible = False
-        Me.ingresosConsulta_dg.Size = New System.Drawing.Size(651, 100)
-        Me.ingresosConsulta_dg.TabIndex = 108
-        '
-        'nombreUsuarioIngresos
-        '
-        Me.nombreUsuarioIngresos.HeaderText = "Nombre Usuario"
-        Me.nombreUsuarioIngresos.Name = "nombreUsuarioIngresos"
-        Me.nombreUsuarioIngresos.Width = 250
-        '
-        'IngresosConsulta
-        '
-        Me.IngresosConsulta.HeaderText = "Total de Ingresos"
-        Me.IngresosConsulta.Name = "IngresosConsulta"
-        Me.IngresosConsulta.Width = 150
-        '
-        'periodoIngresos
-        '
-        Me.periodoIngresos.HeaderText = "Periodo"
-        Me.periodoIngresos.Name = "periodoIngresos"
-        Me.periodoIngresos.Width = 250
-        '
-        'lblIngresos
-        '
-        Me.lblIngresos.AutoSize = True
-        Me.lblIngresos.Location = New System.Drawing.Point(9, -4)
-        Me.lblIngresos.Name = "lblIngresos"
-        Me.lblIngresos.Size = New System.Drawing.Size(100, 19)
-        Me.lblIngresos.TabIndex = 107
-        Me.lblIngresos.Text = "Ingresos Totales"
-        '
-        'grpConsultaVentas
-        '
-        Me.grpConsultaVentas.BackColor = System.Drawing.SystemColors.Window
-        Me.grpConsultaVentas.Controls.Add(Me.ventasConsulta_dg)
-        Me.grpConsultaVentas.Controls.Add(Me.lblVentas)
-        Me.grpConsultaVentas.Location = New System.Drawing.Point(22, 113)
-        Me.grpConsultaVentas.Name = "grpConsultaVentas"
-        Me.grpConsultaVentas.Size = New System.Drawing.Size(678, 124)
-        Me.grpConsultaVentas.TabIndex = 104
-        Me.grpConsultaVentas.TabStop = False
-        '
-        'ventasConsulta_dg
-        '
-        Me.ventasConsulta_dg.AllowUserToAddRows = False
-        Me.ventasConsulta_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ventasConsulta_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idConsultaVentas, Me.nombreUsuarioConsultaVenta, Me.cantidadVentasConsulta, Me.periodoConsultaVentas})
-        Me.ventasConsulta_dg.Location = New System.Drawing.Point(15, 17)
-        Me.ventasConsulta_dg.Name = "ventasConsulta_dg"
-        Me.ventasConsulta_dg.RowHeadersVisible = False
-        Me.ventasConsulta_dg.Size = New System.Drawing.Size(651, 100)
-        Me.ventasConsulta_dg.TabIndex = 106
-        '
-        'idConsultaVentas
-        '
-        Me.idConsultaVentas.HeaderText = "Id"
-        Me.idConsultaVentas.Name = "idConsultaVentas"
-        Me.idConsultaVentas.Visible = False
-        '
-        'nombreUsuarioConsultaVenta
-        '
-        Me.nombreUsuarioConsultaVenta.HeaderText = "Nombre Usuario"
-        Me.nombreUsuarioConsultaVenta.Name = "nombreUsuarioConsultaVenta"
-        Me.nombreUsuarioConsultaVenta.Width = 250
-        '
-        'cantidadVentasConsulta
-        '
-        Me.cantidadVentasConsulta.HeaderText = "Cantidad de Ventas"
-        Me.cantidadVentasConsulta.Name = "cantidadVentasConsulta"
-        Me.cantidadVentasConsulta.Width = 150
-        '
-        'periodoConsultaVentas
-        '
-        Me.periodoConsultaVentas.HeaderText = "Periodo"
-        Me.periodoConsultaVentas.Name = "periodoConsultaVentas"
-        Me.periodoConsultaVentas.Width = 250
-        '
-        'lblVentas
-        '
-        Me.lblVentas.AutoSize = True
-        Me.lblVentas.Location = New System.Drawing.Point(9, -3)
-        Me.lblVentas.Name = "lblVentas"
-        Me.lblVentas.Size = New System.Drawing.Size(122, 19)
-        Me.lblVentas.TabIndex = 106
-        Me.lblVentas.Text = "Cantidad de Ventas"
-        '
-        'periodos_cmb
-        '
-        Me.periodos_cmb.FormattingEnabled = True
-        Me.periodos_cmb.ItemHeight = 13
-        Me.periodos_cmb.Location = New System.Drawing.Point(518, 62)
-        Me.periodos_cmb.Name = "periodos_cmb"
-        Me.periodos_cmb.Size = New System.Drawing.Size(182, 21)
-        Me.periodos_cmb.TabIndex = 103
-        '
-        'lblPeriodoConsultarVenta
-        '
-        Me.lblPeriodoConsultarVenta.AutoSize = True
-        Me.lblPeriodoConsultarVenta.Location = New System.Drawing.Point(457, 62)
-        Me.lblPeriodoConsultarVenta.Name = "lblPeriodoConsultarVenta"
-        Me.lblPeriodoConsultarVenta.Size = New System.Drawing.Size(55, 19)
-        Me.lblPeriodoConsultarVenta.TabIndex = 102
-        Me.lblPeriodoConsultarVenta.Text = "Periodo"
-        '
-        'usuarioConsulta_cmb
-        '
-        Me.usuarioConsulta_cmb.FormattingEnabled = True
-        Me.usuarioConsulta_cmb.ItemHeight = 13
-        Me.usuarioConsulta_cmb.Location = New System.Drawing.Point(81, 60)
-        Me.usuarioConsulta_cmb.Name = "usuarioConsulta_cmb"
-        Me.usuarioConsulta_cmb.Size = New System.Drawing.Size(182, 21)
-        Me.usuarioConsulta_cmb.TabIndex = 96
-        '
-        'lblUsuarioConsultarVenta
-        '
-        Me.lblUsuarioConsultarVenta.AutoSize = True
-        Me.lblUsuarioConsultarVenta.Location = New System.Drawing.Point(22, 62)
-        Me.lblUsuarioConsultarVenta.Name = "lblUsuarioConsultarVenta"
-        Me.lblUsuarioConsultarVenta.Size = New System.Drawing.Size(53, 19)
-        Me.lblUsuarioConsultarVenta.TabIndex = 87
-        Me.lblUsuarioConsultarVenta.Text = "Usuario"
-        '
-        'lblConsultarVentas
-        '
-        Me.lblConsultarVentas.AutoSize = True
-        Me.lblConsultarVentas.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblConsultarVentas.Location = New System.Drawing.Point(22, 16)
-        Me.lblConsultarVentas.Name = "lblConsultarVentas"
-        Me.lblConsultarVentas.Size = New System.Drawing.Size(220, 25)
-        Me.lblConsultarVentas.TabIndex = 86
-        Me.lblConsultarVentas.Text = "Consultar Ventas e Ingresos"
-        '
         'pnlRegistrarVenta
         '
         Me.pnlRegistrarVenta.Controls.Add(Me.totalVenta_text)
@@ -4781,6 +4580,207 @@ Partial Class FrmMain
         Me.lblRegistrarVenta.Size = New System.Drawing.Size(125, 25)
         Me.lblRegistrarVenta.TabIndex = 86
         Me.lblRegistrarVenta.Text = "Registrar Venta"
+        '
+        'pnlConsultarVentas
+        '
+        Me.pnlConsultarVentas.Controls.Add(Me.btnVolverConsultaVentas)
+        Me.pnlConsultarVentas.Controls.Add(Me.grpConsultaIngresos)
+        Me.pnlConsultarVentas.Controls.Add(Me.grpConsultaVentas)
+        Me.pnlConsultarVentas.Controls.Add(Me.periodos_cmb)
+        Me.pnlConsultarVentas.Controls.Add(Me.lblPeriodoConsultarVenta)
+        Me.pnlConsultarVentas.Controls.Add(Me.usuarioConsulta_cmb)
+        Me.pnlConsultarVentas.Controls.Add(Me.lblUsuarioConsultarVenta)
+        Me.pnlConsultarVentas.Controls.Add(Me.lblConsultarVentas)
+        Me.pnlConsultarVentas.HorizontalScrollbarBarColor = True
+        Me.pnlConsultarVentas.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlConsultarVentas.HorizontalScrollbarSize = 10
+        Me.pnlConsultarVentas.Location = New System.Drawing.Point(0, 3)
+        Me.pnlConsultarVentas.Name = "pnlConsultarVentas"
+        Me.pnlConsultarVentas.Size = New System.Drawing.Size(746, 462)
+        Me.pnlConsultarVentas.TabIndex = 8
+        Me.pnlConsultarVentas.VerticalScrollbarBarColor = True
+        Me.pnlConsultarVentas.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlConsultarVentas.VerticalScrollbarSize = 10
+        Me.pnlConsultarVentas.Visible = False
+        '
+        'btnVolverConsultaVentas
+        '
+        Me.btnVolverConsultaVentas.Location = New System.Drawing.Point(22, 402)
+        Me.btnVolverConsultaVentas.Name = "btnVolverConsultaVentas"
+        Me.btnVolverConsultaVentas.Size = New System.Drawing.Size(123, 36)
+        Me.btnVolverConsultaVentas.TabIndex = 10
+        Me.btnVolverConsultaVentas.Text = "Volver"
+        Me.btnVolverConsultaVentas.UseSelectable = True
+        '
+        'grpConsultaIngresos
+        '
+        Me.grpConsultaIngresos.BackColor = System.Drawing.SystemColors.Window
+        Me.grpConsultaIngresos.Controls.Add(Me.ingresosConsulta_dg)
+        Me.grpConsultaIngresos.Controls.Add(Me.lblIngresos)
+        Me.grpConsultaIngresos.Location = New System.Drawing.Point(22, 252)
+        Me.grpConsultaIngresos.Name = "grpConsultaIngresos"
+        Me.grpConsultaIngresos.Size = New System.Drawing.Size(678, 124)
+        Me.grpConsultaIngresos.TabIndex = 105
+        Me.grpConsultaIngresos.TabStop = False
+        '
+        'ingresosConsulta_dg
+        '
+        Me.ingresosConsulta_dg.AllowUserToAddRows = False
+        Me.ingresosConsulta_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ingresosConsulta_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombreUsuarioIngresos, Me.IngresosConsulta, Me.periodoIngresos})
+        Me.ingresosConsulta_dg.Location = New System.Drawing.Point(14, 16)
+        Me.ingresosConsulta_dg.Name = "ingresosConsulta_dg"
+        Me.ingresosConsulta_dg.RowHeadersVisible = False
+        Me.ingresosConsulta_dg.Size = New System.Drawing.Size(651, 100)
+        Me.ingresosConsulta_dg.TabIndex = 108
+        '
+        'nombreUsuarioIngresos
+        '
+        Me.nombreUsuarioIngresos.HeaderText = "Nombre Usuario"
+        Me.nombreUsuarioIngresos.Name = "nombreUsuarioIngresos"
+        Me.nombreUsuarioIngresos.Width = 250
+        '
+        'IngresosConsulta
+        '
+        Me.IngresosConsulta.HeaderText = "Total de Ingresos"
+        Me.IngresosConsulta.Name = "IngresosConsulta"
+        Me.IngresosConsulta.Width = 150
+        '
+        'periodoIngresos
+        '
+        Me.periodoIngresos.HeaderText = "Periodo"
+        Me.periodoIngresos.Name = "periodoIngresos"
+        Me.periodoIngresos.Width = 250
+        '
+        'lblIngresos
+        '
+        Me.lblIngresos.AutoSize = True
+        Me.lblIngresos.Location = New System.Drawing.Point(9, -4)
+        Me.lblIngresos.Name = "lblIngresos"
+        Me.lblIngresos.Size = New System.Drawing.Size(100, 19)
+        Me.lblIngresos.TabIndex = 107
+        Me.lblIngresos.Text = "Ingresos Totales"
+        '
+        'grpConsultaVentas
+        '
+        Me.grpConsultaVentas.BackColor = System.Drawing.SystemColors.Window
+        Me.grpConsultaVentas.Controls.Add(Me.ventasConsulta_dg)
+        Me.grpConsultaVentas.Controls.Add(Me.lblVentas)
+        Me.grpConsultaVentas.Location = New System.Drawing.Point(22, 113)
+        Me.grpConsultaVentas.Name = "grpConsultaVentas"
+        Me.grpConsultaVentas.Size = New System.Drawing.Size(678, 124)
+        Me.grpConsultaVentas.TabIndex = 104
+        Me.grpConsultaVentas.TabStop = False
+        '
+        'ventasConsulta_dg
+        '
+        Me.ventasConsulta_dg.AllowUserToAddRows = False
+        Me.ventasConsulta_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ventasConsulta_dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idConsultaVentas, Me.nombreUsuarioConsultaVenta, Me.cantidadVentasConsulta, Me.periodoConsultaVentas})
+        Me.ventasConsulta_dg.Location = New System.Drawing.Point(15, 17)
+        Me.ventasConsulta_dg.Name = "ventasConsulta_dg"
+        Me.ventasConsulta_dg.RowHeadersVisible = False
+        Me.ventasConsulta_dg.Size = New System.Drawing.Size(651, 100)
+        Me.ventasConsulta_dg.TabIndex = 106
+        '
+        'idConsultaVentas
+        '
+        Me.idConsultaVentas.HeaderText = "Id"
+        Me.idConsultaVentas.Name = "idConsultaVentas"
+        Me.idConsultaVentas.Visible = False
+        '
+        'nombreUsuarioConsultaVenta
+        '
+        Me.nombreUsuarioConsultaVenta.HeaderText = "Nombre Usuario"
+        Me.nombreUsuarioConsultaVenta.Name = "nombreUsuarioConsultaVenta"
+        Me.nombreUsuarioConsultaVenta.Width = 250
+        '
+        'cantidadVentasConsulta
+        '
+        Me.cantidadVentasConsulta.HeaderText = "Cantidad de Ventas"
+        Me.cantidadVentasConsulta.Name = "cantidadVentasConsulta"
+        Me.cantidadVentasConsulta.Width = 150
+        '
+        'periodoConsultaVentas
+        '
+        Me.periodoConsultaVentas.HeaderText = "Periodo"
+        Me.periodoConsultaVentas.Name = "periodoConsultaVentas"
+        Me.periodoConsultaVentas.Width = 250
+        '
+        'lblVentas
+        '
+        Me.lblVentas.AutoSize = True
+        Me.lblVentas.Location = New System.Drawing.Point(9, -3)
+        Me.lblVentas.Name = "lblVentas"
+        Me.lblVentas.Size = New System.Drawing.Size(122, 19)
+        Me.lblVentas.TabIndex = 106
+        Me.lblVentas.Text = "Cantidad de Ventas"
+        '
+        'periodos_cmb
+        '
+        Me.periodos_cmb.FormattingEnabled = True
+        Me.periodos_cmb.ItemHeight = 13
+        Me.periodos_cmb.Location = New System.Drawing.Point(518, 62)
+        Me.periodos_cmb.Name = "periodos_cmb"
+        Me.periodos_cmb.Size = New System.Drawing.Size(182, 21)
+        Me.periodos_cmb.TabIndex = 103
+        '
+        'lblPeriodoConsultarVenta
+        '
+        Me.lblPeriodoConsultarVenta.AutoSize = True
+        Me.lblPeriodoConsultarVenta.Location = New System.Drawing.Point(457, 62)
+        Me.lblPeriodoConsultarVenta.Name = "lblPeriodoConsultarVenta"
+        Me.lblPeriodoConsultarVenta.Size = New System.Drawing.Size(55, 19)
+        Me.lblPeriodoConsultarVenta.TabIndex = 102
+        Me.lblPeriodoConsultarVenta.Text = "Periodo"
+        '
+        'usuarioConsulta_cmb
+        '
+        Me.usuarioConsulta_cmb.FormattingEnabled = True
+        Me.usuarioConsulta_cmb.ItemHeight = 13
+        Me.usuarioConsulta_cmb.Location = New System.Drawing.Point(81, 60)
+        Me.usuarioConsulta_cmb.Name = "usuarioConsulta_cmb"
+        Me.usuarioConsulta_cmb.Size = New System.Drawing.Size(182, 21)
+        Me.usuarioConsulta_cmb.TabIndex = 96
+        '
+        'lblUsuarioConsultarVenta
+        '
+        Me.lblUsuarioConsultarVenta.AutoSize = True
+        Me.lblUsuarioConsultarVenta.Location = New System.Drawing.Point(22, 62)
+        Me.lblUsuarioConsultarVenta.Name = "lblUsuarioConsultarVenta"
+        Me.lblUsuarioConsultarVenta.Size = New System.Drawing.Size(53, 19)
+        Me.lblUsuarioConsultarVenta.TabIndex = 87
+        Me.lblUsuarioConsultarVenta.Text = "Usuario"
+        '
+        'lblConsultarVentas
+        '
+        Me.lblConsultarVentas.AutoSize = True
+        Me.lblConsultarVentas.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblConsultarVentas.Location = New System.Drawing.Point(22, 16)
+        Me.lblConsultarVentas.Name = "lblConsultarVentas"
+        Me.lblConsultarVentas.Size = New System.Drawing.Size(220, 25)
+        Me.lblConsultarVentas.TabIndex = 86
+        Me.lblConsultarVentas.Text = "Consultar Ventas e Ingresos"
+        '
+        'pnlListarVentas
+        '
+        Me.pnlListarVentas.Controls.Add(Me.btnVolverListarVenta)
+        Me.pnlListarVentas.Controls.Add(Me.dgListaVentas)
+        Me.pnlListarVentas.Controls.Add(Me.lblListaVentas)
+        Me.pnlListarVentas.Controls.Add(Me.btnNuevaVenta)
+        Me.pnlListarVentas.HorizontalScrollbarBarColor = True
+        Me.pnlListarVentas.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlListarVentas.HorizontalScrollbarSize = 10
+        Me.pnlListarVentas.Location = New System.Drawing.Point(0, 3)
+        Me.pnlListarVentas.Name = "pnlListarVentas"
+        Me.pnlListarVentas.Size = New System.Drawing.Size(767, 461)
+        Me.pnlListarVentas.Style = MetroFramework.MetroColorStyle.Blue
+        Me.pnlListarVentas.TabIndex = 89
+        Me.pnlListarVentas.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnlListarVentas.VerticalScrollbarBarColor = True
+        Me.pnlListarVentas.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlListarVentas.VerticalScrollbarSize = 10
+        Me.pnlListarVentas.Visible = False
         '
         'btnVolverListarVenta
         '
@@ -5061,8 +5061,8 @@ Partial Class FrmMain
         Me.gboPorductsSectionRol.ResumeLayout(False)
         Me.gboPorductsSectionRol.PerformLayout()
         Me.TabVentas.ResumeLayout(False)
-        Me.pnlListarVentas.ResumeLayout(False)
-        Me.pnlListarVentas.PerformLayout()
+        Me.pnlRegistrarVenta.ResumeLayout(False)
+        Me.pnlRegistrarVenta.PerformLayout()
         Me.pnlConsultarVentas.ResumeLayout(False)
         Me.pnlConsultarVentas.PerformLayout()
         Me.grpConsultaIngresos.ResumeLayout(False)
@@ -5071,8 +5071,8 @@ Partial Class FrmMain
         Me.grpConsultaVentas.ResumeLayout(False)
         Me.grpConsultaVentas.PerformLayout()
         CType(Me.ventasConsulta_dg, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlRegistrarVenta.ResumeLayout(False)
-        Me.pnlRegistrarVenta.PerformLayout()
+        Me.pnlListarVentas.ResumeLayout(False)
+        Me.pnlListarVentas.PerformLayout()
         CType(Me.dgListaVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

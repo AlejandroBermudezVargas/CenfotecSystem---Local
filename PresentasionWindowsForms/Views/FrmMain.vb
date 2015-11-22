@@ -240,23 +240,28 @@ Public Class FrmMain
         tglEstaInteresado.Checked = False
         tglEsCliente.Checked = False
         ckbEventoProspecto.Checked = False
+        cbEventos.DataSource = Nothing
     End Sub
 
     Private Sub btnGuardarProspecto_Click(sender As Object, e As EventArgs) Handles btnGuardarProspecto.Click
         Dim listaIntereses As New List(Of Tipo_Producto)
+        Dim idEvento = Nothing
         If (tglEstaInteresado.Checked = True) Then
             Dim interes As New Tipo_Producto
-            Dim idInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of String, String)).Key)
-            Dim nombreInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of String, String)).Value)
+            Dim idInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of Integer, String)).Key)
+            Dim nombreInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of Integer, String)).Value)
             interes.Id_Tipo_Producto = idInteres
             interes.Nombre = nombreInteres
             listaIntereses.Add(interes)
+        End If
+        If (ckbEventoProspecto.Checked.Equals(True)) Then
+            idEvento = DirectCast(cbEventos.SelectedItem, KeyValuePair(Of Integer, String)).Key
         End If
         If validateProspectusForm() Then
             Dim resul = ProspectusController.guardarOActualizar(CInt(lblIdProspecto.Text), txtNombreProspecto.Text, txtApellidosProspecto.Text, txtFechaNacProspecto.Value,
                                          txtProcedenciaProspecto.Text, tglEstadoProspecto.Checked, txtTelProspecto.Text,
                                          txtEmailProspecto.Text, txtDireccionProspecto.Text, tglEstaInteresado.Checked,
-                                         tglEsCliente.Checked, listaIntereses)
+                                         tglEsCliente.Checked, listaIntereses, idEvento)
             If (resul.Equals(True)) Then
                 MsgBox(respuestasDelSistema.CREATE_USER_SUCCESS, MsgBoxStyle.Information)
             Else
@@ -327,7 +332,7 @@ Public Class FrmMain
 
     Public Sub llenarComboEventos()
         Dim eventos = EventosController.ListarEventos()
-        Dim comboData As New Dictionary(Of String, String)()
+        Dim comboData As New Dictionary(Of Integer, String)()
         If (eventos.Count > 0) Then
             For Each evento As Evento In eventos
                 comboData.Add(evento.IdEvento, evento.Lugar)
@@ -346,6 +351,7 @@ Public Class FrmMain
         Else
             txtProcedenciaProspecto.Enabled = True
             cbInteresesProspecto.Enabled = False
+            txtProcedenciaProspecto.Clear()
         End If
     End Sub
 
@@ -357,6 +363,7 @@ Public Class FrmMain
         Else
             txtProcedenciaProspecto.Enabled = True
             cbEventos.Enabled = False
+            cbEventos.SelectedItem = Nothing
         End If
     End Sub
 
@@ -473,7 +480,11 @@ Public Class FrmMain
         End If
     End Sub
 
-
+    Private Sub cbEventos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEventos.SelectedIndexChanged
+        If ckbEventoProspecto.Checked = True Then
+            txtProcedenciaProspecto.Text = DirectCast(cbEventos.SelectedItem, KeyValuePair(Of Integer, String)).Value
+        End If
+    End Sub
 
     Private Sub ltbVendedoresSlt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ltbVendedoresSlt.SelectedIndexChanged
         data2.Clear()

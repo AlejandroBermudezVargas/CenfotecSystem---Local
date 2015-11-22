@@ -10,6 +10,7 @@
     Private _direccion As String
     Private _interesado As Boolean
     Private _cliente As Boolean
+    Private _id_evento As Integer
 
     Public Property Id_prospecto As Integer
         Get
@@ -107,6 +108,15 @@
         End Get
         Set(value As Boolean)
             _cliente = value
+        End Set
+    End Property
+
+    Public Property Id_evento As Integer
+        Get
+            Return _id_evento
+        End Get
+        Set(value As Integer)
+            _id_evento = value
         End Set
     End Property
 End Class

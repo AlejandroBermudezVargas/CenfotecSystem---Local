@@ -46,7 +46,7 @@ Public Class ProspectusController
     Shared Function guardarOActualizar(ByVal id As Integer, ByVal nombre As String, ByVal apellidos As String, ByVal fecha_nacimiento As Date,
                             ByVal procedencia As String, ByVal estado As Boolean, ByVal telefono As String,
                             ByVal email As String, ByVal direccion As String, ByVal estaInteresado As Boolean,
-                            ByVal esCliente As Boolean, ByVal intereses As List(Of Tipo_Producto)) As Boolean
+                            ByVal esCliente As Boolean, ByVal intereses As List(Of Tipo_Producto), ByVal idEvento As Integer) As Boolean
         Dim nvoProspecto = New Prospecto
         nvoProspecto.Nombre = nombre
         nvoProspecto.Apellidos = apellidos
@@ -61,6 +61,7 @@ Public Class ProspectusController
         'If (Not intereses.Equals(Nothing)) Then
         'nvoProspecto.Tipo_producto = intereses
         'End If
+        nvoProspecto.Id_evento = idEvento
         Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
         Dim request As RestRequest
         If (id <> -1) Then
