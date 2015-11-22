@@ -1608,7 +1608,9 @@ Public Class FrmMain
     End Sub
 
     Private Sub btnConsultarVentasIcon_Click(sender As Object, e As EventArgs) Handles btnConsultarVentasIcon.Click
-        'pnlConsultarVentas.visible = True
+        LlenarComboUsersConsulta()
+        LlenarComboPeriodos()
+        pnlConsultarVentas.Visible = True
     End Sub
 
     Private Sub LimpiarFormVenta()
@@ -1710,6 +1712,112 @@ Public Class FrmMain
 
     Private Sub btnVolverListarVenta_Click(sender As Object, e As EventArgs) Handles btnVolverListarVenta.Click
         pnlListarVentas.Visible = False
+    End Sub
+
+    Private Sub btnVolverConsultaVentas_Click(sender As Object, e As EventArgs) Handles btnVolverConsultaVentas.Click
+        pnlConsultarVentas.Visible = False
+        usuarioConsulta_cmb.SelectedIndex = 0
+        periodos_cmb.SelectedIndex = 0
+    End Sub
+
+    Private Sub usuarioConsulta_cmb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles usuarioConsulta_cmb.SelectedIndexChanged
+        If usuarioConsulta_cmb.SelectedIndex > 0 Then
+            llenarTablaVentasConsulta()
+            llenarTablaTotalesConsulta()
+        End If
+    End Sub
+    Private Sub llenarTablaTotalesConsulta()
+        ingresosConsulta_dg.Rows.Clear()
+        Dim ventas As List(Of Sale) = SalesController.ObtenerListaVentas()
+        Dim venta As Sale = Nothing
+        Dim total As Double
+        Dim IdUsuarioConsultar As Integer
+        Dim usuario As UserModel = Nothing
+        Dim periodo As String
+        usuario = Users_controller.getUser(user.id_usuario)
+        periodo = DirectCast(periodos_cmb.SelectedItem, KeyValuePair(Of String, String)).Value
+        'usuarioConsulta_cmb.SelectedIndex = 0
+        total = 0
+        If (Not ventas Is Nothing) Then
+            For Each venta In ventas
+                If user.id_rol = 1 And usuarioConsulta_cmb.SelectedIndex > 0 Then
+                    IdUsuarioConsultar = CInt(DirectCast(usuarioConsulta_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
+                    usuario = Users_controller.getUser(IdUsuarioConsultar)
+                    If venta.Id_Usuario = IdUsuarioConsultar Then
+                        total = total + venta.Monto
+                    End If
+                Else
+                    usuario = user
+                    If user.id_usuario = venta.Id_Usuario Then
+                        total = total + venta.Monto
+                    End If
+                End If
+            Next
+            ingresosConsulta_dg.Rows.Add(usuario.nombre & " " & usuario.apellido, total, periodo)
+        End If
+    End Sub
+
+
+    Private Sub llenarTablaVentasConsulta()
+        ventasConsulta_dg.Rows.Clear()
+        Dim ventas As List(Of Sale) = SalesController.ObtenerListaVentas()
+        Dim venta As Sale = Nothing
+        Dim cantidadVentas As Integer
+        Dim IdUsuarioConsultar As Integer
+        Dim usuario As UserModel = Nothing
+        Dim periodo As String
+        usuario = Users_controller.getUser(user.id_usuario)
+        cantidadVentas = 0
+
+        periodo = DirectCast(periodos_cmb.SelectedItem, KeyValuePair(Of String, String)).Value
+        'usuarioConsulta_cmb.SelectedIndex = 0
+        If (Not ventas Is Nothing) Then
+            For Each venta In ventas
+                If user.id_rol = 1 And usuarioConsulta_cmb.SelectedIndex > 0 Then
+                    IdUsuarioConsultar = CInt(DirectCast(usuarioConsulta_cmb.SelectedItem, KeyValuePair(Of String, String)).Key)
+                    usuario = Users_controller.getUser(IdUsuarioConsultar)
+                    If venta.Id_Usuario = IdUsuarioConsultar Then
+                        cantidadVentas = cantidadVentas + 1
+                    End If
+                Else
+
+                    If usuario.id_usuario = venta.Id_Usuario Then
+                        cantidadVentas = cantidadVentas + 1
+                    End If
+                End If
+            Next
+            ventasConsulta_dg.Rows.Add(IdUsuarioConsultar, usuario.nombre & " " & usuario.apellido, cantidadVentas, periodo)
+
+        End If
+    End Sub
+
+    Private Sub LlenarComboUsersConsulta()
+        Dim comboSource As New Dictionary(Of String, String)()
+        If user.id_rol = 1 Then
+            Dim usuarios As List(Of UserModel) = Users_controller.getUsers
+            comboSource.Add("", "Elija uno")
+            For Each usuario As UserModel In usuarios
+                comboSource.Add(usuario.id_usuario, usuario.apellido & " " & usuario.nombre)
+            Next
+        Else
+            comboSource.Add(user.id_usuario, user.nombre & " " & user.apellido)
+        End If
+        usuarioConsulta_cmb.DataSource = New BindingSource(comboSource, Nothing)
+        usuarioConsulta_cmb.DisplayMember = "Value"
+        usuarioConsulta_cmb.ValueMember = "Key"
+    End Sub
+
+    Private Sub LlenarComboPeriodos()
+        Dim periodos() As String = {"Año en curso"}
+        Dim comboSource As New Dictionary(Of String, String)()
+        Dim i As Integer = 0
+        For Each per In periodos
+            comboSource.Add(i, periodos(i))
+            i = i + 1
+        Next
+        periodos_cmb.DataSource = New BindingSource(comboSource, Nothing)
+        periodos_cmb.DisplayMember = "Value"
+        periodos_cmb.ValueMember = "Key"
     End Sub
 End Class
 
