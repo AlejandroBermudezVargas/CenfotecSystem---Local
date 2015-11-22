@@ -497,9 +497,9 @@ Partial Class FrmMain
         'TabProductos
         '
         Me.TabProductos.Controls.Add(Me.pnlRegistrarCarrera)
-        Me.TabProductos.Controls.Add(Me.pnlListaCarreras)
         Me.TabProductos.Controls.Add(Me.registrarActi_pnl)
         Me.TabProductos.Controls.Add(Me.listaActis_pnl)
+        Me.TabProductos.Controls.Add(Me.pnlListaCarreras)
         Me.TabProductos.Controls.Add(Me.btnActiIco)
         Me.TabProductos.Controls.Add(Me.btnCarrerasIcon)
         Me.TabProductos.HorizontalScrollbarBarColor = True

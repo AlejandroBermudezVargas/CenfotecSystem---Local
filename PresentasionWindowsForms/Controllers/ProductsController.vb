@@ -193,7 +193,7 @@ Public Class ProductsController
                 & "Código|Nombre|Costo|Tipo|Horario|Fecha Inicio" & registrosError
                 MsgBox(resul, MsgBoxStyle.Critical)
             Else
-                MsgBox("La información de carreras se ingresó correctamente.", MsgBoxStyle.Information)
+                MsgBox("La información de productos se ingresó correctamente.", MsgBoxStyle.Information)
             End If
 
             costoProd = 0

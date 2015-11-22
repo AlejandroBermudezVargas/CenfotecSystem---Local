@@ -1827,9 +1827,9 @@ Public Class FrmMain
         tipoImport = 1
         tipoProdImport = 2
         AbrirArchivo()
-        llenarTablaActis()
-        registrarActi_pnl.Visible = False
-        listaActis_pnl.Visible = True
+        llenarTablaCarreras()
+        pnlRegistrarCarrera.Visible = False
+        pnlListaCarreras.Visible = True
     End Sub
 
     Public Sub AbrirArchivo()
@@ -1866,6 +1866,15 @@ Public Class FrmMain
             limpiarFormCarrera()
             pnlListaCarreras.Visible = True
         End If
+    End Sub
+
+    Private Sub importarActis_lbl_Click(sender As Object, e As EventArgs) Handles importarActis_lbl.Click
+        tipoImport = 1
+        tipoProdImport = 1
+        AbrirArchivo()
+        llenarTablaActis()
+        registrarActi_pnl.Visible = False
+        listaActis_pnl.Visible = True
     End Sub
 End Class
 
