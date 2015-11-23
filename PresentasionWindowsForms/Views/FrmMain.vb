@@ -3,6 +3,9 @@ Imports System.Net.Mail
 Imports PresentasionWindowsForms.My.Resources
 
 Public Class FrmMain
+    Shared tipoImport As Integer
+    Shared tipoExport As Integer
+    Shared tipoProdImport As Integer
     Shared modProduct As Boolean = False
     Private user As UserModel
 
@@ -748,7 +751,7 @@ Public Class FrmMain
         If (Not actis Is Nothing) Then
             For Each acti As Producto In actis
                 If (acti.Id_Tipo_Product = 1) Then
-                    listaActis_dg.Rows.Add(acti.Id_producto, acti.Nombre, acti.Codigo_Producto, acti.Costo, acti.Horario, Format(acti.Fecha_inicio, "dd-MM-yyyy"))
+                    listaActis_dg.Rows.Add(acti.Id_producto, acti.Nombre, acti.Codigo_Producto, acti.Costo, acti.Horario, Format(acti.Fecha_Inicio, "dd-MM-yyyy"))
                 End If
             Next
         End If
@@ -1532,7 +1535,7 @@ Public Class FrmMain
         dgListaVentas.Rows.Clear()
         Dim usuario As UserModel = Nothing
 
-        Dim ventas As List(Of Sale) = SalesController.obtenerListaVentas()
+        Dim ventas As List(Of Sale) = SalesController.ObtenerListaVentas()
         If (Not ventas Is Nothing) Then
             For Each venta As Sale In ventas
                 If user.id_rol = 1 Then
@@ -1818,6 +1821,51 @@ Public Class FrmMain
         periodos_cmb.DataSource = New BindingSource(comboSource, Nothing)
         periodos_cmb.DisplayMember = "Value"
         periodos_cmb.ValueMember = "Key"
+    End Sub
+
+    Private Sub lblImportarCarrera_Click(sender As Object, e As EventArgs) Handles lblImportarCarrera.Click
+        tipoImport = 1
+        tipoProdImport = 2
+        AbrirArchivo()
+        llenarTablaActis()
+        registrarActi_pnl.Visible = False
+        listaActis_pnl.Visible = True
+    End Sub
+
+    Public Sub AbrirArchivo()
+
+        Dim openFileDialog1 As New OpenFileDialog()
+        Dim path As String
+
+        openFileDialog1.InitialDirectory = "c:\Desktop"
+        openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
+        openFileDialog1.FilterIndex = 2
+        openFileDialog1.RestoreDirectory = True
+
+        If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Try
+                path = openFileDialog1.FileName
+                If (path IsNot "") Then
+                    Select Case (tipoImport)
+                        Case 1
+                            ProductsController.ImportarProductos(path, tipoProdImport)
+
+                            'Case 2
+                            '    ProspectusController.ImportarProspectos(path)
+                        Case 3
+
+                        Case Else
+                    End Select
+
+                End If
+            Catch Ex As Exception
+                MessageBox.Show("Ocurrio un error al intentar importar la información." & Ex.Message)
+            End Try
+
+            llenarTablaCarreras()
+            limpiarFormCarrera()
+            pnlListaCarreras.Visible = True
+        End If
     End Sub
 End Class
 
