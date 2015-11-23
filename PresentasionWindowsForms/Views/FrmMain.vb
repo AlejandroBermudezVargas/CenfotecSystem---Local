@@ -332,6 +332,20 @@ Public Class FrmMain
             btnListarSeguimientos.Visible = True
             PnlListaProspectos.Visible = False
             PnlNuevoProspecto.Visible = True
+            If (Not ppros.Id_evento.Equals(Nothing)) Then
+                For x As Integer = 0 To cbEventos.Items.Count - 1
+                    If (ppros.Id_evento.Equals(DirectCast(cbEventos.Items.Item(x), KeyValuePair(Of Integer, String)).Key)) Then
+                        cbEventos.SelectedItem = cbEventos.Items.Item(x)
+                    End If
+                Next
+            End If
+            If tglEstaInteresado.Checked = True Then
+                If ppros.Tipo_producto.Count > 1 Then
+                    cbInteresesProspecto.SelectedItem = cbInteresesProspecto.Items.Item(0)
+                Else
+                    cbInteresesProspecto.SelectedItem = cbInteresesProspecto.Items.Item(ppros.Tipo_producto(0).Id_Tipo_Producto)
+                End If
+            End If
         Else
             Exit Sub
         End If
@@ -505,7 +519,21 @@ Public Class FrmMain
     End Sub
 
     Private Sub btnGuardarAsignarProsp_Click(sender As Object, e As EventArgs) Handles btnGuardarAsignarProsp.Click
-
+        Dim vendedor As New UserModel
+        Dim idVendedor = DirectCast(ltbVendedoresSlt.SelectedItem, KeyValuePair(Of Integer, String)).Key
+        Dim listaProspectos As New List(Of Prospecto)
+        vendedor = Users_controller.getUser(idVendedor.ToString)
+        For x As Integer = 0 To ltbProspAsignados.Items.Count - 1
+            Dim prospecto As New Prospecto
+            prospecto.Id_prospecto = DirectCast(ltbProspAsignados.Items.Item(x), KeyValuePair(Of Integer, String)).Key
+            listaProspectos.Add(prospecto)
+        Next
+        vendedor.Prospectos = listaProspectos
+        If (Users_controller.assignProspectus(vendedor).Equals(True)) Then
+            MsgBox("Los prospectos fueron asignados con éxito", MsgBoxStyle.Information)
+        Else
+            MsgBox("Hubo un error al tratar de guardar los cambios", MsgBoxStyle.Critical)
+        End If
     End Sub
     '
     'SEGUIMIENTOS

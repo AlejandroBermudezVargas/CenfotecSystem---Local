@@ -86,8 +86,9 @@ Public Class ProspectusController
         request.AddParameter("id", id)
         request.RequestFormat = DataFormat.Json
         Dim response = client.Execute(Of Prospecto)(request)
+        Dim prospecto As Prospecto = JsonConvert.DeserializeObject(Of Prospecto)(response.Content)
         If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
-            Return response.Data
+            Return prospecto
         Else
             Return Nothing
         End If
