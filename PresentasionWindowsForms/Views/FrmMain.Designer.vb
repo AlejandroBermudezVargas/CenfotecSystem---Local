@@ -496,8 +496,8 @@ Partial Class FrmMain
         '
         'TabProductos
         '
-        Me.TabProductos.Controls.Add(Me.pnlRegistrarCarrera)
         Me.TabProductos.Controls.Add(Me.registrarActi_pnl)
+        Me.TabProductos.Controls.Add(Me.pnlRegistrarCarrera)
         Me.TabProductos.Controls.Add(Me.listaActis_pnl)
         Me.TabProductos.Controls.Add(Me.pnlListaCarreras)
         Me.TabProductos.Controls.Add(Me.btnActiIco)
@@ -660,11 +660,11 @@ Partial Class FrmMain
         Me.lblImportarCarrera.FontSize = MetroFramework.MetroLinkSize.Tall
         Me.lblImportarCarrera.FontWeight = MetroFramework.MetroLinkWeight.Light
         Me.lblImportarCarrera.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblImportarCarrera.Location = New System.Drawing.Point(205, 18)
+        Me.lblImportarCarrera.Location = New System.Drawing.Point(171, 16)
         Me.lblImportarCarrera.Name = "lblImportarCarrera"
         Me.lblImportarCarrera.Size = New System.Drawing.Size(147, 23)
         Me.lblImportarCarrera.TabIndex = 89
-        Me.lblImportarCarrera.Text = "Importar Datos"
+        Me.lblImportarCarrera.Text = "Importar Carreras"
         Me.lblImportarCarrera.UseCustomForeColor = True
         Me.lblImportarCarrera.UseSelectable = True
         '
@@ -870,6 +870,7 @@ Partial Class FrmMain
         Me.registrarActi_pnl.HorizontalScrollbarBarColor = True
         Me.registrarActi_pnl.HorizontalScrollbarHighlightOnWheel = False
         Me.registrarActi_pnl.HorizontalScrollbarSize = 10
+        Me.registrarActi_pnl.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.registrarActi_pnl.Location = New System.Drawing.Point(0, 3)
         Me.registrarActi_pnl.Name = "registrarActi_pnl"
         Me.registrarActi_pnl.Size = New System.Drawing.Size(746, 462)
@@ -921,11 +922,11 @@ Partial Class FrmMain
         Me.importarActis_lbl.FontSize = MetroFramework.MetroLinkSize.Tall
         Me.importarActis_lbl.FontWeight = MetroFramework.MetroLinkWeight.Light
         Me.importarActis_lbl.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.importarActis_lbl.Location = New System.Drawing.Point(187, 11)
+        Me.importarActis_lbl.Location = New System.Drawing.Point(150, 9)
         Me.importarActis_lbl.Name = "importarActis_lbl"
-        Me.importarActis_lbl.Size = New System.Drawing.Size(147, 23)
+        Me.importarActis_lbl.Size = New System.Drawing.Size(123, 23)
         Me.importarActis_lbl.TabIndex = 85
-        Me.importarActis_lbl.Text = "Importar Datos"
+        Me.importarActis_lbl.Text = "Importar Actis"
         Me.importarActis_lbl.UseCustomForeColor = True
         Me.importarActis_lbl.UseSelectable = True
         '

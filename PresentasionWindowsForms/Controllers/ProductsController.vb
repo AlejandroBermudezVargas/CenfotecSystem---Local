@@ -162,8 +162,11 @@ Public Class ProductsController
                         Case 4
                             If CStr(rango.Cells(i, j).Value) = "" Then
                                 errores = True
+                                tipoProd = tipoProdImport
+                            Else
+                                tipoProd = Integer.Parse(rango.Cells(i, j).Value.ToString())
                             End If
-                            tipoProd = Integer.Parse(rango.Cells(i, j).Value.ToString())
+
                         Case 5
                             If CStr(rango.Cells(i, j).Value) = "" Then
                                 horario = "No Provisto"
@@ -203,13 +206,14 @@ Public Class ProductsController
             Else
                 MsgBox("La información de productos se ingresó correctamente.", MsgBoxStyle.Information)
             End If
-
+            errores = False
             costoProd = 0
             codProd = ""
             nombreProd = ""
-            workbook.Close()
-            APP = Nothing
+
         End If
+        workbook.Close()
+        APP = Nothing
     End Sub
 
 End Class

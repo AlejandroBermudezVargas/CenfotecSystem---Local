@@ -759,6 +759,7 @@ Public Class FrmMain
 
     Private Sub vovlerActi_btn_Click(sender As Object, e As EventArgs) Handles vovlerActi_btn.Click
         listaActis_pnl.Visible = False
+        pnlListaCarreras.Visible = False
     End Sub
 
     Private Sub LlenarComboDias()
@@ -1773,7 +1774,6 @@ Public Class FrmMain
         cantidadVentas = 0
 
         periodo = DirectCast(periodos_cmb.SelectedItem, KeyValuePair(Of String, String)).Value
-        'usuarioConsulta_cmb.SelectedIndex = 0
         If (Not ventas Is Nothing) Then
             For Each venta In ventas
                 If user.id_rol = 1 And usuarioConsulta_cmb.SelectedIndex > 0 Then
