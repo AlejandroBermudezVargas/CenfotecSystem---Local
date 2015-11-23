@@ -496,8 +496,8 @@ Partial Class FrmMain
         '
         'TabProductos
         '
+        Me.TabProductos.Controls.Add(Me.pnlRegistrarCarrera)
         Me.TabProductos.Controls.Add(Me.registrarActi_pnl)
-        Me.TabProductos.Controls.Add(Me.listaActis_pnl)
         Me.TabProductos.Controls.Add(Me.pnlListaCarreras)
         Me.TabProductos.Controls.Add(Me.btnActiIco)
         Me.TabProductos.Controls.Add(Me.btnCarrerasIcon)
@@ -1119,7 +1119,7 @@ Partial Class FrmMain
         Me.pnlRegistrarCarrera.HorizontalScrollbarBarColor = True
         Me.pnlRegistrarCarrera.HorizontalScrollbarHighlightOnWheel = False
         Me.pnlRegistrarCarrera.HorizontalScrollbarSize = 10
-        Me.pnlRegistrarCarrera.Location = New System.Drawing.Point(752, 92)
+        Me.pnlRegistrarCarrera.Location = New System.Drawing.Point(0, 3)
         Me.pnlRegistrarCarrera.Name = "pnlRegistrarCarrera"
         Me.pnlRegistrarCarrera.Size = New System.Drawing.Size(746, 462)
         Me.pnlRegistrarCarrera.TabIndex = 6
@@ -1307,7 +1307,6 @@ Partial Class FrmMain
         '
         'listaActis_pnl
         '
-        Me.listaActis_pnl.Controls.Add(Me.pnlRegistrarCarrera)
         Me.listaActis_pnl.Controls.Add(Me.exportarActi_btn)
         Me.listaActis_pnl.Controls.Add(Me.vovlerActi_btn)
         Me.listaActis_pnl.Controls.Add(Me.listaActis_dg)
@@ -1316,7 +1315,7 @@ Partial Class FrmMain
         Me.listaActis_pnl.HorizontalScrollbarBarColor = True
         Me.listaActis_pnl.HorizontalScrollbarHighlightOnWheel = False
         Me.listaActis_pnl.HorizontalScrollbarSize = 10
-        Me.listaActis_pnl.Location = New System.Drawing.Point(0, 3)
+        Me.listaActis_pnl.Location = New System.Drawing.Point(752, 66)
         Me.listaActis_pnl.Name = "listaActis_pnl"
         Me.listaActis_pnl.Size = New System.Drawing.Size(767, 461)
         Me.listaActis_pnl.Style = MetroFramework.MetroColorStyle.Blue
@@ -1415,6 +1414,7 @@ Partial Class FrmMain
         '
         'pnlListaCarreras
         '
+        Me.pnlListaCarreras.Controls.Add(Me.listaActis_pnl)
         Me.pnlListaCarreras.Controls.Add(Me.btnExportar_Carreras)
         Me.pnlListaCarreras.Controls.Add(Me.btnVolver_Carrera)
         Me.pnlListaCarreras.Controls.Add(Me.listaCarreras_dg)
