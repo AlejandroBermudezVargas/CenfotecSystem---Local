@@ -58,9 +58,7 @@ Public Class ProspectusController
         nvoProspecto.Direccion = direccion
         nvoProspecto.Interesado = estaInteresado
         nvoProspecto.Cliente = esCliente
-        'If (Not intereses.Equals(Nothing)) Then
-        'nvoProspecto.Tipo_producto = intereses
-        'End If
+        nvoProspecto.Tipo_producto = intereses
         nvoProspecto.Id_evento = idEvento
         Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
         Dim request As RestRequest

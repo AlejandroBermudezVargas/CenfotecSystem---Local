@@ -247,14 +247,26 @@ Public Class FrmMain
         Dim listaIntereses As New List(Of Tipo_Producto)
         Dim idEvento = Nothing
         If (tglEstaInteresado.Checked = True) Then
-            Dim interes As New Tipo_Producto
             Dim idInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of Integer, String)).Key)
-            Dim nombreInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of Integer, String)).Value)
-            interes.Id_Tipo_Producto = idInteres
-            interes.Nombre = nombreInteres
-            listaIntereses.Add(interes)
+            Dim nombreInteres = Nothing
+            If idInteres = 0 Then
+                For x As Integer = 1 To cbInteresesProspecto.Items.Count - 1
+                    Dim interes As New Tipo_Producto
+                    idInteres = DirectCast(cbInteresesProspecto.Items.Item(x), KeyValuePair(Of Integer, String)).Key
+                    nombreInteres = DirectCast(cbInteresesProspecto.Items.Item(x), KeyValuePair(Of Integer, String)).Value
+                    interes.Id_Tipo_Producto = idInteres
+                    interes.Nombre = nombreInteres
+                    listaIntereses.Add(interes)
+                Next
+            Else
+                Dim interes As New Tipo_Producto
+                nombreInteres = DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of Integer, String)).Value
+                interes.Id_Tipo_Producto = idInteres
+                interes.Nombre = nombreInteres
+                listaIntereses.Add(interes)
+            End If
         End If
-        If (ckbEventoProspecto.Checked.Equals(True)) Then
+        If (ckbEventoProspecto.Checked = True) Then
             idEvento = DirectCast(cbEventos.SelectedItem, KeyValuePair(Of Integer, String)).Key
         End If
         If validateProspectusForm() Then
@@ -294,6 +306,10 @@ Public Class FrmMain
             result = False
             ErrorProvider1.SetError(txtApellidosProspecto, ValidationsMessages.EMPTY_FIELD)
         End If
+        If String.IsNullOrEmpty(txtProcedenciaProspecto.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtProcedenciaProspecto, ValidationsMessages.EMPTY_FIELD)
+        End If
         Return result
     End Function
 
@@ -322,12 +338,17 @@ Public Class FrmMain
     End Sub
 
     Public Sub llenarComboIntereses()
-        Dim comboData As New Dictionary(Of String, String)()
-        comboData.Add(1, "Acti")
-        comboData.Add(2, "Carrera")
-        cbInteresesProspecto.DataSource = New BindingSource(comboData, Nothing)
-        cbInteresesProspecto.DisplayMember = "Value"
-        cbInteresesProspecto.ValueMember = "Key"
+        Dim tipos = ProductTypeController.obtenerLista()
+        Dim comboData As New Dictionary(Of Integer, String)()
+        comboData.Add(0, "Todo")
+        If tipos.Count > 0 Then
+            For Each tipo As Tipo_Producto In tipos
+                comboData.Add(tipo.Id_Tipo_Producto, tipo.Nombre)
+            Next
+            cbInteresesProspecto.DataSource = New BindingSource(comboData, Nothing)
+            cbInteresesProspecto.DisplayMember = "Value"
+            cbInteresesProspecto.ValueMember = "Key"
+        End If
     End Sub
 
     Public Sub llenarComboEventos()
@@ -345,23 +366,19 @@ Public Class FrmMain
 
     Private Sub tglEstaInteresado_CheckedChanged(sender As Object, e As EventArgs) Handles tglEstaInteresado.CheckedChanged
         If (tglEstaInteresado.Checked = True) Then
-            txtProcedenciaProspecto.Enabled = False
             cbInteresesProspecto.Enabled = True
             llenarComboIntereses()
         Else
-            txtProcedenciaProspecto.Enabled = True
             cbInteresesProspecto.Enabled = False
-            txtProcedenciaProspecto.Clear()
+            cbInteresesProspecto.SelectedItem = Nothing
         End If
     End Sub
 
     Private Sub ckbEventoProspecto_CheckedChanged(sender As Object, e As EventArgs) Handles ckbEventoProspecto.CheckedChanged
         If (ckbEventoProspecto.Checked = True) Then
-            txtProcedenciaProspecto.Enabled = False
             cbEventos.Enabled = True
             llenarComboEventos()
         Else
-            txtProcedenciaProspecto.Enabled = True
             cbEventos.Enabled = False
             cbEventos.SelectedItem = Nothing
         End If
@@ -480,17 +497,15 @@ Public Class FrmMain
         End If
     End Sub
 
-    Private Sub cbEventos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEventos.SelectedIndexChanged
-        If ckbEventoProspecto.Checked = True Then
-            txtProcedenciaProspecto.Text = DirectCast(cbEventos.SelectedItem, KeyValuePair(Of Integer, String)).Value
-        End If
-    End Sub
-
     Private Sub ltbVendedoresSlt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ltbVendedoresSlt.SelectedIndexChanged
         data2.Clear()
         data3.Clear()
         ltbProspAsignados.DataSource = Nothing
         llenarListBoxProspectos()
+    End Sub
+
+    Private Sub btnGuardarAsignarProsp_Click(sender As Object, e As EventArgs) Handles btnGuardarAsignarProsp.Click
+
     End Sub
     '
     'SEGUIMIENTOS
