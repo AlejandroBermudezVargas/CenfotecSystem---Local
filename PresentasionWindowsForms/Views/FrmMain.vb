@@ -1876,6 +1876,26 @@ Public Class FrmMain
         registrarActi_pnl.Visible = False
         listaActis_pnl.Visible = True
     End Sub
+
+    Private Sub exportarActi_btn_Click(sender As Object, e As EventArgs) Handles exportarActi_btn.Click
+        tipoExport = 1
+        Dim path = SalvarArchivo()
+    End Sub
+    Public Function SalvarArchivo() As String
+        Dim path As String = ""
+        Dim dialog As New FolderBrowserDialog()
+        dialog.RootFolder = Environment.SpecialFolder.Desktop
+        dialog.SelectedPath = "C:\"
+        dialog.Description = "Seleccione la ubicación donde desea guardar el archivo: "
+        If dialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            path = dialog.SelectedPath
+            ProductsController.ExportarProductos(tipoExport, path)
+        ElseIf dialog.ShowDialog() = Windows.Forms.DialogResult.Cancel Then
+
+        End If
+        Return path
+    End Function
+
 End Class
 
 
