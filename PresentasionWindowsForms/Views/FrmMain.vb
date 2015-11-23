@@ -759,6 +759,7 @@ Public Class FrmMain
 
     Private Sub vovlerActi_btn_Click(sender As Object, e As EventArgs) Handles vovlerActi_btn.Click
         listaActis_pnl.Visible = False
+        pnlListaCarreras.Visible = False
     End Sub
 
     Private Sub LlenarComboDias()
@@ -1773,7 +1774,6 @@ Public Class FrmMain
         cantidadVentas = 0
 
         periodo = DirectCast(periodos_cmb.SelectedItem, KeyValuePair(Of String, String)).Value
-        'usuarioConsulta_cmb.SelectedIndex = 0
         If (Not ventas Is Nothing) Then
             For Each venta In ventas
                 If user.id_rol = 1 And usuarioConsulta_cmb.SelectedIndex > 0 Then
@@ -1827,9 +1827,9 @@ Public Class FrmMain
         tipoImport = 1
         tipoProdImport = 2
         AbrirArchivo()
-        llenarTablaActis()
-        registrarActi_pnl.Visible = False
-        listaActis_pnl.Visible = True
+        llenarTablaCarreras()
+        pnlRegistrarCarrera.Visible = False
+        pnlListaCarreras.Visible = True
     End Sub
 
     Public Sub AbrirArchivo()
@@ -1866,6 +1866,15 @@ Public Class FrmMain
             limpiarFormCarrera()
             pnlListaCarreras.Visible = True
         End If
+    End Sub
+
+    Private Sub importarActis_lbl_Click(sender As Object, e As EventArgs) Handles importarActis_lbl.Click
+        tipoImport = 1
+        tipoProdImport = 1
+        AbrirArchivo()
+        llenarTablaActis()
+        registrarActi_pnl.Visible = False
+        listaActis_pnl.Visible = True
     End Sub
 End Class
 

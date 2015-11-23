@@ -107,7 +107,9 @@ Public Class ProductsController
         Dim fecha_inicio As Date
         Dim errores As Boolean
         Dim registrosError As String
+        Dim cantRegistros As Integer
 
+        cantRegistros = 0
         tipoProdImport = ptipoProdImport
         horario = ""
         nombreProd = ""
@@ -126,7 +128,13 @@ Public Class ProductsController
                    & "Verifique el archivo e inténtelo de nuevo.", MsgBoxStyle.Critical)
             Exit Sub
         Else
-            MsgBox("Se importarán " & rowCount - 1 & " registros.", MsgBoxStyle.Information)
+
+            For i = 2 To rowCount
+                If CStr(rango.Cells(i, 4).Value) = ptipoProdImport Then
+                    cantRegistros = cantRegistros + 1
+                End If
+            Next
+            MsgBox("Se importarán " & cantRegistros & " registros.", MsgBoxStyle.Information)
             For i = 2 To rowCount
                 For j = 1 To colCount
                     fieldNum = j
@@ -154,8 +162,11 @@ Public Class ProductsController
                         Case 4
                             If CStr(rango.Cells(i, j).Value) = "" Then
                                 errores = True
+                                tipoProd = tipoProdImport
+                            Else
+                                tipoProd = Integer.Parse(rango.Cells(i, j).Value.ToString())
                             End If
-                            tipoProd = Integer.Parse(rango.Cells(i, j).Value.ToString())
+
                         Case 5
                             If CStr(rango.Cells(i, j).Value) = "" Then
                                 horario = "No Provisto"
@@ -193,15 +204,16 @@ Public Class ProductsController
                 & "Código|Nombre|Costo|Tipo|Horario|Fecha Inicio" & registrosError
                 MsgBox(resul, MsgBoxStyle.Critical)
             Else
-                MsgBox("La información de carreras se ingresó correctamente.", MsgBoxStyle.Information)
+                MsgBox("La información de productos se ingresó correctamente.", MsgBoxStyle.Information)
             End If
-
+            errores = False
             costoProd = 0
             codProd = ""
             nombreProd = ""
-            workbook.Close()
-            APP = Nothing
+
         End If
+        workbook.Close()
+        APP = Nothing
     End Sub
 
 End Class
