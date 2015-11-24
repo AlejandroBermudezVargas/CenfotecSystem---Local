@@ -1523,7 +1523,8 @@ Public Class FrmMain
     End Sub
 
     Private Sub btnExportar_Carreras_Click(sender As Object, e As EventArgs) Handles btnExportar_Carreras.Click
-
+        tipoExport = 2
+        Dim path = SalvarArchivo()
     End Sub
 
     Private Sub btnListarVentasIcon_Click(sender As Object, e As EventArgs) Handles btnListarVentasIcon.Click
@@ -1891,7 +1892,7 @@ Public Class FrmMain
             path = dialog.SelectedPath
             ProductsController.ExportarProductos(tipoExport, path)
         ElseIf dialog.ShowDialog() = Windows.Forms.DialogResult.Cancel Then
-
+            path = ""
         End If
         Return path
     End Function

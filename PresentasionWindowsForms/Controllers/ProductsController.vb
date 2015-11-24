@@ -249,14 +249,17 @@ Public Class ProductsController
             End If
             oSheet.usedRange.EntireColumn.AutoFit()
             oSheet.usedRange.WrapText = False
-            oBook.SaveAs(path & "\" & nombreFile)
-            oSheet = Nothing
-            oBook = Nothing
-            oExcel.Quit()
-            oExcel = Nothing
-            GC.Collect()
+            If path <> "" Then
+                oBook.SaveAs(path & "\" & nombreFile)
+                oSheet = Nothing
+                oBook = Nothing
+                oExcel.Quit()
+                oExcel = Nothing
+                GC.Collect()
+                MsgBox("La información se exportó correctamente.", MsgBoxStyle.Information)
+            End If
         Else
-            MsgBox("No hay información para exportar", MsgBoxStyle.Critical)
+            MsgBox("No hay información para exportar.", MsgBoxStyle.Critical)
         End If
 
     End Sub
