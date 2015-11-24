@@ -3,6 +3,9 @@ Imports System.Net.Mail
 Imports PresentasionWindowsForms.My.Resources
 
 Public Class FrmMain
+    Shared tipoImport As Integer
+    Shared tipoExport As Integer
+    Shared tipoProdImport As Integer
     Shared modProduct As Boolean = False
     Private user As UserModel
 
@@ -802,7 +805,7 @@ Public Class FrmMain
         If (Not actis Is Nothing) Then
             For Each acti As Producto In actis
                 If (acti.Id_Tipo_Product = 1) Then
-                    listaActis_dg.Rows.Add(acti.Id_producto, acti.Nombre, acti.Codigo_Producto, acti.Costo, acti.Horario, Format(acti.Fecha_inicio, "dd-MM-yyyy"))
+                    listaActis_dg.Rows.Add(acti.Id_producto, acti.Nombre, acti.Codigo_Producto, acti.Costo, acti.Horario, Format(acti.Fecha_Inicio, "dd-MM-yyyy"))
                 End If
             Next
         End If
@@ -810,6 +813,7 @@ Public Class FrmMain
 
     Private Sub vovlerActi_btn_Click(sender As Object, e As EventArgs) Handles vovlerActi_btn.Click
         listaActis_pnl.Visible = False
+        pnlListaCarreras.Visible = False
     End Sub
 
     Private Sub LlenarComboDias()
@@ -1573,7 +1577,8 @@ Public Class FrmMain
     End Sub
 
     Private Sub btnExportar_Carreras_Click(sender As Object, e As EventArgs) Handles btnExportar_Carreras.Click
-
+        tipoExport = 2
+        Dim path = SalvarArchivo()
     End Sub
 
     Private Sub btnListarVentasIcon_Click(sender As Object, e As EventArgs) Handles btnListarVentasIcon.Click
@@ -1586,7 +1591,7 @@ Public Class FrmMain
         dgListaVentas.Rows.Clear()
         Dim usuario As UserModel = Nothing
 
-        Dim ventas As List(Of Sale) = SalesController.obtenerListaVentas()
+        Dim ventas As List(Of Sale) = SalesController.ObtenerListaVentas()
         If (Not ventas Is Nothing) Then
             For Each venta As Sale In ventas
                 If user.id_rol = 1 Then
@@ -1824,7 +1829,6 @@ Public Class FrmMain
         cantidadVentas = 0
 
         periodo = DirectCast(periodos_cmb.SelectedItem, KeyValuePair(Of String, String)).Value
-        'usuarioConsulta_cmb.SelectedIndex = 0
         If (Not ventas Is Nothing) Then
             For Each venta In ventas
                 If user.id_rol = 1 And usuarioConsulta_cmb.SelectedIndex > 0 Then
@@ -1872,6 +1876,88 @@ Public Class FrmMain
         periodos_cmb.DataSource = New BindingSource(comboSource, Nothing)
         periodos_cmb.DisplayMember = "Value"
         periodos_cmb.ValueMember = "Key"
+    End Sub
+
+    Private Sub lblImportarCarrera_Click(sender As Object, e As EventArgs) Handles lblImportarCarrera.Click
+        tipoImport = 1
+        tipoProdImport = 2
+        AbrirArchivo()
+        llenarTablaCarreras()
+        pnlRegistrarCarrera.Visible = False
+        pnlListaCarreras.Visible = True
+    End Sub
+
+    Public Sub AbrirArchivo()
+
+        Dim openFileDialog1 As New OpenFileDialog()
+        Dim path As String
+
+        openFileDialog1.InitialDirectory = "c:\Desktop"
+        openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
+        openFileDialog1.FilterIndex = 2
+        openFileDialog1.RestoreDirectory = True
+
+        If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Try
+                path = openFileDialog1.FileName
+                If (path IsNot "") Then
+                    Select Case (tipoImport)
+                        Case 1
+                            ProductsController.ImportarProductos(path, tipoProdImport)
+
+                        Case 2
+                            ProspectusController.ImportarProspectos(path)
+                        Case 3
+
+                        Case Else
+                    End Select
+
+                End If
+            Catch Ex As Exception
+                MessageBox.Show("Ocurrio un error al intentar importar la información." & Ex.Message)
+            End Try
+
+            llenarTablaCarreras()
+            limpiarFormCarrera()
+            pnlListaCarreras.Visible = True
+        End If
+    End Sub
+
+    Private Sub importarActis_lbl_Click(sender As Object, e As EventArgs) Handles importarActis_lbl.Click
+        tipoImport = 1
+        tipoProdImport = 1
+        AbrirArchivo()
+        llenarTablaActis()
+        registrarActi_pnl.Visible = False
+        listaActis_pnl.Visible = True
+    End Sub
+
+    Private Sub exportarActi_btn_Click(sender As Object, e As EventArgs) Handles exportarActi_btn.Click
+        tipoExport = 1
+        Dim path = SalvarArchivo()
+    End Sub
+    Public Function SalvarArchivo() As String
+        Dim path As String = ""
+        Dim dialog As New FolderBrowserDialog()
+        dialog.RootFolder = Environment.SpecialFolder.Desktop
+        dialog.SelectedPath = "C:\"
+        dialog.Description = "Seleccione la ubicación donde desea guardar el archivo: "
+        If dialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            path = dialog.SelectedPath
+            ProductsController.ExportarProductos(tipoExport, path)
+        ElseIf dialog.ShowDialog() = Windows.Forms.DialogResult.Cancel Then
+            path = ""
+        End If
+        Return path
+    End Function
+
+    Private Sub lblImportarProspectos_Click(sender As Object, e As EventArgs) Handles lblImportarProspectos.Click
+        tipoImport = 2
+        AbrirArchivo()
+        PnlNuevoProspecto.Visible = False
+        lstProspectos.Rows.Clear()
+        llenarListaProspectos()
+        PnlListaProspectos.Visible = True
     End Sub
 End Class
 
