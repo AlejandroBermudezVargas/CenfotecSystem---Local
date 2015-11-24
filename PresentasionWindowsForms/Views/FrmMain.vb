@@ -1851,8 +1851,8 @@ Public Class FrmMain
                         Case 1
                             ProductsController.ImportarProductos(path, tipoProdImport)
 
-                            'Case 2
-                            '    ProspectusController.ImportarProspectos(path)
+                        Case 2
+                            ProspectusController.ImportarProspectos(path)
                         Case 3
 
                         Case Else
@@ -1897,6 +1897,14 @@ Public Class FrmMain
         Return path
     End Function
 
+    Private Sub lblImportarProspectos_Click(sender As Object, e As EventArgs) Handles lblImportarProspectos.Click
+        tipoImport = 2
+        AbrirArchivo()
+        PnlNuevoProspecto.Visible = False
+        lstProspectos.Rows.Clear()
+        llenarListaProspectos()
+        PnlListaProspectos.Visible = True
+    End Sub
 End Class
 
 
