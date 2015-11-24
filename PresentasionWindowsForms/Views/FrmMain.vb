@@ -443,7 +443,7 @@ Public Class FrmMain
                 For Each user As UserModel In users
                     Dim rol As RolModel = RolsController.getRol(user.id_rol)
                     If rol.nombre.Equals("Telemercadeo") Or rol.nombre.Equals("Ventas") Then
-                        data1.Add(user.id_usuario, user.nombre + "" + user.apellido)
+                        data1.Add(user.id_usuario, user.nombre + " " + user.apellido)
                     End If
                 Next
                 ltbVendedoresSlt.DataSource = New BindingSource(data1, Nothing)

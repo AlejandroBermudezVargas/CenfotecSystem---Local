@@ -106,7 +106,7 @@ Public Class Users_controller
 
     Shared Function assignProspectus(ByVal usuario As UserModel)
         Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
-        Dim request = New RestRequest("Users/" + usuario.id_usuario.ToString, Method.PUT)
+        Dim request = New RestRequest("Users/assign/" + usuario.id_usuario.ToString, Method.PUT)
         request.RequestFormat = DataFormat.Json
         request.AddBody(usuario)
 
