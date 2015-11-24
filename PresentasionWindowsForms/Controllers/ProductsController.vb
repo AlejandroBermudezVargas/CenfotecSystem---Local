@@ -216,4 +216,48 @@ Public Class ProductsController
         APP = Nothing
     End Sub
 
+    Shared Sub ExportarProductos(ByVal tipoProd As Integer, ByVal path As String)
+        Dim oExcel As Object
+        Dim oBook As Object
+        Dim oSheet As Object
+        Dim nombreFile As String = ""
+        Dim productos As List(Of Producto) = ProductsController.obtenerListaProductos
+
+        If productos.Count > 0 Then
+            oExcel = CreateObject("Excel.Application")
+            oBook = oExcel.Workbooks.Add
+            oSheet = oBook.Worksheets(1)
+            oSheet.Range("A1").value = "Código"
+            oSheet.Range("B1").value = "Nombre"
+            oSheet.Range("C1").value = "Costo"
+            oSheet.Range("D1").value = "Horario"
+            Dim i = 2
+            For Each prod As Producto In productos
+                If prod.Id_Tipo_Product = tipoProd Then
+                    oSheet.Range("A" & i).value = Trim(prod.Codigo_Producto)
+                    oSheet.Range("B" & i).Value = Trim(prod.Nombre)
+                    oSheet.Range("C" & i).Value = Trim(prod.Costo)
+                    oSheet.Range("D" & i).value = Trim(prod.Horario)
+                    i = i + 1
+                End If
+            Next prod
+            If tipoProd = 1 Then
+                nombreFile = "Actis.xlsx"
+            End If
+            If tipoProd = 2 Then
+                nombreFile = "Carreras.xlsx"
+            End If
+            oSheet.usedRange.EntireColumn.AutoFit()
+            oSheet.usedRange.WrapText = False
+            oBook.SaveAs(path & "\" & nombreFile)
+            oSheet = Nothing
+            oBook = Nothing
+            oExcel.Quit()
+            oExcel = Nothing
+            GC.Collect()
+        Else
+            MsgBox("No hay información para exportar", MsgBoxStyle.Critical)
+        End If
+
+    End Sub
 End Class
