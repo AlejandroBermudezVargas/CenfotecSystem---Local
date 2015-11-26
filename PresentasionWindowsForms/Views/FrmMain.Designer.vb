@@ -138,27 +138,18 @@ Partial Class FrmMain
         Me.lblLugar = New MetroFramework.Controls.MetroLabel()
         Me.EventosLbl = New MetroFramework.Controls.MetroLabel()
         Me.TabProspectos = New MetroFramework.Controls.MetroTabPage()
-        Me.PnlListaProspectos = New MetroFramework.Controls.MetroPanel()
-        Me.btnAsignarProspecto = New MetroFramework.Controls.MetroButton()
-        Me.lblListaProspectos = New MetroFramework.Controls.MetroLabel()
-        Me.btnCrearProspecto = New MetroFramework.Controls.MetroButton()
-        Me.lstProspectos = New System.Windows.Forms.DataGridView()
-        Me.ColumnaIDProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaNombreProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaApellidosProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaNacimientoProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaProcedenciaProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTelefonoProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEmailProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEditarProspecto = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.pnlSeguimientos = New MetroFramework.Controls.MetroPanel()
-        Me.lblCrearSeguimiento = New MetroFramework.Controls.MetroLabel()
-        Me.txtComentarioSeguimiento = New MetroFramework.Controls.MetroTextBox()
-        Me.btnCancelarSeguimiento = New MetroFramework.Controls.MetroButton()
-        Me.btnGuardarSeguimiento = New MetroFramework.Controls.MetroButton()
-        Me.lblComentarioSeguimiento = New MetroFramework.Controls.MetroLabel()
-        Me.txtFechaSeguimiento = New MetroFramework.Controls.MetroDateTime()
-        Me.lblFechaSeguimiento = New MetroFramework.Controls.MetroLabel()
+        Me.pnlAsignarProspecto = New MetroFramework.Controls.MetroPanel()
+        Me.btnQuitarProspAsignado = New MetroFramework.Controls.MetroButton()
+        Me.btnGuardarAsignarProsp = New MetroFramework.Controls.MetroButton()
+        Me.btnCancelarAsignarProsp = New MetroFramework.Controls.MetroButton()
+        Me.btnAsignarListaProsp = New MetroFramework.Controls.MetroButton()
+        Me.ltbProspAsignados = New System.Windows.Forms.ListBox()
+        Me.lblProspAsignados = New MetroFramework.Controls.MetroLabel()
+        Me.ltbProspectosSlt = New System.Windows.Forms.ListBox()
+        Me.ltbVendedoresSlt = New System.Windows.Forms.ListBox()
+        Me.lblProspectosSlt = New MetroFramework.Controls.MetroLabel()
+        Me.lblVendedoresSlt = New MetroFramework.Controls.MetroLabel()
+        Me.lblAsignarProspecto = New MetroFramework.Controls.MetroLabel()
         Me.PnlNuevoProspecto = New MetroFramework.Controls.MetroPanel()
         Me.lblIdSeguimiento = New MetroFramework.Controls.MetroLabel()
         Me.lblIdProspecto = New MetroFramework.Controls.MetroLabel()
@@ -191,6 +182,28 @@ Partial Class FrmMain
         Me.lblCrearProspectos = New MetroFramework.Controls.MetroLabel()
         Me.lblClienteProspecto = New MetroFramework.Controls.MetroLabel()
         Me.tglEsCliente = New MetroFramework.Controls.MetroToggle()
+        Me.lblImportarProspectos = New MetroFramework.Controls.MetroLabel()
+        Me.PnlListaProspectos = New MetroFramework.Controls.MetroPanel()
+        Me.btnAsignarProspecto = New MetroFramework.Controls.MetroButton()
+        Me.lblListaProspectos = New MetroFramework.Controls.MetroLabel()
+        Me.btnCrearProspecto = New MetroFramework.Controls.MetroButton()
+        Me.lstProspectos = New System.Windows.Forms.DataGridView()
+        Me.ColumnaIDProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaNombreProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaApellidosProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaNacimientoProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaProcedenciaProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTelefonoProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEmailProspecto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEditarProspecto = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.pnlSeguimientos = New MetroFramework.Controls.MetroPanel()
+        Me.lblCrearSeguimiento = New MetroFramework.Controls.MetroLabel()
+        Me.txtComentarioSeguimiento = New MetroFramework.Controls.MetroTextBox()
+        Me.btnCancelarSeguimiento = New MetroFramework.Controls.MetroButton()
+        Me.btnGuardarSeguimiento = New MetroFramework.Controls.MetroButton()
+        Me.lblComentarioSeguimiento = New MetroFramework.Controls.MetroLabel()
+        Me.txtFechaSeguimiento = New MetroFramework.Controls.MetroDateTime()
+        Me.lblFechaSeguimiento = New MetroFramework.Controls.MetroLabel()
         Me.PnlListaSeguimientos = New MetroFramework.Controls.MetroPanel()
         Me.btnCancelarListaSeguimiento = New MetroFramework.Controls.MetroButton()
         Me.lstSeguimientos = New System.Windows.Forms.DataGridView()
@@ -200,18 +213,6 @@ Partial Class FrmMain
         Me.ColumnaEditarSeguimiento = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ColumnaEliminarSeguimiento = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblListaSeguimientos = New MetroFramework.Controls.MetroLabel()
-        Me.pnlAsignarProspecto = New MetroFramework.Controls.MetroPanel()
-        Me.btnQuitarProspAsignado = New MetroFramework.Controls.MetroButton()
-        Me.btnGuardarAsignarProsp = New MetroFramework.Controls.MetroButton()
-        Me.btnCancelarAsignarProsp = New MetroFramework.Controls.MetroButton()
-        Me.btnAsignarListaProsp = New MetroFramework.Controls.MetroButton()
-        Me.ltbProspAsignados = New System.Windows.Forms.ListBox()
-        Me.lblProspAsignados = New MetroFramework.Controls.MetroLabel()
-        Me.ltbProspectosSlt = New System.Windows.Forms.ListBox()
-        Me.ltbVendedoresSlt = New System.Windows.Forms.ListBox()
-        Me.lblProspectosSlt = New MetroFramework.Controls.MetroLabel()
-        Me.lblVendedoresSlt = New MetroFramework.Controls.MetroLabel()
-        Me.lblAsignarProspecto = New MetroFramework.Controls.MetroLabel()
         Me.KPIHolder = New MetroFramework.Controls.MetroTabPage()
         Me.panSeleccionarTipoKPI = New MetroFramework.Controls.MetroPanel()
         Me.TileKpiProductos = New MetroFramework.Controls.MetroTile()
@@ -404,7 +405,6 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
-        Me.lblImportarProspectos = New MetroFramework.Controls.MetroLabel()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.registrarActi_pnl.SuspendLayout()
@@ -439,13 +439,13 @@ Partial Class FrmMain
         CType(Me.DataListarEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelCrearEvento.SuspendLayout()
         Me.TabProspectos.SuspendLayout()
+        Me.pnlAsignarProspecto.SuspendLayout()
+        Me.PnlNuevoProspecto.SuspendLayout()
         Me.PnlListaProspectos.SuspendLayout()
         CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSeguimientos.SuspendLayout()
-        Me.PnlNuevoProspecto.SuspendLayout()
         Me.PnlListaSeguimientos.SuspendLayout()
         CType(Me.lstSeguimientos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlAsignarProspecto.SuspendLayout()
         Me.KPIHolder.SuspendLayout()
         Me.panSeleccionarTipoKPI.SuspendLayout()
         Me.pnlCrearKpiProducto.SuspendLayout()
@@ -1765,224 +1765,127 @@ Partial Class FrmMain
         Me.TabProspectos.VerticalScrollbarHighlightOnWheel = False
         Me.TabProspectos.VerticalScrollbarSize = 10
         '
-        'PnlListaProspectos
+        'pnlAsignarProspecto
         '
-        Me.PnlListaProspectos.Controls.Add(Me.btnAsignarProspecto)
-        Me.PnlListaProspectos.Controls.Add(Me.lblListaProspectos)
-        Me.PnlListaProspectos.Controls.Add(Me.btnCrearProspecto)
-        Me.PnlListaProspectos.Controls.Add(Me.lstProspectos)
-        Me.PnlListaProspectos.HorizontalScrollbarBarColor = True
-        Me.PnlListaProspectos.HorizontalScrollbarHighlightOnWheel = False
-        Me.PnlListaProspectos.HorizontalScrollbarSize = 10
-        Me.PnlListaProspectos.Location = New System.Drawing.Point(0, 20)
-        Me.PnlListaProspectos.Name = "PnlListaProspectos"
-        Me.PnlListaProspectos.Size = New System.Drawing.Size(749, 452)
-        Me.PnlListaProspectos.Style = MetroFramework.MetroColorStyle.White
-        Me.PnlListaProspectos.TabIndex = 41
-        Me.PnlListaProspectos.VerticalScrollbarBarColor = True
-        Me.PnlListaProspectos.VerticalScrollbarHighlightOnWheel = False
-        Me.PnlListaProspectos.VerticalScrollbarSize = 10
+        Me.pnlAsignarProspecto.Controls.Add(Me.btnQuitarProspAsignado)
+        Me.pnlAsignarProspecto.Controls.Add(Me.btnGuardarAsignarProsp)
+        Me.pnlAsignarProspecto.Controls.Add(Me.btnCancelarAsignarProsp)
+        Me.pnlAsignarProspecto.Controls.Add(Me.btnAsignarListaProsp)
+        Me.pnlAsignarProspecto.Controls.Add(Me.ltbProspAsignados)
+        Me.pnlAsignarProspecto.Controls.Add(Me.lblProspAsignados)
+        Me.pnlAsignarProspecto.Controls.Add(Me.ltbProspectosSlt)
+        Me.pnlAsignarProspecto.Controls.Add(Me.ltbVendedoresSlt)
+        Me.pnlAsignarProspecto.Controls.Add(Me.lblProspectosSlt)
+        Me.pnlAsignarProspecto.Controls.Add(Me.lblVendedoresSlt)
+        Me.pnlAsignarProspecto.Controls.Add(Me.lblAsignarProspecto)
+        Me.pnlAsignarProspecto.HorizontalScrollbarBarColor = True
+        Me.pnlAsignarProspecto.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlAsignarProspecto.HorizontalScrollbarSize = 10
+        Me.pnlAsignarProspecto.Location = New System.Drawing.Point(4, 8)
+        Me.pnlAsignarProspecto.Name = "pnlAsignarProspecto"
+        Me.pnlAsignarProspecto.Size = New System.Drawing.Size(743, 464)
+        Me.pnlAsignarProspecto.TabIndex = 45
+        Me.pnlAsignarProspecto.VerticalScrollbarBarColor = True
+        Me.pnlAsignarProspecto.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlAsignarProspecto.VerticalScrollbarSize = 10
+        Me.pnlAsignarProspecto.Visible = False
         '
-        'btnAsignarProspecto
+        'btnQuitarProspAsignado
         '
-        Me.btnAsignarProspecto.Location = New System.Drawing.Point(4, 412)
-        Me.btnAsignarProspecto.Name = "btnAsignarProspecto"
-        Me.btnAsignarProspecto.Size = New System.Drawing.Size(123, 36)
-        Me.btnAsignarProspecto.TabIndex = 43
-        Me.btnAsignarProspecto.Text = "Asignar prospectos"
-        Me.btnAsignarProspecto.UseSelectable = True
+        Me.btnQuitarProspAsignado.Location = New System.Drawing.Point(488, 228)
+        Me.btnQuitarProspAsignado.Name = "btnQuitarProspAsignado"
+        Me.btnQuitarProspAsignado.Size = New System.Drawing.Size(35, 23)
+        Me.btnQuitarProspAsignado.TabIndex = 26
+        Me.btnQuitarProspAsignado.Text = "<="
+        Me.btnQuitarProspAsignado.UseSelectable = True
         '
-        'lblListaProspectos
+        'btnGuardarAsignarProsp
         '
-        Me.lblListaProspectos.AutoSize = True
-        Me.lblListaProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblListaProspectos.Location = New System.Drawing.Point(4, 0)
-        Me.lblListaProspectos.Name = "lblListaProspectos"
-        Me.lblListaProspectos.Size = New System.Drawing.Size(132, 25)
-        Me.lblListaProspectos.TabIndex = 10
-        Me.lblListaProspectos.Text = "Lista prospectos"
+        Me.btnGuardarAsignarProsp.Location = New System.Drawing.Point(318, 439)
+        Me.btnGuardarAsignarProsp.Name = "btnGuardarAsignarProsp"
+        Me.btnGuardarAsignarProsp.Size = New System.Drawing.Size(97, 23)
+        Me.btnGuardarAsignarProsp.TabIndex = 25
+        Me.btnGuardarAsignarProsp.Text = "Guardar"
+        Me.btnGuardarAsignarProsp.UseSelectable = True
         '
-        'btnCrearProspecto
+        'btnCancelarAsignarProsp
         '
-        Me.btnCrearProspecto.Location = New System.Drawing.Point(620, 412)
-        Me.btnCrearProspecto.Name = "btnCrearProspecto"
-        Me.btnCrearProspecto.Size = New System.Drawing.Size(122, 36)
-        Me.btnCrearProspecto.TabIndex = 9
-        Me.btnCrearProspecto.Text = "Nuevo prospecto"
-        Me.btnCrearProspecto.UseSelectable = True
+        Me.btnCancelarAsignarProsp.Location = New System.Drawing.Point(421, 439)
+        Me.btnCancelarAsignarProsp.Name = "btnCancelarAsignarProsp"
+        Me.btnCancelarAsignarProsp.Size = New System.Drawing.Size(97, 23)
+        Me.btnCancelarAsignarProsp.TabIndex = 24
+        Me.btnCancelarAsignarProsp.Text = "Cancelar"
+        Me.btnCancelarAsignarProsp.UseSelectable = True
         '
-        'lstProspectos
+        'btnAsignarListaProsp
         '
-        Me.lstProspectos.AllowUserToAddRows = False
-        Me.lstProspectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.lstProspectos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDProspecto, Me.ColumnaNombreProspecto, Me.ColumnaApellidosProspecto, Me.ColumnaNacimientoProspecto, Me.ColumnaProcedenciaProspecto, Me.ColumnaTelefonoProspecto, Me.ColumnaEmailProspecto, Me.ColumnaEditarProspecto})
-        Me.lstProspectos.Location = New System.Drawing.Point(4, 37)
-        Me.lstProspectos.Name = "lstProspectos"
-        Me.lstProspectos.RowHeadersVisible = False
-        Me.lstProspectos.Size = New System.Drawing.Size(739, 344)
-        Me.lstProspectos.TabIndex = 8
+        Me.btnAsignarListaProsp.Location = New System.Drawing.Point(489, 190)
+        Me.btnAsignarListaProsp.Name = "btnAsignarListaProsp"
+        Me.btnAsignarListaProsp.Size = New System.Drawing.Size(35, 23)
+        Me.btnAsignarListaProsp.TabIndex = 23
+        Me.btnAsignarListaProsp.Text = "=>"
+        Me.btnAsignarListaProsp.UseSelectable = True
         '
-        'ColumnaIDProspecto
+        'ltbProspAsignados
         '
-        Me.ColumnaIDProspecto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaIDProspecto.HeaderText = "ID"
-        Me.ColumnaIDProspecto.Name = "ColumnaIDProspecto"
-        Me.ColumnaIDProspecto.ReadOnly = True
-        Me.ColumnaIDProspecto.Visible = False
+        Me.ltbProspAsignados.FormattingEnabled = True
+        Me.ltbProspAsignados.Location = New System.Drawing.Point(540, 91)
+        Me.ltbProspAsignados.Name = "ltbProspAsignados"
+        Me.ltbProspAsignados.Size = New System.Drawing.Size(184, 277)
+        Me.ltbProspAsignados.TabIndex = 20
         '
-        'ColumnaNombreProspecto
+        'lblProspAsignados
         '
-        Me.ColumnaNombreProspecto.HeaderText = "Nombre"
-        Me.ColumnaNombreProspecto.Name = "ColumnaNombreProspecto"
-        Me.ColumnaNombreProspecto.ReadOnly = True
+        Me.lblProspAsignados.AutoSize = True
+        Me.lblProspAsignados.Location = New System.Drawing.Point(540, 64)
+        Me.lblProspAsignados.Name = "lblProspAsignados"
+        Me.lblProspAsignados.Size = New System.Drawing.Size(135, 19)
+        Me.lblProspAsignados.TabIndex = 19
+        Me.lblProspAsignados.Text = "Prospectos asignados"
         '
-        'ColumnaApellidosProspecto
+        'ltbProspectosSlt
         '
-        Me.ColumnaApellidosProspecto.HeaderText = "Apellidos"
-        Me.ColumnaApellidosProspecto.Name = "ColumnaApellidosProspecto"
-        Me.ColumnaApellidosProspecto.ReadOnly = True
+        Me.ltbProspectosSlt.FormattingEnabled = True
+        Me.ltbProspectosSlt.Location = New System.Drawing.Point(288, 91)
+        Me.ltbProspectosSlt.Name = "ltbProspectosSlt"
+        Me.ltbProspectosSlt.Size = New System.Drawing.Size(184, 277)
+        Me.ltbProspectosSlt.TabIndex = 18
         '
-        'ColumnaNacimientoProspecto
+        'ltbVendedoresSlt
         '
-        Me.ColumnaNacimientoProspecto.HeaderText = "Nacimiento"
-        Me.ColumnaNacimientoProspecto.Name = "ColumnaNacimientoProspecto"
-        Me.ColumnaNacimientoProspecto.ReadOnly = True
+        Me.ltbVendedoresSlt.FormattingEnabled = True
+        Me.ltbVendedoresSlt.Location = New System.Drawing.Point(23, 91)
+        Me.ltbVendedoresSlt.Name = "ltbVendedoresSlt"
+        Me.ltbVendedoresSlt.Size = New System.Drawing.Size(183, 277)
+        Me.ltbVendedoresSlt.TabIndex = 17
         '
-        'ColumnaProcedenciaProspecto
+        'lblProspectosSlt
         '
-        Me.ColumnaProcedenciaProspecto.HeaderText = "Procedencia"
-        Me.ColumnaProcedenciaProspecto.Name = "ColumnaProcedenciaProspecto"
-        Me.ColumnaProcedenciaProspecto.ReadOnly = True
+        Me.lblProspectosSlt.AutoSize = True
+        Me.lblProspectosSlt.Location = New System.Drawing.Point(288, 64)
+        Me.lblProspectosSlt.Name = "lblProspectosSlt"
+        Me.lblProspectosSlt.Size = New System.Drawing.Size(73, 19)
+        Me.lblProspectosSlt.TabIndex = 16
+        Me.lblProspectosSlt.Text = "Prospectos"
         '
-        'ColumnaTelefonoProspecto
+        'lblVendedoresSlt
         '
-        Me.ColumnaTelefonoProspecto.HeaderText = "Teléfono"
-        Me.ColumnaTelefonoProspecto.Name = "ColumnaTelefonoProspecto"
-        Me.ColumnaTelefonoProspecto.ReadOnly = True
+        Me.lblVendedoresSlt.AutoSize = True
+        Me.lblVendedoresSlt.Location = New System.Drawing.Point(22, 64)
+        Me.lblVendedoresSlt.Name = "lblVendedoresSlt"
+        Me.lblVendedoresSlt.Size = New System.Drawing.Size(78, 19)
+        Me.lblVendedoresSlt.TabIndex = 15
+        Me.lblVendedoresSlt.Text = "Vendedores"
         '
-        'ColumnaEmailProspecto
+        'lblAsignarProspecto
         '
-        Me.ColumnaEmailProspecto.HeaderText = "E-mail"
-        Me.ColumnaEmailProspecto.Name = "ColumnaEmailProspecto"
-        Me.ColumnaEmailProspecto.ReadOnly = True
-        '
-        'ColumnaEditarProspecto
-        '
-        Me.ColumnaEditarProspecto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaEditarProspecto.HeaderText = ""
-        Me.ColumnaEditarProspecto.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.ColumnaEditarProspecto.Name = "ColumnaEditarProspecto"
-        Me.ColumnaEditarProspecto.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEditarProspecto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'pnlSeguimientos
-        '
-        Me.pnlSeguimientos.Controls.Add(Me.lblCrearSeguimiento)
-        Me.pnlSeguimientos.Controls.Add(Me.txtComentarioSeguimiento)
-        Me.pnlSeguimientos.Controls.Add(Me.btnCancelarSeguimiento)
-        Me.pnlSeguimientos.Controls.Add(Me.btnGuardarSeguimiento)
-        Me.pnlSeguimientos.Controls.Add(Me.lblComentarioSeguimiento)
-        Me.pnlSeguimientos.Controls.Add(Me.txtFechaSeguimiento)
-        Me.pnlSeguimientos.Controls.Add(Me.lblFechaSeguimiento)
-        Me.pnlSeguimientos.HorizontalScrollbarBarColor = True
-        Me.pnlSeguimientos.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnlSeguimientos.HorizontalScrollbarSize = 10
-        Me.pnlSeguimientos.Location = New System.Drawing.Point(4, 14)
-        Me.pnlSeguimientos.Name = "pnlSeguimientos"
-        Me.pnlSeguimientos.Size = New System.Drawing.Size(565, 235)
-        Me.pnlSeguimientos.TabIndex = 42
-        Me.pnlSeguimientos.VerticalScrollbarBarColor = True
-        Me.pnlSeguimientos.VerticalScrollbarHighlightOnWheel = False
-        Me.pnlSeguimientos.VerticalScrollbarSize = 10
-        Me.pnlSeguimientos.Visible = False
-        '
-        'lblCrearSeguimiento
-        '
-        Me.lblCrearSeguimiento.AutoSize = True
-        Me.lblCrearSeguimiento.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblCrearSeguimiento.Location = New System.Drawing.Point(-2, 4)
-        Me.lblCrearSeguimiento.Name = "lblCrearSeguimiento"
-        Me.lblCrearSeguimiento.Size = New System.Drawing.Size(151, 25)
-        Me.lblCrearSeguimiento.TabIndex = 40
-        Me.lblCrearSeguimiento.Text = "Crear seguimiento"
-        '
-        'txtComentarioSeguimiento
-        '
-        '
-        '
-        '
-        Me.txtComentarioSeguimiento.CustomButton.Image = Nothing
-        Me.txtComentarioSeguimiento.CustomButton.Location = New System.Drawing.Point(301, 1)
-        Me.txtComentarioSeguimiento.CustomButton.Name = ""
-        Me.txtComentarioSeguimiento.CustomButton.Size = New System.Drawing.Size(65, 65)
-        Me.txtComentarioSeguimiento.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtComentarioSeguimiento.CustomButton.TabIndex = 1
-        Me.txtComentarioSeguimiento.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtComentarioSeguimiento.CustomButton.UseSelectable = True
-        Me.txtComentarioSeguimiento.CustomButton.Visible = False
-        Me.txtComentarioSeguimiento.Lines = New String(-1) {}
-        Me.txtComentarioSeguimiento.Location = New System.Drawing.Point(155, 102)
-        Me.txtComentarioSeguimiento.MaxLength = 32767
-        Me.txtComentarioSeguimiento.Multiline = True
-        Me.txtComentarioSeguimiento.Name = "txtComentarioSeguimiento"
-        Me.txtComentarioSeguimiento.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtComentarioSeguimiento.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtComentarioSeguimiento.SelectedText = ""
-        Me.txtComentarioSeguimiento.SelectionLength = 0
-        Me.txtComentarioSeguimiento.SelectionStart = 0
-        Me.txtComentarioSeguimiento.Size = New System.Drawing.Size(367, 67)
-        Me.txtComentarioSeguimiento.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtComentarioSeguimiento.TabIndex = 39
-        Me.txtComentarioSeguimiento.UseSelectable = True
-        Me.txtComentarioSeguimiento.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtComentarioSeguimiento.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'btnCancelarSeguimiento
-        '
-        Me.btnCancelarSeguimiento.Location = New System.Drawing.Point(425, 187)
-        Me.btnCancelarSeguimiento.Name = "btnCancelarSeguimiento"
-        Me.btnCancelarSeguimiento.Size = New System.Drawing.Size(97, 23)
-        Me.btnCancelarSeguimiento.TabIndex = 38
-        Me.btnCancelarSeguimiento.Text = "Cancelar"
-        Me.btnCancelarSeguimiento.UseSelectable = True
-        '
-        'btnGuardarSeguimiento
-        '
-        Me.btnGuardarSeguimiento.Location = New System.Drawing.Point(322, 187)
-        Me.btnGuardarSeguimiento.Name = "btnGuardarSeguimiento"
-        Me.btnGuardarSeguimiento.Size = New System.Drawing.Size(97, 23)
-        Me.btnGuardarSeguimiento.TabIndex = 37
-        Me.btnGuardarSeguimiento.Text = "Guardar"
-        Me.btnGuardarSeguimiento.UseSelectable = True
-        '
-        'lblComentarioSeguimiento
-        '
-        Me.lblComentarioSeguimiento.AutoSize = True
-        Me.lblComentarioSeguimiento.Location = New System.Drawing.Point(22, 102)
-        Me.lblComentarioSeguimiento.Name = "lblComentarioSeguimiento"
-        Me.lblComentarioSeguimiento.Size = New System.Drawing.Size(82, 19)
-        Me.lblComentarioSeguimiento.TabIndex = 35
-        Me.lblComentarioSeguimiento.Text = "Comentario:"
-        '
-        'txtFechaSeguimiento
-        '
-        Me.txtFechaSeguimiento.CustomFormat = ""
-        Me.txtFechaSeguimiento.Location = New System.Drawing.Point(155, 52)
-        Me.txtFechaSeguimiento.MinimumSize = New System.Drawing.Size(4, 29)
-        Me.txtFechaSeguimiento.Name = "txtFechaSeguimiento"
-        Me.txtFechaSeguimiento.Size = New System.Drawing.Size(367, 29)
-        Me.txtFechaSeguimiento.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtFechaSeguimiento.TabIndex = 34
-        Me.txtFechaSeguimiento.Value = New Date(2015, 11, 1, 16, 55, 54, 0)
-        '
-        'lblFechaSeguimiento
-        '
-        Me.lblFechaSeguimiento.AutoSize = True
-        Me.lblFechaSeguimiento.Location = New System.Drawing.Point(22, 54)
-        Me.lblFechaSeguimiento.Name = "lblFechaSeguimiento"
-        Me.lblFechaSeguimiento.Size = New System.Drawing.Size(46, 19)
-        Me.lblFechaSeguimiento.TabIndex = 33
-        Me.lblFechaSeguimiento.Text = "Fecha:"
+        Me.lblAsignarProspecto.AutoSize = True
+        Me.lblAsignarProspecto.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblAsignarProspecto.Location = New System.Drawing.Point(1, 10)
+        Me.lblAsignarProspecto.Name = "lblAsignarProspecto"
+        Me.lblAsignarProspecto.Size = New System.Drawing.Size(149, 25)
+        Me.lblAsignarProspecto.TabIndex = 11
+        Me.lblAsignarProspecto.Text = "Asignar prospecto"
         '
         'PnlNuevoProspecto
         '
@@ -2463,6 +2366,238 @@ Partial Class FrmMain
         Me.tglEsCliente.Theme = MetroFramework.MetroThemeStyle.Light
         Me.tglEsCliente.UseSelectable = True
         '
+        'lblImportarProspectos
+        '
+        Me.lblImportarProspectos.AutoSize = True
+        Me.lblImportarProspectos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblImportarProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblImportarProspectos.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.lblImportarProspectos.Location = New System.Drawing.Point(155, 4)
+        Me.lblImportarProspectos.Name = "lblImportarProspectos"
+        Me.lblImportarProspectos.Size = New System.Drawing.Size(165, 25)
+        Me.lblImportarProspectos.TabIndex = 49
+        Me.lblImportarProspectos.Text = "Importar prospectos"
+        Me.lblImportarProspectos.UseCustomForeColor = True
+        '
+        'PnlListaProspectos
+        '
+        Me.PnlListaProspectos.Controls.Add(Me.btnAsignarProspecto)
+        Me.PnlListaProspectos.Controls.Add(Me.lblListaProspectos)
+        Me.PnlListaProspectos.Controls.Add(Me.btnCrearProspecto)
+        Me.PnlListaProspectos.Controls.Add(Me.lstProspectos)
+        Me.PnlListaProspectos.HorizontalScrollbarBarColor = True
+        Me.PnlListaProspectos.HorizontalScrollbarHighlightOnWheel = False
+        Me.PnlListaProspectos.HorizontalScrollbarSize = 10
+        Me.PnlListaProspectos.Location = New System.Drawing.Point(0, 20)
+        Me.PnlListaProspectos.Name = "PnlListaProspectos"
+        Me.PnlListaProspectos.Size = New System.Drawing.Size(749, 452)
+        Me.PnlListaProspectos.Style = MetroFramework.MetroColorStyle.White
+        Me.PnlListaProspectos.TabIndex = 41
+        Me.PnlListaProspectos.VerticalScrollbarBarColor = True
+        Me.PnlListaProspectos.VerticalScrollbarHighlightOnWheel = False
+        Me.PnlListaProspectos.VerticalScrollbarSize = 10
+        '
+        'btnAsignarProspecto
+        '
+        Me.btnAsignarProspecto.Location = New System.Drawing.Point(4, 412)
+        Me.btnAsignarProspecto.Name = "btnAsignarProspecto"
+        Me.btnAsignarProspecto.Size = New System.Drawing.Size(123, 36)
+        Me.btnAsignarProspecto.TabIndex = 43
+        Me.btnAsignarProspecto.Text = "Asignar prospectos"
+        Me.btnAsignarProspecto.UseSelectable = True
+        '
+        'lblListaProspectos
+        '
+        Me.lblListaProspectos.AutoSize = True
+        Me.lblListaProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblListaProspectos.Location = New System.Drawing.Point(4, 0)
+        Me.lblListaProspectos.Name = "lblListaProspectos"
+        Me.lblListaProspectos.Size = New System.Drawing.Size(132, 25)
+        Me.lblListaProspectos.TabIndex = 10
+        Me.lblListaProspectos.Text = "Lista prospectos"
+        '
+        'btnCrearProspecto
+        '
+        Me.btnCrearProspecto.Location = New System.Drawing.Point(620, 412)
+        Me.btnCrearProspecto.Name = "btnCrearProspecto"
+        Me.btnCrearProspecto.Size = New System.Drawing.Size(122, 36)
+        Me.btnCrearProspecto.TabIndex = 9
+        Me.btnCrearProspecto.Text = "Nuevo prospecto"
+        Me.btnCrearProspecto.UseSelectable = True
+        '
+        'lstProspectos
+        '
+        Me.lstProspectos.AllowUserToAddRows = False
+        Me.lstProspectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.lstProspectos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDProspecto, Me.ColumnaNombreProspecto, Me.ColumnaApellidosProspecto, Me.ColumnaNacimientoProspecto, Me.ColumnaProcedenciaProspecto, Me.ColumnaTelefonoProspecto, Me.ColumnaEmailProspecto, Me.ColumnaEditarProspecto})
+        Me.lstProspectos.Location = New System.Drawing.Point(4, 37)
+        Me.lstProspectos.Name = "lstProspectos"
+        Me.lstProspectos.RowHeadersVisible = False
+        Me.lstProspectos.Size = New System.Drawing.Size(739, 344)
+        Me.lstProspectos.TabIndex = 8
+        '
+        'ColumnaIDProspecto
+        '
+        Me.ColumnaIDProspecto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaIDProspecto.HeaderText = "ID"
+        Me.ColumnaIDProspecto.Name = "ColumnaIDProspecto"
+        Me.ColumnaIDProspecto.ReadOnly = True
+        Me.ColumnaIDProspecto.Visible = False
+        '
+        'ColumnaNombreProspecto
+        '
+        Me.ColumnaNombreProspecto.HeaderText = "Nombre"
+        Me.ColumnaNombreProspecto.Name = "ColumnaNombreProspecto"
+        Me.ColumnaNombreProspecto.ReadOnly = True
+        '
+        'ColumnaApellidosProspecto
+        '
+        Me.ColumnaApellidosProspecto.HeaderText = "Apellidos"
+        Me.ColumnaApellidosProspecto.Name = "ColumnaApellidosProspecto"
+        Me.ColumnaApellidosProspecto.ReadOnly = True
+        '
+        'ColumnaNacimientoProspecto
+        '
+        Me.ColumnaNacimientoProspecto.HeaderText = "Nacimiento"
+        Me.ColumnaNacimientoProspecto.Name = "ColumnaNacimientoProspecto"
+        Me.ColumnaNacimientoProspecto.ReadOnly = True
+        '
+        'ColumnaProcedenciaProspecto
+        '
+        Me.ColumnaProcedenciaProspecto.HeaderText = "Procedencia"
+        Me.ColumnaProcedenciaProspecto.Name = "ColumnaProcedenciaProspecto"
+        Me.ColumnaProcedenciaProspecto.ReadOnly = True
+        '
+        'ColumnaTelefonoProspecto
+        '
+        Me.ColumnaTelefonoProspecto.HeaderText = "Teléfono"
+        Me.ColumnaTelefonoProspecto.Name = "ColumnaTelefonoProspecto"
+        Me.ColumnaTelefonoProspecto.ReadOnly = True
+        '
+        'ColumnaEmailProspecto
+        '
+        Me.ColumnaEmailProspecto.HeaderText = "E-mail"
+        Me.ColumnaEmailProspecto.Name = "ColumnaEmailProspecto"
+        Me.ColumnaEmailProspecto.ReadOnly = True
+        '
+        'ColumnaEditarProspecto
+        '
+        Me.ColumnaEditarProspecto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaEditarProspecto.HeaderText = ""
+        Me.ColumnaEditarProspecto.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.ColumnaEditarProspecto.Name = "ColumnaEditarProspecto"
+        Me.ColumnaEditarProspecto.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEditarProspecto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'pnlSeguimientos
+        '
+        Me.pnlSeguimientos.Controls.Add(Me.lblCrearSeguimiento)
+        Me.pnlSeguimientos.Controls.Add(Me.txtComentarioSeguimiento)
+        Me.pnlSeguimientos.Controls.Add(Me.btnCancelarSeguimiento)
+        Me.pnlSeguimientos.Controls.Add(Me.btnGuardarSeguimiento)
+        Me.pnlSeguimientos.Controls.Add(Me.lblComentarioSeguimiento)
+        Me.pnlSeguimientos.Controls.Add(Me.txtFechaSeguimiento)
+        Me.pnlSeguimientos.Controls.Add(Me.lblFechaSeguimiento)
+        Me.pnlSeguimientos.HorizontalScrollbarBarColor = True
+        Me.pnlSeguimientos.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlSeguimientos.HorizontalScrollbarSize = 10
+        Me.pnlSeguimientos.Location = New System.Drawing.Point(4, 14)
+        Me.pnlSeguimientos.Name = "pnlSeguimientos"
+        Me.pnlSeguimientos.Size = New System.Drawing.Size(565, 235)
+        Me.pnlSeguimientos.TabIndex = 42
+        Me.pnlSeguimientos.VerticalScrollbarBarColor = True
+        Me.pnlSeguimientos.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlSeguimientos.VerticalScrollbarSize = 10
+        Me.pnlSeguimientos.Visible = False
+        '
+        'lblCrearSeguimiento
+        '
+        Me.lblCrearSeguimiento.AutoSize = True
+        Me.lblCrearSeguimiento.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblCrearSeguimiento.Location = New System.Drawing.Point(-2, 4)
+        Me.lblCrearSeguimiento.Name = "lblCrearSeguimiento"
+        Me.lblCrearSeguimiento.Size = New System.Drawing.Size(151, 25)
+        Me.lblCrearSeguimiento.TabIndex = 40
+        Me.lblCrearSeguimiento.Text = "Crear seguimiento"
+        '
+        'txtComentarioSeguimiento
+        '
+        '
+        '
+        '
+        Me.txtComentarioSeguimiento.CustomButton.Image = Nothing
+        Me.txtComentarioSeguimiento.CustomButton.Location = New System.Drawing.Point(301, 1)
+        Me.txtComentarioSeguimiento.CustomButton.Name = ""
+        Me.txtComentarioSeguimiento.CustomButton.Size = New System.Drawing.Size(65, 65)
+        Me.txtComentarioSeguimiento.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtComentarioSeguimiento.CustomButton.TabIndex = 1
+        Me.txtComentarioSeguimiento.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtComentarioSeguimiento.CustomButton.UseSelectable = True
+        Me.txtComentarioSeguimiento.CustomButton.Visible = False
+        Me.txtComentarioSeguimiento.Lines = New String(-1) {}
+        Me.txtComentarioSeguimiento.Location = New System.Drawing.Point(155, 102)
+        Me.txtComentarioSeguimiento.MaxLength = 32767
+        Me.txtComentarioSeguimiento.Multiline = True
+        Me.txtComentarioSeguimiento.Name = "txtComentarioSeguimiento"
+        Me.txtComentarioSeguimiento.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtComentarioSeguimiento.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtComentarioSeguimiento.SelectedText = ""
+        Me.txtComentarioSeguimiento.SelectionLength = 0
+        Me.txtComentarioSeguimiento.SelectionStart = 0
+        Me.txtComentarioSeguimiento.Size = New System.Drawing.Size(367, 67)
+        Me.txtComentarioSeguimiento.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtComentarioSeguimiento.TabIndex = 39
+        Me.txtComentarioSeguimiento.UseSelectable = True
+        Me.txtComentarioSeguimiento.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtComentarioSeguimiento.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'btnCancelarSeguimiento
+        '
+        Me.btnCancelarSeguimiento.Location = New System.Drawing.Point(425, 187)
+        Me.btnCancelarSeguimiento.Name = "btnCancelarSeguimiento"
+        Me.btnCancelarSeguimiento.Size = New System.Drawing.Size(97, 23)
+        Me.btnCancelarSeguimiento.TabIndex = 38
+        Me.btnCancelarSeguimiento.Text = "Cancelar"
+        Me.btnCancelarSeguimiento.UseSelectable = True
+        '
+        'btnGuardarSeguimiento
+        '
+        Me.btnGuardarSeguimiento.Location = New System.Drawing.Point(322, 187)
+        Me.btnGuardarSeguimiento.Name = "btnGuardarSeguimiento"
+        Me.btnGuardarSeguimiento.Size = New System.Drawing.Size(97, 23)
+        Me.btnGuardarSeguimiento.TabIndex = 37
+        Me.btnGuardarSeguimiento.Text = "Guardar"
+        Me.btnGuardarSeguimiento.UseSelectable = True
+        '
+        'lblComentarioSeguimiento
+        '
+        Me.lblComentarioSeguimiento.AutoSize = True
+        Me.lblComentarioSeguimiento.Location = New System.Drawing.Point(22, 102)
+        Me.lblComentarioSeguimiento.Name = "lblComentarioSeguimiento"
+        Me.lblComentarioSeguimiento.Size = New System.Drawing.Size(82, 19)
+        Me.lblComentarioSeguimiento.TabIndex = 35
+        Me.lblComentarioSeguimiento.Text = "Comentario:"
+        '
+        'txtFechaSeguimiento
+        '
+        Me.txtFechaSeguimiento.CustomFormat = ""
+        Me.txtFechaSeguimiento.Location = New System.Drawing.Point(155, 52)
+        Me.txtFechaSeguimiento.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.txtFechaSeguimiento.Name = "txtFechaSeguimiento"
+        Me.txtFechaSeguimiento.Size = New System.Drawing.Size(367, 29)
+        Me.txtFechaSeguimiento.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtFechaSeguimiento.TabIndex = 34
+        Me.txtFechaSeguimiento.Value = New Date(2015, 11, 1, 16, 55, 54, 0)
+        '
+        'lblFechaSeguimiento
+        '
+        Me.lblFechaSeguimiento.AutoSize = True
+        Me.lblFechaSeguimiento.Location = New System.Drawing.Point(22, 54)
+        Me.lblFechaSeguimiento.Name = "lblFechaSeguimiento"
+        Me.lblFechaSeguimiento.Size = New System.Drawing.Size(46, 19)
+        Me.lblFechaSeguimiento.TabIndex = 33
+        Me.lblFechaSeguimiento.Text = "Fecha:"
+        '
         'PnlListaSeguimientos
         '
         Me.PnlListaSeguimientos.Controls.Add(Me.btnCancelarListaSeguimiento)
@@ -2547,128 +2682,6 @@ Partial Class FrmMain
         Me.lblListaSeguimientos.Size = New System.Drawing.Size(150, 25)
         Me.lblListaSeguimientos.TabIndex = 11
         Me.lblListaSeguimientos.Text = "Lista seguimientos"
-        '
-        'pnlAsignarProspecto
-        '
-        Me.pnlAsignarProspecto.Controls.Add(Me.btnQuitarProspAsignado)
-        Me.pnlAsignarProspecto.Controls.Add(Me.btnGuardarAsignarProsp)
-        Me.pnlAsignarProspecto.Controls.Add(Me.btnCancelarAsignarProsp)
-        Me.pnlAsignarProspecto.Controls.Add(Me.btnAsignarListaProsp)
-        Me.pnlAsignarProspecto.Controls.Add(Me.ltbProspAsignados)
-        Me.pnlAsignarProspecto.Controls.Add(Me.lblProspAsignados)
-        Me.pnlAsignarProspecto.Controls.Add(Me.ltbProspectosSlt)
-        Me.pnlAsignarProspecto.Controls.Add(Me.ltbVendedoresSlt)
-        Me.pnlAsignarProspecto.Controls.Add(Me.lblProspectosSlt)
-        Me.pnlAsignarProspecto.Controls.Add(Me.lblVendedoresSlt)
-        Me.pnlAsignarProspecto.Controls.Add(Me.lblAsignarProspecto)
-        Me.pnlAsignarProspecto.HorizontalScrollbarBarColor = True
-        Me.pnlAsignarProspecto.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnlAsignarProspecto.HorizontalScrollbarSize = 10
-        Me.pnlAsignarProspecto.Location = New System.Drawing.Point(4, 8)
-        Me.pnlAsignarProspecto.Name = "pnlAsignarProspecto"
-        Me.pnlAsignarProspecto.Size = New System.Drawing.Size(743, 464)
-        Me.pnlAsignarProspecto.TabIndex = 45
-        Me.pnlAsignarProspecto.VerticalScrollbarBarColor = True
-        Me.pnlAsignarProspecto.VerticalScrollbarHighlightOnWheel = False
-        Me.pnlAsignarProspecto.VerticalScrollbarSize = 10
-        Me.pnlAsignarProspecto.Visible = False
-        '
-        'btnQuitarProspAsignado
-        '
-        Me.btnQuitarProspAsignado.Location = New System.Drawing.Point(488, 228)
-        Me.btnQuitarProspAsignado.Name = "btnQuitarProspAsignado"
-        Me.btnQuitarProspAsignado.Size = New System.Drawing.Size(35, 23)
-        Me.btnQuitarProspAsignado.TabIndex = 26
-        Me.btnQuitarProspAsignado.Text = "<="
-        Me.btnQuitarProspAsignado.UseSelectable = True
-        '
-        'btnGuardarAsignarProsp
-        '
-        Me.btnGuardarAsignarProsp.Location = New System.Drawing.Point(318, 439)
-        Me.btnGuardarAsignarProsp.Name = "btnGuardarAsignarProsp"
-        Me.btnGuardarAsignarProsp.Size = New System.Drawing.Size(97, 23)
-        Me.btnGuardarAsignarProsp.TabIndex = 25
-        Me.btnGuardarAsignarProsp.Text = "Guardar"
-        Me.btnGuardarAsignarProsp.UseSelectable = True
-        '
-        'btnCancelarAsignarProsp
-        '
-        Me.btnCancelarAsignarProsp.Location = New System.Drawing.Point(421, 439)
-        Me.btnCancelarAsignarProsp.Name = "btnCancelarAsignarProsp"
-        Me.btnCancelarAsignarProsp.Size = New System.Drawing.Size(97, 23)
-        Me.btnCancelarAsignarProsp.TabIndex = 24
-        Me.btnCancelarAsignarProsp.Text = "Cancelar"
-        Me.btnCancelarAsignarProsp.UseSelectable = True
-        '
-        'btnAsignarListaProsp
-        '
-        Me.btnAsignarListaProsp.Location = New System.Drawing.Point(489, 190)
-        Me.btnAsignarListaProsp.Name = "btnAsignarListaProsp"
-        Me.btnAsignarListaProsp.Size = New System.Drawing.Size(35, 23)
-        Me.btnAsignarListaProsp.TabIndex = 23
-        Me.btnAsignarListaProsp.Text = "=>"
-        Me.btnAsignarListaProsp.UseSelectable = True
-        '
-        'ltbProspAsignados
-        '
-        Me.ltbProspAsignados.FormattingEnabled = True
-        Me.ltbProspAsignados.Location = New System.Drawing.Point(540, 91)
-        Me.ltbProspAsignados.Name = "ltbProspAsignados"
-        Me.ltbProspAsignados.Size = New System.Drawing.Size(184, 277)
-        Me.ltbProspAsignados.TabIndex = 20
-        '
-        'lblProspAsignados
-        '
-        Me.lblProspAsignados.AutoSize = True
-        Me.lblProspAsignados.Location = New System.Drawing.Point(540, 64)
-        Me.lblProspAsignados.Name = "lblProspAsignados"
-        Me.lblProspAsignados.Size = New System.Drawing.Size(135, 19)
-        Me.lblProspAsignados.TabIndex = 19
-        Me.lblProspAsignados.Text = "Prospectos asignados"
-        '
-        'ltbProspectosSlt
-        '
-        Me.ltbProspectosSlt.FormattingEnabled = True
-        Me.ltbProspectosSlt.Location = New System.Drawing.Point(288, 91)
-        Me.ltbProspectosSlt.Name = "ltbProspectosSlt"
-        Me.ltbProspectosSlt.Size = New System.Drawing.Size(184, 277)
-        Me.ltbProspectosSlt.TabIndex = 18
-        '
-        'ltbVendedoresSlt
-        '
-        Me.ltbVendedoresSlt.FormattingEnabled = True
-        Me.ltbVendedoresSlt.Location = New System.Drawing.Point(23, 91)
-        Me.ltbVendedoresSlt.Name = "ltbVendedoresSlt"
-        Me.ltbVendedoresSlt.Size = New System.Drawing.Size(183, 277)
-        Me.ltbVendedoresSlt.TabIndex = 17
-        '
-        'lblProspectosSlt
-        '
-        Me.lblProspectosSlt.AutoSize = True
-        Me.lblProspectosSlt.Location = New System.Drawing.Point(288, 64)
-        Me.lblProspectosSlt.Name = "lblProspectosSlt"
-        Me.lblProspectosSlt.Size = New System.Drawing.Size(73, 19)
-        Me.lblProspectosSlt.TabIndex = 16
-        Me.lblProspectosSlt.Text = "Prospectos"
-        '
-        'lblVendedoresSlt
-        '
-        Me.lblVendedoresSlt.AutoSize = True
-        Me.lblVendedoresSlt.Location = New System.Drawing.Point(22, 64)
-        Me.lblVendedoresSlt.Name = "lblVendedoresSlt"
-        Me.lblVendedoresSlt.Size = New System.Drawing.Size(78, 19)
-        Me.lblVendedoresSlt.TabIndex = 15
-        Me.lblVendedoresSlt.Text = "Vendedores"
-        '
-        'lblAsignarProspecto
-        '
-        Me.lblAsignarProspecto.AutoSize = True
-        Me.lblAsignarProspecto.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblAsignarProspecto.Location = New System.Drawing.Point(1, 10)
-        Me.lblAsignarProspecto.Name = "lblAsignarProspecto"
-        Me.lblAsignarProspecto.Size = New System.Drawing.Size(149, 25)
-        Me.lblAsignarProspecto.TabIndex = 11
-        Me.lblAsignarProspecto.Text = "Asignar prospecto"
         '
         'KPIHolder
         '
@@ -2790,7 +2803,7 @@ Partial Class FrmMain
         Me.checkBoxTotalProducto.AutoSize = True
         Me.checkBoxTotalProducto.Location = New System.Drawing.Point(15, 62)
         Me.checkBoxTotalProducto.Name = "checkBoxTotalProducto"
-        Me.checkBoxTotalProducto.Size = New System.Drawing.Size(102, 15)
+        Me.checkBoxTotalProducto.Size = New System.Drawing.Size(101, 15)
         Me.checkBoxTotalProducto.TabIndex = 12
         Me.checkBoxTotalProducto.Text = "Total Producto"
         Me.checkBoxTotalProducto.UseSelectable = True
@@ -2855,7 +2868,7 @@ Partial Class FrmMain
         Me.checkboxTotalProspetosCliente.AutoSize = True
         Me.checkboxTotalProspetosCliente.Location = New System.Drawing.Point(152, 60)
         Me.checkboxTotalProspetosCliente.Name = "checkboxTotalProspetosCliente"
-        Me.checkboxTotalProspetosCliente.Size = New System.Drawing.Size(167, 15)
+        Me.checkboxTotalProspetosCliente.Size = New System.Drawing.Size(166, 15)
         Me.checkboxTotalProspetosCliente.TabIndex = 13
         Me.checkboxTotalProspetosCliente.Text = "Total de Prospectos Cliente"
         Me.checkboxTotalProspetosCliente.UseSelectable = True
@@ -2865,7 +2878,7 @@ Partial Class FrmMain
         Me.checkBoxTotalProspectos.AutoSize = True
         Me.checkBoxTotalProspectos.Location = New System.Drawing.Point(19, 60)
         Me.checkBoxTotalProspectos.Name = "checkBoxTotalProspectos"
-        Me.checkBoxTotalProspectos.Size = New System.Drawing.Size(127, 15)
+        Me.checkBoxTotalProspectos.Size = New System.Drawing.Size(126, 15)
         Me.checkBoxTotalProspectos.TabIndex = 12
         Me.checkBoxTotalProspectos.Text = "Total de Prospectos"
         Me.checkBoxTotalProspectos.UseSelectable = True
@@ -2930,7 +2943,7 @@ Partial Class FrmMain
         Me.checkBoxMontoTotalVentas.AutoSize = True
         Me.checkBoxMontoTotalVentas.Location = New System.Drawing.Point(115, 69)
         Me.checkBoxMontoTotalVentas.Name = "checkBoxMontoTotalVentas"
-        Me.checkBoxMontoTotalVentas.Size = New System.Drawing.Size(143, 15)
+        Me.checkBoxMontoTotalVentas.Size = New System.Drawing.Size(141, 15)
         Me.checkBoxMontoTotalVentas.TabIndex = 14
         Me.checkBoxMontoTotalVentas.Text = "Monto Total de Ventas"
         Me.checkBoxMontoTotalVentas.UseSelectable = True
@@ -2940,7 +2953,7 @@ Partial Class FrmMain
         Me.checkBoxTotalVentas.AutoSize = True
         Me.checkBoxTotalVentas.Location = New System.Drawing.Point(21, 69)
         Me.checkBoxTotalVentas.Name = "checkBoxTotalVentas"
-        Me.checkBoxTotalVentas.Size = New System.Drawing.Size(88, 15)
+        Me.checkBoxTotalVentas.Size = New System.Drawing.Size(86, 15)
         Me.checkBoxTotalVentas.TabIndex = 12
         Me.checkBoxTotalVentas.Text = "Total Ventas"
         Me.checkBoxTotalVentas.UseSelectable = True
@@ -4973,19 +4986,6 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
-        'lblImportarProspectos
-        '
-        Me.lblImportarProspectos.AutoSize = True
-        Me.lblImportarProspectos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblImportarProspectos.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblImportarProspectos.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblImportarProspectos.Location = New System.Drawing.Point(155, 4)
-        Me.lblImportarProspectos.Name = "lblImportarProspectos"
-        Me.lblImportarProspectos.Size = New System.Drawing.Size(165, 25)
-        Me.lblImportarProspectos.TabIndex = 49
-        Me.lblImportarProspectos.Text = "Importar prospectos"
-        Me.lblImportarProspectos.UseCustomForeColor = True
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5038,18 +5038,18 @@ Partial Class FrmMain
         Me.PanelCrearEvento.ResumeLayout(False)
         Me.PanelCrearEvento.PerformLayout()
         Me.TabProspectos.ResumeLayout(False)
+        Me.pnlAsignarProspecto.ResumeLayout(False)
+        Me.pnlAsignarProspecto.PerformLayout()
+        Me.PnlNuevoProspecto.ResumeLayout(False)
+        Me.PnlNuevoProspecto.PerformLayout()
         Me.PnlListaProspectos.ResumeLayout(False)
         Me.PnlListaProspectos.PerformLayout()
         CType(Me.lstProspectos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSeguimientos.ResumeLayout(False)
         Me.pnlSeguimientos.PerformLayout()
-        Me.PnlNuevoProspecto.ResumeLayout(False)
-        Me.PnlNuevoProspecto.PerformLayout()
         Me.PnlListaSeguimientos.ResumeLayout(False)
         Me.PnlListaSeguimientos.PerformLayout()
         CType(Me.lstSeguimientos, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlAsignarProspecto.ResumeLayout(False)
-        Me.pnlAsignarProspecto.PerformLayout()
         Me.KPIHolder.ResumeLayout(False)
         Me.panSeleccionarTipoKPI.ResumeLayout(False)
         Me.pnlCrearKpiProducto.ResumeLayout(False)

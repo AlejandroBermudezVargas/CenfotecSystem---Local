@@ -48,7 +48,7 @@ Public Class ProspectusController
     Shared Function guardarOActualizar(ByVal id As Integer, ByVal nombre As String, ByVal apellidos As String, ByVal fecha_nacimiento As Date,
                             ByVal procedencia As String, ByVal estado As Boolean, ByVal telefono As String,
                             ByVal email As String, ByVal direccion As String, ByVal estaInteresado As Boolean,
-                            ByVal esCliente As Boolean, ByVal intereses As List(Of Tipo_Producto)) As Boolean
+                            ByVal esCliente As Boolean, ByVal intereses As List(Of Tipo_Producto), ByVal idEvento As Integer) As Boolean
         Dim nvoProspecto = New Prospecto
         nvoProspecto.Nombre = nombre
         nvoProspecto.Apellidos = apellidos
@@ -60,9 +60,8 @@ Public Class ProspectusController
         nvoProspecto.Direccion = direccion
         nvoProspecto.Interesado = estaInteresado
         nvoProspecto.Cliente = esCliente
-        'If (Not intereses.Equals(Nothing)) Then
-        'nvoProspecto.Tipo_producto = intereses
-        'End If
+        nvoProspecto.Tipo_producto = intereses
+        nvoProspecto.Id_evento = idEvento
         Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
         Dim request As RestRequest
         If (id <> -1) Then
@@ -89,8 +88,9 @@ Public Class ProspectusController
         request.AddParameter("id", id)
         request.RequestFormat = DataFormat.Json
         Dim response = client.Execute(Of Prospecto)(request)
+        Dim prospecto As Prospecto = JsonConvert.DeserializeObject(Of Prospecto)(response.Content)
         If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
-            Return response.Data
+            Return prospecto
         Else
             Return Nothing
         End If
@@ -225,7 +225,7 @@ Public Class ProspectusController
                 registrosError = registrosError & nombre & "|" & apellidos & "|" & fecha_nacimiento & "|" & procedencia & "|" & _
                     estado & "|" & telefono & "|" & email & "|" & direccion & "|" & estaInteresado & "|" & esCliente & vbNewLine
             End If
-            guardarOActualizar(-1, nombre, apellidos, fecha_nacimiento, procedencia, estado, telefono, email, direccion, estaInteresado, esCliente, intereses)
+            guardarOActualizar(-1, nombre, apellidos, fecha_nacimiento, procedencia, estado, telefono, email, direccion, estaInteresado, esCliente, intereses, -1)
         Next i
         If registrosError.Length > 0 Then
             resul = "Los siguientes registros presentaron problemas al tratar de ingresarse en la base de datos: " & vbNewLine _

@@ -183,6 +183,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmMain.resx">
       <DependentUpon>FrmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

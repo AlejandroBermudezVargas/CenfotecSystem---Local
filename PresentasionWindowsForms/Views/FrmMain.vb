@@ -243,23 +243,40 @@ Public Class FrmMain
         tglEstaInteresado.Checked = False
         tglEsCliente.Checked = False
         ckbEventoProspecto.Checked = False
+        cbEventos.DataSource = Nothing
     End Sub
 
     Private Sub btnGuardarProspecto_Click(sender As Object, e As EventArgs) Handles btnGuardarProspecto.Click
         Dim listaIntereses As New List(Of Tipo_Producto)
+        Dim idEvento = Nothing
         If (tglEstaInteresado.Checked = True) Then
-            Dim interes As New Tipo_Producto
-            Dim idInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of String, String)).Key)
-            Dim nombreInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of String, String)).Value)
-            interes.Id_Tipo_Producto = idInteres
-            interes.Nombre = nombreInteres
-            listaIntereses.Add(interes)
+            Dim idInteres = (DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of Integer, String)).Key)
+            Dim nombreInteres = Nothing
+            If idInteres = 0 Then
+                For x As Integer = 1 To cbInteresesProspecto.Items.Count - 1
+                    Dim interes As New Tipo_Producto
+                    idInteres = DirectCast(cbInteresesProspecto.Items.Item(x), KeyValuePair(Of Integer, String)).Key
+                    nombreInteres = DirectCast(cbInteresesProspecto.Items.Item(x), KeyValuePair(Of Integer, String)).Value
+                    interes.Id_Tipo_Producto = idInteres
+                    interes.Nombre = nombreInteres
+                    listaIntereses.Add(interes)
+                Next
+            Else
+                Dim interes As New Tipo_Producto
+                nombreInteres = DirectCast(cbInteresesProspecto.SelectedItem, KeyValuePair(Of Integer, String)).Value
+                interes.Id_Tipo_Producto = idInteres
+                interes.Nombre = nombreInteres
+                listaIntereses.Add(interes)
+            End If
+        End If
+        If (ckbEventoProspecto.Checked = True) Then
+            idEvento = DirectCast(cbEventos.SelectedItem, KeyValuePair(Of Integer, String)).Key
         End If
         If validateProspectusForm() Then
             Dim resul = ProspectusController.guardarOActualizar(CInt(lblIdProspecto.Text), txtNombreProspecto.Text, txtApellidosProspecto.Text, txtFechaNacProspecto.Value,
                                          txtProcedenciaProspecto.Text, tglEstadoProspecto.Checked, txtTelProspecto.Text,
                                          txtEmailProspecto.Text, txtDireccionProspecto.Text, tglEstaInteresado.Checked,
-                                         tglEsCliente.Checked, listaIntereses)
+                                         tglEsCliente.Checked, listaIntereses, idEvento)
             If (resul.Equals(True)) Then
                 MsgBox(respuestasDelSistema.CREATE_USER_SUCCESS, MsgBoxStyle.Information)
             Else
@@ -292,6 +309,10 @@ Public Class FrmMain
             result = False
             ErrorProvider1.SetError(txtApellidosProspecto, ValidationsMessages.EMPTY_FIELD)
         End If
+        If String.IsNullOrEmpty(txtProcedenciaProspecto.Text) Then
+            result = False
+            ErrorProvider1.SetError(txtProcedenciaProspecto, ValidationsMessages.EMPTY_FIELD)
+        End If
         Return result
     End Function
 
@@ -314,23 +335,42 @@ Public Class FrmMain
             btnListarSeguimientos.Visible = True
             PnlListaProspectos.Visible = False
             PnlNuevoProspecto.Visible = True
+            If (Not ppros.Id_evento.Equals(Nothing)) Then
+                For x As Integer = 0 To cbEventos.Items.Count - 1
+                    If (ppros.Id_evento.Equals(DirectCast(cbEventos.Items.Item(x), KeyValuePair(Of Integer, String)).Key)) Then
+                        cbEventos.SelectedItem = cbEventos.Items.Item(x)
+                    End If
+                Next
+            End If
+            If tglEstaInteresado.Checked = True Then
+                If ppros.Tipo_producto.Count > 1 Then
+                    cbInteresesProspecto.SelectedItem = cbInteresesProspecto.Items.Item(0)
+                Else
+                    cbInteresesProspecto.SelectedItem = cbInteresesProspecto.Items.Item(ppros.Tipo_producto(0).Id_Tipo_Producto)
+                End If
+            End If
         Else
             Exit Sub
         End If
     End Sub
 
     Public Sub llenarComboIntereses()
-        Dim comboData As New Dictionary(Of String, String)()
-        comboData.Add(1, "Acti")
-        comboData.Add(2, "Carrera")
-        cbInteresesProspecto.DataSource = New BindingSource(comboData, Nothing)
-        cbInteresesProspecto.DisplayMember = "Value"
-        cbInteresesProspecto.ValueMember = "Key"
+        Dim tipos = ProductTypeController.obtenerLista()
+        Dim comboData As New Dictionary(Of Integer, String)()
+        comboData.Add(0, "Todo")
+        If tipos.Count > 0 Then
+            For Each tipo As Tipo_Producto In tipos
+                comboData.Add(tipo.Id_Tipo_Producto, tipo.Nombre)
+            Next
+            cbInteresesProspecto.DataSource = New BindingSource(comboData, Nothing)
+            cbInteresesProspecto.DisplayMember = "Value"
+            cbInteresesProspecto.ValueMember = "Key"
+        End If
     End Sub
 
     Public Sub llenarComboEventos()
         Dim eventos = EventosController.ListarEventos()
-        Dim comboData As New Dictionary(Of String, String)()
+        Dim comboData As New Dictionary(Of Integer, String)()
         If (eventos.Count > 0) Then
             For Each evento As Evento In eventos
                 comboData.Add(evento.IdEvento, evento.Lugar)
@@ -343,23 +383,21 @@ Public Class FrmMain
 
     Private Sub tglEstaInteresado_CheckedChanged(sender As Object, e As EventArgs) Handles tglEstaInteresado.CheckedChanged
         If (tglEstaInteresado.Checked = True) Then
-            txtProcedenciaProspecto.Enabled = False
             cbInteresesProspecto.Enabled = True
             llenarComboIntereses()
         Else
-            txtProcedenciaProspecto.Enabled = True
             cbInteresesProspecto.Enabled = False
+            cbInteresesProspecto.SelectedItem = Nothing
         End If
     End Sub
 
     Private Sub ckbEventoProspecto_CheckedChanged(sender As Object, e As EventArgs) Handles ckbEventoProspecto.CheckedChanged
         If (ckbEventoProspecto.Checked = True) Then
-            txtProcedenciaProspecto.Enabled = False
             cbEventos.Enabled = True
             llenarComboEventos()
         Else
-            txtProcedenciaProspecto.Enabled = True
             cbEventos.Enabled = False
+            cbEventos.SelectedItem = Nothing
         End If
     End Sub
 
@@ -408,7 +446,7 @@ Public Class FrmMain
                 For Each user As UserModel In users
                     Dim rol As RolModel = RolsController.getRol(user.id_rol)
                     If rol.nombre.Equals("Telemercadeo") Or rol.nombre.Equals("Ventas") Then
-                        data1.Add(user.id_usuario, user.nombre + "" + user.apellido)
+                        data1.Add(user.id_usuario, user.nombre + " " + user.apellido)
                     End If
                 Next
                 ltbVendedoresSlt.DataSource = New BindingSource(data1, Nothing)
@@ -476,13 +514,29 @@ Public Class FrmMain
         End If
     End Sub
 
-
-
     Private Sub ltbVendedoresSlt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ltbVendedoresSlt.SelectedIndexChanged
         data2.Clear()
         data3.Clear()
         ltbProspAsignados.DataSource = Nothing
         llenarListBoxProspectos()
+    End Sub
+
+    Private Sub btnGuardarAsignarProsp_Click(sender As Object, e As EventArgs) Handles btnGuardarAsignarProsp.Click
+        Dim vendedor As New UserModel
+        Dim idVendedor = DirectCast(ltbVendedoresSlt.SelectedItem, KeyValuePair(Of Integer, String)).Key
+        Dim listaProspectos As New List(Of Prospecto)
+        vendedor = Users_controller.getUser(idVendedor.ToString)
+        For x As Integer = 0 To ltbProspAsignados.Items.Count - 1
+            Dim prospecto As New Prospecto
+            prospecto.Id_prospecto = DirectCast(ltbProspAsignados.Items.Item(x), KeyValuePair(Of Integer, String)).Key
+            listaProspectos.Add(prospecto)
+        Next
+        vendedor.Prospectos = listaProspectos
+        If (Users_controller.assignProspectus(vendedor).Equals(True)) Then
+            MsgBox("Los prospectos fueron asignados con éxito", MsgBoxStyle.Information)
+        Else
+            MsgBox("Hubo un error al tratar de guardar los cambios", MsgBoxStyle.Critical)
+        End If
     End Sub
     '
     'SEGUIMIENTOS

@@ -103,4 +103,18 @@ Public Class Users_controller
             Return Nothing
         End If
     End Function
+
+    Shared Function assignProspectus(ByVal usuario As UserModel)
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Users/assign/" + usuario.id_usuario.ToString, Method.PUT)
+        request.RequestFormat = DataFormat.Json
+        request.AddBody(usuario)
+
+        Dim response = client.Execute(request)
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.NoContent)) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

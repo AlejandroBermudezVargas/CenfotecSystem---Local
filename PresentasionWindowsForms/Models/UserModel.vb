@@ -10,6 +10,7 @@
     Private _activo As Boolean
     Private _fecha_nacimiento As Date
     Private _rol As RolModel
+    Private _prospectos As List(Of Prospecto)
 
     Sub New()
         cedula = Nothing
@@ -172,6 +173,15 @@
         End Get
         Set(value As RolModel)
             _rol = value
+        End Set
+    End Property
+
+    Public Property Prospectos As List(Of Prospecto)
+        Get
+            Return _prospectos
+        End Get
+        Set(value As List(Of Prospecto))
+            _prospectos = value
         End Set
     End Property
 End Class

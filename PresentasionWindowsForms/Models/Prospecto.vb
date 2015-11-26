@@ -10,6 +10,8 @@
     Private _direccion As String
     Private _interesado As Boolean
     Private _cliente As Boolean
+    Private _tipo_producto As List(Of Tipo_Producto)
+    Private _id_evento As Nullable(Of Integer)
 
     Public Property Id_prospecto As Integer
         Get
@@ -107,6 +109,24 @@
         End Get
         Set(value As Boolean)
             _cliente = value
+        End Set
+    End Property
+
+    Public Property Tipo_producto As List(Of Tipo_Producto)
+        Get
+            Return _tipo_producto
+        End Get
+        Set(value As List(Of Tipo_Producto))
+            _tipo_producto = value
+        End Set
+    End Property
+
+    Public Property Id_evento As Nullable(Of Integer)
+        Get
+            Return _id_evento
+        End Get
+        Set(value As Nullable(Of Integer))
+            _id_evento = value
         End Set
     End Property
 End Class
