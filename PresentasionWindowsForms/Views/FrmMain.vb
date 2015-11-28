@@ -1968,6 +1968,12 @@ Public Class FrmMain
         pnListUsers.Visible = True
     End Sub
 
+    Private Sub lblImportEstudiantes_Click(sender As Object, e As EventArgs) Handles lblImportEstudiantes.Click
+        tipoImport = 4
+        AbrirArchivo()
+        populateListOfUsers()
+        pnListUsers.Visible = True
+    End Sub
 End Class
 
 
