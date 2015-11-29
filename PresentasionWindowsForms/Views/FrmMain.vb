@@ -336,6 +336,7 @@ Public Class FrmMain
             PnlListaProspectos.Visible = False
             PnlNuevoProspecto.Visible = True
             If (Not ppros.Id_evento.Equals(Nothing)) Then
+                ckbEventoProspecto.Checked = True
                 For x As Integer = 0 To cbEventos.Items.Count - 1
                     If (ppros.Id_evento.Equals(DirectCast(cbEventos.Items.Item(x), KeyValuePair(Of Integer, String)).Key)) Then
                         cbEventos.SelectedItem = cbEventos.Items.Item(x)
@@ -1950,11 +1951,12 @@ Public Class FrmMain
                     Select Case (tipoImport)
                         Case 1
                             ProductsController.ImportarProductos(path, tipoProdImport)
-
                         Case 2
                             ProspectusController.ImportarProspectos(path)
                         Case 3
-
+                            Users_controller.ImportarUsuarios(path, 1)
+                        Case 4
+                            Users_controller.ImportarUsuarios(path, 5)
                         Case Else
                     End Select
 
@@ -1963,9 +1965,9 @@ Public Class FrmMain
                 MessageBox.Show("Ocurrio un error al intentar importar la información." & Ex.Message)
             End Try
 
-            llenarTablaCarreras()
-            limpiarFormCarrera()
-            pnlListaCarreras.Visible = True
+            'llenarTablaCarreras()
+            'limpiarFormCarrera()
+            'pnlListaCarreras.Visible = True
         End If
     End Sub
 
@@ -2004,6 +2006,22 @@ Public Class FrmMain
         lstProspectos.Rows.Clear()
         llenarListaProspectos()
         PnlListaProspectos.Visible = True
+    End Sub
+
+    Private Sub lblImportProfesores_Click(sender As Object, e As EventArgs) Handles lblImportProfesores.Click
+        tipoImport = 3
+        AbrirArchivo()
+        populateListOfUsers()
+        pnListUsers.Visible = True
+        pnlCreateUser.Visible = False
+    End Sub
+
+    Private Sub lblImportEstudiantes_Click(sender As Object, e As EventArgs) Handles lblImportEstudiantes.Click
+        tipoImport = 4
+        AbrirArchivo()
+        populateListOfUsers()
+        pnListUsers.Visible = True
+        pnlCreateUser.Visible = False
     End Sub
 End Class
 
