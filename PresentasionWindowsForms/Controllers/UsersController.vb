@@ -120,6 +120,19 @@ Public Class Users_controller
         End If
     End Function
 
+    Shared Function getProspectusAssigned(ByVal pid As String) As UserModel
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Users/getassign/" + pid, Method.GET)
+        request.RequestFormat = DataFormat.Json
+        Dim response = client.Execute(request)
+        Dim usuario As UserModel = JsonConvert.DeserializeObject(Of UserModel)(response.Content)
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.OK)) Then
+            Return usuario
+        Else
+            Return Nothing
+        End If
+    End Function
+
     Shared Sub ImportarUsuarios(ByVal path As String, ByVal tipo As Integer)
         Dim APP As New Excel.Application
         Dim worksheet As Excel.Worksheet

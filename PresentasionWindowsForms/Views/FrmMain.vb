@@ -336,6 +336,7 @@ Public Class FrmMain
             PnlListaProspectos.Visible = False
             PnlNuevoProspecto.Visible = True
             If (Not ppros.Id_evento.Equals(Nothing)) Then
+                ckbEventoProspecto.Checked = True
                 For x As Integer = 0 To cbEventos.Items.Count - 1
                     If (ppros.Id_evento.Equals(DirectCast(cbEventos.Items.Item(x), KeyValuePair(Of Integer, String)).Key)) Then
                         cbEventos.SelectedItem = cbEventos.Items.Item(x)
@@ -432,7 +433,6 @@ Public Class FrmMain
         PnlListaProspectos.Visible = False
         pnlAsignarProspecto.Visible = True
         llenarListBoxVendedores()
-        llenarListBoxProspectos()
     End Sub
 
     Dim data1 As New Dictionary(Of Integer, String)()
@@ -457,20 +457,35 @@ Public Class FrmMain
     End Sub
 
     Public Sub llenarListBoxProspectos()
+        Dim users = Users_controller.getUsers()
         If data2.Count.Equals(0) Then
             Dim prospectos = ProspectusController.listar()
             If prospectos.Count > 0 Then
                 For Each prosp As Prospecto In prospectos
-                    If prosp.Estado.Equals(True) Then
+                    If Not yaFueAsignado(prosp.Id_prospecto, users) And prosp.Estado.Equals(True) Then
                         data2.Add(prosp.Id_prospecto, prosp.Nombre + " " + prosp.Apellidos)
                     End If
                 Next
-                ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
-                ltbProspectosSlt.DisplayMember = "Value"
-                ltbProspectosSlt.ValueMember = "Key"
+                If data2.Count > 0 Then
+                    ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
+                    ltbProspectosSlt.DisplayMember = "Value"
+                    ltbProspectosSlt.ValueMember = "Key"
+                End If
             End If
         End If
     End Sub
+
+    Public Function yaFueAsignado(ByVal idProsp As Integer, ByVal users As List(Of UserModel)) As Boolean
+        For Each usuario In users
+            usuario = Users_controller.getProspectusAssigned(usuario.id_usuario)
+            For Each prospecto In usuario.Prospectos
+                If idProsp.Equals(prospecto.Id_prospecto) Then
+                    Return True
+                End If
+            Next
+        Next
+        Return False
+    End Function
 
     Private Sub btnCancelarAsignarProsp_Click(sender As Object, e As EventArgs) Handles btnCancelarAsignarProsp.Click
         data1.Clear()
@@ -486,14 +501,22 @@ Public Class FrmMain
             Dim valor = DirectCast(ltbProspectosSlt.SelectedItem, KeyValuePair(Of Integer, String)).Value
             data3.Add(llave, valor)
             data2.Remove(DirectCast(ltbProspectosSlt.SelectedItem, KeyValuePair(Of Integer, String)).Key)
+
             ltbProspectosSlt.DataSource = Nothing
-            ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
-            ltbProspectosSlt.DisplayMember = "Value"
-            ltbProspectosSlt.ValueMember = "Key"
+            If data2.Count > 0 Then
+
+                ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
+                ltbProspectosSlt.DisplayMember = "Value"
+                ltbProspectosSlt.ValueMember = "Key"
+            End If
+
             ltbProspAsignados.DataSource = Nothing
-            ltbProspAsignados.DataSource = New BindingSource(data3, Nothing)
-            ltbProspAsignados.DisplayMember = "Value"
-            ltbProspAsignados.ValueMember = "Key"
+            If data3.Count > 0 Then
+
+                ltbProspAsignados.DataSource = New BindingSource(data3, Nothing)
+                ltbProspAsignados.DisplayMember = "Value"
+                ltbProspAsignados.ValueMember = "Key"
+            End If
         End If
     End Sub
 
@@ -504,13 +527,20 @@ Public Class FrmMain
             data2.Add(llave, valor)
             data3.Remove(DirectCast(ltbProspAsignados.SelectedItem, KeyValuePair(Of Integer, String)).Key)
             ltbProspAsignados.DataSource = Nothing
-            ltbProspAsignados.DataSource = New BindingSource(data3, Nothing)
-            ltbProspAsignados.DisplayMember = "Value"
-            ltbProspAsignados.ValueMember = "Key"
+
+            If data3.Count > 0 Then
+                ltbProspAsignados.DataSource = New BindingSource(data3, Nothing)
+                ltbProspAsignados.DisplayMember = "Value"
+                ltbProspAsignados.ValueMember = "Key"
+            End If
+
             ltbProspectosSlt.DataSource = Nothing
-            ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
-            ltbProspectosSlt.DisplayMember = "Value"
-            ltbProspectosSlt.ValueMember = "Key"
+            If data2.Count > 0 Then
+                ltbProspectosSlt.DataSource = New BindingSource(data2, Nothing)
+                ltbProspectosSlt.DisplayMember = "Value"
+                ltbProspectosSlt.ValueMember = "Key"
+            End If
+            
         End If
     End Sub
 
@@ -518,6 +548,19 @@ Public Class FrmMain
         data2.Clear()
         data3.Clear()
         ltbProspAsignados.DataSource = Nothing
+
+        Dim idVendedor = DirectCast(ltbVendedoresSlt.SelectedItem, KeyValuePair(Of Integer, String)).Key
+        Dim vendedor = Users_controller.getProspectusAssigned(idVendedor.ToString)
+
+        If vendedor.Prospectos.Count > 0 Then
+            For Each prospecto In vendedor.Prospectos
+                data3.Add(prospecto.Id_prospecto, prospecto.Nombre + " " + prospecto.Apellidos)
+            Next
+            ltbProspAsignados.DataSource = New BindingSource(data3, Nothing)
+            ltbProspAsignados.DisplayMember = "Value"
+            ltbProspAsignados.ValueMember = "Key"
+        End If
+
         llenarListBoxProspectos()
     End Sub
 
@@ -526,11 +569,15 @@ Public Class FrmMain
         Dim idVendedor = DirectCast(ltbVendedoresSlt.SelectedItem, KeyValuePair(Of Integer, String)).Key
         Dim listaProspectos As New List(Of Prospecto)
         vendedor = Users_controller.getUser(idVendedor.ToString)
-        For x As Integer = 0 To ltbProspAsignados.Items.Count - 1
-            Dim prospecto As New Prospecto
-            prospecto.Id_prospecto = DirectCast(ltbProspAsignados.Items.Item(x), KeyValuePair(Of Integer, String)).Key
-            listaProspectos.Add(prospecto)
-        Next
+
+        If data3.Count > 0 Then
+            For x As Integer = 0 To ltbProspAsignados.Items.Count - 1
+                Dim prospecto As New Prospecto
+                prospecto.Id_prospecto = DirectCast(ltbProspAsignados.Items.Item(x), KeyValuePair(Of Integer, String)).Key
+                listaProspectos.Add(prospecto)
+            Next
+        End If
+
         vendedor.Prospectos = listaProspectos
         If (Users_controller.assignProspectus(vendedor).Equals(True)) Then
             MsgBox("Los prospectos fueron asignados con éxito", MsgBoxStyle.Information)
