@@ -263,7 +263,45 @@ Partial Class FrmMain
         Me.lblChangePasswordTittle = New MetroFramework.Controls.MetroLabel()
         Me.tileChangeInformation = New MetroFramework.Controls.MetroTile()
         Me.TabUsuarios = New MetroFramework.Controls.MetroTabPage()
+        Me.pnlCreateRol = New MetroFramework.Controls.MetroPanel()
+        Me.gboPermissionsRol = New System.Windows.Forms.GroupBox()
+        Me.grpPermisosWeb = New System.Windows.Forms.GroupBox()
+        Me.tgPreguntasRol = New MetroFramework.Controls.MetroToggle()
+        Me.lblPregunntas = New MetroFramework.Controls.MetroLabel()
+        Me.lblPermisosWeb = New MetroFramework.Controls.MetroLabel()
+        Me.tgEvaluacionesRol = New MetroFramework.Controls.MetroToggle()
+        Me.lblEvaluations = New MetroFramework.Controls.MetroLabel()
+        Me.lblReportsRol = New MetroFramework.Controls.MetroLabel()
+        Me.tgReportsRol = New MetroFramework.Controls.MetroToggle()
+        Me.tgUsersRol = New MetroFramework.Controls.MetroToggle()
+        Me.lblUsersRol = New MetroFramework.Controls.MetroLabel()
+        Me.gboPorductsSectionRol = New System.Windows.Forms.GroupBox()
+        Me.lblActisRol = New MetroFramework.Controls.MetroLabel()
+        Me.lblCareersRol = New MetroFramework.Controls.MetroLabel()
+        Me.tgCareersRol = New MetroFramework.Controls.MetroToggle()
+        Me.tgActiRol = New MetroFramework.Controls.MetroToggle()
+        Me.lblProductsSectionRol = New MetroFramework.Controls.MetroLabel()
+        Me.tgConfigurationRol = New MetroFramework.Controls.MetroToggle()
+        Me.tgKpiRol = New MetroFramework.Controls.MetroToggle()
+        Me.tgEventsRol = New MetroFramework.Controls.MetroToggle()
+        Me.tgProspectusRol = New MetroFramework.Controls.MetroToggle()
+        Me.tgSalesRol = New MetroFramework.Controls.MetroToggle()
+        Me.lblConfigurationRol = New MetroFramework.Controls.MetroLabel()
+        Me.lblKpiRol = New MetroFramework.Controls.MetroLabel()
+        Me.lblEventsRol = New MetroFramework.Controls.MetroLabel()
+        Me.lblProspectusRol = New MetroFramework.Controls.MetroLabel()
+        Me.lblSalesRol = New MetroFramework.Controls.MetroLabel()
+        Me.lblPermissionsRol = New MetroFramework.Controls.MetroLabel()
+        Me.tgEnabledRol = New MetroFramework.Controls.MetroToggle()
+        Me.txtRolName = New MetroFramework.Controls.MetroTextBox()
+        Me.btnCancelRol = New MetroFramework.Controls.MetroButton()
+        Me.btnSaveRol = New MetroFramework.Controls.MetroButton()
+        Me.btnEnabledRol = New MetroFramework.Controls.MetroLabel()
+        Me.lblNameRol = New MetroFramework.Controls.MetroLabel()
+        Me.lblCreateRolTittle = New MetroFramework.Controls.MetroLabel()
         Me.pnlCreateUser = New MetroFramework.Controls.MetroPanel()
+        Me.lblImportEstudiantes = New MetroFramework.Controls.MetroLabel()
+        Me.lblImportProfesores = New MetroFramework.Controls.MetroLabel()
         Me.lblPasswordUserBackup = New System.Windows.Forms.Label()
         Me.chkChangeUserPassword = New MetroFramework.Controls.MetroCheckBox()
         Me.cboDateCreateUser = New MetroFramework.Controls.MetroDateTime()
@@ -311,36 +349,6 @@ Partial Class FrmMain
         Me.colEditListRol = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblListOfRols = New MetroFramework.Controls.MetroLabel()
         Me.btnNewRol = New MetroFramework.Controls.MetroButton()
-        Me.pnlCreateRol = New MetroFramework.Controls.MetroPanel()
-        Me.gboPermissionsRol = New System.Windows.Forms.GroupBox()
-        Me.tgUsersRol = New MetroFramework.Controls.MetroToggle()
-        Me.lblUsersRol = New MetroFramework.Controls.MetroLabel()
-        Me.gboPorductsSectionRol = New System.Windows.Forms.GroupBox()
-        Me.lblActisRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblCareersRol = New MetroFramework.Controls.MetroLabel()
-        Me.tgCareersRol = New MetroFramework.Controls.MetroToggle()
-        Me.tgActiRol = New MetroFramework.Controls.MetroToggle()
-        Me.lblProductsSectionRol = New MetroFramework.Controls.MetroLabel()
-        Me.tgConfigurationRol = New MetroFramework.Controls.MetroToggle()
-        Me.tgReportsRol = New MetroFramework.Controls.MetroToggle()
-        Me.tgKpiRol = New MetroFramework.Controls.MetroToggle()
-        Me.tgEventsRol = New MetroFramework.Controls.MetroToggle()
-        Me.tgProspectusRol = New MetroFramework.Controls.MetroToggle()
-        Me.tgSalesRol = New MetroFramework.Controls.MetroToggle()
-        Me.lblConfigurationRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblReportsRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblKpiRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblEventsRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblProspectusRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblSalesRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblPermissionsRol = New MetroFramework.Controls.MetroLabel()
-        Me.tgEnabledRol = New MetroFramework.Controls.MetroToggle()
-        Me.txtRolName = New MetroFramework.Controls.MetroTextBox()
-        Me.btnCancelRol = New MetroFramework.Controls.MetroButton()
-        Me.btnSaveRol = New MetroFramework.Controls.MetroButton()
-        Me.btnEnabledRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblNameRol = New MetroFramework.Controls.MetroLabel()
-        Me.lblCreateRolTittle = New MetroFramework.Controls.MetroLabel()
         Me.TabVentas = New MetroFramework.Controls.MetroTabPage()
         Me.pnlRegistrarVenta = New MetroFramework.Controls.MetroPanel()
         Me.totalVenta_text = New MetroFramework.Controls.MetroTextBox()
@@ -405,8 +413,6 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
-        Me.lblImportProfesores = New MetroFramework.Controls.MetroLabel()
-        Me.lblImportEstudiantes = New MetroFramework.Controls.MetroLabel()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.registrarActi_pnl.SuspendLayout()
@@ -456,14 +462,15 @@ Partial Class FrmMain
         Me.TabConfiguracion.SuspendLayout()
         Me.pnlUpdateUserInfo.SuspendLayout()
         Me.TabUsuarios.SuspendLayout()
+        Me.pnlCreateRol.SuspendLayout()
+        Me.gboPermissionsRol.SuspendLayout()
+        Me.grpPermisosWeb.SuspendLayout()
+        Me.gboPorductsSectionRol.SuspendLayout()
         Me.pnlCreateUser.SuspendLayout()
         Me.pnListUsers.SuspendLayout()
         CType(Me.lstUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlListRols.SuspendLayout()
         CType(Me.lstListRols, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlCreateRol.SuspendLayout()
-        Me.gboPermissionsRol.SuspendLayout()
-        Me.gboPorductsSectionRol.SuspendLayout()
         Me.TabVentas.SuspendLayout()
         Me.pnlRegistrarVenta.SuspendLayout()
         Me.pnlConsultarVentas.SuspendLayout()
@@ -491,7 +498,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 5
+        Me.Main.SelectedIndex = 0
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -1915,7 +1922,7 @@ Partial Class FrmMain
         '
         Me.txtFechaNacProspecto.CustomFormat = ""
         Me.txtFechaNacProspecto.Location = New System.Drawing.Point(158, 112)
-        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(4, 29)
         Me.txtFechaNacProspecto.Name = "txtFechaNacProspecto"
         Me.txtFechaNacProspecto.Size = New System.Drawing.Size(367, 29)
         Me.txtFechaNacProspecto.Style = MetroFramework.MetroColorStyle.Purple
@@ -3379,10 +3386,10 @@ Partial Class FrmMain
         '
         'TabUsuarios
         '
+        Me.TabUsuarios.Controls.Add(Me.pnlCreateRol)
         Me.TabUsuarios.Controls.Add(Me.pnlCreateUser)
         Me.TabUsuarios.Controls.Add(Me.pnListUsers)
         Me.TabUsuarios.Controls.Add(Me.pnlListRols)
-        Me.TabUsuarios.Controls.Add(Me.pnlCreateRol)
         Me.TabUsuarios.HorizontalScrollbarBarColor = True
         Me.TabUsuarios.HorizontalScrollbarHighlightOnWheel = False
         Me.TabUsuarios.HorizontalScrollbarSize = 10
@@ -3394,6 +3401,418 @@ Partial Class FrmMain
         Me.TabUsuarios.VerticalScrollbarBarColor = True
         Me.TabUsuarios.VerticalScrollbarHighlightOnWheel = False
         Me.TabUsuarios.VerticalScrollbarSize = 10
+        '
+        'pnlCreateRol
+        '
+        Me.pnlCreateRol.Controls.Add(Me.gboPermissionsRol)
+        Me.pnlCreateRol.Controls.Add(Me.lblPermissionsRol)
+        Me.pnlCreateRol.Controls.Add(Me.tgEnabledRol)
+        Me.pnlCreateRol.Controls.Add(Me.txtRolName)
+        Me.pnlCreateRol.Controls.Add(Me.btnCancelRol)
+        Me.pnlCreateRol.Controls.Add(Me.btnSaveRol)
+        Me.pnlCreateRol.Controls.Add(Me.btnEnabledRol)
+        Me.pnlCreateRol.Controls.Add(Me.lblNameRol)
+        Me.pnlCreateRol.Controls.Add(Me.lblCreateRolTittle)
+        Me.pnlCreateRol.HorizontalScrollbarBarColor = True
+        Me.pnlCreateRol.HorizontalScrollbarHighlightOnWheel = False
+        Me.pnlCreateRol.HorizontalScrollbarSize = 10
+        Me.pnlCreateRol.Location = New System.Drawing.Point(0, 3)
+        Me.pnlCreateRol.Name = "pnlCreateRol"
+        Me.pnlCreateRol.Size = New System.Drawing.Size(753, 461)
+        Me.pnlCreateRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.pnlCreateRol.TabIndex = 51
+        Me.pnlCreateRol.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.pnlCreateRol.VerticalScrollbarBarColor = True
+        Me.pnlCreateRol.VerticalScrollbarHighlightOnWheel = False
+        Me.pnlCreateRol.VerticalScrollbarSize = 10
+        Me.pnlCreateRol.Visible = False
+        '
+        'gboPermissionsRol
+        '
+        Me.gboPermissionsRol.BackColor = System.Drawing.Color.White
+        Me.gboPermissionsRol.Controls.Add(Me.grpPermisosWeb)
+        Me.gboPermissionsRol.Controls.Add(Me.tgUsersRol)
+        Me.gboPermissionsRol.Controls.Add(Me.lblUsersRol)
+        Me.gboPermissionsRol.Controls.Add(Me.gboPorductsSectionRol)
+        Me.gboPermissionsRol.Controls.Add(Me.tgConfigurationRol)
+        Me.gboPermissionsRol.Controls.Add(Me.tgKpiRol)
+        Me.gboPermissionsRol.Controls.Add(Me.tgEventsRol)
+        Me.gboPermissionsRol.Controls.Add(Me.tgProspectusRol)
+        Me.gboPermissionsRol.Controls.Add(Me.tgSalesRol)
+        Me.gboPermissionsRol.Controls.Add(Me.lblConfigurationRol)
+        Me.gboPermissionsRol.Controls.Add(Me.lblKpiRol)
+        Me.gboPermissionsRol.Controls.Add(Me.lblEventsRol)
+        Me.gboPermissionsRol.Controls.Add(Me.lblProspectusRol)
+        Me.gboPermissionsRol.Controls.Add(Me.lblSalesRol)
+        Me.gboPermissionsRol.Location = New System.Drawing.Point(90, 133)
+        Me.gboPermissionsRol.Name = "gboPermissionsRol"
+        Me.gboPermissionsRol.Size = New System.Drawing.Size(605, 267)
+        Me.gboPermissionsRol.TabIndex = 27
+        Me.gboPermissionsRol.TabStop = False
+        '
+        'grpPermisosWeb
+        '
+        Me.grpPermisosWeb.BackColor = System.Drawing.Color.White
+        Me.grpPermisosWeb.Controls.Add(Me.tgPreguntasRol)
+        Me.grpPermisosWeb.Controls.Add(Me.lblPregunntas)
+        Me.grpPermisosWeb.Controls.Add(Me.lblPermisosWeb)
+        Me.grpPermisosWeb.Controls.Add(Me.tgEvaluacionesRol)
+        Me.grpPermisosWeb.Controls.Add(Me.lblEvaluations)
+        Me.grpPermisosWeb.Controls.Add(Me.lblReportsRol)
+        Me.grpPermisosWeb.Controls.Add(Me.tgReportsRol)
+        Me.grpPermisosWeb.Location = New System.Drawing.Point(215, 95)
+        Me.grpPermisosWeb.Name = "grpPermisosWeb"
+        Me.grpPermisosWeb.Size = New System.Drawing.Size(377, 156)
+        Me.grpPermisosWeb.TabIndex = 51
+        Me.grpPermisosWeb.TabStop = False
+        '
+        'tgPreguntasRol
+        '
+        Me.tgPreguntasRol.AutoSize = True
+        Me.tgPreguntasRol.Location = New System.Drawing.Point(194, 110)
+        Me.tgPreguntasRol.Name = "tgPreguntasRol"
+        Me.tgPreguntasRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgPreguntasRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgPreguntasRol.TabIndex = 55
+        Me.tgPreguntasRol.Text = "Off"
+        Me.tgPreguntasRol.UseSelectable = True
+        '
+        'lblPregunntas
+        '
+        Me.lblPregunntas.AutoSize = True
+        Me.lblPregunntas.Location = New System.Drawing.Point(97, 108)
+        Me.lblPregunntas.Name = "lblPregunntas"
+        Me.lblPregunntas.Size = New System.Drawing.Size(67, 19)
+        Me.lblPregunntas.TabIndex = 54
+        Me.lblPregunntas.Text = "Preguntas"
+        '
+        'lblPermisosWeb
+        '
+        Me.lblPermisosWeb.AutoSize = True
+        Me.lblPermisosWeb.Location = New System.Drawing.Point(6, -4)
+        Me.lblPermisosWeb.Name = "lblPermisosWeb"
+        Me.lblPermisosWeb.Size = New System.Drawing.Size(105, 19)
+        Me.lblPermisosWeb.TabIndex = 50
+        Me.lblPermisosWeb.Text = "Plataforma Web"
+        '
+        'tgEvaluacionesRol
+        '
+        Me.tgEvaluacionesRol.AutoSize = True
+        Me.tgEvaluacionesRol.Location = New System.Drawing.Point(194, 38)
+        Me.tgEvaluacionesRol.Name = "tgEvaluacionesRol"
+        Me.tgEvaluacionesRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgEvaluacionesRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgEvaluacionesRol.TabIndex = 52
+        Me.tgEvaluacionesRol.Text = "Off"
+        Me.tgEvaluacionesRol.UseSelectable = True
+        '
+        'lblEvaluations
+        '
+        Me.lblEvaluations.AutoSize = True
+        Me.lblEvaluations.Location = New System.Drawing.Point(97, 36)
+        Me.lblEvaluations.Name = "lblEvaluations"
+        Me.lblEvaluations.Size = New System.Drawing.Size(82, 19)
+        Me.lblEvaluations.TabIndex = 53
+        Me.lblEvaluations.Text = "Evaluaciones"
+        '
+        'lblReportsRol
+        '
+        Me.lblReportsRol.AutoSize = True
+        Me.lblReportsRol.Location = New System.Drawing.Point(97, 72)
+        Me.lblReportsRol.Name = "lblReportsRol"
+        Me.lblReportsRol.Size = New System.Drawing.Size(62, 19)
+        Me.lblReportsRol.TabIndex = 34
+        Me.lblReportsRol.Text = "Reportes"
+        '
+        'tgReportsRol
+        '
+        Me.tgReportsRol.AutoSize = True
+        Me.tgReportsRol.Location = New System.Drawing.Point(194, 74)
+        Me.tgReportsRol.Name = "tgReportsRol"
+        Me.tgReportsRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgReportsRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgReportsRol.TabIndex = 7
+        Me.tgReportsRol.Text = "Off"
+        Me.tgReportsRol.UseSelectable = True
+        '
+        'tgUsersRol
+        '
+        Me.tgUsersRol.AutoSize = True
+        Me.tgUsersRol.Location = New System.Drawing.Point(99, 131)
+        Me.tgUsersRol.Name = "tgUsersRol"
+        Me.tgUsersRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgUsersRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgUsersRol.TabIndex = 12
+        Me.tgUsersRol.Text = "Off"
+        Me.tgUsersRol.UseSelectable = True
+        '
+        'lblUsersRol
+        '
+        Me.lblUsersRol.AutoSize = True
+        Me.lblUsersRol.Location = New System.Drawing.Point(15, 129)
+        Me.lblUsersRol.Name = "lblUsersRol"
+        Me.lblUsersRol.Size = New System.Drawing.Size(58, 19)
+        Me.lblUsersRol.TabIndex = 51
+        Me.lblUsersRol.Text = "Usuarios"
+        '
+        'gboPorductsSectionRol
+        '
+        Me.gboPorductsSectionRol.BackColor = System.Drawing.Color.White
+        Me.gboPorductsSectionRol.Controls.Add(Me.lblActisRol)
+        Me.gboPorductsSectionRol.Controls.Add(Me.lblCareersRol)
+        Me.gboPorductsSectionRol.Controls.Add(Me.tgCareersRol)
+        Me.gboPorductsSectionRol.Controls.Add(Me.tgActiRol)
+        Me.gboPorductsSectionRol.Controls.Add(Me.lblProductsSectionRol)
+        Me.gboPorductsSectionRol.Location = New System.Drawing.Point(8, 165)
+        Me.gboPorductsSectionRol.Name = "gboPorductsSectionRol"
+        Me.gboPorductsSectionRol.Size = New System.Drawing.Size(182, 86)
+        Me.gboPorductsSectionRol.TabIndex = 49
+        Me.gboPorductsSectionRol.TabStop = False
+        '
+        'lblActisRol
+        '
+        Me.lblActisRol.AutoSize = True
+        Me.lblActisRol.Location = New System.Drawing.Point(7, 23)
+        Me.lblActisRol.Name = "lblActisRol"
+        Me.lblActisRol.Size = New System.Drawing.Size(36, 19)
+        Me.lblActisRol.TabIndex = 44
+        Me.lblActisRol.Text = "Actis"
+        '
+        'lblCareersRol
+        '
+        Me.lblCareersRol.AutoSize = True
+        Me.lblCareersRol.Location = New System.Drawing.Point(7, 56)
+        Me.lblCareersRol.Name = "lblCareersRol"
+        Me.lblCareersRol.Size = New System.Drawing.Size(59, 19)
+        Me.lblCareersRol.TabIndex = 45
+        Me.lblCareersRol.Text = "Carreras"
+        '
+        'tgCareersRol
+        '
+        Me.tgCareersRol.AutoSize = True
+        Me.tgCareersRol.Location = New System.Drawing.Point(91, 58)
+        Me.tgCareersRol.Name = "tgCareersRol"
+        Me.tgCareersRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgCareersRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgCareersRol.TabIndex = 10
+        Me.tgCareersRol.Text = "Off"
+        Me.tgCareersRol.UseSelectable = True
+        '
+        'tgActiRol
+        '
+        Me.tgActiRol.AutoSize = True
+        Me.tgActiRol.Location = New System.Drawing.Point(91, 23)
+        Me.tgActiRol.Name = "tgActiRol"
+        Me.tgActiRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgActiRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgActiRol.TabIndex = 9
+        Me.tgActiRol.Text = "Off"
+        Me.tgActiRol.UseSelectable = True
+        '
+        'lblProductsSectionRol
+        '
+        Me.lblProductsSectionRol.AutoSize = True
+        Me.lblProductsSectionRol.Location = New System.Drawing.Point(6, -4)
+        Me.lblProductsSectionRol.Name = "lblProductsSectionRol"
+        Me.lblProductsSectionRol.Size = New System.Drawing.Size(68, 19)
+        Me.lblProductsSectionRol.TabIndex = 50
+        Me.lblProductsSectionRol.Text = "Productos"
+        '
+        'tgConfigurationRol
+        '
+        Me.tgConfigurationRol.AutoSize = True
+        Me.tgConfigurationRol.Location = New System.Drawing.Point(318, 24)
+        Me.tgConfigurationRol.Name = "tgConfigurationRol"
+        Me.tgConfigurationRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgConfigurationRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgConfigurationRol.TabIndex = 8
+        Me.tgConfigurationRol.Text = "Off"
+        Me.tgConfigurationRol.UseSelectable = True
+        '
+        'tgKpiRol
+        '
+        Me.tgKpiRol.AutoSize = True
+        Me.tgKpiRol.Location = New System.Drawing.Point(99, 25)
+        Me.tgKpiRol.Name = "tgKpiRol"
+        Me.tgKpiRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgKpiRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgKpiRol.TabIndex = 3
+        Me.tgKpiRol.Text = "Off"
+        Me.tgKpiRol.UseSelectable = True
+        '
+        'tgEventsRol
+        '
+        Me.tgEventsRol.AutoSize = True
+        Me.tgEventsRol.Location = New System.Drawing.Point(99, 95)
+        Me.tgEventsRol.Name = "tgEventsRol"
+        Me.tgEventsRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgEventsRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgEventsRol.TabIndex = 6
+        Me.tgEventsRol.Text = "Off"
+        Me.tgEventsRol.UseSelectable = True
+        '
+        'tgProspectusRol
+        '
+        Me.tgProspectusRol.AutoSize = True
+        Me.tgProspectusRol.Location = New System.Drawing.Point(318, 61)
+        Me.tgProspectusRol.Name = "tgProspectusRol"
+        Me.tgProspectusRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgProspectusRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgProspectusRol.TabIndex = 5
+        Me.tgProspectusRol.Text = "Off"
+        Me.tgProspectusRol.UseSelectable = True
+        '
+        'tgSalesRol
+        '
+        Me.tgSalesRol.AutoSize = True
+        Me.tgSalesRol.Location = New System.Drawing.Point(99, 61)
+        Me.tgSalesRol.Name = "tgSalesRol"
+        Me.tgSalesRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgSalesRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgSalesRol.TabIndex = 4
+        Me.tgSalesRol.Text = "Off"
+        Me.tgSalesRol.UseSelectable = True
+        '
+        'lblConfigurationRol
+        '
+        Me.lblConfigurationRol.AutoSize = True
+        Me.lblConfigurationRol.Location = New System.Drawing.Point(221, 22)
+        Me.lblConfigurationRol.Name = "lblConfigurationRol"
+        Me.lblConfigurationRol.Size = New System.Drawing.Size(91, 19)
+        Me.lblConfigurationRol.TabIndex = 35
+        Me.lblConfigurationRol.Text = "Configuracion"
+        '
+        'lblKpiRol
+        '
+        Me.lblKpiRol.AutoSize = True
+        Me.lblKpiRol.Location = New System.Drawing.Point(15, 23)
+        Me.lblKpiRol.Name = "lblKpiRol"
+        Me.lblKpiRol.Size = New System.Drawing.Size(27, 19)
+        Me.lblKpiRol.TabIndex = 32
+        Me.lblKpiRol.Text = "Kpi"
+        '
+        'lblEventsRol
+        '
+        Me.lblEventsRol.AutoSize = True
+        Me.lblEventsRol.Location = New System.Drawing.Point(15, 93)
+        Me.lblEventsRol.Name = "lblEventsRol"
+        Me.lblEventsRol.Size = New System.Drawing.Size(53, 19)
+        Me.lblEventsRol.TabIndex = 31
+        Me.lblEventsRol.Text = "Eventos"
+        '
+        'lblProspectusRol
+        '
+        Me.lblProspectusRol.AutoSize = True
+        Me.lblProspectusRol.Location = New System.Drawing.Point(221, 59)
+        Me.lblProspectusRol.Name = "lblProspectusRol"
+        Me.lblProspectusRol.Size = New System.Drawing.Size(73, 19)
+        Me.lblProspectusRol.TabIndex = 30
+        Me.lblProspectusRol.Text = "Prospectos"
+        '
+        'lblSalesRol
+        '
+        Me.lblSalesRol.AutoSize = True
+        Me.lblSalesRol.Location = New System.Drawing.Point(15, 59)
+        Me.lblSalesRol.Name = "lblSalesRol"
+        Me.lblSalesRol.Size = New System.Drawing.Size(46, 19)
+        Me.lblSalesRol.TabIndex = 29
+        Me.lblSalesRol.Text = "Ventas"
+        '
+        'lblPermissionsRol
+        '
+        Me.lblPermissionsRol.AutoSize = True
+        Me.lblPermissionsRol.Location = New System.Drawing.Point(23, 133)
+        Me.lblPermissionsRol.Name = "lblPermissionsRol"
+        Me.lblPermissionsRol.Size = New System.Drawing.Size(61, 19)
+        Me.lblPermissionsRol.TabIndex = 26
+        Me.lblPermissionsRol.Text = "Permisos"
+        '
+        'tgEnabledRol
+        '
+        Me.tgEnabledRol.AutoSize = True
+        Me.tgEnabledRol.Location = New System.Drawing.Point(98, 86)
+        Me.tgEnabledRol.Name = "tgEnabledRol"
+        Me.tgEnabledRol.Size = New System.Drawing.Size(80, 17)
+        Me.tgEnabledRol.Style = MetroFramework.MetroColorStyle.Purple
+        Me.tgEnabledRol.TabIndex = 2
+        Me.tgEnabledRol.Text = "Off"
+        Me.tgEnabledRol.UseSelectable = True
+        '
+        'txtRolName
+        '
+        '
+        '
+        '
+        Me.txtRolName.CustomButton.Image = Nothing
+        Me.txtRolName.CustomButton.Location = New System.Drawing.Point(430, 1)
+        Me.txtRolName.CustomButton.Name = ""
+        Me.txtRolName.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtRolName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtRolName.CustomButton.TabIndex = 1
+        Me.txtRolName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtRolName.CustomButton.UseSelectable = True
+        Me.txtRolName.CustomButton.Visible = False
+        Me.txtRolName.Lines = New String(-1) {}
+        Me.txtRolName.Location = New System.Drawing.Point(98, 51)
+        Me.txtRolName.MaxLength = 75
+        Me.txtRolName.Name = "txtRolName"
+        Me.txtRolName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtRolName.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtRolName.SelectedText = ""
+        Me.txtRolName.SelectionLength = 0
+        Me.txtRolName.SelectionStart = 0
+        Me.txtRolName.Size = New System.Drawing.Size(452, 23)
+        Me.txtRolName.Style = MetroFramework.MetroColorStyle.Purple
+        Me.txtRolName.TabIndex = 1
+        Me.txtRolName.UseSelectable = True
+        Me.txtRolName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtRolName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'btnCancelRol
+        '
+        Me.btnCancelRol.Location = New System.Drawing.Point(598, 422)
+        Me.btnCancelRol.Name = "btnCancelRol"
+        Me.btnCancelRol.Size = New System.Drawing.Size(97, 23)
+        Me.btnCancelRol.TabIndex = 14
+        Me.btnCancelRol.Text = "Cancelar"
+        Me.btnCancelRol.UseSelectable = True
+        '
+        'btnSaveRol
+        '
+        Me.btnSaveRol.Location = New System.Drawing.Point(494, 422)
+        Me.btnSaveRol.Name = "btnSaveRol"
+        Me.btnSaveRol.Size = New System.Drawing.Size(97, 23)
+        Me.btnSaveRol.TabIndex = 13
+        Me.btnSaveRol.Text = "Guardar"
+        Me.btnSaveRol.UseSelectable = True
+        '
+        'btnEnabledRol
+        '
+        Me.btnEnabledRol.AutoSize = True
+        Me.btnEnabledRol.Location = New System.Drawing.Point(24, 82)
+        Me.btnEnabledRol.Name = "btnEnabledRol"
+        Me.btnEnabledRol.Size = New System.Drawing.Size(45, 19)
+        Me.btnEnabledRol.TabIndex = 14
+        Me.btnEnabledRol.Text = "Activo"
+        '
+        'lblNameRol
+        '
+        Me.lblNameRol.AutoSize = True
+        Me.lblNameRol.Location = New System.Drawing.Point(24, 51)
+        Me.lblNameRol.Name = "lblNameRol"
+        Me.lblNameRol.Size = New System.Drawing.Size(59, 19)
+        Me.lblNameRol.TabIndex = 11
+        Me.lblNameRol.Text = "Nombre"
+        '
+        'lblCreateRolTittle
+        '
+        Me.lblCreateRolTittle.AutoSize = True
+        Me.lblCreateRolTittle.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblCreateRolTittle.Location = New System.Drawing.Point(4, 9)
+        Me.lblCreateRolTittle.Name = "lblCreateRolTittle"
+        Me.lblCreateRolTittle.Size = New System.Drawing.Size(78, 25)
+        Me.lblCreateRolTittle.TabIndex = 10
+        Me.lblCreateRolTittle.Text = "Crear rol"
         '
         'pnlCreateUser
         '
@@ -3436,6 +3855,32 @@ Partial Class FrmMain
         Me.pnlCreateUser.VerticalScrollbarSize = 10
         Me.pnlCreateUser.Visible = False
         '
+        'lblImportEstudiantes
+        '
+        Me.lblImportEstudiantes.AutoSize = True
+        Me.lblImportEstudiantes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblImportEstudiantes.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblImportEstudiantes.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.lblImportEstudiantes.Location = New System.Drawing.Point(357, 10)
+        Me.lblImportEstudiantes.Name = "lblImportEstudiantes"
+        Me.lblImportEstudiantes.Size = New System.Drawing.Size(168, 25)
+        Me.lblImportEstudiantes.TabIndex = 51
+        Me.lblImportEstudiantes.Text = "Importar estudiantes"
+        Me.lblImportEstudiantes.UseCustomForeColor = True
+        '
+        'lblImportProfesores
+        '
+        Me.lblImportProfesores.AutoSize = True
+        Me.lblImportProfesores.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblImportProfesores.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblImportProfesores.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.lblImportProfesores.Location = New System.Drawing.Point(158, 9)
+        Me.lblImportProfesores.Name = "lblImportProfesores"
+        Me.lblImportProfesores.Size = New System.Drawing.Size(162, 25)
+        Me.lblImportProfesores.TabIndex = 50
+        Me.lblImportProfesores.Text = "Importar profesores"
+        Me.lblImportProfesores.UseCustomForeColor = True
+        '
         'lblPasswordUserBackup
         '
         Me.lblPasswordUserBackup.AutoSize = True
@@ -3460,7 +3905,7 @@ Partial Class FrmMain
         'cboDateCreateUser
         '
         Me.cboDateCreateUser.Location = New System.Drawing.Point(158, 175)
-        Me.cboDateCreateUser.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.cboDateCreateUser.MinimumSize = New System.Drawing.Size(4, 29)
         Me.cboDateCreateUser.Name = "cboDateCreateUser"
         Me.cboDateCreateUser.Size = New System.Drawing.Size(366, 29)
         Me.cboDateCreateUser.Style = MetroFramework.MetroColorStyle.Purple
@@ -4001,354 +4446,6 @@ Partial Class FrmMain
         Me.btnNewRol.TabIndex = 9
         Me.btnNewRol.Text = "Nuevo rol"
         Me.btnNewRol.UseSelectable = True
-        '
-        'pnlCreateRol
-        '
-        Me.pnlCreateRol.Controls.Add(Me.gboPermissionsRol)
-        Me.pnlCreateRol.Controls.Add(Me.lblPermissionsRol)
-        Me.pnlCreateRol.Controls.Add(Me.tgEnabledRol)
-        Me.pnlCreateRol.Controls.Add(Me.txtRolName)
-        Me.pnlCreateRol.Controls.Add(Me.btnCancelRol)
-        Me.pnlCreateRol.Controls.Add(Me.btnSaveRol)
-        Me.pnlCreateRol.Controls.Add(Me.btnEnabledRol)
-        Me.pnlCreateRol.Controls.Add(Me.lblNameRol)
-        Me.pnlCreateRol.Controls.Add(Me.lblCreateRolTittle)
-        Me.pnlCreateRol.HorizontalScrollbarBarColor = True
-        Me.pnlCreateRol.HorizontalScrollbarHighlightOnWheel = False
-        Me.pnlCreateRol.HorizontalScrollbarSize = 10
-        Me.pnlCreateRol.Location = New System.Drawing.Point(0, 3)
-        Me.pnlCreateRol.Name = "pnlCreateRol"
-        Me.pnlCreateRol.Size = New System.Drawing.Size(753, 461)
-        Me.pnlCreateRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.pnlCreateRol.TabIndex = 51
-        Me.pnlCreateRol.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.pnlCreateRol.VerticalScrollbarBarColor = True
-        Me.pnlCreateRol.VerticalScrollbarHighlightOnWheel = False
-        Me.pnlCreateRol.VerticalScrollbarSize = 10
-        Me.pnlCreateRol.Visible = False
-        '
-        'gboPermissionsRol
-        '
-        Me.gboPermissionsRol.BackColor = System.Drawing.Color.White
-        Me.gboPermissionsRol.Controls.Add(Me.tgUsersRol)
-        Me.gboPermissionsRol.Controls.Add(Me.lblUsersRol)
-        Me.gboPermissionsRol.Controls.Add(Me.gboPorductsSectionRol)
-        Me.gboPermissionsRol.Controls.Add(Me.lblProductsSectionRol)
-        Me.gboPermissionsRol.Controls.Add(Me.tgConfigurationRol)
-        Me.gboPermissionsRol.Controls.Add(Me.tgReportsRol)
-        Me.gboPermissionsRol.Controls.Add(Me.tgKpiRol)
-        Me.gboPermissionsRol.Controls.Add(Me.tgEventsRol)
-        Me.gboPermissionsRol.Controls.Add(Me.tgProspectusRol)
-        Me.gboPermissionsRol.Controls.Add(Me.tgSalesRol)
-        Me.gboPermissionsRol.Controls.Add(Me.lblConfigurationRol)
-        Me.gboPermissionsRol.Controls.Add(Me.lblReportsRol)
-        Me.gboPermissionsRol.Controls.Add(Me.lblKpiRol)
-        Me.gboPermissionsRol.Controls.Add(Me.lblEventsRol)
-        Me.gboPermissionsRol.Controls.Add(Me.lblProspectusRol)
-        Me.gboPermissionsRol.Controls.Add(Me.lblSalesRol)
-        Me.gboPermissionsRol.Location = New System.Drawing.Point(98, 133)
-        Me.gboPermissionsRol.Name = "gboPermissionsRol"
-        Me.gboPermissionsRol.Size = New System.Drawing.Size(597, 267)
-        Me.gboPermissionsRol.TabIndex = 27
-        Me.gboPermissionsRol.TabStop = False
-        '
-        'tgUsersRol
-        '
-        Me.tgUsersRol.AutoSize = True
-        Me.tgUsersRol.Location = New System.Drawing.Point(346, 173)
-        Me.tgUsersRol.Name = "tgUsersRol"
-        Me.tgUsersRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgUsersRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgUsersRol.TabIndex = 12
-        Me.tgUsersRol.Text = "Off"
-        Me.tgUsersRol.UseSelectable = True
-        '
-        'lblUsersRol
-        '
-        Me.lblUsersRol.AutoSize = True
-        Me.lblUsersRol.Location = New System.Drawing.Point(226, 171)
-        Me.lblUsersRol.Name = "lblUsersRol"
-        Me.lblUsersRol.Size = New System.Drawing.Size(58, 19)
-        Me.lblUsersRol.TabIndex = 51
-        Me.lblUsersRol.Text = "Usuarios"
-        '
-        'gboPorductsSectionRol
-        '
-        Me.gboPorductsSectionRol.BackColor = System.Drawing.Color.White
-        Me.gboPorductsSectionRol.Controls.Add(Me.lblActisRol)
-        Me.gboPorductsSectionRol.Controls.Add(Me.lblCareersRol)
-        Me.gboPorductsSectionRol.Controls.Add(Me.tgCareersRol)
-        Me.gboPorductsSectionRol.Controls.Add(Me.tgActiRol)
-        Me.gboPorductsSectionRol.Location = New System.Drawing.Point(231, 82)
-        Me.gboPorductsSectionRol.Name = "gboPorductsSectionRol"
-        Me.gboPorductsSectionRol.Size = New System.Drawing.Size(205, 75)
-        Me.gboPorductsSectionRol.TabIndex = 49
-        Me.gboPorductsSectionRol.TabStop = False
-        '
-        'lblActisRol
-        '
-        Me.lblActisRol.AutoSize = True
-        Me.lblActisRol.Location = New System.Drawing.Point(5, 15)
-        Me.lblActisRol.Name = "lblActisRol"
-        Me.lblActisRol.Size = New System.Drawing.Size(31, 19)
-        Me.lblActisRol.TabIndex = 44
-        Me.lblActisRol.Text = "Acti"
-        '
-        'lblCareersRol
-        '
-        Me.lblCareersRol.AutoSize = True
-        Me.lblCareersRol.Location = New System.Drawing.Point(6, 49)
-        Me.lblCareersRol.Name = "lblCareersRol"
-        Me.lblCareersRol.Size = New System.Drawing.Size(59, 19)
-        Me.lblCareersRol.TabIndex = 45
-        Me.lblCareersRol.Text = "Carreras"
-        '
-        'tgCareersRol
-        '
-        Me.tgCareersRol.AutoSize = True
-        Me.tgCareersRol.Location = New System.Drawing.Point(115, 52)
-        Me.tgCareersRol.Name = "tgCareersRol"
-        Me.tgCareersRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgCareersRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgCareersRol.TabIndex = 10
-        Me.tgCareersRol.Text = "Off"
-        Me.tgCareersRol.UseSelectable = True
-        '
-        'tgActiRol
-        '
-        Me.tgActiRol.AutoSize = True
-        Me.tgActiRol.Location = New System.Drawing.Point(115, 15)
-        Me.tgActiRol.Name = "tgActiRol"
-        Me.tgActiRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgActiRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgActiRol.TabIndex = 9
-        Me.tgActiRol.Text = "Off"
-        Me.tgActiRol.UseSelectable = True
-        '
-        'lblProductsSectionRol
-        '
-        Me.lblProductsSectionRol.AutoSize = True
-        Me.lblProductsSectionRol.Location = New System.Drawing.Point(226, 64)
-        Me.lblProductsSectionRol.Name = "lblProductsSectionRol"
-        Me.lblProductsSectionRol.Size = New System.Drawing.Size(68, 19)
-        Me.lblProductsSectionRol.TabIndex = 50
-        Me.lblProductsSectionRol.Text = "Productos"
-        '
-        'tgConfigurationRol
-        '
-        Me.tgConfigurationRol.AutoSize = True
-        Me.tgConfigurationRol.Location = New System.Drawing.Point(346, 27)
-        Me.tgConfigurationRol.Name = "tgConfigurationRol"
-        Me.tgConfigurationRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgConfigurationRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgConfigurationRol.TabIndex = 8
-        Me.tgConfigurationRol.Text = "Off"
-        Me.tgConfigurationRol.UseSelectable = True
-        '
-        'tgReportsRol
-        '
-        Me.tgReportsRol.AutoSize = True
-        Me.tgReportsRol.Location = New System.Drawing.Point(85, 171)
-        Me.tgReportsRol.Name = "tgReportsRol"
-        Me.tgReportsRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgReportsRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgReportsRol.TabIndex = 7
-        Me.tgReportsRol.Text = "Off"
-        Me.tgReportsRol.UseSelectable = True
-        '
-        'tgKpiRol
-        '
-        Me.tgKpiRol.AutoSize = True
-        Me.tgKpiRol.Location = New System.Drawing.Point(85, 25)
-        Me.tgKpiRol.Name = "tgKpiRol"
-        Me.tgKpiRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgKpiRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgKpiRol.TabIndex = 3
-        Me.tgKpiRol.Text = "Off"
-        Me.tgKpiRol.UseSelectable = True
-        '
-        'tgEventsRol
-        '
-        Me.tgEventsRol.AutoSize = True
-        Me.tgEventsRol.Location = New System.Drawing.Point(85, 133)
-        Me.tgEventsRol.Name = "tgEventsRol"
-        Me.tgEventsRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgEventsRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgEventsRol.TabIndex = 6
-        Me.tgEventsRol.Text = "Off"
-        Me.tgEventsRol.UseSelectable = True
-        '
-        'tgProspectusRol
-        '
-        Me.tgProspectusRol.AutoSize = True
-        Me.tgProspectusRol.Location = New System.Drawing.Point(85, 97)
-        Me.tgProspectusRol.Name = "tgProspectusRol"
-        Me.tgProspectusRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgProspectusRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgProspectusRol.TabIndex = 5
-        Me.tgProspectusRol.Text = "Off"
-        Me.tgProspectusRol.UseSelectable = True
-        '
-        'tgSalesRol
-        '
-        Me.tgSalesRol.AutoSize = True
-        Me.tgSalesRol.Location = New System.Drawing.Point(85, 61)
-        Me.tgSalesRol.Name = "tgSalesRol"
-        Me.tgSalesRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgSalesRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgSalesRol.TabIndex = 4
-        Me.tgSalesRol.Text = "Off"
-        Me.tgSalesRol.UseSelectable = True
-        '
-        'lblConfigurationRol
-        '
-        Me.lblConfigurationRol.AutoSize = True
-        Me.lblConfigurationRol.Location = New System.Drawing.Point(226, 25)
-        Me.lblConfigurationRol.Name = "lblConfigurationRol"
-        Me.lblConfigurationRol.Size = New System.Drawing.Size(91, 19)
-        Me.lblConfigurationRol.TabIndex = 35
-        Me.lblConfigurationRol.Text = "Configuracion"
-        '
-        'lblReportsRol
-        '
-        Me.lblReportsRol.AutoSize = True
-        Me.lblReportsRol.Location = New System.Drawing.Point(7, 171)
-        Me.lblReportsRol.Name = "lblReportsRol"
-        Me.lblReportsRol.Size = New System.Drawing.Size(62, 19)
-        Me.lblReportsRol.TabIndex = 34
-        Me.lblReportsRol.Text = "Reportes"
-        '
-        'lblKpiRol
-        '
-        Me.lblKpiRol.AutoSize = True
-        Me.lblKpiRol.Location = New System.Drawing.Point(6, 23)
-        Me.lblKpiRol.Name = "lblKpiRol"
-        Me.lblKpiRol.Size = New System.Drawing.Size(27, 19)
-        Me.lblKpiRol.TabIndex = 32
-        Me.lblKpiRol.Text = "Kpi"
-        '
-        'lblEventsRol
-        '
-        Me.lblEventsRol.AutoSize = True
-        Me.lblEventsRol.Location = New System.Drawing.Point(7, 131)
-        Me.lblEventsRol.Name = "lblEventsRol"
-        Me.lblEventsRol.Size = New System.Drawing.Size(53, 19)
-        Me.lblEventsRol.TabIndex = 31
-        Me.lblEventsRol.Text = "Eventos"
-        '
-        'lblProspectusRol
-        '
-        Me.lblProspectusRol.AutoSize = True
-        Me.lblProspectusRol.Location = New System.Drawing.Point(7, 95)
-        Me.lblProspectusRol.Name = "lblProspectusRol"
-        Me.lblProspectusRol.Size = New System.Drawing.Size(73, 19)
-        Me.lblProspectusRol.TabIndex = 30
-        Me.lblProspectusRol.Text = "Prospectos"
-        '
-        'lblSalesRol
-        '
-        Me.lblSalesRol.AutoSize = True
-        Me.lblSalesRol.Location = New System.Drawing.Point(6, 59)
-        Me.lblSalesRol.Name = "lblSalesRol"
-        Me.lblSalesRol.Size = New System.Drawing.Size(46, 19)
-        Me.lblSalesRol.TabIndex = 29
-        Me.lblSalesRol.Text = "Ventas"
-        '
-        'lblPermissionsRol
-        '
-        Me.lblPermissionsRol.AutoSize = True
-        Me.lblPermissionsRol.Location = New System.Drawing.Point(23, 133)
-        Me.lblPermissionsRol.Name = "lblPermissionsRol"
-        Me.lblPermissionsRol.Size = New System.Drawing.Size(61, 19)
-        Me.lblPermissionsRol.TabIndex = 26
-        Me.lblPermissionsRol.Text = "Permisos"
-        '
-        'tgEnabledRol
-        '
-        Me.tgEnabledRol.AutoSize = True
-        Me.tgEnabledRol.Location = New System.Drawing.Point(98, 86)
-        Me.tgEnabledRol.Name = "tgEnabledRol"
-        Me.tgEnabledRol.Size = New System.Drawing.Size(80, 17)
-        Me.tgEnabledRol.Style = MetroFramework.MetroColorStyle.Purple
-        Me.tgEnabledRol.TabIndex = 2
-        Me.tgEnabledRol.Text = "Off"
-        Me.tgEnabledRol.UseSelectable = True
-        '
-        'txtRolName
-        '
-        '
-        '
-        '
-        Me.txtRolName.CustomButton.Image = Nothing
-        Me.txtRolName.CustomButton.Location = New System.Drawing.Point(430, 1)
-        Me.txtRolName.CustomButton.Name = ""
-        Me.txtRolName.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtRolName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtRolName.CustomButton.TabIndex = 1
-        Me.txtRolName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtRolName.CustomButton.UseSelectable = True
-        Me.txtRolName.CustomButton.Visible = False
-        Me.txtRolName.Lines = New String(-1) {}
-        Me.txtRolName.Location = New System.Drawing.Point(98, 51)
-        Me.txtRolName.MaxLength = 75
-        Me.txtRolName.Name = "txtRolName"
-        Me.txtRolName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtRolName.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtRolName.SelectedText = ""
-        Me.txtRolName.SelectionLength = 0
-        Me.txtRolName.SelectionStart = 0
-        Me.txtRolName.Size = New System.Drawing.Size(452, 23)
-        Me.txtRolName.Style = MetroFramework.MetroColorStyle.Purple
-        Me.txtRolName.TabIndex = 1
-        Me.txtRolName.UseSelectable = True
-        Me.txtRolName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtRolName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'btnCancelRol
-        '
-        Me.btnCancelRol.Location = New System.Drawing.Point(598, 422)
-        Me.btnCancelRol.Name = "btnCancelRol"
-        Me.btnCancelRol.Size = New System.Drawing.Size(97, 23)
-        Me.btnCancelRol.TabIndex = 14
-        Me.btnCancelRol.Text = "Cancelar"
-        Me.btnCancelRol.UseSelectable = True
-        '
-        'btnSaveRol
-        '
-        Me.btnSaveRol.Location = New System.Drawing.Point(494, 422)
-        Me.btnSaveRol.Name = "btnSaveRol"
-        Me.btnSaveRol.Size = New System.Drawing.Size(97, 23)
-        Me.btnSaveRol.TabIndex = 13
-        Me.btnSaveRol.Text = "Guardar"
-        Me.btnSaveRol.UseSelectable = True
-        '
-        'btnEnabledRol
-        '
-        Me.btnEnabledRol.AutoSize = True
-        Me.btnEnabledRol.Location = New System.Drawing.Point(24, 82)
-        Me.btnEnabledRol.Name = "btnEnabledRol"
-        Me.btnEnabledRol.Size = New System.Drawing.Size(45, 19)
-        Me.btnEnabledRol.TabIndex = 14
-        Me.btnEnabledRol.Text = "Activo"
-        '
-        'lblNameRol
-        '
-        Me.lblNameRol.AutoSize = True
-        Me.lblNameRol.Location = New System.Drawing.Point(24, 51)
-        Me.lblNameRol.Name = "lblNameRol"
-        Me.lblNameRol.Size = New System.Drawing.Size(59, 19)
-        Me.lblNameRol.TabIndex = 11
-        Me.lblNameRol.Text = "Nombre"
-        '
-        'lblCreateRolTittle
-        '
-        Me.lblCreateRolTittle.AutoSize = True
-        Me.lblCreateRolTittle.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblCreateRolTittle.Location = New System.Drawing.Point(4, 9)
-        Me.lblCreateRolTittle.Name = "lblCreateRolTittle"
-        Me.lblCreateRolTittle.Size = New System.Drawing.Size(78, 25)
-        Me.lblCreateRolTittle.TabIndex = 10
-        Me.lblCreateRolTittle.Text = "Crear rol"
         '
         'TabVentas
         '
@@ -4990,32 +5087,6 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
-        'lblImportProfesores
-        '
-        Me.lblImportProfesores.AutoSize = True
-        Me.lblImportProfesores.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblImportProfesores.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblImportProfesores.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblImportProfesores.Location = New System.Drawing.Point(158, 9)
-        Me.lblImportProfesores.Name = "lblImportProfesores"
-        Me.lblImportProfesores.Size = New System.Drawing.Size(162, 25)
-        Me.lblImportProfesores.TabIndex = 50
-        Me.lblImportProfesores.Text = "Importar profesores"
-        Me.lblImportProfesores.UseCustomForeColor = True
-        '
-        'lblImportEstudiantes
-        '
-        Me.lblImportEstudiantes.AutoSize = True
-        Me.lblImportEstudiantes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblImportEstudiantes.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblImportEstudiantes.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblImportEstudiantes.Location = New System.Drawing.Point(357, 10)
-        Me.lblImportEstudiantes.Name = "lblImportEstudiantes"
-        Me.lblImportEstudiantes.Size = New System.Drawing.Size(168, 25)
-        Me.lblImportEstudiantes.TabIndex = 51
-        Me.lblImportEstudiantes.Text = "Importar estudiantes"
-        Me.lblImportEstudiantes.UseCustomForeColor = True
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5092,6 +5163,14 @@ Partial Class FrmMain
         Me.pnlUpdateUserInfo.ResumeLayout(False)
         Me.pnlUpdateUserInfo.PerformLayout()
         Me.TabUsuarios.ResumeLayout(False)
+        Me.pnlCreateRol.ResumeLayout(False)
+        Me.pnlCreateRol.PerformLayout()
+        Me.gboPermissionsRol.ResumeLayout(False)
+        Me.gboPermissionsRol.PerformLayout()
+        Me.grpPermisosWeb.ResumeLayout(False)
+        Me.grpPermisosWeb.PerformLayout()
+        Me.gboPorductsSectionRol.ResumeLayout(False)
+        Me.gboPorductsSectionRol.PerformLayout()
         Me.pnlCreateUser.ResumeLayout(False)
         Me.pnlCreateUser.PerformLayout()
         Me.pnListUsers.ResumeLayout(False)
@@ -5100,12 +5179,6 @@ Partial Class FrmMain
         Me.pnlListRols.ResumeLayout(False)
         Me.pnlListRols.PerformLayout()
         CType(Me.lstListRols, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlCreateRol.ResumeLayout(False)
-        Me.pnlCreateRol.PerformLayout()
-        Me.gboPermissionsRol.ResumeLayout(False)
-        Me.gboPermissionsRol.PerformLayout()
-        Me.gboPorductsSectionRol.ResumeLayout(False)
-        Me.gboPorductsSectionRol.PerformLayout()
         Me.TabVentas.ResumeLayout(False)
         Me.pnlRegistrarVenta.ResumeLayout(False)
         Me.pnlRegistrarVenta.PerformLayout()
@@ -5508,4 +5581,10 @@ Partial Class FrmMain
     Friend WithEvents lblImportarProspectos As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblImportEstudiantes As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblImportProfesores As MetroFramework.Controls.MetroLabel
+    Friend WithEvents tgEvaluacionesRol As MetroFramework.Controls.MetroToggle
+    Friend WithEvents lblEvaluations As MetroFramework.Controls.MetroLabel
+    Friend WithEvents grpPermisosWeb As System.Windows.Forms.GroupBox
+    Friend WithEvents lblPermisosWeb As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblPregunntas As MetroFramework.Controls.MetroLabel
+    Friend WithEvents tgPreguntasRol As MetroFramework.Controls.MetroToggle
 End Class

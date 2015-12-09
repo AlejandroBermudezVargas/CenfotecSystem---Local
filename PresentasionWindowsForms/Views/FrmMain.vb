@@ -1087,6 +1087,12 @@ Public Class FrmMain
             If tgConfigurationRol.Checked Then
                 permissions.Add(New PermissionModel(9))
             End If
+            If tgEvaluacionesRol.Checked Then
+                permissions.Add(New PermissionModel(10))
+            End If
+            If tgPreguntasRol.Checked Then
+                permissions.Add(New PermissionModel(11))
+            End If
             If String.Compare(lblIdRol.Text, "-1") = 0 Then
                 If (RolsController.create(txtRolName.Text, tgEnabledRol.Checked, permissions)) Then
                     MsgBox(respuestasDelSistema.CREATE_ROL_SUCCESS, MsgBoxStyle.Information)

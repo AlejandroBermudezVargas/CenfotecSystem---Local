@@ -256,6 +256,26 @@ Public Class Users_controller
                             Else
                                 estado = False
                             End If
+                        Case 8 'Cursos
+                            If CStr(UCase(rango.Cells(i, j).Value) = "") Then
+  
+                            Else
+                                Dim listaCursos As String = rango.Cells(i, j).Value
+                                Dim cursosAImportar As String() = listaCursos.Split(New Char() {","c})
+                                Dim cursosExistentes As New List(Of Producto)
+                                cursosExistentes = ProductsController.obtenerListaProductos
+                                Dim curso As String
+                                For Each curso In cursosAImportar
+
+                                    'If cursosExistentes.Contains(curso) Then
+
+                                    'End If
+
+                                    'Console.WriteLine(curso)
+                                Next
+
+
+                            End If
                         Case Else
                     End Select
                 Next j
@@ -263,7 +283,7 @@ Public Class Users_controller
                 If errores Then
                     registrosError = registrosError & Str(i) & "|" & nombre & "|" & apellidos & "|" & mensajeError & vbNewLine
                 Else
-                    password = "UCenfotec" & anio
+                    password = "UCenfotec" & anio 'Default password
                     If tipo = 1 Then
                         idRol = 4
                     Else
