@@ -47,6 +47,25 @@ Public Class Users_controller
         End If
     End Function
 
+    Shared Function create(ByVal pcedula As String, ByVal pnombre As String, ByVal papellido As String,
+                       ByVal pemail As String, ByVal pphone As String, ByVal ppassword As String,
+                       ByVal pidRol As Integer, ByVal pactivo As Boolean, ByVal pfecha_nacimiento As Date,
+                       ByVal listaCursos As List(Of Producto)) As Boolean
+
+        Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
+        Dim request = New RestRequest("Users", Method.POST)
+
+        request.RequestFormat = DataFormat.Json
+        request.AddBody(New UserModel(pcedula, pnombre, papellido, pemail, pphone, ppassword, pidRol, pactivo, pfecha_nacimiento, listaCursos))
+
+        Dim response = client.Execute(Of UserModel)(request)
+        If (response.StatusCode.Equals(System.Net.HttpStatusCode.Created)) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
     Shared Function update(ByVal pid As String, ByVal pcedula As String, ByVal pnombre As String, ByVal papellido As String,
                            ByVal pemail As String, ByVal pphone As String, ByVal ppassword As String,
                            ByVal pidRol As Integer, ByVal pactivo As Boolean, ByVal pfecha_nacimiento As Date) As Boolean
@@ -147,6 +166,8 @@ Public Class Users_controller
         Dim mensajeError As String
         Dim usuarios As New List(Of UserModel)
         Dim registrosBitacora As New Dictionary(Of String, String)()
+        Dim cursosAImportar As List(Of Producto) = New List(Of Producto)
+        Dim cursosActivos As List(Of Producto)
         usuarios = getUsers()
 
         workbook = APP.Workbooks.Open(path)
@@ -156,14 +177,16 @@ Public Class Users_controller
         rowCount = worksheet.UsedRange.Rows.Count
         colCount = worksheet.UsedRange.Columns.Count
 
-        If colCount <> 7 Then
+
+
+        If colCount - 1 <> 7 Then '1
             MsgBox("La cantidad de columnas no coincide con la cantidad de campos de la tabla destino. " & vbNewLine _
                    & "Verifique el archivo e inténtelo de nuevo.", MsgBoxStyle.Critical)
             Exit Sub
-        Else
+        Else '1
 
             MsgBox("Se importarán " & rowCount & " registros.", MsgBoxStyle.Information)
-
+            cursosActivos = ProductsController.obtenerListaProductos
             For i = 2 To rowCount
                 nombre = ""
                 apellidos = ""
@@ -177,95 +200,115 @@ Public Class Users_controller
 
                 For j = 1 To colCount
                     fieldNum = j
-                    If CStr(rango.Cells(i, j).Value) = "" Then
+                    If CStr(rango.Cells(i, j).Value) = "" Then '2
                         errores = True
-                    End If
+                    End If '2
                     Select Case (fieldNum)
                         Case 1 'Num Cedula
                             Dim regularExpression As New Regex("^[0-9]{9,15}$")
                             cedula = CStr(Trim(rango.Cells(i, j).Value))
-                            If CStr(rango.Cells(i, j).Value) = "" Or Not regularExpression.IsMatch(cedula) Then
+                            If CStr(rango.Cells(i, j).Value) = "" Or Not regularExpression.IsMatch(cedula) Then '3
                                 errores = True
                                 mensajeError = mensajeError & "Formato de cédula incorrecto"
-                            Else
+                            Else '3
                                 cedula = CStr(Trim(rango.Cells(i, j).Value))
                                 For Each user In usuarios
-                                    If cedula = user.cedula And Not errores Then
+                                    If cedula = user.cedula And Not errores Then '4
                                         errores = True
                                         mensajeError = mensajeError & "Ya existe un usuario con ese número de cédula"
-                                    End If
+                                    End If '4
                                 Next
-                            End If
+                            End If '3
                         Case 2 'Nombre
                             nombre = CStr(Trim(rango.Cells(i, j).Value))
-                            If nombre = "" Then
+                            If nombre = "" Then '5
                                 errores = True
                                 mensajeError = mensajeError & "Nombre no provisto"
-                            End If
+                            End If '5
                         Case 3 'Apellidos
                             apellidos = CStr(Trim(rango.Cells(i, j).Value))
-                            If apellidos = "" Then
+                            If apellidos = "" Then '6
                                 errores = True
                                 mensajeError = mensajeError & "Apellidos no provistos"
-                            End If
+                            End If '6
                         Case 4 'Email
                             Dim emailExpression As New Regex("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$")
                             email = CStr(rango.Cells(i, j).Value)
-                            If email = "" Then
+                            If email = "" Then '7
                                 errores = True
                                 mensajeError = mensajeError & "|" & "Formato de email incorrecto"
-                            ElseIf emailExpression.IsMatch(email) Then
+                            ElseIf emailExpression.IsMatch(email) Then '7
                                 email = CStr(Trim(rango.Cells(i, j).Value))
-                            Else
-                            End If
+                            Else '7
+                            End If '7
                         Case 5 'fechaNac
-                            If CStr(Trim(rango.Cells(i, j).Value)) <> "" Then
+                            If CStr(Trim(rango.Cells(i, j).Value)) <> "" Then '8
                                 dia = Left(Trim(rango.Cells(i, j).Value.ToString()), 2)
                                 mes = Mid(Trim(rango.Cells(i, j).Value.ToString()), 4, 2)
                                 anio = Mid(Trim(rango.Cells(i, j).Value.ToString()), 7, 4)
-                                If dia > 31 < 0 Or mes > 12 < 0 Then
+                                If dia > 31 < 0 Or mes > 12 < 0 Then '9
                                     errores = True
                                     mensajeError = mensajeError & "Formato de fecha incorrecto"
-                                Else
+                                Else '9
                                     fecha_nacimiento = Date.Parse(Format(rango.Cells(i, j).Value.ToString))
-                                End If
-                            End If
+                                End If '9
+                            End If '8
                         Case 6 'Telefono
                             Dim regularExpression As New Regex("^[0-9]{8,15}$")
                             telefono = CStr(Trim(rango.Cells(i, j).Value))
-                            If CStr(rango.Cells(i, j).Value) = "" Or Not regularExpression.IsMatch(telefono) Then
+                            If CStr(rango.Cells(i, j).Value) = "" Or Not regularExpression.IsMatch(telefono) Then '10
                                 errores = True
                                 mensajeError = mensajeError & "Formato de teléfono incorrecto"
-                            End If
+                            End If '10
                         Case 7 'Estado
-                            If CStr(UCase(rango.Cells(i, j).Value) = "ACTIVO") Then
+                            If CStr(UCase(rango.Cells(i, j).Value) = "ACTIVO") Then '11
                                 estado = True
-                            Else
+                            Else '11
                                 estado = False
-                            End If
+                            End If '11
+                        Case 8 'Cursos
+                            If Len(CStr(rango.Cells(i, j).Value)) > 0 Then '12
+                                Dim cursos As String 'Valor 
+                                Dim listaCursos As String() 'Lista generada luego de dividir la cadena de texto en códigos individuales.
+                                Dim h As Integer
+                                Dim isProdAvailable As Boolean = False
+                                cursos = UCase(rango.Cells(i, j).Value)
+                                listaCursos = cursos.Split(New Char() {","c})
+                                For Each curso In listaCursos
+                                    For h = 0 To cursosActivos.Count - 1
+                                        If curso.Equals(cursosActivos(h).Codigo_Producto) Then
+                                            cursosAImportar.Add(cursosActivos(h))
+                                        End If
+                                    Next
+                                Next curso
+                            Else '12
+                                errores = True
+                                mensajeError = mensajeError & "|Requiere tener al menos un curso matriculado."
+                            End If '12
                         Case Else
                     End Select
                 Next j
 
-                If errores Then
+                If errores Then '13
                     registrosError = registrosError & Str(i) & "|" & nombre & "|" & apellidos & "|" & mensajeError & vbNewLine
-                Else
+                Else '13
                     password = "UCenfotec" & anio
-                    If tipo = 1 Then
+                    If tipo = 1 Then '14
                         idRol = 4
-                    Else
+                    Else '14
                         idRol = 5
-                    End If
-                    create(cedula, nombre, apellidos, email, telefono, password, idRol, estado, fecha_nacimiento)
-                End If
+                    End If '14
+                    create(cedula, nombre, apellidos, email, telefono, password, idRol, estado, fecha_nacimiento, cursosAImportar)
+                End If '13
             Next i
-            If registrosError.Length > 0 Then
+            If registrosError.Length > 0 Then '15
                 resul = "Los siguientes registros presentaron problemas al tratar de ingresarse en la base de datos: " & vbNewLine _
                     & "Num.Registro|Nombre|Apellidos|Error" & vbNewLine & registrosError
                 MsgBox(resul, MsgBoxStyle.Critical)
-            End If
+            End If '15
             workbook.Close()
             APP = Nothing
-        End If
+        End If '1
+
     End Sub
 End Class

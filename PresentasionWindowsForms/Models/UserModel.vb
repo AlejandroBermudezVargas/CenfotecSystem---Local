@@ -11,6 +11,7 @@
     Private _fecha_nacimiento As Date
     Private _rol As RolModel
     Private _prospectos As List(Of Prospecto)
+    Private _productos As List(Of Producto)
 
     Sub New()
         cedula = Nothing
@@ -64,6 +65,22 @@
         password = ppassword
         fecha_nacimiento = pfechaNacimiento
         _id_usuario = pid
+    End Sub
+
+    Sub New(ByVal pcedula As String, ByVal pnombre As String, ByVal papellido As String, ByVal pcorreo As String,
+        ByVal ptelefono As String, ByVal ppassword As String, ByVal pid_rol As Integer, ByVal pactivo As Boolean,
+        ByVal pfechaNacimiento As Date, ByVal listaCursos As List(Of Producto))
+        cedula = pcedula
+        nombre = pnombre
+        apellido = papellido
+        correo = pcorreo
+        telefono = ptelefono
+        id_rol = pid_rol
+        activo = pactivo
+        password = ppassword
+        fecha_nacimiento = pfechaNacimiento
+        Productos = listaCursos
+
     End Sub
 
     Public Property id_usuario As Integer
@@ -182,6 +199,15 @@
         End Get
         Set(value As List(Of Prospecto))
             _prospectos = value
+        End Set
+    End Property
+
+    Public Property Productos As List(Of Producto)
+        Get
+            Return _productos
+        End Get
+        Set(value As List(Of Producto))
+            _productos = value
         End Set
     End Property
 End Class

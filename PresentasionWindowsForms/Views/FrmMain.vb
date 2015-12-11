@@ -1907,9 +1907,9 @@ Public Class FrmMain
                         Case 2
                             ProspectusController.ImportarProspectos(path)
                         Case 3
-                            Users_controller.ImportarUsuarios(path, 1)
+                            Users_controller.ImportarUsuarios(path, 1) 'Estudiantes
                         Case 4
-                            Users_controller.ImportarUsuarios(path, 5)
+                            Users_controller.ImportarUsuarios(path, 5) 'Profesors
                         Case Else
                     End Select
 

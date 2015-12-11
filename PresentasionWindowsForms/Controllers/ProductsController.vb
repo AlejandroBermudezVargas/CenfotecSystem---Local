@@ -142,7 +142,7 @@ Public Class ProductsController
                     Select Case (fieldNum)
                         Case 1
                             If CStr(rango.Cells(i, j).Value) = "" Then
-                                codProd = "No Provisto"
+                                codProd = "No Provisto" 'VALIDAR DUPLICADOS!!
                             Else
                                 codProd = CStr(rango.Cells(i, j).Value)
                             End If
