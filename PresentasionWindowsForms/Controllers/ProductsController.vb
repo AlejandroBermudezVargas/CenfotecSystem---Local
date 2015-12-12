@@ -32,17 +32,22 @@ Public Class ProductsController
         Return resultado
     End Function
     Shared Function RegistrarProducto(ByVal nombre As String, ByVal costo As Double, ByVal codigo As String, _
-                                      ByVal horarios As String, ByVal id_tipo_product As Integer, ByVal fecha_Inicio As Date) As Boolean
+                                      ByVal horarios As String, ByVal id_tipo_product As Integer,
+                                      ByVal fecha_Inicio As Date) As Boolean
 
         Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
         Dim request = New RestRequest("Products", Method.POST)
         Dim producto = New Producto
+
+        producto.Fecha_Creacion = Date.Now
+        producto.Fecha_actualizacion = Date.Now
         producto.Nombre = nombre
         producto.Costo = costo
         producto.Codigo_Producto = codigo
         producto.Horario = horarios
         producto.Id_Tipo_Product = id_tipo_product
         producto.Fecha_Inicio = fecha_Inicio
+
         request.RequestFormat = DataFormat.Json
         request.AddBody(producto)
         Dim response = client.Execute(Of Producto)(request)
@@ -257,6 +262,9 @@ Public Class ProductsController
                 oExcel = Nothing
                 GC.Collect()
                 MsgBox("La información se exportó correctamente.", MsgBoxStyle.Information)
+                Process.Start("explorer", "/select," & path & "\" & nombreFile)
+
+                'Process.Start("explorer.exe", path)
             End If
         Else
             MsgBox("No hay información para exportar.", MsgBoxStyle.Critical)

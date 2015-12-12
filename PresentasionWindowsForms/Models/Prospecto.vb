@@ -12,6 +12,8 @@
     Private _cliente As Boolean
     Private _tipo_producto As List(Of Tipo_Producto)
     Private _id_evento As Nullable(Of Integer)
+    Private _fecha_creacion As Date
+    Private _fecha_actualizacion As Date
 
     Public Property Id_prospecto As Integer
         Get
@@ -127,6 +129,22 @@
         End Get
         Set(value As Nullable(Of Integer))
             _id_evento = value
+        End Set
+    End Property
+    Public Property Fecha_Creacion() As Date
+        Get
+            Return _fecha_creacion
+        End Get
+        Set(ByVal value As Date)
+            _fecha_creacion = value
+        End Set
+    End Property
+    Public Property Fecha_actualizacion() As Date
+        Get
+            Return _fecha_actualizacion
+        End Get
+        Set(ByVal value As Date)
+            _fecha_actualizacion = value
         End Set
     End Property
 End Class
