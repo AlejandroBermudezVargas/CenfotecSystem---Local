@@ -62,6 +62,8 @@ Public Class ProspectusController
         nvoProspecto.Cliente = esCliente
         nvoProspecto.Tipo_producto = intereses
         nvoProspecto.Id_evento = idEvento
+        nvoProspecto.Fecha_Creacion = Date.Now
+        nvoProspecto.Fecha_actualizacion = Date.Now
         Dim client = New RestClient(ConfigurationManager.AppSettings.Get("endpoint"))
         Dim request As RestRequest
         If (id <> -1) Then
@@ -211,12 +213,13 @@ Public Class ProspectusController
                         If CInt(rango.Cells(i, j).Value) = 3 Then
                             intereses = tipos
                         Else
-                            For Each tipo In tipos
-                                If CInt(rango.Cells(i, j).Value) = tipo.Id_Tipo_Producto Then
-                                    intereses.Add(tipo)
-                                End If
-                            Next tipo
-
+                            If tipos.Count > 0 Then
+                                For Each tipo In tipos
+                                    If CInt(rango.Cells(i, j).Value) = tipo.Id_Tipo_Producto Then
+                                        intereses.Add(tipo)
+                                    End If
+                                Next tipo
+                            End If
                         End If
                     Case Else
                 End Select
@@ -225,7 +228,7 @@ Public Class ProspectusController
                 registrosError = registrosError & nombre & "|" & apellidos & "|" & fecha_nacimiento & "|" & procedencia & "|" & _
                     estado & "|" & telefono & "|" & email & "|" & direccion & "|" & estaInteresado & "|" & esCliente & vbNewLine
             End If
-            guardarOActualizar(-1, nombre, apellidos, fecha_nacimiento, procedencia, estado, telefono, email, direccion, estaInteresado, esCliente, intereses, -1)
+            guardarOActualizar(-1, nombre, apellidos, fecha_nacimiento, procedencia, estado, telefono, email, direccion, estaInteresado, esCliente, intereses, Nothing)
         Next i
         If registrosError.Length > 0 Then
             resul = "Los siguientes registros presentaron problemas al tratar de ingresarse en la base de datos: " & vbNewLine _

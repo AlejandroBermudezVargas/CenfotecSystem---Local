@@ -6,6 +6,9 @@
     Private _horario As String
     Private _codigo_producto As String
     Private _id_tipo_product As Integer
+    Private _fecha_creacion As Date
+    Private _fecha_actualizacion As Date
+
     Public Property Id_Tipo_Product() As Integer
         Get
             Return _id_tipo_product
@@ -66,6 +69,22 @@
         End Get
         Set(ByVal value As Date)
             _fecha_inicio = value
+        End Set
+    End Property
+    Public Property Fecha_Creacion() As Date
+        Get
+            Return _fecha_creacion
+        End Get
+        Set(ByVal value As Date)
+            _fecha_creacion = value
+        End Set
+    End Property
+    Public Property Fecha_actualizacion() As Date
+        Get
+            Return _fecha_actualizacion
+        End Get
+        Set(ByVal value As Date)
+            _fecha_actualizacion = value
         End Set
     End Property
 

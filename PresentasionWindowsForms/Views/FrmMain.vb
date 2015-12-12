@@ -1951,25 +1951,25 @@ Public Class FrmMain
         openFileDialog1.RestoreDirectory = True
 
         If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            Try
-                path = openFileDialog1.FileName
-                If (path IsNot "") Then
-                    Select Case (tipoImport)
-                        Case 1
-                            ProductsController.ImportarProductos(path, tipoProdImport)
-                        Case 2
-                            ProspectusController.ImportarProspectos(path)
-                        Case 3
-                            Users_controller.ImportarUsuarios(path, 1)
-                        Case 4
-                            Users_controller.ImportarUsuarios(path, 5)
-                        Case Else
-                    End Select
+            'Try
+            path = openFileDialog1.FileName
+            If (path IsNot "") Then
+                Select Case (tipoImport)
+                    Case 1
+                        ProductsController.ImportarProductos(path, tipoProdImport)
+                    Case 2
+                        ProspectusController.ImportarProspectos(path)
+                    Case 3
+                        Users_controller.ImportarUsuarios(path, 1)
+                    Case 4
+                        Users_controller.ImportarUsuarios(path, 5)
+                    Case Else
+                End Select
 
-                End If
-            Catch Ex As Exception
-                MessageBox.Show("Ocurrio un error al intentar importar la información." & Ex.Message)
-            End Try
+            End If
+            'Catch Ex As Exception
+            '    MessageBox.Show("Ocurrio un error al intentar importar la información." & Ex.Message)
+            'End Try
 
             'llenarTablaCarreras()
             'limpiarFormCarrera()
