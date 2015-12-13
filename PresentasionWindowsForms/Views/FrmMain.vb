@@ -1021,7 +1021,7 @@ Public Class FrmMain
                 tgEnabledRol.Checked = rol.activo
                 For Each permiso As PermissionModel In rol.permisos
                     Select Case permiso.nombre
-                        Case "acti"
+                        Case "actis"
                             tgActiRol.Checked = True
                         Case "carreras"
                             tgCareersRol.Checked = True
@@ -1039,6 +1039,10 @@ Public Class FrmMain
                             tgReportsRol.Checked = True
                         Case "configuracion"
                             tgConfigurationRol.Checked = True
+                        Case "evaluaciones"
+                            tgEvaluacionesRol.Checked = True
+                        Case "preguntas"
+                            tgPreguntasRol.Checked = True
                     End Select
                 Next
             Else
@@ -1046,8 +1050,6 @@ Public Class FrmMain
             End If
         End If
     End Sub
-
-
 
 
     ''' <summary>
