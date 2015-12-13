@@ -260,6 +260,7 @@ Public Class ProductsController
                 oExcel = Nothing
                 GC.Collect()
                 MsgBox("La información se exportó correctamente.", MsgBoxStyle.Information)
+                Process.Start("explorer", "/select," & path & "\" & nombreFile)
             End If
         Else
             MsgBox("No hay información para exportar.", MsgBoxStyle.Critical)
