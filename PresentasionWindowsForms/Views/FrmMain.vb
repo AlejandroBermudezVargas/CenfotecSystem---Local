@@ -35,7 +35,7 @@ Public Class FrmMain
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         user = puser
-        Me.Text = user.nombre + " " + user.apellido
+        Me.Text = user.nombre + " " + user.apellido + " - " + user.rol.nombre
         'Me.tActis.Visible = False
         'Me.tCareers.Visible = False
         Me.Main.TabPages.Remove(Me.TabProductos)
@@ -1906,9 +1906,9 @@ Public Class FrmMain
 
     Private Sub LlenarComboUsersConsulta()
         Dim comboSource As New Dictionary(Of String, String)()
+        comboSource.Add("", "Elija uno")
         If user.id_rol = 1 Then
             Dim usuarios As List(Of UserModel) = Users_controller.getUsers
-            comboSource.Add("", "Elija uno")
             For Each usuario As UserModel In usuarios
                 comboSource.Add(usuario.id_usuario, usuario.apellido & " " & usuario.nombre)
             Next

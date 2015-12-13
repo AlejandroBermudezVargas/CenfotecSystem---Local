@@ -498,7 +498,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 0
+        Me.Main.SelectedIndex = 3
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
