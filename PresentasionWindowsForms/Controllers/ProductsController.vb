@@ -42,7 +42,10 @@ Public Class ProductsController
         producto.Codigo_Producto = codigo
         producto.Horario = horarios
         producto.Id_Tipo_Product = id_tipo_product
-        producto.Fecha_Inicio = fecha_Inicio
+        producto.Fecha_inicio = fecha_Inicio
+        producto.Fecha_Creacion = Date.Now
+        producto.Fecha_actualizacion = Date.Now
+
         request.RequestFormat = DataFormat.Json
         request.AddBody(producto)
         Dim response = client.Execute(Of Producto)(request)

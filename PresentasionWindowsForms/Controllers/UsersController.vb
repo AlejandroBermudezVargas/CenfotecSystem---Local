@@ -169,7 +169,7 @@ Public Class Users_controller
         rowCount = worksheet.UsedRange.Rows.Count
         colCount = worksheet.UsedRange.Columns.Count
 
-        If colCount <> 7 Then
+        If colCount - 1 <> 7 Then
             MsgBox("La cantidad de columnas no coincide con la cantidad de campos de la tabla destino. " & vbNewLine _
                    & "Verifique el archivo e inténtelo de nuevo.", MsgBoxStyle.Critical)
             Exit Sub
@@ -258,7 +258,7 @@ Public Class Users_controller
                             End If
                         Case 8 'Cursos
                             If CStr(UCase(rango.Cells(i, j).Value) = "") Then
-  
+
                             Else
                                 Dim listaCursos As String = rango.Cells(i, j).Value
                                 Dim cursosAImportar As String() = listaCursos.Split(New Char() {","c})
