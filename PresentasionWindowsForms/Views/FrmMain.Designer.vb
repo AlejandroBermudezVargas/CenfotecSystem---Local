@@ -510,8 +510,8 @@ Partial Class FrmMain
         Me.TabProductos.Controls.Add(Me.listaActis_pnl)
         Me.TabProductos.Controls.Add(Me.pnlRegistrarCarrera)
         Me.TabProductos.Controls.Add(Me.pnlListaCarreras)
-        Me.TabProductos.Controls.Add(Me.btnActiIco)
         Me.TabProductos.Controls.Add(Me.btnCarrerasIcon)
+        Me.TabProductos.Controls.Add(Me.btnActiIco)
         Me.TabProductos.HorizontalScrollbarBarColor = True
         Me.TabProductos.HorizontalScrollbarHighlightOnWheel = False
         Me.TabProductos.HorizontalScrollbarSize = 10
@@ -1531,6 +1531,7 @@ Partial Class FrmMain
         Me.btnActiIco.TabIndex = 4
         Me.btnActiIco.Text = "Acti's"
         Me.btnActiIco.UseSelectable = True
+        Me.btnActiIco.Visible = False
         '
         'btnCarrerasIcon
         '
@@ -1543,6 +1544,7 @@ Partial Class FrmMain
         Me.btnCarrerasIcon.TabIndex = 3
         Me.btnCarrerasIcon.Text = "Carreras"
         Me.btnCarrerasIcon.UseSelectable = True
+        Me.btnCarrerasIcon.Visible = False
         '
         'Eventos
         '

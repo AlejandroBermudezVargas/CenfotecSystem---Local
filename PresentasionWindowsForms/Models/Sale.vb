@@ -52,4 +52,26 @@
     End Property
 
 
+
+    Private _fecha_creacion As Date
+    Public Property Fecha_creacion() As Date
+        Get
+            Return _fecha_creacion
+        End Get
+        Set(ByVal value As Date)
+            _fecha_creacion = value
+        End Set
+    End Property
+
+    Private _fecha_actualizacion As Date
+    Public Property Fecha_actualizacion As Date
+        Get
+            Return _fecha_actualizacion
+        End Get
+        Set(ByVal value As Date)
+            _fecha_actualizacion = value
+        End Set
+    End Property
+
+
 End Class
