@@ -39,6 +39,8 @@ Public Class SalesController
         sale.Id_Usuario = id_usuario
         sale.Monto = monto
         sale.Fecha = fecha
+        sale.Fecha_creacion = Date.Now
+        sale.Fecha_actualizacion = Date.Now
         request.RequestFormat = DataFormat.Json
         request.AddBody(sale)
         Dim response = client.Execute(Of Sale)(request)
