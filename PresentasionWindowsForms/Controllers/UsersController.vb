@@ -304,9 +304,9 @@ Public Class Users_controller
                     Else
                         password = "UCenfotec" & anio 'Default password
                         If tipo = 1 Then
-                            idRol = 4
-                        Else
                             idRol = 5
+                        Else
+                            idRol = 4
                         End If
                         create(cedula, nombre, apellidos, email, telefono, password, idRol, estado, fecha_nacimiento, cursosAImportar)
                     End If
