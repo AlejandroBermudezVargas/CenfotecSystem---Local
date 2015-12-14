@@ -20,7 +20,7 @@ Public Class FrmLogin
                 If user.activo Then
                     For Each permiso As PermissionModel In user.rol.permisos
                         Select Case permiso.nombre
-                            Case "acti"
+                            Case "actis"
                                 main.btnActiIco.Visible = True
                             Case "carreras"
                                 main.btnCarrerasIcon.Visible = True

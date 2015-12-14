@@ -115,8 +115,8 @@ Partial Class FrmMain
         Me.editarCarrera = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblListaCrreras = New MetroFramework.Controls.MetroLabel()
         Me.btnNueva_Carrera = New MetroFramework.Controls.MetroButton()
-        Me.btnActiIco = New MetroFramework.Controls.MetroTile()
         Me.btnCarrerasIcon = New MetroFramework.Controls.MetroTile()
+        Me.btnActiIco = New MetroFramework.Controls.MetroTile()
         Me.Eventos = New MetroFramework.Controls.MetroTabPage()
         Me.PanelListarEventos = New MetroFramework.Controls.MetroPanel()
         Me.btnCrearEvento = New MetroFramework.Controls.MetroButton()
@@ -498,7 +498,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 0
+        Me.Main.SelectedIndex = 4
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -510,8 +510,8 @@ Partial Class FrmMain
         Me.TabProductos.Controls.Add(Me.listaActis_pnl)
         Me.TabProductos.Controls.Add(Me.pnlRegistrarCarrera)
         Me.TabProductos.Controls.Add(Me.pnlListaCarreras)
-        Me.TabProductos.Controls.Add(Me.btnActiIco)
         Me.TabProductos.Controls.Add(Me.btnCarrerasIcon)
+        Me.TabProductos.Controls.Add(Me.btnActiIco)
         Me.TabProductos.HorizontalScrollbarBarColor = True
         Me.TabProductos.HorizontalScrollbarHighlightOnWheel = False
         Me.TabProductos.HorizontalScrollbarSize = 10
@@ -1520,18 +1520,6 @@ Partial Class FrmMain
         Me.btnNueva_Carrera.Text = "Nueva Carrera"
         Me.btnNueva_Carrera.UseSelectable = True
         '
-        'btnActiIco
-        '
-        Me.btnActiIco.ActiveControl = Nothing
-        Me.btnActiIco.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnActiIco.Location = New System.Drawing.Point(165, 27)
-        Me.btnActiIco.Name = "btnActiIco"
-        Me.btnActiIco.Size = New System.Drawing.Size(124, 119)
-        Me.btnActiIco.Style = MetroFramework.MetroColorStyle.Purple
-        Me.btnActiIco.TabIndex = 4
-        Me.btnActiIco.Text = "Acti's"
-        Me.btnActiIco.UseSelectable = True
-        '
         'btnCarrerasIcon
         '
         Me.btnCarrerasIcon.ActiveControl = Nothing
@@ -1543,6 +1531,20 @@ Partial Class FrmMain
         Me.btnCarrerasIcon.TabIndex = 3
         Me.btnCarrerasIcon.Text = "Carreras"
         Me.btnCarrerasIcon.UseSelectable = True
+        Me.btnCarrerasIcon.Visible = False
+        '
+        'btnActiIco
+        '
+        Me.btnActiIco.ActiveControl = Nothing
+        Me.btnActiIco.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnActiIco.Location = New System.Drawing.Point(165, 27)
+        Me.btnActiIco.Name = "btnActiIco"
+        Me.btnActiIco.Size = New System.Drawing.Size(124, 119)
+        Me.btnActiIco.Style = MetroFramework.MetroColorStyle.Purple
+        Me.btnActiIco.TabIndex = 4
+        Me.btnActiIco.Text = "Acti's"
+        Me.btnActiIco.UseSelectable = True
+        Me.btnActiIco.Visible = False
         '
         'Eventos
         '
@@ -3118,14 +3120,14 @@ Partial Class FrmMain
         Me.lblNewpassUpdateUserInfo.Enabled = False
         Me.lblNewpassUpdateUserInfo.Location = New System.Drawing.Point(25, 281)
         Me.lblNewpassUpdateUserInfo.Name = "lblNewpassUpdateUserInfo"
-        Me.lblNewpassUpdateUserInfo.Size = New System.Drawing.Size(118, 19)
+        Me.lblNewpassUpdateUserInfo.Size = New System.Drawing.Size(116, 19)
         Me.lblNewpassUpdateUserInfo.TabIndex = 46
-        Me.lblNewpassUpdateUserInfo.Text = "Nueva constraseña"
+        Me.lblNewpassUpdateUserInfo.Text = "Nueva Contraseña"
         '
         'cboDateUpdateUserInfo
         '
         Me.cboDateUpdateUserInfo.Location = New System.Drawing.Point(181, 175)
-        Me.cboDateUpdateUserInfo.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.cboDateUpdateUserInfo.MinimumSize = New System.Drawing.Size(0, 29)
         Me.cboDateUpdateUserInfo.Name = "cboDateUpdateUserInfo"
         Me.cboDateUpdateUserInfo.Size = New System.Drawing.Size(366, 29)
         Me.cboDateUpdateUserInfo.Style = MetroFramework.MetroColorStyle.Purple
@@ -3333,7 +3335,7 @@ Partial Class FrmMain
         Me.lblPhoneUpdateUserInfo.Name = "lblPhoneUpdateUserInfo"
         Me.lblPhoneUpdateUserInfo.Size = New System.Drawing.Size(58, 19)
         Me.lblPhoneUpdateUserInfo.TabIndex = 15
-        Me.lblPhoneUpdateUserInfo.Text = "Telefono"
+        Me.lblPhoneUpdateUserInfo.Text = "Teléfono"
         '
         'lblNameUpdateUserInfo
         '
@@ -3360,7 +3362,7 @@ Partial Class FrmMain
         Me.lblIdUpdateUserInfo.Name = "lblIdUpdateUserInfo"
         Me.lblIdUpdateUserInfo.Size = New System.Drawing.Size(50, 19)
         Me.lblIdUpdateUserInfo.TabIndex = 11
-        Me.lblIdUpdateUserInfo.Text = "Cedula"
+        Me.lblIdUpdateUserInfo.Text = "Cédula"
         '
         'lblChangePasswordTittle
         '

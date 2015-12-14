@@ -35,7 +35,7 @@ Public Class FrmMain
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         user = puser
-        Me.Text = user.nombre + " " + user.apellido
+        Me.Text = user.nombre + " " + user.apellido + " - " + user.rol.nombre
         'Me.tActis.Visible = False
         'Me.tCareers.Visible = False
         Me.Main.TabPages.Remove(Me.TabProductos)
@@ -1021,7 +1021,7 @@ Public Class FrmMain
                 tgEnabledRol.Checked = rol.activo
                 For Each permiso As PermissionModel In rol.permisos
                     Select Case permiso.nombre
-                        Case "acti"
+                        Case "actis"
                             tgActiRol.Checked = True
                         Case "carreras"
                             tgCareersRol.Checked = True
@@ -1039,6 +1039,10 @@ Public Class FrmMain
                             tgReportsRol.Checked = True
                         Case "configuracion"
                             tgConfigurationRol.Checked = True
+                        Case "evaluaciones"
+                            tgEvaluacionesRol.Checked = True
+                        Case "preguntas"
+                            tgPreguntasRol.Checked = True
                     End Select
                 Next
             Else
@@ -1046,8 +1050,6 @@ Public Class FrmMain
             End If
         End If
     End Sub
-
-
 
 
     ''' <summary>
@@ -1425,6 +1427,7 @@ Public Class FrmMain
     ''' <remarks></remarks>
     Private Sub btnSaveUpdateUserInfo_Click(sender As Object, e As EventArgs) Handles btnSaveUpdateUserInfo.Click
         If (validateUpdateUserForm()) Then
+
             If Not (Users_controller.login(user.correo, txtPasswordUpdateUserInfo.Text)) Is Nothing Then
                 If tgChangePassUpdateUserInfo.Checked Then
                     If (Users_controller.updateUserAndPassword(user.id_usuario, txtIdUpdateUserInfo.Text, txtNameUpdateUserInfo.Text, txtLastNameUpdateUserInfo.Text,
@@ -1457,7 +1460,7 @@ Public Class FrmMain
     ''' <remarks></remarks>
     Private Function validateUpdateUserForm() As Boolean
         Dim result As Boolean = True
-        If isAUserId(txtIdUpdateUserInfo.Text) Then
+        If Not isAUserId(txtIdUpdateUserInfo.Text) Then
             result = False
             ErrorProvider1.SetError(txtIdUpdateUserInfo, ValidationsMessages.INVALID_USER_ID)
             txtIdUpdateUserInfo.WithError = True
@@ -1904,9 +1907,9 @@ Public Class FrmMain
 
     Private Sub LlenarComboUsersConsulta()
         Dim comboSource As New Dictionary(Of String, String)()
+        comboSource.Add("", "Elija uno")
         If user.id_rol = 1 Then
             Dim usuarios As List(Of UserModel) = Users_controller.getUsers
-            comboSource.Add("", "Elija uno")
             For Each usuario As UserModel In usuarios
                 comboSource.Add(usuario.id_usuario, usuario.apellido & " " & usuario.nombre)
             Next

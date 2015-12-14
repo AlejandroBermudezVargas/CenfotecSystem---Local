@@ -225,7 +225,7 @@ Public Class ProspectusController
                 registrosError = registrosError & nombre & "|" & apellidos & "|" & fecha_nacimiento & "|" & procedencia & "|" & _
                     estado & "|" & telefono & "|" & email & "|" & direccion & "|" & estaInteresado & "|" & esCliente & vbNewLine
             End If
-            guardarOActualizar(-1, nombre, apellidos, fecha_nacimiento, procedencia, estado, telefono, email, direccion, estaInteresado, esCliente, intereses, -1)
+            guardarOActualizar(-1, nombre, apellidos, fecha_nacimiento, procedencia, estado, telefono, email, direccion, estaInteresado, esCliente, intereses, 0)
         Next i
         If registrosError.Length > 0 Then
             resul = "Los siguientes registros presentaron problemas al tratar de ingresarse en la base de datos: " & vbNewLine _
