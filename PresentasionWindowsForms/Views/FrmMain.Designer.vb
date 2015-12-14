@@ -3122,7 +3122,7 @@ Partial Class FrmMain
         Me.lblNewpassUpdateUserInfo.Name = "lblNewpassUpdateUserInfo"
         Me.lblNewpassUpdateUserInfo.Size = New System.Drawing.Size(118, 19)
         Me.lblNewpassUpdateUserInfo.TabIndex = 46
-        Me.lblNewpassUpdateUserInfo.Text = "Nueva constraseña"
+        Me.lblNewpassUpdateUserInfo.Text = "Contraseña Actual"
         '
         'cboDateUpdateUserInfo
         '

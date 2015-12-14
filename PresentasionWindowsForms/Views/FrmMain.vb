@@ -1427,10 +1427,11 @@ Public Class FrmMain
     ''' <remarks></remarks>
     Private Sub btnSaveUpdateUserInfo_Click(sender As Object, e As EventArgs) Handles btnSaveUpdateUserInfo.Click
         If (validateUpdateUserForm()) Then
-            If Not (Users_controller.login(user.correo, txtPasswordUpdateUserInfo.Text)) Is Nothing Then
+
+            If Not (Users_controller.login(user.correo, txtNewPassUpdateUserInfo.Text)) Is Nothing Then
                 If tgChangePassUpdateUserInfo.Checked Then
                     If (Users_controller.updateUserAndPassword(user.id_usuario, txtIdUpdateUserInfo.Text, txtNameUpdateUserInfo.Text, txtLastNameUpdateUserInfo.Text,
-                                            txtEmailUpdateUserInfo.Text, txtPhoneUpdateUserInfo.Text, txtNewPassUpdateUserInfo.Text, user.id_rol, user.activo, cboDateUpdateUserInfo.Value)) Then
+                                            txtEmailUpdateUserInfo.Text, txtPhoneUpdateUserInfo.Text, txtPasswordUpdateUserInfo.Text, user.id_rol, user.activo, cboDateUpdateUserInfo.Value)) Then
                         MsgBox(respuestasDelSistema.UPDATE_USER_SUCCESS, MsgBoxStyle.Information)
                         hideUpdateUserInfo()
                     Else
