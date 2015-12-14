@@ -35,7 +35,7 @@ Public Class FrmLogin
                             Case "kpis"
                                 main.Main.TabPages.Add(main.KPIHolder)
                             Case "reportes"
-                                main.Main.TabPages.Add(main.TabReportes)
+                                'main.Main.TabPages.Add(main.TabReportes)
                             Case "configuracion"
                                 main.Main.TabPages.Add(main.TabConfiguracion)
                         End Select

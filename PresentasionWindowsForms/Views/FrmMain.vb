@@ -395,9 +395,12 @@ Public Class FrmMain
     Private Sub ckbEventoProspecto_CheckedChanged(sender As Object, e As EventArgs) Handles ckbEventoProspecto.CheckedChanged
         If (ckbEventoProspecto.Checked = True) Then
             cbEventos.Enabled = True
+            txtProcedenciaProspecto.Text = "Evento"
+            txtProcedenciaProspecto.Enabled = ckbEventoProspecto.Checked
             llenarComboEventos()
         Else
             cbEventos.Enabled = False
+            txtProcedenciaProspecto.Text = ""
             cbEventos.SelectedItem = Nothing
         End If
     End Sub

@@ -121,11 +121,6 @@ Partial Class FrmMain
         Me.PanelListarEventos = New MetroFramework.Controls.MetroPanel()
         Me.btnCrearEvento = New MetroFramework.Controls.MetroButton()
         Me.DataListarEventos = New System.Windows.Forms.DataGridView()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaInicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaFin = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEvento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editar = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblEventos = New MetroFramework.Controls.MetroLabel()
         Me.PanelCrearEvento = New MetroFramework.Controls.MetroPanel()
         Me.dateFin = New MetroFramework.Controls.MetroDateTime()
@@ -413,6 +408,11 @@ Partial Class FrmMain
         Me.checkBoxTopProduto = New MetroFramework.Controls.MetroCheckBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblCloseSession = New MetroFramework.Controls.MetroLink()
+        Me.IdEvento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaInicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaFin = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editar = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Main.SuspendLayout()
         Me.TabProductos.SuspendLayout()
         Me.registrarActi_pnl.SuspendLayout()
@@ -498,7 +498,7 @@ Partial Class FrmMain
         Me.Main.Location = New System.Drawing.Point(20, 60)
         Me.Main.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.Main.Name = "Main"
-        Me.Main.SelectedIndex = 4
+        Me.Main.SelectedIndex = 1
         Me.Main.Size = New System.Drawing.Size(760, 520)
         Me.Main.Style = MetroFramework.MetroColorStyle.Purple
         Me.Main.TabIndex = 1
@@ -1591,38 +1591,11 @@ Partial Class FrmMain
         '
         Me.DataListarEventos.AllowUserToAddRows = False
         Me.DataListarEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataListarEventos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.FechaInicio, Me.FechaFin, Me.IdEvento, Me.editar})
-        Me.DataListarEventos.Location = New System.Drawing.Point(39, 42)
+        Me.DataListarEventos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEvento, Me.Nombre, Me.FechaInicio, Me.FechaFin, Me.editar})
+        Me.DataListarEventos.Location = New System.Drawing.Point(11, 38)
         Me.DataListarEventos.Name = "DataListarEventos"
-        Me.DataListarEventos.Size = New System.Drawing.Size(643, 357)
+        Me.DataListarEventos.Size = New System.Drawing.Size(739, 344)
         Me.DataListarEventos.TabIndex = 13
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Lugar"
-        Me.Nombre.Name = "Nombre"
-        '
-        'FechaInicio
-        '
-        Me.FechaInicio.HeaderText = "Fecha Inicio"
-        Me.FechaInicio.Name = "FechaInicio"
-        '
-        'FechaFin
-        '
-        Me.FechaFin.HeaderText = "Finaliza"
-        Me.FechaFin.Name = "FechaFin"
-        '
-        'IdEvento
-        '
-        Me.IdEvento.HeaderText = "ID"
-        Me.IdEvento.Name = "IdEvento"
-        '
-        'editar
-        '
-        Me.editar.HeaderText = "Editar"
-        Me.editar.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
-        Me.editar.Name = "editar"
-        Me.editar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'lblEventos
         '
@@ -1924,7 +1897,7 @@ Partial Class FrmMain
         '
         Me.txtFechaNacProspecto.CustomFormat = ""
         Me.txtFechaNacProspecto.Location = New System.Drawing.Point(158, 112)
-        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.txtFechaNacProspecto.MinimumSize = New System.Drawing.Size(0, 29)
         Me.txtFechaNacProspecto.Name = "txtFechaNacProspecto"
         Me.txtFechaNacProspecto.Size = New System.Drawing.Size(367, 29)
         Me.txtFechaNacProspecto.Style = MetroFramework.MetroColorStyle.Purple
@@ -3388,10 +3361,10 @@ Partial Class FrmMain
         '
         'TabUsuarios
         '
-        Me.TabUsuarios.Controls.Add(Me.pnlCreateRol)
-        Me.TabUsuarios.Controls.Add(Me.pnlCreateUser)
         Me.TabUsuarios.Controls.Add(Me.pnListUsers)
         Me.TabUsuarios.Controls.Add(Me.pnlListRols)
+        Me.TabUsuarios.Controls.Add(Me.pnlCreateRol)
+        Me.TabUsuarios.Controls.Add(Me.pnlCreateUser)
         Me.TabUsuarios.HorizontalScrollbarBarColor = True
         Me.TabUsuarios.HorizontalScrollbarHighlightOnWheel = False
         Me.TabUsuarios.HorizontalScrollbarSize = 10
@@ -3907,7 +3880,7 @@ Partial Class FrmMain
         'cboDateCreateUser
         '
         Me.cboDateCreateUser.Location = New System.Drawing.Point(158, 175)
-        Me.cboDateCreateUser.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.cboDateCreateUser.MinimumSize = New System.Drawing.Size(0, 29)
         Me.cboDateCreateUser.Name = "cboDateCreateUser"
         Me.cboDateCreateUser.Size = New System.Drawing.Size(366, 29)
         Me.cboDateCreateUser.Style = MetroFramework.MetroColorStyle.Purple
@@ -5089,6 +5062,35 @@ Partial Class FrmMain
         Me.lblCloseSession.Text = "Cerrar sesion"
         Me.lblCloseSession.UseSelectable = True
         '
+        'IdEvento
+        '
+        Me.IdEvento.HeaderText = "ID"
+        Me.IdEvento.Name = "IdEvento"
+        '
+        'Nombre
+        '
+        Me.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Nombre.HeaderText = "Lugar"
+        Me.Nombre.Name = "Nombre"
+        '
+        'FechaInicio
+        '
+        Me.FechaInicio.HeaderText = "Fecha Inicio"
+        Me.FechaInicio.Name = "FechaInicio"
+        '
+        'FechaFin
+        '
+        Me.FechaFin.HeaderText = "Finaliza"
+        Me.FechaFin.Name = "FechaFin"
+        '
+        'editar
+        '
+        Me.editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.editar.HeaderText = ""
+        Me.editar.Image = Global.PresentasionWindowsForms.My.Resources.Resources.pen29
+        Me.editar.Name = "editar"
+        Me.editar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5513,11 +5515,6 @@ Partial Class FrmMain
     Friend WithEvents listaCarreras_dg As System.Windows.Forms.DataGridView
     Friend WithEvents lblListaCrreras As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnNueva_Carrera As MetroFramework.Controls.MetroButton
-    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FechaInicio As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FechaFin As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents IdEvento As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents editar As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents btnConsultarVentasIcon As MetroFramework.Controls.MetroTile
     Friend WithEvents btnListarVentasIcon As MetroFramework.Controls.MetroTile
     Friend WithEvents btnRegistrarVentaIcon As MetroFramework.Controls.MetroTile
@@ -5589,4 +5586,9 @@ Partial Class FrmMain
     Friend WithEvents lblPermisosWeb As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblPregunntas As MetroFramework.Controls.MetroLabel
     Friend WithEvents tgPreguntasRol As MetroFramework.Controls.MetroToggle
+    Friend WithEvents IdEvento As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FechaInicio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FechaFin As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents editar As System.Windows.Forms.DataGridViewImageColumn
 End Class
